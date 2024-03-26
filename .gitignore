@@ -1,0 +1,13 @@
+# Dependency directories
+node_modules/*
+
+*.DS_Store
+
+# scss
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+package-lock.json
+package.json
