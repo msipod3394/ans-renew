@@ -1,0 +1,66 @@
+@import "./variable.scss";
+
+body {
+  background-color: #fff;
+  font-family: $font-noto;
+  color: $color-text;
+  font-weight: normal;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  word-wrap: break-word;
+}
+.pc {
+  display: block;
+}
+.sp {
+  display: none;
+}
+a {
+  color: $color-text;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+::selection {
+  background: $color-blue;
+  color: #fff;
+}
+::-moz-selection {
+  background: $color-blue;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .sp {
+    display: block;
+  }
+  .pc {
+    display: none;
+  }
+  .ah:hover {
+    opacity: 1;
+  }
+}
+
+/**
+ * scroll bar
+ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: $color-blue;
+  background: linear-gradient(
+    0deg,
+    rgba(var(--color-blue), 1) 0%,
+    rgba(var(--color-green), 1) 100%
+  );
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-gold));
+  margin: 2px;
+  box-shadow: none;
+}

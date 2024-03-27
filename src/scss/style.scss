@@ -1,11 +1,3 @@
 // style.scss
 @import "./base/_index";
-
-body {
-  font-size: $font-size-base;
-}
-
-.header {
-  background-color: $primary-color;
-  color: $secondary-color;
-}
+@import "./module/_index";

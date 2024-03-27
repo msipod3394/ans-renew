@@ -1,0 +1,35 @@
+// icon-mask
+@mixin icon-mask($url, $background-color) {
+  content: "";
+  display: block;
+  -webkit-mask-image: url(#{$url});
+  mask-image: url(#{$url});
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  background-color: $background-color;
+  transition: background-color 0.3s ease;
+}
+
+// 使用例
+// &::before {
+//   width: $size-22;
+//   height: $size-16;
+//   @include icon-mask('/assets/img/common/icon/icon-mail.svg', #fff);
+// }
+
+// 
+$vw: 1vw;
+
+@mixin calc-width-size($size) {
+  $calculated-size: min(#{$vw * $size}, #{$size}px);
+  width: $calculated-size;
+}
+
+// 使用例
+// .element {
+//   @include calc-size(8);
+// }
