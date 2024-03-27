@@ -11,7 +11,7 @@
   -webkit-mask-size: 100%;
   mask-size: 100%;
   background-color: $background-color;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 // 使用例
@@ -21,7 +21,7 @@
 //   @include icon-mask('/assets/img/common/icon/icon-mail.svg', #fff);
 // }
 
-// 
+//
 $vw: 1vw;
 
 @mixin calc-width-size($size) {
@@ -31,5 +31,5 @@ $vw: 1vw;
 
 // 使用例
 // .element {
-//   @include calc-size(8);
+//   @include calc-width-size(8);
 // }

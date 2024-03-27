@@ -2,10 +2,14 @@
 @import "../mixin/index";
 
 .header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: $border;
+  position: relative;
+
+  &__in {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: $border;
+  }
 
   &__logo {
     display: flex;
@@ -13,7 +17,7 @@
     padding-left: $size-16;
   }
 
-  &__in {
+  &__navin {
     display: flex;
     justify-content: space-between;
   }
@@ -140,5 +144,111 @@
         }
       }
     }
+  }
+
+  &__toggle {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $size-40 $size-80;
+    display: flex;
+    gap: $size-40;
+    border-bottom: $border;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+
+    &._isShow {
+      opacity: 1;
+    }
+
+    &--nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--heading {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+
+      > span {
+        color: $color-blue;
+      }
+      &--text {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: $size-20;
+        line-height: 1;
+        font-weight: 600;
+      }
+
+      .font-en {
+        font-size: $size-18;
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+    }
+
+    &--list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $size-16;
+    }
+
+    &--item {
+      position: relative;
+      @include calc-width-size(240);
+
+      > a {
+        width: 100%;
+        font-size: $size-14;
+        padding-bottom: 8px;
+        border-bottom: $border;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $size-16;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          background-color: $color-blue;
+          bottom: 0;
+          transform: scale(0, 1);
+          transform-origin: right;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          color: $color-blue;
+
+          &::before {
+            transform: scale(1, 1);
+            transform-origin: left;
+          }
+        }
+      }
+
+      .icon-arrow::after {
+        transform: translateX(-5px);
+      }
+
+      a.icon-arrow:hover {
+        &::after {
+          transform: translateX(0px);
+        }
+      }
+    }
+  }
+}
+
+.icon-arrow._after {
+  &::after {
+    width: $size-24;
+    height: 4px;
+    @include icon-mask("/assets/img/common/icon/icon-arrow.svg", $color-blue);
   }
 }
