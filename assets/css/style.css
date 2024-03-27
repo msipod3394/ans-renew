@@ -354,17 +354,23 @@ a:hover {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .header__toggle {
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  border-bottom: 1px solid #ccc;
+}
+.header__toggle._isShow {
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+}
+.header__toggle--in {
   max-width: 1400px;
   margin: 0 auto;
   padding: min(40vw, 40px) min(80vw, 80px);
   display: flex;
   gap: min(40vw, 40px);
-  border-bottom: 1px solid #ccc;
-  transition: opacity 0.2s ease;
-  opacity: 0;
-}
-.header__toggle._isShow {
-  opacity: 1;
 }
 .header__toggle--nav {
   display: flex;

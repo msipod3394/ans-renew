@@ -147,17 +147,24 @@
   }
 
   &__toggle {
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: $size-40 $size-80;
-    display: flex;
-    gap: $size-40;
-    border-bottom: $border;
-    transition: opacity 0.2s ease;
     opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    border-bottom: $border;
 
     &._isShow {
       opacity: 1;
+      height: auto;
+      visibility: visible;
+    }
+
+    &--in {
+      max-width: $max-width;
+      margin: 0 auto;
+      padding: $size-40 $size-80;
+      display: flex;
+      gap: $size-40;
     }
 
     &--nav {
