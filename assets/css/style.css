@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@500;600;700&display=swap");
 body, div, dl, dt, dd, ul, ol, li, p, h1, h2, h3, h4, h5, h6, th, td, pre, code, blockquote, form, fieldset, legend, input, textarea, figcaption, figure {
@@ -207,6 +208,22 @@ a:hover {
   font-family: "Shippori Mincho", serif;
 }
 
+/*
+ * icon-mask
+ */
+/*
+ * font-size可変用
+ */
+.common-in-maxwidth {
+  max-width: 1400px;
+}
+
+/*
+ * icon-mask
+ */
+/*
+ * font-size可変用
+ */
 .header {
   position: relative;
 }
@@ -359,6 +376,10 @@ a:hover {
   visibility: hidden;
   transition: opacity 0.2s ease;
   border-bottom: 1px solid #ccc;
+  position: absolute;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: #eee 0 8px 16px;
 }
 .header__toggle._isShow {
   opacity: 1;
@@ -404,7 +425,6 @@ a:hover {
 }
 .header__toggle--item {
   position: relative;
-  width: min(240vw, 240px);
 }
 .header__toggle--item > a {
   width: 100%;
@@ -459,6 +479,12 @@ a:hover {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/*
+ * icon-mask
+ */
+/*
+ * font-size可変用
+ */
 .footer {
   width: 100%;
   max-width: 1400px;
@@ -468,9 +494,6 @@ a:hover {
 .footer__in {
   display: flex;
   justify-content: space-between;
-}
-.footer__logo {
-  width: min(360vw, 360px);
 }
 .footer__logo > a {
   width: 100%;
@@ -544,3 +567,215 @@ a:hover {
   line-height: 1.5;
   letter-spacing: 0;
 }
+
+/*
+ * icon-mask
+ */
+/*
+ * font-size可変用
+ */
+.contact {
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: min(12.6666666667vw, 152px) 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: max(10.6666666667vw, 40px) 0;
+  }
+}
+.contact::before {
+  content: "";
+  display: block;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: url(/assets/img/common/contact/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact__titleWrap {
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .contact__titleWrap {
+    margin-bottom: max(5.3333333333vw, 20px);
+  }
+}
+.contact__title {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: clamp(24px, 2vw, 32px);
+}
+@media screen and (max-width: 768px) {
+  .contact__title {
+    font-size: clamp(14.612176814px, 4.0033361134vw, 48px);
+  }
+}
+.contact__title--bg {
+  position: relative;
+  z-index: 3;
+  mix-blend-mode: overlay;
+}
+@media screen and (min-width: 769px) {
+  .contact__title--bg {
+    min-height: 56px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__title--bg {
+    height: max(16vw, 60px);
+  }
+}
+.contact__title--bg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.contact__in {
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+@media screen and (min-width: 769px) {
+  .contact__in {
+    width: min(66.6666666667vw, 800px);
+    padding: min(5.3333333333vw, 64px) 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__in {
+    width: 86%;
+    padding: max(5.3333333333vw, 20px) 0;
+  }
+}
+.contact__desc {
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-size: clamp(15px, 1.25vw, 20px);
+  margin-bottom: min(6.6666666667vw, 80px);
+}
+@media screen and (max-width: 768px) {
+  .contact__desc {
+    font-size: clamp(12.1768140117px, 3.3361134279vw, 40px);
+    margin-bottom: max(10.6666666667vw, 40px);
+  }
+}
+.contact__link {
+  max-width: 850px;
+  padding-top: 80px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .contact__link {
+    padding-top: max(10.6666666667vw, 40px);
+  }
+}
+.contact__link--list {
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+}
+@media screen and (max-width: 768px) {
+  .contact__link--list {
+    flex-direction: column;
+  }
+}
+.contact__link--item {
+  width: 100%;
+  border: 1px solid #fff;
+}
+@media screen and (min-width: 769px) {
+  .contact__link--item {
+    width: 42%;
+    max-width: 320px;
+  }
+}
+.contact__link--item > a {
+  padding: min(5.3333333333vw, 64px) 0;
+  display: block;
+}
+.contact__link--item > a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.contact__link--item > a > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(16.5px, 1.375vw, 22px);
+  text-align: center;
+  font-weight: 300;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .contact__link--item > a > span {
+    font-size: clamp(15.8298582152px, 4.3369474562vw, 52px);
+  }
+}
+.contact__link--item > a > span::after {
+  width: min(28vw, 28px);
+  height: min(20vw, 20px);
+  margin-left: 16px;
+  content: "";
+  display: block;
+  -webkit-mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  background-color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+@media screen and (max-width: 768px) {
+  .contact__link--item + .contact__link--item {
+    margin-top: min(6.6666666667vw, 80px);
+  }
+}
+
+/*
+ * icon-mask
+ */
+/*
+ * font-size可変用
+ */
+.template .fs-16-px {
+  font-size: 16px;
+}
+.template .fs-16 {
+  font-size: min(1.3333333333vw, 16px);
+}
+@media screen and (max-width: 768px) {
+  .template .fs-16 {
+    font-size: max(2.1333333333vw, 8px);
+  }
+}
+
+/*
+ * icon-mask
+ */
+/*
+ * font-size可変用
+ */

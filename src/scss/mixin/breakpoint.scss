@@ -1,0 +1,24 @@
+// ===============================================
+// breakpoints
+// ===============================================
+
+$mq-breakpoints: (
+  'xs': 321px, // 極狭sp用（独自）
+  'sm': 576px, // sp用（bootstrap5）
+  'md': 769px, // sp用(bootstrap5/tailwind)
+  'lg': 1024px, // pc/タブレット用（tailwind）
+  'xl': 1200px, // pc用（tailwind）
+  'xxl': 1680px, // デスクトップ用（独自）
+) !default;
+
+@mixin mq($breakpoint: md, $rule: min) {
+  $breakpoint: map-get($mq-breakpoints, $breakpoint);
+
+  @if $rule==max {
+    $breakpoint: $breakpoint - 1px;
+  }
+
+  @media screen and (#{$rule}-width: $breakpoint) {
+    @content;
+  }
+}

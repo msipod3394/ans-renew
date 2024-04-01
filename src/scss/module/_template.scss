@@ -1,0 +1,15 @@
+// contact
+@import "../mixin/index";
+
+.template {
+  .fs-16-px {
+    font-size: 16px;
+  }
+  .fs-16 {
+    font-size: vw_min(16px);
+    
+    @include mq(md, max){ // sp
+      font-size: vw_max(16px);
+    }
+  }
+}

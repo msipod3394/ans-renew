@@ -13,7 +13,7 @@
   }
 
   &__logo {
-    @include calc-width-size(360);
+    // @include calc-width-size(360);
     > a {
       width: 100%;
       display: block;

@@ -1,5 +1,6 @@
 // header
 $(document).ready(function () {
+
   $(".js-hover-service").hover(
     function () {
       console.log("hover!");
@@ -10,6 +11,7 @@ $(document).ready(function () {
       $(".js-hover-service").removeClass("_isShow");
     }
   );
+
   $(".js-hover-company").hover(
     function () {
       console.log("hover!");
@@ -20,4 +22,5 @@ $(document).ready(function () {
       $(".js-hover-company").removeClass("_isShow");
     }
   );
+
 });

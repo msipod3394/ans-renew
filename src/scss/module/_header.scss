@@ -152,6 +152,10 @@
     visibility: hidden;
     transition: opacity 0.2s ease;
     border-bottom: $border;
+    position: absolute;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: #eee 0 8px 16px;
 
     &._isShow {
       opacity: 1;
@@ -204,7 +208,7 @@
 
     &--item {
       position: relative;
-      @include calc-width-size(240);
+      // @include calc-width-size(240);
 
       > a {
         width: 100%;
