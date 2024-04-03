@@ -5,3 +5,131 @@
 .common-in-maxwidth {
   max-width: 1400px;
 }
+
+/* common__title */
+.common__title {
+  display: flex;
+  flex-direction: column;
+  gap: vw_min(40px);
+
+  @include mq(md, max) {
+    // sp
+    gap: vw_max(40px);
+  }
+
+  &--text {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: vw_min(8px);
+
+    &::before {
+      content: "";
+      display: block;
+      width: vw_min(80px);
+      height: 1px;
+      background-color: $color-blue-dark;
+      margin-top: vw_min(10px);
+
+      @include mq(md, max) {
+        // sp
+        width: vw_max(40px);
+      }
+    }
+  }
+
+  &--textIn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    span {
+      line-height: 1;
+
+      &.font-en {
+        font-size: vw_min(24px);
+        color: $color-blue-dark;
+        letter-spacing: -0.01em;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(24px);
+        }
+      }
+      &.font-mincho {
+        font-size: vw_min(28px);
+        letter-spacing: 0.05em;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(28px);
+        }
+      }
+    }
+  }
+
+  &--desc {
+    font-size: vw_min(16px);
+    font-weight: 300;
+    margin-left: vw_min(88px);
+
+    @include mq(md, max) {
+      // sp
+      font-size: vw_max(16px);
+      margin-left: vw_max(40px);
+    }
+  }
+}
+
+.common__linkButton {
+  width: vw_min(290px);
+  margin: 0 auto;
+
+  @include mq(md, max) {
+    // sp
+    width: 68%;
+  }
+
+  > a {
+    width: 100%;
+    display: block;
+    background-color: $color-blue-dark;
+    padding: vw_min(16px) 0;
+
+    @include mq(md, max) {
+      // sp
+      padding: vw_max(16px) 0;
+    }
+
+    span {
+      font-size: vw_min(18px);
+      text-align: center;
+      font-weight: 300;
+      line-height: 1;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: vw_min(8px);
+      margin-left: vw_min(8px);
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(18px);
+        gap: vw_max(8px);
+      }
+
+      &::after {
+        width: $size-24;
+        height: $size-16;
+        @include icon-mask("/assets/img/common/icon/icon-arrow.svg", #fff);
+
+        @include mq(md, max) {
+          // sp
+          width: $size-18;
+          height: $size-12;
+        }
+      }
+    }
+  }
+}
