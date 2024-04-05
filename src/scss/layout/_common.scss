@@ -113,15 +113,17 @@
   > a {
     width: 100%;
     display: block;
-    background-color: $color-blue-dark;
+    border: 1px solid $color-blue-dark;
     padding: vw_min(16px) 0;
+    position: relative;
+    overflow: hidden;
 
     @include mq(md, max) {
       // sp
       padding: vw_max(16px) 0;
     }
 
-    span {
+    > span {
       font-size: vw_min(18px);
       text-align: center;
       font-weight: 300;
@@ -132,6 +134,8 @@
       align-items: center;
       gap: vw_min(8px);
       margin-left: vw_min(8px);
+      position: relative;
+      z-index: 2;
 
       @include mq(md, max) {
         // sp
@@ -140,15 +144,73 @@
       }
 
       &::after {
+        position: relative;
         width: $size-24;
         height: $size-16;
         @include icon-mask("/assets/img/common/icon/icon-arrow.svg", #fff);
+        transition: $transition;
 
         @include mq(md, max) {
           // sp
           width: $size-18;
           height: $size-12;
         }
+      }
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      width: 100%;
+      height: vw_min(56px);
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transform: scale(0, 1);
+      transform-origin: right;
+      transition: $transition;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: vw_min(56px);
+      background-color: $color-blue-dark;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transform: scale(1, 1);
+      transform-origin: left;
+      transition: $transition;
+    }
+
+    &:hover {
+      background-color: #fff;
+
+      > span {
+        color: $color-blue-dark;
+
+        &::after {
+          transform: translateX(4px);
+          @include icon-mask(
+            "/assets/img/common/icon/icon-arrow.svg",
+            $color-blue-dark
+          );
+        }
+      }
+
+      &:hover::before {
+        transform-origin: left;
+        transform: scale(1, 1);
+      }
+
+      &:hover::after {
+        transform-origin: right;
+        transform: scale(0, 1);
       }
     }
   }

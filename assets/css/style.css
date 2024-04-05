@@ -323,15 +323,17 @@ a:hover {
 .common__linkButton > a {
   width: 100%;
   display: block;
-  background-color: #1c294f;
+  border: 1px solid #1c294f;
   padding: min(1.3333333333vw, 16px) 0;
+  position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .common__linkButton > a {
     padding: max(2.1333333333vw, 8px) 0;
   }
 }
-.common__linkButton > a span {
+.common__linkButton > a > span {
   font-size: min(1.5vw, 18px);
   text-align: center;
   font-weight: 300;
@@ -342,14 +344,17 @@ a:hover {
   align-items: center;
   gap: min(0.6666666667vw, 8px);
   margin-left: min(0.6666666667vw, 8px);
+  position: relative;
+  z-index: 2;
 }
 @media screen and (max-width: 768px) {
-  .common__linkButton > a span {
+  .common__linkButton > a > span {
     font-size: max(3.2vw, 12px);
     gap: max(1.0666666667vw, 4px);
   }
 }
-.common__linkButton > a span::after {
+.common__linkButton > a > span::after {
+  position: relative;
   width: min(24vw, 24px);
   height: min(16vw, 16px);
   content: "";
@@ -364,12 +369,70 @@ a:hover {
   mask-size: 100%;
   background-color: #fff;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 @media screen and (max-width: 768px) {
-  .common__linkButton > a span::after {
+  .common__linkButton > a > span::after {
     width: min(18vw, 18px);
     height: min(12vw, 12px);
   }
+}
+.common__linkButton > a::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: min(4.6666666667vw, 56px);
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: scale(0, 1);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.common__linkButton > a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: min(4.6666666667vw, 56px);
+  background-color: #1c294f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: scale(1, 1);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.common__linkButton > a:hover {
+  background-color: #fff;
+}
+.common__linkButton > a:hover > span {
+  color: #1c294f;
+}
+.common__linkButton > a:hover > span::after {
+  transform: translateX(4px);
+  content: "";
+  display: block;
+  -webkit-mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  background-color: #1c294f;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.common__linkButton > a:hover:hover::before {
+  transform-origin: left;
+  transform: scale(1, 1);
+}
+.common__linkButton > a:hover:hover::after {
+  transform-origin: right;
+  transform: scale(0, 1);
 }
 
 /* -onbg */
