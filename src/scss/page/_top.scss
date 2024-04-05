@@ -1,7 +1,471 @@
 // top
 @import "../mixin/index";
 
-/*  */
+/* service */
+.service {
+  padding-top: vw_min(80px);
+
+  &__main {
+    margin-top: vw_min(80px);
+    &--dl {
+      border-top: 1px solid $color-gray-300;
+      border-bottom: 1px solid $color-gray-300;
+    }
+    &--item {
+      position: relative;
+      overflow: hidden;
+    }
+    &--item + &--item {
+      border-top: 1px solid $color-gray-300;
+    }
+    &--link {
+      display: flex;
+      gap: vw_min(80px);
+      position: relative;
+      padding: vw_min(48px) vw_min(88px);
+
+      @include mq(md, max) {
+        // sp
+        padding: vw_max(48px) vw_max(56px);
+        flex-direction: column;
+        gap: vw_max(16px);
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.3s ease, transform 0.4s ease;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.01);
+
+        .-fullorder & {
+          background: url(/assets/img/top/service_fullorder_bg.jpg) no-repeat
+            center center / cover;
+        }
+        .-renewal & {
+          background: url(/assets/img/top/service_fullorder_bg.jpg) no-repeat
+            center center / cover;
+        }
+        .-maintenance & {
+          background: url(/assets/img/top/service_fullorder_bg.jpg) no-repeat
+            center center / cover;
+        }
+      }
+
+      &::after {
+        width: $size-32;
+        height: $size-16;
+        @include icon-mask(
+          "/assets/img/common/icon/icon-arrow.svg",
+          $color-blue-dark
+        );
+        transition: $transition;
+        position: absolute;
+
+        @include mq(md, min) {
+          // pc
+          right: vw_min(56px);
+          bottom: vw_min(24px);
+        }
+
+        @include mq(md, max) {
+          // sp
+          width: $size-32;
+          height: $size-16;
+          top: vw_max(64px);
+          right: vw_max(56px);
+        }
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+    &--dt {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @include mq(md, min) {
+        // pc
+        min-width: 400px;
+      }
+
+      > .font-mincho {
+        display: flex;
+        font-size: vw_min(28px);
+        letter-spacing: 0;
+        font-weight: 400;
+        color: $color-blue-dark;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(32px);
+        }
+
+        &::before {
+          display: block;
+          margin-top: vw_min(3px);
+          margin-right: vw_min(8px);
+          font-size: vw_min(22px);
+          font-weight: 300;
+          letter-spacing: -0.05em;
+          font-family: $font-mincho;
+          color: $color-blue-dark;
+
+          @include mq(md, max) {
+            // sp
+            margin-top: vw_max(6px);
+            margin-right: vw_max(8px);
+            font-size: vw_max(24px);
+          }
+
+          .-fullorder & {
+            content: "#1";
+          }
+          .-renewal & {
+            content: "#2";
+          }
+          .-maintenance & {
+            content: "#3";
+          }
+        }
+      }
+
+      > .font-en {
+        font-size: vw_min(24px);
+        letter-spacing: 0;
+        margin-left: vw_min(32px);
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(24px);
+          margin-left: 0;
+        }
+      }
+
+      a:hover & {
+        .font-mincho,
+        .font-en {
+          color: #fff;
+        }
+
+        .font-mincho::before {
+          color: #fff;
+        }
+      }
+    }
+
+    &--dd {
+      position: relative;
+      font-weight: 400;
+
+      @include mq(md, min) {
+        // pc
+        padding-top: vw_min(8px);
+      }
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_min(32px);
+      }
+
+      a:hover & {
+        color: #fff;
+      }
+    }
+  }
+
+  &__other {
+    padding: vw_min(80px);
+
+    @include mq(md, max) {
+      // sp
+      padding: vw_max(80px) vw_max(88px);
+    }
+
+    &--title {
+      font-size: vw_min(28px);
+      display: flex;
+      flex-direction: column;
+      gap: vw_min(16px);
+
+      @include mq(md, max) {
+        // sp
+        gap: vw_max(16px);
+        font-size: vw_max(32px);
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: vw_min(80px);
+        height: 1px;
+        background-color: $color-blue-dark;
+
+        @include mq(md, max) {
+          // sp
+          width: vw_max(80px);
+          margin-top: vw_max(10px);
+        }
+      }
+    }
+
+    &--dl {
+      display: flex;
+
+      @include mq(md, min) {
+        // pc
+        gap: vw_min(24px);
+        margin-top: vw_min(40px);
+      }
+
+      @include mq(md, max) {
+        // sp
+        flex-direction: column;
+        gap: vw_max(56px);
+        margin-top: vw_max(40px);
+      }
+    }
+
+    &--item {
+      @include mq(md, min) {
+        // pc
+        width: calc(100% / 3 - vw_min(24px));
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: vw_min(16px);
+      }
+
+      > img {
+        max-width: 100%;
+      }
+    }
+
+    &--dt {
+      width: 100%;
+      background-color: $color-blue-dark;
+      color: #fff;
+      padding: vw_min(10px) vw_min(16px);
+
+      @include mq(md, max) {
+        // sp
+        margin-top: vw_max(32px);
+        padding: vw_max(10px) vw_max(16px);
+        font-size: vw_max(24px);
+      }
+    }
+
+    &--dd {
+      font-size: vw_min(15px);
+      line-height: 1.75;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: vw_max(32px);
+        font-size: vw_max(20px);
+      }
+    }
+
+    &--link {
+      margin-top: vw_min(16px);
+
+      @include mq(md, max) {
+        // sp
+        margin-top: vw_max(24px);
+      }
+
+      > a {
+        span.icon-link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: vw_min(16px);
+
+          &::after {
+            position: relative;
+            width: $size-18;
+            height: $size-18;
+            @include icon-mask(
+              "/assets/img/common/icon/icon-link.svg",
+              $color-blue-dark
+            );
+            transition: $transition;
+
+            @include mq(md, max) {
+              // sp
+              width: $size-16;
+              height: $size-16;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__sub {
+    padding: vw_min(80px) vw_min(88px);
+
+    @include mq(md, max) {
+      // sp
+      padding: vw_max(80px) 0;
+    }
+
+    &--in {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include mq(md, min) {
+        // pc
+        margin-right: vw_min(40px);
+      }
+
+      @include mq(md, max) {
+        // sp
+        flex-direction: column-reverse;
+        margin: 0 vw_max(32px);
+      }
+    }
+
+    &--card {
+      border: 1px solid $color-gray-300;
+
+      @include mq(md, min) {
+        // pc
+        width: 50%;
+        margin-top: -1px;
+      }
+    }
+
+    &--card + &--card {
+      @include mq(md, min) {
+        // pc
+        margin-left: -1px;
+      }
+
+      @include mq(md, max) {
+        // sp
+        margin-top: -1px;
+      }
+    }
+
+    &--card--img {
+      > img {
+        width: 100%;
+      }
+    }
+
+    &--card--wrap {
+      display: flex;
+      gap: vw_min(40px);
+      padding: vw_min(40px) vw_min(40px);
+
+      @include mq(md, max) {
+        // sp
+        padding: vw_max(56px) vw_max(40px);
+        gap: vw_max(40px);
+      }
+    }
+
+    &--card--title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-size: vw_min(18px);
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(22px);
+      }
+
+      > .font-mincho {
+        font-size: vw_min(14px);
+        line-height: 1;
+        color: $color-gray-300;
+        letter-spacing: 0;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(18px);
+        }
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: relative;
+        width: vw_min(80px);
+        height: vw_min(80px);
+
+        @include mq(md, max) {
+          // sp
+          width: vw_max(110px);
+          height: vw_max(110px);
+          margin-bottom: vw_max(8px);
+        }
+
+        .--advice & {
+          background: url(/assets/img/common/icon/icon-service-advice.svg)
+            no-repeat center center / contain;
+        }
+        .--insourcing & {
+          background: url(/assets/img/common/icon/icon-service-insourcing.svg)
+            no-repeat center center / contain;
+        }
+        .--bcp & {
+          background: url(/assets/img/common/icon/icon-service-bcp.svg)
+            no-repeat center center / contain;
+        }
+        .--offshore & {
+          background: url(/assets/img/common/icon/icon-service-offshore.svg)
+            no-repeat center center / contain;
+        }
+      }
+    }
+
+    &--card--content {
+      display: flex;
+      flex-direction: column;
+      margin-top: vw_min(16px);
+
+      > p {
+        font-size: vw_min(15px);
+        line-height: 1.25;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(20px);
+        }
+      }
+    }
+    &--card--link {
+      margin-top: vw_min(32px);
+
+      @include mq(md, max) {
+        // sp
+        margin-top: vw_max(40px);
+      }
+
+      span.icon-arrow {
+        display: flex;
+        align-items: center;
+        gap: vw_min(32px);
+      }
+    }
+  }
+}
+
+/* mission */
 .mission {
   padding: vw_min(80px) 0;
 
@@ -37,7 +501,8 @@
     }
 
     &--in {
-      @include mq(md, min){ // pc
+      @include mq(md, min) {
+        // pc
         margin-top: vw_min(40px);
         margin-left: vw_min(80px);
       }

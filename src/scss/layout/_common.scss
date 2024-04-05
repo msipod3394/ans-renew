@@ -120,7 +120,7 @@
 
     @include mq(md, max) {
       // sp
-      padding: vw_max(16px) 0;
+      padding: vw_max(24px) 0;
     }
 
     > span {
@@ -174,8 +174,8 @@
     }
 
     &::after {
-      display: block;
       content: "";
+      display: block;
       width: 100%;
       height: vw_min(56px);
       background-color: $color-blue-dark;
@@ -186,6 +186,11 @@
       transform: scale(1, 1);
       transform-origin: left;
       transition: $transition;
+
+      @include mq(md, max) {
+        // sp
+        height: vw_max(72px);
+      }
     }
 
     &:hover {
@@ -219,4 +224,73 @@
 /* -onbg */
 .-onbg {
   background: url(/assets/img/common/bg/onbg.png) repeat left top/ 150px 150px;
+}
+
+/* common__borderLink */
+.common__borderLink {
+  display: inline-block;
+  position: relative;
+  padding-bottom: vw_min(12px);
+  font-size: vw_min(14px);
+  font-weight: 500;
+  color: $color-blue-dark;
+
+  @include mq(md, max) {
+    // sp
+    font-size: vw_max(20px);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $color-gray-300;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $color-blue-dark;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: $transition;
+  }
+
+  &:hover {
+    &::after {
+      transform-origin: left;
+      transform: scale(1, 1);
+    }
+  }
+}
+
+/* icon-arrow */
+.icon-arrow {
+  &::after {
+    position: relative;
+    width: $size-24;
+    height: $size-16;
+    @include icon-mask(
+      "/assets/img/common/icon/icon-arrow.svg",
+      $color-blue-dark
+    );
+    transition: $transition;
+
+    @include mq(md, max) {
+      // sp
+      width: $size-18;
+      height: $size-12;
+    }
+  }
 }

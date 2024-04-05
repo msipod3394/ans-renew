@@ -6,6 +6,7 @@
   max-width: $max-width;
   margin: 0 auto;
   padding: $size-24;
+  padding-top: vw_min(80px);
 
   &__in {
     display: flex;
