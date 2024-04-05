@@ -6,7 +6,20 @@
   max-width: 1400px;
 }
 
-/* common__title */
+/* inner */
+.common__inner {
+  @include mq(md, min) {
+    // pc
+    margin: vw_min(64px) vw_min(88px) 0;
+  }
+
+  @include mq(md, max) {
+    // sp
+    margin: vw_max(32px) vw_max(40px) 0;
+  }
+}
+
+/* title */
 .common__title {
   display: flex;
   flex-direction: column;
@@ -15,13 +28,18 @@
   @include mq(md, max) {
     // sp
     gap: vw_max(40px);
+    margin-bottom: vw_max(56px);
   }
 
   &--text {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
     gap: vw_min(8px);
+
+    @include mq(md, max) {
+      // sp
+      gap: vw_max(16px);
+    }
 
     &::before {
       content: "";
@@ -29,11 +47,12 @@
       width: vw_min(80px);
       height: 1px;
       background-color: $color-blue-dark;
-      margin-top: vw_min(10px);
+      margin-top: vw_min(16px);
 
       @include mq(md, max) {
         // sp
         width: vw_max(40px);
+        margin-top: vw_max(24px);
       }
     }
   }
@@ -43,8 +62,8 @@
     flex-direction: column;
     gap: 16px;
 
-    span {
-      line-height: 1;
+    > span {
+      line-height: 1.5;
 
       &.font-en {
         font-size: vw_min(24px);
@@ -53,16 +72,17 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(24px);
+          font-size: vw_max(32px);
         }
       }
+
       &.font-mincho {
         font-size: vw_min(28px);
         letter-spacing: 0.05em;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(28px);
+          font-size: vw_max(32px);
         }
       }
     }
@@ -70,20 +90,20 @@
 
   &--desc {
     font-size: vw_min(16px);
-    font-weight: 300;
+    font-weight: 400;
     margin-left: vw_min(88px);
 
     @include mq(md, max) {
       // sp
-      font-size: vw_max(16px);
-      margin-left: vw_max(40px);
+      font-size: vw_max(20px);
+      margin: 0 vw_max(40px);
     }
   }
 }
 
+/* linkButton */
 .common__linkButton {
   width: vw_min(290px);
-  margin: 0 auto;
 
   @include mq(md, max) {
     // sp
@@ -115,7 +135,7 @@
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(18px);
+        font-size: vw_max(24px);
         gap: vw_max(8px);
       }
 
@@ -132,4 +152,9 @@
       }
     }
   }
+}
+
+/* -onbg */
+.-onbg {
+  background: url(/assets/img/common/bg/onbg.png) repeat left top/ 150px 150px;
 }

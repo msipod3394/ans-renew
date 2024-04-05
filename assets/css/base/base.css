@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 body {
-  background-color: #fff;
+  background-color: #FBFBFB;
   font-family: "Noto Sans JP", sans-serif;
-  color: #222;
+  color: #333;
   font-weight: normal;
   line-height: 1.8;
   letter-spacing: 0.05em;
@@ -18,7 +19,7 @@ body {
 }
 
 a {
-  color: #222;
+  color: #333;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -72,4 +73,8 @@ a:hover {
 
 .font-mincho {
   font-family: "Shippori Mincho", serif;
+}
+
+.font-robot {
+  font-family: "Roboto", sans-serif;
 }

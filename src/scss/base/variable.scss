@@ -1,13 +1,18 @@
 // variable.scss
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 
 // color
 $color-blue: #083388;
-$color-blue-dark: #1C294F;
+$color-blue-dark: #1c294f;
 $color-orange: #fe5b00;
 
+$color-gray-200: #eaebef;
+$color-gray-300: #d2d5db;
+$color-gray-400: #afb4be;
+
 // text
-$color-text: #222;
+$color-text: #333;
 
 // border
 $border: 1px solid #ccc;
@@ -16,12 +21,12 @@ $border: 1px solid #ccc;
 $font-en: "Cormorant Garamond", serif;
 $font-noto: "Noto Sans JP", sans-serif;
 $font-mincho: "Shippori Mincho", serif;
+$font-robot: "Roboto", sans-serif;
 
 // width
 $max-width: 1400px;
 $min-width: 1200px;
 $min-width-sp: 86%;
-
 
 // size
 $vw: 1vw; //ビューポート幅
