@@ -307,7 +307,7 @@ a:hover {
 @media screen and (max-width: 768px) {
   .common__title--desc {
     font-size: max(2.6666666667vw, 10px);
-    margin: 0 max(5.3333333333vw, 20px);
+    margin: 0 max(7.4666666667vw, 28px);
   }
 }
 
@@ -605,8 +605,9 @@ a:hover {
 @media screen and (max-width: 768px) {
   .header__nav {
     width: 100%;
-    flex-direction: column;
     height: calc(100vh - 160px);
+    margin: 0 max(7.4666666667vw, 28px);
+    flex-direction: column;
     justify-content: center;
     gap: max(8.5333333333vw, 32px);
   }
@@ -987,9 +988,19 @@ a:hover {
   padding: min(24vw, 24px);
   padding-top: min(6.6666666667vw, 80px);
 }
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: max(10.6666666667vw, 40px) max(8.5333333333vw, 32px);
+  }
+}
 .footer__in {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .footer__in {
+    flex-direction: column;
+  }
 }
 .footer__logo > a {
   width: 100%;
@@ -1001,13 +1012,29 @@ a:hover {
 .footer__nav {
   display: flex;
   flex-wrap: wrap;
-  gap: min(32vw, 32px);
-  margin-left: min(24vw, 24px);
+}
+@media screen and (min-width: 769px) {
+  .footer__nav {
+    gap: min(32vw, 32px);
+    margin-left: min(24vw, 24px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__nav {
+    margin-top: max(10.6666666667vw, 40px);
+    gap: max(3.2vw, 12px);
+    flex-direction: column;
+  }
 }
 .footer__nav--item > a._textBold {
   font-weight: 600;
   font-size: min(14vw, 14px);
   line-height: 1;
+}
+@media screen and (max-width: 768px) {
+  .footer__nav--item > a._textBold {
+    font-size: max(3.2vw, 12px);
+  }
 }
 .footer__nav--item > a._textThin {
   font-size: min(13vw, 13px);
@@ -1025,10 +1052,24 @@ a:hover {
   padding-bottom: min(32vw, 32px);
   border-bottom: 1px solid #ccc;
 }
+@media screen and (max-width: 768px) {
+  .footer__cookie {
+    flex-direction: column;
+    gap: max(5.3333333333vw, 20px);
+    margin-top: max(5.3333333333vw, 20px);
+    padding-bottom: max(10.6666666667vw, 40px);
+    margin-bottom: max(7.4666666667vw, 28px);
+  }
+}
 .footer__cookie--text {
   font-size: min(10vw, 10px);
   line-height: 1.5;
   letter-spacing: 0;
+}
+@media screen and (max-width: 768px) {
+  .footer__cookie--text {
+    font-size: max(2.4vw, 9px);
+  }
 }
 .footer__cookie--links {
   display: flex;
@@ -1048,6 +1089,11 @@ a:hover {
   margin-top: min(80vw, 80px);
   margin-bottom: min(32vw, 32px);
   padding-bottom: min(32vw, 32px);
+}
+@media screen and (max-width: 768px) {
+  .footer__copy {
+    flex-direction: column;
+  }
 }
 .footer__copy--text {
   font-size: min(10vw, 10px);
@@ -1624,7 +1670,7 @@ a:hover .service__main--dd {
 }
 @media screen and (max-width: 768px) {
   .service__other {
-    padding: max(10.6666666667vw, 40px) max(11.7333333333vw, 44px);
+    padding: max(10.6666666667vw, 40px) max(7.4666666667vw, 28px);
   }
 }
 .service__other--title {
@@ -1761,7 +1807,7 @@ a:hover .service__main--dd {
 @media screen and (max-width: 768px) {
   .service__sub--in {
     flex-direction: column-reverse;
-    margin: 0 max(4.2666666667vw, 16px);
+    margin: 0 max(7.4666666667vw, 28px);
   }
 }
 .service__sub--card {
@@ -1894,7 +1940,7 @@ a:hover .service__main--dd {
 @media screen and (max-width: 768px) {
   .mission__in {
     flex-direction: column-reverse;
-    margin: 0 max(4.2666666667vw, 16px);
+    margin: 0 max(7.4666666667vw, 28px);
   }
 }
 @media screen and (min-width: 769px) {
@@ -1961,6 +2007,11 @@ a:hover .service__main--dd {
     padding-top: max(10.6666666667vw, 40px);
   }
 }
+@media screen and (max-width: 768px) {
+  .develop__inner {
+    margin: 0 max(7.4666666667vw, 28px);
+  }
+}
 .develop__listBox {
   background-color: #fff;
   border: 1px solid #d2d5db;
@@ -1992,7 +2043,7 @@ a:hover .service__main--dd {
 }
 @media screen and (max-width: 768px) {
   .develop__listWrap {
-    padding: 0 max(7.4666666667vw, 28px);
+    padding: 0 max(4.2666666667vw, 16px);
   }
 }
 .develop__list {
@@ -2128,6 +2179,7 @@ a:hover .service__main--dd {
 @media screen and (max-width: 768px) {
   .column__inner {
     flex-direction: column;
+    margin: 0 max(7.4666666667vw, 28px);
   }
 }
 .column__title {

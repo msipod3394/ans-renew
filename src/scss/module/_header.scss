@@ -93,8 +93,9 @@
     @include mq(md, max) {
       // sp
       width: 100%;
-      flex-direction: column;
       height: calc(100vh - 160px);
+      margin: 0 vw_max(56px);
+      flex-direction: column;
       justify-content: center;
       gap: vw_max(64px);
     }

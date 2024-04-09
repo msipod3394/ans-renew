@@ -8,13 +8,22 @@
   padding: $size-24;
   padding-top: vw_min(80px);
 
+  @include mq(md, max) {
+    // sp
+    padding: vw_max(80px) vw_max(64px);
+  }
+
   &__in {
     display: flex;
     justify-content: space-between;
+
+    @include mq(md, max) {
+      // sp
+      flex-direction: column;
+    }
   }
 
   &__logo {
-    // @include calc-width-size(360);
     > a {
       width: 100%;
       display: block;
@@ -27,8 +36,22 @@
   &__nav {
     display: flex;
     flex-wrap: wrap;
-    gap: $size-32;
-    margin-left: $size-24;
+
+    @include mq(md, min) {
+      // pc
+      gap: $size-32;
+      margin-left: $size-24;
+    }
+
+    @include mq(md, max) {
+      // sp
+      margin-top: vw_max(80px);
+      gap: vw_max(24px);
+      flex-direction: column;
+    }
+  }
+
+  &__nav--list {
   }
 
   &__nav--item {
@@ -37,6 +60,11 @@
         font-weight: 600;
         font-size: $size-14;
         line-height: 1;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(24px);
+        }
       }
 
       &._textThin {
@@ -58,11 +86,25 @@
     margin-bottom: $size-32;
     padding-bottom: $size-32;
     border-bottom: $border;
+    
+    @include mq(md, max) {
+      // sp
+      flex-direction: column;
+      gap: vw_max(40px);
+      margin-top: vw_max(40px);
+      padding-bottom: vw_max(80px);
+      margin-bottom: vw_max(56px);
+    }
 
     &--text {
       font-size: $size-10;
       line-height: 1.5;
       letter-spacing: 0;
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(18px);
+      }
     }
     &--links {
       display: flex;
@@ -89,10 +131,19 @@
     margin-bottom: $size-32;
     padding-bottom: $size-32;
 
+    @include mq(md, max) {
+      // sp
+      flex-direction: column;
+    }
+
     &--text {
       font-size: $size-10;
       line-height: 1.5;
       letter-spacing: 0;
+
+      @include mq(md, max) {
+        // sp
+      }
     }
     &--links {
       display: flex;
