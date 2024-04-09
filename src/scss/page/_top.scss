@@ -1,6 +1,192 @@
 // top
 @import "../mixin/index";
 
+#fullWrap {
+  overflow: hidden;
+}
+
+/* mv */
+.mv {
+  position: relative;
+  margin-bottom: vw_min(80px);
+
+  &__wrap {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAAXNSR0IArs4c6QAAABhJREFUGFdjZEACjHp6ev8vXboEphmRZQBrKwWNTXkrSAAAAABJRU5ErkJggg=="),
+        url("https://drive.google.com/uc?export=view&id=1D8WqoRgWao_Ac_xUh9cAmozt6JBE0LUx");
+      background-repeat: repeat, no-repeat; /* パターンのリピート */
+      background-blend-mode: overlay; /* パターンをオ−バーレイにする */
+      background-size: auto, cover; /* パターンにautoを指定する */
+      position: absolute; /* absolute */
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0.5;
+      mix-blend-mode: plus-lighter;
+    }
+  }
+
+  &__slide {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+
+    .swiper-slide {
+      position: relative;
+      min-height: 100vh;
+    }
+    .swiper-img {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+    }
+  }
+
+  &__inner {
+    min-height: calc(100vh - 32px);
+    padding: vw_min(80px) vw_min(56px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+
+    @include mq(md, max) {
+      // sp
+      min-height: 100vh;
+      padding: 0 vw_max(56px);
+    }
+  }
+
+  &__catch {
+    &--en {
+      font-size: vw_min(24px);
+      font-weight: 600;
+      letter-spacing: 0;
+      color: $color-blue;
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(24px);
+      }
+    }
+    &--ja {
+      margin-top: vw_min(32px);
+      font-size: vw_min(56px);
+      font-weight: 300;
+      line-height: 1.25;
+      color: #fff;
+      letter-spacing: 0;
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(56px);
+        margin-top: vw_max(32px);
+      }
+    }
+    &--desc {
+      margin-top: vw_min(32px);
+
+      @include mq(md, max) {
+        // sp
+        margin-top: vw_max(32px);
+      }
+
+      > p {
+        font-size: vw_min(18px);
+        line-height: 1.25;
+        font-weight: 400;
+        color: #fff;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(20px);
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  &__progressbar {
+    max-width: 320px;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    overflow: hidden;
+    margin-top: vw_min(64px);
+
+    @include mq(md, max) {
+      // sp
+      height: 2px;
+      margin-top: vw_max(64px);
+    }
+
+    span {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transform-origin: left center;
+      background: $color-blue;
+      transform: scaleX(0);
+      transition-timing-function: linear;
+    }
+  }
+
+  &__flow {
+    display: flex;
+    list-style: none;
+    padding-inline: 0;
+    margin-inline: 0;
+    gap: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: difference;
+    position: absolute;
+    bottom: vw_min(-45px);
+    
+    @include mq(md, max){ // sp
+      bottom: vw_max(-80px);
+    }
+
+    > span {
+      color: #fff;
+      font-size: vw_min(160px);
+      font-weight: 300;
+      line-height: 0.75;
+      font-weight: bold;
+      white-space: nowrap;
+      padding: 0 0.5em 0 0;
+      margin: 0;
+      animation: marquee-left 16s linear infinite;
+
+      @include mq(md, max){ // sp
+        font-size: vw_max(160px);
+      }
+    }
+  }
+
+  /* アニメーション */
+  @keyframes marquee-left {
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
 /* service */
 .service {
   padding-top: vw_min(80px);
@@ -880,4 +1066,22 @@
       margin: vw_max(40px) auto;
     }
   }
+}
+
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+.swiper-slide-active .swiper-img,
+.swiper-slide-duplicate-active .swiper-img,
+.swiper-slide-prev .swiper-img {
+  animation: zoomUp 12s linear 0s normal both;
+}
+.swiper-slide img {
+  height: auto;
+  width: 100%;
 }
