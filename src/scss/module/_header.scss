@@ -67,7 +67,7 @@
     @include mq(md, max) {
       // sp
       width: 100%;
-      height: 100vh;
+      height: 100dvh;
       overflow: hidden;
       position: fixed;
       flex-direction: column;
@@ -179,8 +179,8 @@
           content: "";
           background-color: #222;
           display: block;
-          -webkit-mask-image: url(/assets/img/common/icon/icon-blank.svg);
-          mask-image: url(/assets/img/common/icon/icon-blank.svg);
+          -webkit-mask-image: url($path + "common/icon/icon-blank.svg");
+          mask-image: url($path + "common/icon/icon-blank.svg");
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
           -webkit-mask-position: center;
@@ -237,7 +237,8 @@
       flex-direction: column;
       align-items: center;
       gap: vw_max(40px);
-      margin: vw_max(40px);
+      margin: vw_max(40px) auto;
+      padding-bottom: vw_max(40px);
     }
 
     &--btn {
@@ -268,7 +269,7 @@
             width: $size-14;
             height: $size-18;
             margin-right: 8px;
-            @include icon-mask("/assets/img/common/icon/icon-paper.svg", #fff);
+            @include icon-mask($path + "common/icon/icon-paper.svg", #fff);
 
             @include mq(md, max) {
               // sp
@@ -285,7 +286,7 @@
             width: $size-20;
             height: $size-16;
             margin-right: 8px;
-            @include icon-mask("/assets/img/common/icon/icon-mail.svg", #fff);
+            @include icon-mask($path + "common/icon/icon-mail.svg", #fff);
 
             @include mq(md, max) {
               // sp
@@ -481,6 +482,6 @@
   &::after {
     width: $size-24;
     height: 4px;
-    @include icon-mask("/assets/img/common/icon/icon-arrow.svg", $color-blue);
+    @include icon-mask($path + "common/icon/icon-arrow.svg", $color-blue);
   }
 }
