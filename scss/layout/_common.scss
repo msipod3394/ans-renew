@@ -228,7 +228,7 @@
 
 /* -onbg */
 .-onbg {
-  background: url(/assets/img/common/bg/onbg.png) repeat left top/ 150px 150px;
+  background: url($path + "common/bg/onbg.png") repeat left top/ 150px 150px;
 }
 
 /* common__borderLink */
@@ -283,6 +283,10 @@
 
 /* icon-arrow */
 .icon-arrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   &::after {
     position: relative;
     width: $size-24;
