@@ -11,16 +11,16 @@ gulp.task("sass", function () {
     const excludeUnderscoreFiles = filter(["**", "!**/_*.scss"]);
 
     return gulp
-      .src("./src/scss/**/*.scss") // 入力元のSCSSファイルのパス
+      .src("./scss/**/*.scss") // 入力元のSCSSファイルのパス
       .pipe(excludeUnderscoreFiles) // '_'を含むファイルを除外
       .pipe(sass().on("error", sass.logError)) // SCSSをコンパイル
-      .pipe(gulp.dest("./assets/css")); // 出力先のディレクトリ
+      .pipe(gulp.dest("./src/assets/css")); // 出力先のディレクトリ
   });
 });
 
 // ファイルの変更を監視して自動的にコンパイルするタスク
 gulp.task("watch", function () {
-  gulp.watch("./src/scss/**/*.scss", gulp.series("sass")); // 監視するファイルのパスとタスクの実行
+  gulp.watch("./scss/**/*.scss", gulp.series("sass")); // 監視するファイルのパスとタスクの実行
 });
 
 // デフォルトのタスクを設定（watchタスクをデフォルトで実行）
