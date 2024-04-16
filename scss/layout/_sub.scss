@@ -7,7 +7,6 @@
     @include mq(md, min) {
       // pc
       // margin-top: vw_min(90px);
-      margin-bottom: vw_min(160px);
     }
 
     @include mq(md, max) {
@@ -317,7 +316,7 @@
 
   &__headingImg {
     position: absolute;
-    top: -1px;
+    top: 0;
     right: 0;
     overflow: hidden;
 
@@ -466,7 +465,7 @@
 /* 下層コラム */
 .subColumn {
   margin-top: vw_min(40px);
-  padding: vw_min(80px) 0 vw_min(160px);
+  padding: vw_min(80px) 0 vw_min(80px);
 
   &__inner {
     display: flex;
