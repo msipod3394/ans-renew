@@ -14,7 +14,7 @@ gulp.task("sass", function () {
       .src("./scss/**/*.scss") // 入力元のSCSSファイルのパス
       .pipe(excludeUnderscoreFiles) // '_'を含むファイルを除外
       .pipe(sass().on("error", sass.logError)) // SCSSをコンパイル
-      .pipe(gulp.dest("./src/assets/css")); // 出力先のディレクトリ
+      .pipe(gulp.dest("./assets/css")); // 出力先のディレクトリ
   });
 });
 

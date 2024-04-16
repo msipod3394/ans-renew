@@ -40,7 +40,6 @@ window.onload = function () {
 };
 
 // jQueryの拡張機能: 要素がビューポート内にあるかどうかを判定する関数
-// jQueryの拡張機能: 要素がビューポート内にあるかどうかを判定する関数
 $.fn.isOnScreen = function () {
   var win = $(window);
   var viewport = {

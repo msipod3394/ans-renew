@@ -3,31 +3,34 @@
 
 .header {
   width: 100%;
-  // top: 0;
-  // left: 0;
-  // z-index: 10;
-  // position: fixed;
   transition: all 0.3s ease;
 
-  @include mq(md, min) {
-    // pc
-    // transform: translateY(-100px);
-    // opacity: 0;
-  }
+  #top & {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: fixed;
 
+    @include mq(md, min) {
+      // pc
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+  
   &._notfixed {
     @include mq(md, min) {
       // pc
-      position: absolute;
-      transform: translateY(0px);
-      opacity: 1;
+      position: absolute !important;
+      transform: translateY(0px) !important;
+      opacity: 1 !important;
     }
   }
 
   &.scrolled-top {
-    position: fixed;
-    transform: translateY(0px);
-    opacity: 1;
+    position: fixed !important;
+    transform: translateY(0px) !important;
+    opacity: 1 !important;
     z-index: 999;
     background-color: #fff;
     border-bottom: $border;

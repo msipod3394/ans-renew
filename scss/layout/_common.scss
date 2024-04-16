@@ -236,8 +236,8 @@
   display: inline-block;
   position: relative;
   padding-bottom: vw_min(12px);
-  font-size: vw_min(14px);
-  font-weight: 500;
+  font-size: vw_min(15px);
+  // font-weight: 500;
   color: $color-blue-dark;
 
   @include mq(md, max) {

@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   font-family: $font-noto;
   color: $color-text;
   font-weight: normal;
@@ -52,19 +52,14 @@ a {
  * scroll bar
  */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: $color-blue;
-  background: linear-gradient(
-    0deg,
-    rgba(var(--color-blue), 1) 0%,
-    rgba(var(--color-green), 1) 100%
-  );
+  background: #fff;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(var(--color-gold));
+  background: $color-blue-dark;
   margin: 2px;
   box-shadow: none;
 }
