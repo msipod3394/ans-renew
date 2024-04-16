@@ -364,8 +364,8 @@ a:hover {
   height: min(16vw, 16px);
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  mask-image: url(/assets/img/common/icon/icon-arrow.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -425,8 +425,8 @@ a:hover {
   transform: translateX(4px);
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  mask-image: url(/assets/img/common/icon/icon-arrow.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -447,7 +447,7 @@ a:hover {
 
 /* -onbg */
 .-onbg {
-  background: url("/ans-renew/src/assets/img/common/bg/onbg.png") repeat left top/150px 150px;
+  background: url("/assets/img/common/bg/onbg.png") repeat left top/150px 150px;
 }
 
 /* common__borderLink */
@@ -507,8 +507,8 @@ a:hover {
   height: min(16vw, 16px);
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img//common/icon/icon-arrow.svg);
-  mask-image: url(/ans-renew/src/assets/img//common/icon/icon-arrow.svg);
+  -webkit-mask-image: url(/assets/img//common/icon/icon-arrow.svg);
+  mask-image: url(/assets/img//common/icon/icon-arrow.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -534,7 +534,6 @@ a:hover {
  */
 @media screen and (min-width: 769px) {
   .sub__container {
-    margin-top: min(7.5vw, 90px);
     margin-bottom: min(13.3333333333vw, 160px);
   }
 }
@@ -768,8 +767,8 @@ a:hover {
   margin-right: 8px;
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-paper.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-paper.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-paper.svg);
+  mask-image: url(/assets/img/common/icon/icon-paper.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -795,8 +794,8 @@ a:hover {
   margin-right: 8px;
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-mail.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-mail.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-mail.svg);
+  mask-image: url(/assets/img/common/icon/icon-mail.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -962,8 +961,8 @@ a:hover {
   transition: transform 0.3s ease;
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  mask-image: url(/assets/img/common/icon/icon-arrow.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -1101,10 +1100,6 @@ a:hover {
  */
 .header {
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  position: fixed;
   transition: all 0.3s ease;
 }
 @media screen and (min-width: 769px) {
@@ -1257,8 +1252,8 @@ a:hover {
   content: "";
   background-color: #222;
   display: block;
-  -webkit-mask-image: url("/ans-renew/src/assets/img/common/icon/icon-blank.svg");
-  mask-image: url("/ans-renew/src/assets/img/common/icon/icon-blank.svg");
+  -webkit-mask-image: url("/assets/img/common/icon/icon-blank.svg");
+  mask-image: url("/assets/img/common/icon/icon-blank.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -1339,8 +1334,8 @@ a:hover {
   margin-right: 8px;
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-paper.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-paper.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-paper.svg);
+  mask-image: url(/assets/img/common/icon/icon-paper.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -1366,8 +1361,8 @@ a:hover {
   margin-right: 8px;
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-mail.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-mail.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-mail.svg);
+  mask-image: url(/assets/img/common/icon/icon-mail.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -1536,8 +1531,8 @@ a:hover {
   height: 4px;
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  mask-image: url(/assets/img/common/icon/icon-arrow.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -1713,7 +1708,7 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 2;
-  background: url("/ans-renew/src/assets/img/common/contact/bg.jpg");
+  background: url("/assets/img/common/contact/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1849,8 +1844,8 @@ a:hover {
   margin-left: 16px;
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  mask-image: url(/assets/img/common/icon/icon-arrow.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -2118,21 +2113,21 @@ a:hover {
   transform: translate(-50%, -50%) scale(1.01);
 }
 .-fullorder .service__main--link::before {
-  background: url("/ans-renew/src/assets/img/top/service_fullorder_bg.jpg") no-repeat center center/cover;
+  background: url("/assets/img/top/service_fullorder_bg.jpg") no-repeat center center/cover;
 }
 .-renewal .service__main--link::before {
-  background: url("/ans-renew/src/assets/img/top/service_fullorder_bg.jpg") no-repeat center center/cover;
+  background: url("/assets/img/top/service_fullorder_bg.jpg") no-repeat center center/cover;
 }
 .-maintenance .service__main--link::before {
-  background: url("/ans-renew/src/assets/img/top/service_fullorder_bg.jpg") no-repeat center center/cover;
+  background: url("/assets/img/top/service_fullorder_bg.jpg") no-repeat center center/cover;
 }
 .service__main--link::after {
   width: min(32vw, 32px);
   height: min(16vw, 16px);
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  mask-image: url(/assets/img/common/icon/icon-arrow.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -2349,8 +2344,8 @@ a:hover .service__main--dd {
   height: min(18vw, 18px);
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-link.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-link.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-link.svg);
+  mask-image: url(/assets/img/common/icon/icon-link.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -2461,16 +2456,16 @@ a:hover .service__main--dd {
   }
 }
 .--advice .service__sub--card--title::before {
-  background: url("/ans-renew/src/assets/img/common/icon/icon-service-advice.svg") no-repeat center center/contain;
+  background: url("/assets/img/common/icon/icon-service-advice.svg") no-repeat center center/contain;
 }
 .--insourcing .service__sub--card--title::before {
-  background: url("/ans-renew/src/assets/img/common/icon/icon-service-insourcing.svg") no-repeat center center/contain;
+  background: url("/assets/img/common/icon/icon-service-insourcing.svg") no-repeat center center/contain;
 }
 .--bcp .service__sub--card--title::before {
-  background: url("/ans-renew/src/assets/img/common/icon/icon-service-bcp.svg") no-repeat center center/contain;
+  background: url("/assets/img/common/icon/icon-service-bcp.svg") no-repeat center center/contain;
 }
 .--offshore .service__sub--card--title::before {
-  background: url("/ans-renew/src/assets/img/common/icon/icon-service-offshore.svg") no-repeat center center/contain;
+  background: url("/assets/img/common/icon/icon-service-offshore.svg") no-repeat center center/contain;
 }
 .service__sub--card--content {
   display: flex;
@@ -2580,7 +2575,7 @@ a:hover .service__main--dd {
 .case__titleImg {
   padding-top: min(26.6666666667vw, 320px);
   padding-bottom: min(5.3333333333vw, 64px);
-  background: url("/ans-renew/src/assets/img/top/case/case_bg.jpg") no-repeat center center/cover;
+  background: url("/assets/img/top/case/case_bg.jpg") no-repeat center center/cover;
 }
 @media screen and (max-width: 768px) {
   .case__titleImg {
@@ -2805,8 +2800,8 @@ a:hover .service__main--dd {
   margin-right: 4px;
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-tag.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-tag.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-tag.svg);
+  mask-image: url(/assets/img/common/icon/icon-tag.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -2888,7 +2883,7 @@ a:hover .service__main--dd {
   position: relative;
   width: min(9.1666666667vw, 110px);
   height: min(9.1666666667vw, 110px);
-  background: url("/ans-renew/src/assets/img/top/develop_bg.svg") no-repeat center center/cover;
+  background: url("/assets/img/top/develop_bg.svg") no-repeat center center/cover;
 }
 @media screen and (max-width: 768px) {
   .develop__item {
@@ -2930,8 +2925,8 @@ a:hover .service__main--dd {
   height: min(16vw, 16px);
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-dev-lang.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-dev-lang.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-dev-lang.svg);
+  mask-image: url(/assets/img/common/icon/icon-dev-lang.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -2949,8 +2944,8 @@ a:hover .service__main--dd {
   height: min(24vw, 24px);
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-dev-db.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-dev-db.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-dev-db.svg);
+  mask-image: url(/assets/img/common/icon/icon-dev-db.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -2968,8 +2963,8 @@ a:hover .service__main--dd {
   height: min(24vw, 24px);
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-dev-framework.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-dev-framework.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-dev-framework.svg);
+  mask-image: url(/assets/img/common/icon/icon-dev-framework.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -3100,8 +3095,8 @@ a:hover .service__main--dd {
   height: min(16vw, 16px);
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-arrow.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-arrow.svg);
+  mask-image: url(/assets/img/common/icon/icon-arrow.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -3484,8 +3479,8 @@ a:hover .service__main--dd {
   height: min(18vw, 18px);
   content: "";
   display: block;
-  -webkit-mask-image: url(/ans-renew/src/assets/img/common/icon/icon-link.svg);
-  mask-image: url(/ans-renew/src/assets/img/common/icon/icon-link.svg);
+  -webkit-mask-image: url(/assets/img/common/icon/icon-link.svg);
+  mask-image: url(/assets/img/common/icon/icon-link.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -3596,16 +3591,16 @@ a:hover .service__main--dd {
   }
 }
 .--advice .serviceTop__sub--card--title::before {
-  background: url("/ans-renew/src/assets/img/common/icon/icon-service-advice.svg") no-repeat center center/contain;
+  background: url("/assets/img/common/icon/icon-service-advice.svg") no-repeat center center/contain;
 }
 .--insourcing .serviceTop__sub--card--title::before {
-  background: url("/ans-renew/src/assets/img/common/icon/icon-service-insourcing.svg") no-repeat center center/contain;
+  background: url("/assets/img/common/icon/icon-service-insourcing.svg") no-repeat center center/contain;
 }
 .--bcp .serviceTop__sub--card--title::before {
-  background: url("/ans-renew/src/assets/img/common/icon/icon-service-bcp.svg") no-repeat center center/contain;
+  background: url("/assets/img/common/icon/icon-service-bcp.svg") no-repeat center center/contain;
 }
 .--offshore .serviceTop__sub--card--title::before {
-  background: url("/ans-renew/src/assets/img/common/icon/icon-service-offshore.svg") no-repeat center center/contain;
+  background: url("/assets/img/common/icon/icon-service-offshore.svg") no-repeat center center/contain;
 }
 .serviceTop__sub--card--content {
   display: flex;

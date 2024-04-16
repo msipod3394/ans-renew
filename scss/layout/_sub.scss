@@ -6,7 +6,7 @@
   &__container {
     @include mq(md, min) {
       // pc
-      margin-top: vw_min(90px);
+      // margin-top: vw_min(90px);
       margin-bottom: vw_min(160px);
     }
 
