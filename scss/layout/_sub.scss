@@ -126,7 +126,7 @@
         @include mq(md, max) {
           // sp
           width: vw_max(40px);
-          margin-top: vw_max(30px);
+          margin-top: vw_max(24px);
         }
       }
     }
@@ -151,7 +151,7 @@
 
           @include mq(md, max) {
             // sp
-            font-size: vw_max(40px);
+            font-size: vw_max(32px);
             font-weight: 500;
           }
         }
@@ -163,7 +163,7 @@
           @include mq(md, max) {
             // sp
             font-size: vw_max(42px);
-            font-weight: 500;
+            font-weight: 600;
           }
         }
       }

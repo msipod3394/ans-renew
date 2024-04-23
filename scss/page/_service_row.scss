@@ -19,13 +19,14 @@
 
     @include mq(md, max) {
       // sp
-      padding: vw_max(32px) vw_max(24px);
+      padding: vw_max(48px) vw_max(40px);
+      background-color: $color-gray-100;
     }
   }
 
   &__heading {
     margin-bottom: vw_min(24px);
-    font-size: vw_min(24px);
+    font-size: vw_min(22px);
     font-weight: 500;
 
     @include mq(md, max) {
@@ -65,7 +66,7 @@
   &__item {
     display: flex;
     gap: vw_min(16px);
-    font-size: vw_min(18px);
+    font-size: vw_min(16px);
     // font-weight: 500;
     letter-spacing: -0.025em;
 
@@ -153,7 +154,7 @@
   }
   &__result {
     > p {
-      font-size: vw_min(24px);
+      font-size: vw_min(22px);
       text-align: center;
       color: $color-blue-dark;
       text-decoration: underline;
@@ -169,9 +170,11 @@
 
 /* service */
 .serviceRow .service {
+  margin-top: vw_min(80px);
+
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(80px);
+    margin-top: vw_max(120px);
   }
 
   &__img {
@@ -334,7 +337,7 @@
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(160px);
+    margin-top: vw_max(120px);
   }
 
   &__cards {
@@ -358,7 +361,7 @@
 
     @include mq(md, max) {
       // sp
-      padding: vw_max(56px) vw_max(48px) vw_max(64px) 0;
+      padding: vw_max(56px) vw_max(40px) vw_max(56px) 0;
     }
   }
   &__cards--title {
@@ -387,7 +390,7 @@
 
     @include mq(md, max) {
       // sp
-      padding-left: vw_max(56px);
+      padding-left: vw_max(40px);
     }
   }
   &__cards--desc {
@@ -414,7 +417,7 @@
     }
 
     .mapcard {
-      padding: vw_min(24px) vw_min(32px);
+      padding: vw_min(24px) vw_min(16px);
       background-color: $color-gray-100;
 
       @include mq(md, max) {
@@ -476,7 +479,7 @@
 
         > span {
           display: block;
-          font-size: vw_min(18px);
+          font-size: vw_min(16px);
           color: $color-blue-dark;
           font-weight: 500;
           letter-spacing: 0;
@@ -511,7 +514,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            font-size: vw_min(16px);
+            font-size: vw_min(15px);
             color: $color-blue-dark;
             font-weight: 500;
             letter-spacing: 0;
@@ -578,7 +581,7 @@
 
           @include mq(md, max) {
             // sp
-            font-size: vw_max(22px);
+            font-size: vw_max(21px);
             line-height: 1.5;
           }
         }
@@ -602,22 +605,23 @@
 
       &__contents--part {
         background-color: $color-gray-100;
-        font-size: vw_min(16px);
+        font-size: vw_min(15px);
         color: $color-blue-dark;
         font-weight: 500;
         letter-spacing: 0;
         margin-bottom: vw_min(8px);
-        padding: vw_min(8px) vw_min(16px) vw_min(10px);
+        padding: vw_min(8px) vw_min(8px) vw_min(10px);
+        text-align: center;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(20px);
-          padding: vw_max(8px) vw_max(16px) vw_max(10px);
+          font-size: vw_max(18px);
+          padding: vw_max(8px) vw_max(8px) vw_max(10px);
         }
       }
 
       &__contents--text {
-        font-size: vw_min(15px);
+        font-size: vw_min(14px);
         letter-spacing: 0;
 
         @include mq(md, max) {
@@ -757,7 +761,7 @@
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(160px);
+    margin-top: vw_max(120px);
   }
 
   &__inner {
@@ -944,12 +948,12 @@
     display: flex;
     font-size: vw_min(21px);
     line-height: 1.65;
-    font-weight: 400;
+    font-weight: 500;
     color: $color-blue-dark;
 
     @include mq(md, max) {
       // sp
-      font-size: vw_max(24px);
+      font-size: vw_max(26px);
     }
 
     .icon-flow {
@@ -996,7 +1000,7 @@
     @include mq(md, max) {
       // sp
       padding: vw_max(24px) 0 vw_max(32px) vw_max(56px);
-      font-size: vw_max(22px);
+      font-size: vw_max(24px);
     }
 
     &::before {
@@ -1045,7 +1049,30 @@
       // sp
       padding: vw_max(40px) vw_max(32px);
     }
+
+    &.-bg-gray {
+      background-color: $color-gray-100;
+      box-shadow: none;
+
+      .common__cards--dt {
+        justify-content: center;
+      }
+    }
   }
+
+  &__cards--img {
+    margin: vw_min(-40px) vw_min(-32px) vw_min(32px);
+
+    @include mq(md, max) {
+      // sp
+      margin: vw_max(-48px) vw_max(-36px) vw_max(32px);
+    }
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
   &__cards--dt {
     font-size: vw_min(20px);
     font-weight: 500;
@@ -1057,20 +1084,44 @@
       font-size: vw_max(28px);
     }
 
-    &::before {
-      content: attr(data-num);
-      display: block;
-      font-size: vw_min(18px);
-      font-family: $font-mincho;
-      margin-right: vw_min(10px);
-      letter-spacing: 0;
+    &._hasBorder {
+      margin-top: vw_min(32px);
+      margin-bottom: vw_min(32px);
+      flex-direction: column;
 
-      @include mq(md, max) {
-        // sp
-        font-size: vw_max(24px);
+      &::after {
+        content: "";
+        display: block;
+        width: vw_min(32px);
+        height: 2px;
+        background-color: $color-blue-dark;
+        margin-top: vw_min(16px);
+
+        @include mq(md, max) {
+          // sp
+          width: vw_max(56px);
+          margin: vw_max(32px) 0;
+        }
+      }
+    }
+
+    &._hasIcon {
+      &::before {
+        content: attr(data-num);
+        display: block;
+        font-size: vw_min(18px);
+        font-family: $font-mincho;
+        margin-right: vw_min(10px);
+        letter-spacing: 0;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(24px);
+        }
       }
     }
   }
+
   &__cards--dd {
     margin-top: vw_min(12px);
     font-size: vw_min(15px);
@@ -1081,7 +1132,6 @@
       // sp
       margin-top: vw_max(16px);
       font-size: vw_max(24px);
-      line-height: 1.5;
     }
   }
   &__cards--linkList {
@@ -1103,24 +1153,5 @@
     > a {
       width: 100%;
     }
-  }
-}
-
-/* icon-arrows */
-.icon-arrows {
-  width: vw_min(32px);
-  height: vw_min(136px);
-
-  &::after {
-    width: 100%;
-    height: 100%;
-    content: "";
-    display: block;
-    @include icon-mask($path + "common/icon/icon-arrows.svg", $color-blue-dark);
-  }
-
-  &._vetical {
-    margin: vw_min(-24px);
-    transform: rotate(90deg);
   }
 }

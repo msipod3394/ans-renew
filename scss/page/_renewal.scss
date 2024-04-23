@@ -1,0 +1,191 @@
+// top
+@import "../mixin/index";
+
+/*-----------------------------------------------
+* renewal
+-------------------------------------------------*/
+
+.renewal .features {
+  margin-top: vw_min(80px);
+
+  @include mq(md, max) {
+    // sp
+    margin-top: vw_max(120px);
+  }
+}
+
+.renewal .flow {
+  &__service {
+    &::after {
+      content: "";
+      display: block;
+      width: vw_min(80px);
+      height: vw_min(40px);
+      margin: 0 auto;
+
+      @include icon-mask(
+        $path + "common/icon/icon-arrow-beta.svg",
+        $color-blue-dark
+      );
+    }
+
+    &--inner {
+      margin-top: vw_min(80px);
+      background-color: #fff;
+      border: 1px solid $color-gray-200;
+      padding: vw_min(48px) vw_min(40px);
+      box-shadow: 1px 1px 10px 0px $color-gray-200;
+      margin-bottom: vw_min(40px);
+      
+      @include mq(md, max){ // sp
+        padding: vw_max(48px) vw_max(40px);
+      }
+    }
+
+    &--title {
+      font-size: vw_min(20px);
+      font-weight: 500;
+      color: $color-blue-dark;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: vw_min(32px);
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(28px);
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: vw_min(32px);
+        height: 2px;
+        background-color: $color-blue-dark;
+        margin-top: vw_min(16px);
+
+        @include mq(md, max) {
+          // sp
+          width: vw_max(56px);
+          margin: vw_max(24px) 0;
+        }
+      }
+
+      &._hasIcon {
+        &::before {
+          content: attr(data-num);
+          display: block;
+          font-size: vw_min(18px);
+          font-family: $font-mincho;
+          margin-right: vw_min(10px);
+          letter-spacing: 0;
+
+          @include mq(md, max) {
+            // sp
+            font-size: vw_max(24px);
+          }
+        }
+      }
+    }
+
+    &--list {
+      display: flex;
+      flex-direction: column;
+      gap: vw_min(24px);
+
+      @include mq(md, max) {
+        // sp
+        gap: vw_max(32px);
+      }
+    }
+
+    &--item {
+      padding: vw_min(24px);
+      background-color: $color-gray-100;
+
+      @include mq(md, max) {
+        // sp
+        padding: vw_max(32px);
+      }
+    }
+
+    &--dt {
+      font-size: vw_min(16px);
+      color: $color-blue-dark;
+      font-weight: 500;
+      display: flex;
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(22px);
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        margin-right: vw_min(8px);
+
+        @include mq(md, max) {
+          // sp
+          margin-right: vw_max(16px);
+        }
+      }
+
+      &.icon-voice::before {
+        width: vw_min(28px);
+        height: vw_min(28px);
+        @include icon-mask(
+          $path + "common/icon/icon-voice.svg",
+          $color-blue-dark
+        );
+
+        @include mq(md, max) {
+          // sp
+          width: vw_max(34px);
+          height: vw_max(34px);
+        }
+      }
+
+      &.icon-graph::before {
+        width: vw_min(28px);
+        height: vw_min(28px);
+        @include icon-mask(
+          $path + "common/icon/icon-graph.svg",
+          $color-blue-dark
+        );
+
+        @include mq(md, max) {
+          // sp
+          width: vw_max(34px);
+          height: vw_max(34px);
+        }
+      }
+      &.icon-book::before {
+        width: vw_min(22px);
+        height: vw_min(28px);
+        @include icon-mask(
+          $path + "common/icon/icon-book.svg",
+          $color-blue-dark
+        );
+
+        @include mq(md, max) {
+          // sp
+          width: vw_max(34px);
+          height: vw_max(34px);
+        }
+      }
+    }
+
+    &--dd {
+      margin-top: vw_min(12px);
+      font-size: vw_min(15px);
+      color: $color-blue-dark;
+      line-height: 1.5;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: vw_max(16px);
+        font-size: vw_max(22px);
+      }
+    }
+  }
+}
