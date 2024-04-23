@@ -11,7 +11,7 @@
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(84px);
+      // margin-top: vw_max(84px);
     }
   }
 
@@ -357,7 +357,7 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(36px);
+          font-size: vw_max(40px);
         }
 
         &::before {
@@ -381,12 +381,24 @@
       font-size: vw_min(16px);
       line-height: 1.75;
 
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(24px);
+      }
+
       > .desc-large {
         display: block;
         font-size: vw_min(22px);
         font-weight: 500;
         color: $color-blue-dark;
         margin-bottom: vw_min(16px);
+
+        @include mq(md, max) {
+          // sp
+          margin-bottom: vw_max(32px);
+          font-size: vw_max(28px);
+          letter-spacing: 0;
+        }
       }
     }
   }
@@ -496,7 +508,7 @@
 
     @include mq(md, max) {
       // sp
-      font-size: vw_max(36px);
+      font-size: vw_max(40px);
     }
 
     &::after {
@@ -823,6 +835,11 @@
   }
 
   &__cardList {
+    @include mq(md, max) {
+      // sp
+      margin-top: vw_max(80px);
+    }
+
     &--list {
       display: flex;
       flex-wrap: wrap;
@@ -842,6 +859,7 @@
     @include mq(md, max) {
       // sp
       width: 100%;
+      margin-bottom: vw_max(56px);
     }
 
     &__link {

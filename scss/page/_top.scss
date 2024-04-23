@@ -1,12 +1,12 @@
 // top
 @import "../mixin/index";
 
-#fullWrap {
-  // overflow: hidden;
+.contentsTop {
+  overflow: hidden;
 }
 
 /* mv */
-.mv {
+.contentsTop .mv {
   position: relative;
   margin-bottom: vw_min(80px);
 
@@ -195,7 +195,7 @@
 }
 
 /* service */
-.service {
+.contentsTop .service {
   padding-top: vw_min(80px);
 
   &__main {
@@ -660,7 +660,7 @@
 }
 
 /* mission */
-.mission {
+.contentsTop .mission {
   padding: vw_min(80px) 0;
 
   @include mq(md, max) {
@@ -742,7 +742,7 @@
 }
 
 /* お客様導入事例 */
-.case {
+.contentsTop .case {
   margin-top: vw_min(120px);
 
   @include mq(md, max) {
@@ -1017,7 +1017,7 @@
 }
 
 /* 対応技術 */
-.develop {
+.contentsTop .develop {
   padding-top: vw_min(80px);
 
   @include mq(md, max) {
@@ -1100,6 +1100,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
 
       > span {
         font-size: vw_min(20px);
@@ -1122,42 +1125,6 @@
           display: block;
         }
 
-        .dev-lang & {
-          color: #3298b8;
-
-          &::after {
-            width: $size-20;
-            height: $size-16;
-            @include icon-mask(
-              $path + "common/icon/icon-dev-lang.svg",
-              #3298b8
-            );
-          }
-        }
-
-        .dev-db & {
-          color: #595496;
-
-          &::after {
-            width: $size-18;
-            height: $size-24;
-            @include icon-mask($path + "common/icon/icon-dev-db.svg", #595496);
-          }
-        }
-
-        .dev-framework & {
-          color: #34b881;
-
-          &::after {
-            width: $size-18;
-            height: $size-24;
-            @include icon-mask(
-              $path + "common/icon/icon-dev-framework.svg",
-              #34b881
-            );
-          }
-        }
-
         &.text-small {
           font-size: vw_min(18px);
           line-height: 1;
@@ -1171,10 +1138,40 @@
       display: block;
     }
   }
+
+  .dev-lang {
+    color: #3298b8;
+
+    .develop__item--text::after {
+      width: $size-20;
+      height: $size-16;
+      @include icon-mask($path + "common/icon/icon-dev-lang.svg", #3298b8);
+    }
+  }
+
+  .dev-db {
+    color: #595496;
+
+    .develop__item--text::after {
+      width: $size-18;
+      height: $size-24;
+      @include icon-mask($path + "common/icon/icon-dev-db.svg", #595496);
+    }
+  }
+
+  .dev-framework {
+    color: #34b881;
+
+    .develop__item--text::after {
+      width: $size-18;
+      height: $size-24;
+      @include icon-mask($path + "common/icon/icon-dev-framework.svg", #34b881);
+    }
+  }
 }
 
 /* システム開発に関する最新情報 */
-.column {
+.contentsTop .column {
   padding: vw_min(80px) 0 vw_min(160px);
 
   &__inner {
@@ -1358,7 +1355,7 @@
         -webkit-line-clamp: 2;
       }
     }
-    
+
     &--tag {
       display: flex;
       flex-wrap: wrap;
