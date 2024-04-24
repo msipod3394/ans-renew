@@ -281,6 +281,36 @@
   }
 }
 
+/* common__caution */
+.common__caution {
+  padding: vw_min(24px);
+  background-color: #fff;
+
+  &.__onbg {
+    background-color: $color-gray-100;
+  }
+
+  &--title {
+    font-size: vw_min(16px);
+    font-weight: 500;
+    color: $color-blue-dark;
+  }
+  &--text {
+    margin-top: vw_min(8px);
+    margin-left: vw_min(24px);
+
+    > li {
+      list-style-type: decimal;
+      font-size: vw_min(14px);
+      line-height: 1.5;
+    }
+
+    > li + li {
+      margin-top: vw_min(8px);
+    }
+  }
+}
+
 /* icon-arrow */
 .icon-arrow {
   display: flex;
@@ -318,5 +348,22 @@
   &._vetical {
     margin: vw_min(-24px);
     transform: rotate(90deg);
+  }
+}
+
+/* icon-plus-in-circle */
+.icon-plus-in-circle {
+  width: vw_min(50px);
+  height: vw_min(50px);
+
+  &::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    @include icon-mask(
+      $path + "common/icon/icon-plus-in-circle.svg",
+      $color-blue-dark
+    );
   }
 }
