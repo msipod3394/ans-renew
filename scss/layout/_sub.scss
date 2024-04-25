@@ -351,6 +351,11 @@
     &--title {
       margin-bottom: vw_min(48px);
 
+      @include mq(md, max) {
+        // sp
+        margin-bottom: vw_max(64px);
+      }
+
       > span {
         line-height: 1;
         font-size: vw_min(28px);
@@ -710,11 +715,11 @@
 
 /* 下層事例 */
 .subCase {
-  margin-top: vw_min(120px);
+  margin-top: vw_min(80px);
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(40px);
+    margin-top: vw_max(120px);
   }
 
   &__titleImg {

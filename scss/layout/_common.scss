@@ -310,9 +310,10 @@
     margin-top: vw_min(8px);
     margin-left: vw_min(24px);
 
-    @include mq(md, max){ // sp
+    @include mq(md, max) {
+      // sp
       margin-top: vw_max(16px);
-      margin-left: vw_max(32px);  
+      margin-left: vw_max(32px);
     }
 
     > li {
@@ -349,6 +350,31 @@
       // sp
       width: $size-18;
       height: $size-12;
+    }
+  }
+}
+
+/* icon-arrow2 */
+.icon-arrow2 {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    position: relative;
+    width: vw_min(16px);
+    height: vw_min(12px);
+    margin-right: vw_min(4px);
+    @include icon-mask(
+      $path + "/common/icon/icon-arrow2.svg",
+      $color-blue-dark
+    );
+    transition: $transition;
+
+    @include mq(md, max) {
+      // sp
+      margin-right: vw_max(8px);
+      width: vw_max(24px);
+      height: vw_max(18px);
     }
   }
 }
