@@ -286,6 +286,11 @@
   padding: vw_min(24px);
   background-color: #fff;
 
+  @include mq(md, max) {
+    // sp
+    padding: vw_max(36px);
+  }
+
   &.__onbg {
     background-color: $color-gray-100;
   }
@@ -294,15 +299,31 @@
     font-size: vw_min(16px);
     font-weight: 500;
     color: $color-blue-dark;
+
+    @include mq(md, max) {
+      // sp
+      font-size: vw_max(20px);
+    }
   }
+
   &--text {
     margin-top: vw_min(8px);
     margin-left: vw_min(24px);
+
+    @include mq(md, max){ // sp
+      margin-top: vw_max(16px);
+      margin-left: vw_max(32px);  
+    }
 
     > li {
       list-style-type: decimal;
       font-size: vw_min(14px);
       line-height: 1.5;
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(20px);
+      }
     }
 
     > li + li {

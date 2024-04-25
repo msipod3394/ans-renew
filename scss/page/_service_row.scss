@@ -198,8 +198,12 @@
   }
 
   &__cards {
-    margin-top: vw_max(80px);
+    @include mq(md, max) {
+      // sp
+      margin-top: vw_max(80px);
+    }
   }
+  
   &__cards--list {
     display: flex;
 
@@ -300,7 +304,7 @@
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_min(40px);
+      margin-top: vw_min(32px);
     }
 
     > p {
@@ -649,7 +653,7 @@
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(40px);
+      margin-top: vw_max(32px);
       gap: vw_max(16px);
     }
   }
@@ -660,8 +664,8 @@
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(40px);
-      padding: vw_max(24px) vw_max(32px);
+      margin-top: vw_max(24px);
+      padding: vw_max(32px);
     }
   }
 
@@ -684,7 +688,7 @@
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(28px);
+      margin-top: vw_max(32px);
       gap: vw_max(16px);
     }
   }
