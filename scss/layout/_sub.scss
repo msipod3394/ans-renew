@@ -16,29 +16,34 @@
   }
 
   &__breadcrumbs {
-    padding: vw_min(8px) vw_min(56px);
+    border-top: 1px solid $color-gray-300;
     border-bottom: 1px solid $color-gray-300;
 
     @include mq(md, min) {
       // pc
-      border-top: 1px solid $color-gray-300;
+      padding: vw_min(4px) vw_min(40px);
+    }
+
+    @include mq(md, max) {
+      // sp
+      padding: vw_max(8px) vw_max(24px);
     }
 
     &--list {
       display: flex;
       align-items: center;
-      gap: vw_min(8px);
+      gap: vw_min(5px);
 
       @include mq(md, max) {
         // sp
-        gap: vw_max(4px);
+        gap: vw_max(6px);
       }
     }
 
     &--item {
       > a {
         display: block;
-        font-size: vw_min(13px);
+        font-size: vw_min(10px);
         line-height: 1;
 
         @include mq(md, max) {
@@ -52,9 +57,9 @@
 
         > span {
           font-weight: 400;
-          letter-spacing: 0;
 
           &._current {
+            font-weight: 500;
             color: $color-blue-dark;
           }
         }
@@ -69,23 +74,24 @@
 
       @include mq(md, max) {
         // sp
-        gap: vw_max(8px);
+        gap: vw_max(12px);
       }
 
       &::before {
         content: "";
         display: block;
-        width: vw_min(5px);
-        height: vw_min(5px);
+        width: vw_min(4px);
+        height: vw_min(4px);
         border-top: 1px solid #333;
         border-left: 1px solid #333;
         transform: rotate(135deg);
-        margin-top: 2px;
 
         @include mq(md, max) {
           // sp
-          width: vw_max(5px);
-          height: vw_max(5px);
+          width: vw_max(7px);
+          height: vw_max(7px);
+          border-top: 0.05rem solid #333;
+          border-left: 0.05rem solid #333;
         }
       }
     }
@@ -402,14 +408,13 @@
           // sp
           margin-bottom: vw_max(32px);
           font-size: vw_max(28px);
-          letter-spacing: 0;
         }
       }
     }
   }
 
   &__contentWrap {
-    margin: vw_min(80px) vw_min(80px) 0;
+    // margin: vw_min(80px) vw_min(80px) 0;
     display: flex;
     justify-content: space-between;
   }
@@ -423,26 +428,37 @@
   }
 
   &__side {
-    width: vw_min(260px);
-    border-right: 1px solid $color-gray-200;
-
-    @include mq(md, max) {
-      // sp
-      display: none;
+    @include mq(md, min) {
+      // pc
+      width: vw_min(260px);
+      border-right: 1px solid $color-gray-200;
     }
 
     &--in {
-      position: sticky;
-      top: 20px;
-      left: 0;
+      @include mq(md, min) {
+        // pc
+        position: sticky;
+        top: 20px;
+        left: 0;
+      }
     }
     &--heading {
       font-size: vw_min(16px);
       font-weight: 500;
       color: $color-blue-dark;
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(32px);
+      }
     }
     &--list {
       margin-top: vw_min(16px);
+
+      @include mq(md, max) {
+        // sp
+        margin-top: vw_max(24px);
+      }
     }
     &--item {
       > a {
@@ -452,19 +468,64 @@
         display: flex;
         align-items: center;
         gap: vw_min(8px);
+        position: relative;
+
+        @include mq(md, max) {
+          // sp
+          padding: 16px 0;
+          font-size: vw_max(24px);
+          border-bottom: 1px solid $color-gray-300;
+        }
 
         &::before {
           content: "";
           display: block;
-          width: 6px;
-          height: 6px;
-          background-color: $color-blue-dark;
-          margin-top: 2px;
-          opacity: 0;
+          @include mq(md, min) {
+            // pc
+            width: 6px;
+            height: 6px;
+            background-color: $color-blue-dark;
+            margin-top: 2px;
+            opacity: 0;
+          }
+
+          @include mq(md, max) {
+            // sp
+            box-sizing: border-box;
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-style: solid;
+            border-width: 0 1px 1px 0;
+            transform: translate(0, -50%) rotate(45deg);
+            border-color: #242422;
+            transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s,
+              border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+            backface-visibility: hidden;
+            top: 48%;
+            right: 6px;
+          }
+        }
+
+        &::after {
+          @include mq(md, max) {
+            // sp
+            content: "";
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 17px;
+            height: 17px;
+            border: solid 1px #ddd;
+            border-radius: 50%;
+            transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+          }
         }
 
         &._current {
-          font-size: vw_min(13px);
           font-weight: 500;
 
           &::before {
@@ -473,16 +534,26 @@
         }
       }
     }
+
     &--item + &--item {
       margin-top: vw_min(12px);
+
+      @include mq(md, max) {
+        // sp
+        margin-top: vw_max(16px);
+      }
     }
   }
 }
 
 /* 下層コラム */
 .subColumn {
-  margin-top: vw_min(40px);
-  padding: vw_min(80px) 0 vw_min(80px);
+  padding-top: vw_min(80px);
+
+  @include mq(md, max) {
+    // sp
+    padding-top: vw_max(120px);
+  }
 
   &__inner {
     display: flex;
@@ -658,7 +729,7 @@
     &--desc {
       margin-top: vw_min(8px);
       font-size: vw_min(14px);
-      letter-spacing: 0;
+
       font-weight: 400;
       line-height: 1.25;
       overflow: hidden;
@@ -782,7 +853,6 @@
       font-size: vw_min(24px);
       color: $color-blue-dark;
       text-align: center;
-      letter-spacing: 0;
 
       @include mq(md, max) {
         // sp
@@ -900,7 +970,6 @@
 
       &--company {
         font-size: vw_min(12px);
-        letter-spacing: 0;
 
         @include mq(md, max) {
           // sp
@@ -920,7 +989,7 @@
       }
       &--desc {
         font-size: vw_min(13px);
-        letter-spacing: 0;
+
         font-weight: 400;
         line-height: 1.25;
         overflow: hidden;

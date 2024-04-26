@@ -920,11 +920,11 @@
 
 /* flow */
 .serviceRow .flow {
-  margin-top: vw_min(80px);
+  padding-top: vw_min(80px);
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(160px);
+    padding-top: vw_max(120px);
   }
 
   &__img {

@@ -7,6 +7,13 @@
 
 /* necessity */
 .bcp .necessity {
+  padding-top: vw_min(80px);
+
+  @include mq(md, max) {
+    // sp
+    padding-top: vw_max(120px);
+  }
+
   &__inner {
     border: 1px solid $color-gray-300;
     padding: vw_min(32px) vw_min(32px);
@@ -149,17 +156,17 @@
 
 /* secure */
 .bcp .secure {
-  margin-top: vw_min(80px);
+  padding-top: vw_min(80px);
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(120px);
+    padding-top: vw_max(120px);
   }
 
   &__img {
-    margin-top: vw_min(64px);
-    margin-left: -80px;
-    margin-right: vw_min(-80px);
+    // margin-top: vw_min(64px);
+    // margin-left: -80px;
+    // margin-right: vw_min(-80px);
 
     @include mq(md, max) {
       // sp
@@ -167,7 +174,7 @@
     }
 
     > img {
-      width: 100%;
+      // width: 100%;
     }
   }
 
@@ -197,13 +204,13 @@
 
 /* plan */
 .bcp .plan {
-  margin-top: vw_min(80px);
+  padding-top: vw_min(80px);
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(120px);
+    padding-top: vw_max(120px);
   }
-
+  
   &__cards {
     &--list {
       display: flex;

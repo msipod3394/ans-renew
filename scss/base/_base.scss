@@ -10,7 +10,7 @@ body {
   color: $color-text;
   font-weight: normal;
   line-height: 1.8;
-  letter-spacing: 0.05em;
+  // letter-spacing: 0.05em;
   word-wrap: break-word;
 }
 .pc {
@@ -51,18 +51,18 @@ a {
 /**
  * scroll bar
  */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #fff;
-}
-::-webkit-scrollbar-thumb {
-  background: $color-blue-dark;
-  margin: 2px;
-  box-shadow: none;
-}
+// ::-webkit-scrollbar {
+//   width: 8px;
+//   height: 6px;
+// }
+// ::-webkit-scrollbar-track {
+//   background: #fff;
+// }
+// ::-webkit-scrollbar-thumb {
+//   background: $color-blue-dark;
+//   margin: 2px;
+//   box-shadow: none;
+// }
 
 // fonts
 .font-en {

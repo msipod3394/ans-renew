@@ -17,7 +17,7 @@
       opacity: 0;
     }
   }
-  
+
   &._notfixed {
     @include mq(md, min) {
       // pc
@@ -42,6 +42,7 @@
 
   @include mq(md, max) {
     // sp
+    position: relative;
     z-index: 9999;
     opacity: 1;
   }
@@ -78,6 +79,7 @@
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.5s ease;
+      z-index: 999;
 
       ._active & {
         opacity: 1;
@@ -143,6 +145,7 @@
         @include mq(md, max) {
           // sp
           font-size: vw_max(32px);
+          color: #fff;
         }
 
         &::before {
@@ -176,6 +179,7 @@
         @include mq(md, max) {
           // sp
           font-size: vw_max(32px);
+          color: #fff;
         }
 
         &::before {
@@ -200,6 +204,7 @@
             width: $size-24;
             height: $size-24;
             margin-right: vw_max(8px);
+            background-color: #fff;
           }
         }
 
@@ -421,7 +426,7 @@
   &__hamburger {
     @include mq(md, max) {
       // sp
-      width: 40px;
+      width: 64px;
     }
 
     @include mq(md, min) {
@@ -460,6 +465,8 @@
     }
 
     &._active {
+      top: 32px;
+
       span {
         background-color: #fff;
       }

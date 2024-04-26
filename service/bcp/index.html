@@ -19,7 +19,7 @@
   <meta name="theme-color" content="#0C3388">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script src="../../assets/js/common.js" defer></script> -->
+  <script src="../../assets/js/common.js" defer></script>
 </head>
 <body id="service-bcp">
 <!-- Google Tag Manager (noscript) -->
@@ -126,29 +126,30 @@
             </ul>
           </div>
         </div><!-- ./sub__headingAction -->
-        <div class="sub__headingImg"><img src="../../assets/img/service/fullorder/heading.jpg" alt=""></div>
+        <div class="sub__headingImg"><img src="../../assets/img/service/bcp/heading.jpg" alt=""></div>
       </section><!-- sub__heading -->
 
-      <div class="sub__contentWrap">
-        <div class="sub__side">
+      <div class="l-block">
+
+        <div class="l-column">
+
+        <div class="l-column__sub">
           <div class="sub__side--in">
             <p class="sub__side--heading">目次</p>
             <ul class="sub__side--list">
-              <li class="sub__side--item"><a href="#" class="_current">このような課題はありませんか？</a></li>
-              <li class="sub__side--item"><a href="#">サービス紹介</a></li>
-              <li class="sub__side--item"><a href="#">料金プラン</a></li>
-              <li class="sub__side--item"><a href="#">サポート体制</a></li>
-              <li class="sub__side--item"><a href="#">開発体制</a></li>
-              <li class="sub__side--item"><a href="#">開発フロー</a></li>
-              <li class="sub__side--item"><a href="#">ITインフラのBCP対策の事例</a></li>
-              <li class="sub__side--item"><a href="#">ITインフラのBCP対策に関するコラム</a></li>
+              <li class="sub__side--item js-nav"><a href="#necessity" class="js-anchor _current">BCPの必要性</a></li>
+              <li class="sub__side--item js-nav"><a href="#secure" class="js-anchor">企業が取り組むべきセキュリティ対策</a></li>
+              <li class="sub__side--item js-nav"><a href="#flow" class="js-anchor">BCP策定ステップ</a></li>
+              <li class="sub__side--item js-nav"><a href="#plan" class="js-anchor">ITインフラBCP対策</a></li>
+              <li class="sub__side--item js-nav"><a href="#column" class="js-anchor">システム保守引継ぎに関するコラム</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="sub__content bcp">
+        <div class="l-column__main bcp">
+          <div class="l-column__main--inner">
           <!-- #necessity -->
-          <section id="necessity" class="necessity">
+          <section id="necessity" class="l-section necessity">
             <h2 class="sub__contents--title"><span class="font-mincho">BCPの必要性</span></h2>
             <p class="sub__contents--desc">
               ITにおけるBCPは、災害や事故などの予期せぬ出来事の発生により、限られた経営資源で最低限の事業活動を継続し、迅速に業務を回復できるようにするためための重要な手段です。
@@ -180,8 +181,9 @@
           </section>
           <!-- ./necessity -->
 
+
           <!-- #secure -->
-          <section id="secure" class="secure">
+          <section id="secure" class="l-section secure">
             <div class="secure__heading">
               <h2 class="sub__contents--title"><span class="font-mincho">企業が取り組むべきセキュリティ対策</span></h2>
               <p class="sub__contents--desc">
@@ -189,7 +191,7 @@
               </p>
             </div>
             <div class="secure__inner">
-              <div class="secure__img"><img src="../../assets/img/service/bcp/secure_img.jpg" alt="企業が取り組むべきセキュリティ対策"></div>
+              <div class="secure__img p-over-img"><img src="../../assets/img/service/bcp/secure_img.jpg" alt="企業が取り組むべきセキュリティ対策"></div>
 
               <div class="secure__cards">
                 <dl class="common__cards--list secure__cards--list">
@@ -231,7 +233,7 @@
 
 
           <!-- #flow -->
-          <section id="flow" class="flow">
+          <section id="flow" class="l-section flow">
             <div class="flow__inner">
               <div class="flow__heading">
                 <h2 class="sub__contents--title"><span class="font-mincho">BCP策定ステップ</span></h2>
@@ -267,12 +269,11 @@
 
 
           <!-- #plan -->
-          <section id="plan" class="plan">
+          <section id="plan" class="l-section plan">
             <div class="plan__inner">
               <div class="plan__heading">
-                <h2 class="sub__contents--title"><span class="font-mincho">BCP策定ステップ</span></h2>
+                <h2 class="sub__contents--title"><span class="font-mincho">ITインフラBCP対策</span></h2>
               </div>
-
               <div class="plan__cards">
                 <dl class="plan__cards--list">
                   <div class="plan__cards--item">
@@ -326,131 +327,9 @@
             </div>
           </section>
           <!-- ./plan -->
-
-
-          <!-- #case -->
-          <section id="case" class="subCase">
-            <div class="subCase__inner">
-              <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">システム保守引継ぎに関するコラム</span></h2>
-              <div class="subCase__cardList">
-                <ul class="subCase__cardList--list">
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="" class="subCaseItem__link">
-                    <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
-                    <div class="subCaseItem__contents">
-                      <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
-                      <p class="subCaseItem__contents--title">〇〇システム開発</p>
-                      <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="subCaseItem__contents--tagWrap">
-                        <div class="subCaseItem__contents--tag">
-                          <ul class="tag">
-                            <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                            <li class="tag__item"><span class="">業種：〇〇</span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="" class="subCaseItem__link">
-                    <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
-                    <div class="subCaseItem__contents">
-                      <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
-                      <p class="subCaseItem__contents--title">〇〇システム開発</p>
-                      <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="subCaseItem__contents--tagWrap">
-                        <div class="subCaseItem__contents--tag">
-                          <ul class="tag">
-                            <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                            <li class="tag__item"><span class="">業種：〇〇</span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="" class="subCaseItem__link">
-                    <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
-                    <div class="subCaseItem__contents">
-                      <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
-                      <p class="subCaseItem__contents--title">〇〇システム開発</p>
-                      <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="subCaseItem__contents--tagWrap">
-                        <div class="subCaseItem__contents--tag">
-                          <ul class="tag">
-                            <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                            <li class="tag__item"><span class="">業種：〇〇</span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="" class="subCaseItem__link">
-                    <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
-                    <div class="subCaseItem__contents">
-                      <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
-                      <p class="subCaseItem__contents--title">〇〇システム開発</p>
-                      <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="subCaseItem__contents--tagWrap">
-                        <div class="subCaseItem__contents--tag">
-                          <ul class="tag">
-                            <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                            <li class="tag__item"><span class="">業種：〇〇</span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="" class="subCaseItem__link">
-                    <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
-                    <div class="subCaseItem__contents">
-                      <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
-                      <p class="subCaseItem__contents--title">〇〇システム開発</p>
-                      <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="subCaseItem__contents--tagWrap">
-                        <div class="subCaseItem__contents--tag">
-                          <ul class="tag">
-                            <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                            <li class="tag__item"><span class="">業種：〇〇</span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="" class="subCaseItem__link">
-                    <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
-                    <div class="subCaseItem__contents">
-                      <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
-                      <p class="subCaseItem__contents--title">〇〇システム開発</p>
-                      <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="subCaseItem__contents--tagWrap">
-                        <div class="subCaseItem__contents--tag">
-                          <ul class="tag">
-                            <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                            <li class="tag__item"><span class="">業種：〇〇</span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="subColumn__linkButton common__linkButton"><a href=""><span class="font-mincho">全ての事例を見る</span></a></div>
-          </section><!-- ./subCase -->
-
           
           <!-- #subColumn -->
-          <section id="subColumn" class="subColumn">
+          <section id="column" class="l-section subColumn">
             <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">システム保守引継ぎに関するコラム</span></h2>
             <ul class="subColumn__list">
               <li class="subColumn__card">
@@ -517,8 +396,14 @@
             <div class="subColumn__linkButton common__linkButton"><a href=""><span class="font-mincho">全てのコラムを見る</span></a></div>
           </section><!-- ./subColumn -->
 
+          </div><!-- ./l-column__main--inner -->
+        </div><!-- ./l-column__main -->
+
+        <div class="l-column__right-side"></div>
+
         </div>
-      </div>
+      </div><!-- ./l-block -->
+
     </main><!-- ./sub__container -->
 
 
