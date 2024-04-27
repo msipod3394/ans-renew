@@ -1,0 +1,197 @@
+// top
+@import "../mixin/index";
+
+/*-----------------------------------------------
+* qa
+-------------------------------------------------*/
+
+.qa {
+  &__contents {
+    width: 100%;
+    border-bottom: 1px solid $color-gray-300;
+    margin-bottom: 80px;
+
+    &--box {
+      border-top: 1px solid $color-gray-300;
+      padding-top: vw_min(16px);
+
+      @include mq(md, max) {
+        // sp
+        padding-top: vw_max(8px);
+      }
+    }
+
+    &--row {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      padding: vw_min(16px) 0;
+      color: $color-blue-dark;
+
+      @include mq(md, max) {
+        // sp
+        padding: vw_max(16px);
+      }
+
+      &::before {
+        display: block;
+        font-family: $font-mincho;
+        margin-right: 8px;
+        font-size: vw_min(18px);
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(20px);
+        }
+      }
+
+      &.__ques {
+        font-size: vw_min(18px);
+        line-height: 1.5;
+        margin-bottom: 16px;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(26px);
+          padding: vw_max(24px) 0;
+          margin-bottom: 4px;
+        }
+
+        &::before {
+          content: "Q.";
+          color: $color-blue-dark;
+
+          @include mq(md, max) {
+            // sp
+            font-size: vw_max(24px);
+          }
+        }
+
+        span.icon-plus-in-circle::after {
+          width: vw_min(32px);
+          height: vw_min(32px);
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(0%, -50%);
+          z-index: 10;
+          border-radius: 50rem;
+
+          @include mq(md, max) {
+            // sp
+            width: vw_max(64px);
+            height: vw_max(64px);
+          }
+        }
+      }
+      &.__ans {
+        font-size: vw_min(16px);
+        line-height: 1.75;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(24px);
+        }
+
+        &::before {
+          content: "A.";
+          color: $color-orange;
+
+          @include mq(md, max) {
+            // sp
+            font-size: vw_max(24px);
+          }
+        }
+      }
+    }
+    &--ans {
+    }
+
+    .ques {
+      &__inner {
+        margin-right: 80px;
+
+        @include mq(md, max) {
+          // sp
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
+
+/*=========
+accordion
+=========*/
+.accordion_area .accordion_one .ac_header {
+  position: relative;
+  z-index: +1;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.accordion_area .accordion_one .ac_header .i_box {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  border: 1px solid $color-blue-dark;
+  border-radius: 50rem;
+  padding: 16px;
+
+  @include mq(md, max) {
+    // sp
+    margin-top: -16px;
+    right: 0;
+    width: vw_max(20px);
+    height: vw_max(20px);
+  }
+}
+.accordion_area .accordion_one .ac_header .i_box:before,
+.accordion_area .accordion_one .ac_header .i_box:after {
+  content: "";
+  margin: auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.accordion_area .accordion_one .ac_header .i_box:before {
+  border-top: 2px solid $color-blue-dark;
+  width: 20px;
+  height: 0;
+
+  @include mq(md, max) {
+    // sp
+    width: vw_max(24px);
+  }
+}
+.accordion_area .accordion_one .ac_header .i_box:after {
+  border-left: 2px solid $color-blue-dark;
+  width: 0;
+  height: 20px;
+  transition: 0.3s;
+
+  @include mq(md, max) {
+    // sp
+    height: vw_max(24px);
+  }
+}
+.accordion_area .accordion_one .ac_header.open .i_box:after {
+  height: 0;
+}
+.accordion_area .accordion_one .ac_inner {
+  display: none;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: vw_min(32px);
+  
+  @include mq(md, max) {
+    // sp
+    padding: vw_max(24px);
+    margin-bottom: vw_max(40px);
+  }
+}

@@ -437,7 +437,9 @@
     // pc
     display: grid;
     grid-template: "sub main blank" 1fr/280px 1fr 160px;
+    margin-bottom: 120px;
   }
+
 }
 
 /* l-column__sub */

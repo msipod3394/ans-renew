@@ -80,4 +80,5 @@ $(document).ready(function () {
     }
   });
 
+  // qa toggle処理
 });

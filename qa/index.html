@@ -17,93 +17,354 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <link rel="shortcut icon" href="https://www.ans-net.co.jp/favicon.ico">
   <meta name="theme-color" content="#0C3388">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/assets/js/common.js" defer></script>
+  <script src="../assets/js/common.js" defer></script>
+  <script src="../assets/js/qa.js" defer></script>
 </head>
-<body id="">
+<body id="service-bcp">
 <!-- Google Tag Manager (noscript) -->
 <!-- End Google Tag Manager (noscript) -->
-
   <div id="fullWrap">
 
-    <header class="header js-header">
+    <!-- header -->
+    <header id="header" class="header js-header _top">
+      <button class="header__hamburger hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="header__in">
-      <p class="header__logo"><a href=""><img src="/assets/img/common/logo/logo.svg" alt="株式会社エイ・エヌ・エス"></a></p>
-      <div class="header__navin">
-        <nav class="header__nav">
-          <div class="header__nav--in _navMain">
-            <ul class="header__nav--list">
-              <li class="header__nav--item"><a href="">私たちの強み</a></li>
-              <li class="header__nav--item"><a href="">UI/UX</a></li>
-              <li class="header__nav--item js-hover-service"><a href="">サービス</a></li>
-              <li class="header__nav--item"><a href="">お客様導入事例</a></li>
-              <li class="header__nav--item"><a href="">Q&A</a></li>
-              <li class="header__nav--item"><a href="">コラム</a></li>
-              <li class="header__nav--item js-hover-company"><a href="">会社情報</a></li>
-            </ul>
-          </div>
-          <div class="header__nav--in _navSub">
-            <ul class="header__nav--list">
-              <li class="header__nav--item"><a href="">関連サイト</a></li>
-              <li class="header__nav--item"><a href="">採用情報</a></li>
-            </ul>
-          </div>
-        </nav><!--header__inner-->
-        <div class="header__inquiry">
-          <div class="header__inquiry--btn"><a href="" class="_download">資料請求</a></div>
-          <div class="header__inquiry--btn"><a href="" class="_inquiry">お問合せ</a></div>
-        </div><!--./header__inquiry-->
+        <p class="header__logo"><a href=""><img src="../../assets/img/common/logo/logo.svg" alt="株式会社エイ・エヌ・エス"></a></p>
+        <div class="header__navin">
+          <nav class="header__nav">
+            <div class="header__nav--in _navMain">
+              <ul class="header__nav--list">
+                <li class="header__nav--item"><a href="">私たちの強み</a></li>
+                <li class="header__nav--item"><a href="">UI/UX</a></li>
+                <li class="header__nav--item js-hover-service"><a href="">サービス</a></li>
+                <li class="header__nav--item"><a href="">お客様導入事例</a></li>
+                <li class="header__nav--item"><a href="">Q&A</a></li>
+                <li class="header__nav--item"><a href="">コラム</a></li>
+                <li class="header__nav--item js-hover-company"><a href="">会社情報</a></li>
+              </ul>
+            </div>
+            <div class="header__nav--in _navSub">
+              <ul class="header__nav--list">
+                <li class="header__nav--item"><a href="">関連サイト</a></li>
+                <li class="header__nav--item"><a href="">採用情報</a></li>
+              </ul>
+            </div>
+          </nav><!--header__inner-->
+          <div class="header__inquiry">
+            <div class="header__inquiry--btn"><a href="" class="_download">資料請求</a></div>
+            <div class="header__inquiry--btn"><a href="" class="_inquiry">お問合せ</a></div>
+          </div><!--./header__inquiry-->
+        </div>
+      </div><!--header__in-->
+      <div class="header__toggle js-hover-target -service js-hover-service">
+        <div class="header__toggle--in">
+        <div class="header__toggle--img"><img src="assets/img/common/header/header_service.jpg" alt=""></div>
+        <nav class="header__toggle--nav">
+          <a href="" class="header__toggle--heading">
+            <span class="font-en">Service</span>
+            <span class="header__toggle--heading--text icon-arrow _after">サービス一覧</span>
+          </a>
+          <ul class="header__toggle--list">
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">フルオーダーシステム開発</a></li>
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">基幹システム再構築</a></li>
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">システム保守引継ぎ</a></li>
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">IT相談</a></li>
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">システム開発内製化支援</a></li>
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">BCP対策</a></li>
+          </ul>
+        </nav>
       </div>
-    </div><!--header__in-->
-    <div class="header__toggle js-hover-target -service js-hover-service">
-      <div class="header__toggle--in">
-      <div class="header__toggle--img"><img src="/assets/img/common/header/header_service.jpg" alt=""></div>
-      <nav class="header__toggle--nav">
-        <a href="" class="header__toggle--heading">
-          <span class="font-en">Service</span>
-          <span class="header__toggle--heading--text icon-arrow _after">サービス一覧</span>
-        </a>
-        <ul class="header__toggle--list">
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">フルオーダーシステム開発</a></li>
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">基幹システム再構築</a></li>
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">システム保守引継ぎ</a></li>
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">IT相談</a></li>
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">システム開発内製化支援</a></li>
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">BCP対策</a></li>
-        </ul>
-      </nav>
-    </div>
-    </div><!--header__toggle-->
-    <div class="header__toggle js-hover-target -company js-hover-company">
-      <div class="header__toggle--in">
-      <div class="header__toggle--img"><img src="/assets/img/common/header/header_service.jpg" alt=""></div>
-      <nav class="header__toggle--nav">
-        <a href="" class="header__toggle--heading">
-          <span class="font-en">Company</span>
-          <span class="header__toggle--heading--text icon-arrow _after">会社情報</span>
-        </a>
-        <ul class="header__toggle--list">
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">フルオーダーシステム開発</a></li>
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">基幹システム再構築</a></li>
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">システム保守引継ぎ</a></li>
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">IT相談</a></li>
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">システム開発内製化支援</a></li>
-          <li class="header__toggle--item"><a href="" class="icon-arrow _after">BCP対策</a></li>
-        </ul>
-      </nav>
-    </div>
-    </div><!--header__toggle-->
+      </div><!--header__toggle-->
+      <div class="header__toggle js-hover-target -company js-hover-company">
+        <div class="header__toggle--in">
+        <div class="header__toggle--img"><img src="assets/img/common/header/header_service.jpg" alt=""></div>
+        <nav class="header__toggle--nav">
+          <a href="" class="header__toggle--heading">
+            <span class="font-en">Company</span>
+            <span class="header__toggle--heading--text icon-arrow _after">会社情報</span>
+          </a>
+          <ul class="header__toggle--list">
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">フルオーダーシステム開発</a></li>
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">基幹システム再構築</a></li>
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">システム保守引継ぎ</a></li>
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">IT相談</a></li>
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">システム開発内製化支援</a></li>
+            <li class="header__toggle--item"><a href="" class="icon-arrow _after">BCP対策</a></li>
+          </ul>
+        </nav>
+      </div>
+      </div><!--header__toggle-->
     </header><!--./header-->
 
+    <main id="contents-renewal" class="sub__container serviceRow">
+      <div class="sub__breadcrumbs">
+        <ul class="sub__breadcrumbs--list">
+          <li class="sub__breadcrumbs--item"><a href=""><span>トップ</span></a></li>
+          <li class="sub__breadcrumbs--item"><a href=""><span>サービス一覧</span></a></li>
+          <li class="sub__breadcrumbs--item"><a href=""><span class="_current">よくあるご質問</span></a></li>
+        </ul>
+      </div><!-- ./sub__breadcrumbs -->
+
+      <section class="sub__heading">
+        <h1 class="sub__heading--text">
+          <span class="sub__heading--textIn">
+            <span class="font-en line-left">Q&A</span>
+            <span class="font-mincho">よくあるご質問</span>
+          </span>
+        </h1>
+        <div class="sub__headingAction">
+          <div class="sub__headingAction--in">
+            <p class="sub__headingAction--text">サービスに関するご相談は<br class="sp">こちらのフォームより受け付けております。</p>
+            <ul class="sub__headingAction--list">
+              <li class="sub__headingAction--item"><a href="" class="_download">資料請求</a></li>
+              <li class="sub__headingAction--item"><a href="" class="_inquiry">お問合せ</a></li>  
+            </ul>
+          </div>
+        </div><!-- ./sub__headingAction -->
+        <div class="sub__headingImg"><img src="../../assets/img/service/qa/heading.jpg" alt=""></div>
+      </section><!-- sub__heading -->
+
+      <div class="l-block">
+        <div class="l-column">
+        <div class="l-column__sub">
+          <div class="sub__side--in">
+            <p class="sub__side--heading">目次</p>
+            <ul class="sub__side--list">
+              <li class="sub__side--item js-nav"><a href="#qa1" class="js-anchor _current">サービス内容・契約について</a></li>
+              <li class="sub__side--item js-nav"><a href="#qa2" class="js-anchor">システムについて</a></li>
+              <li class="sub__side--item js-nav"><a href="#qa3" class="js-anchor">保守サポートについて</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="l-column__main qa">
+          <div class="l-column__main--inner">
+
+            <!-- #qa -->
+            <section id="qa" class="l-section">
+              
+              <div class="qa__inner">
+                <div id="qa1" class="qa__contents">
+                  <h2 class="sub__contents--title"><span class="font-mincho">サービス内容・契約について</span></h2>
+                  <div class="accordion_area gutter">
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">アウトソーシングとは、どういう意味ですか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">一般的に、アウトソーシングとは、一部業務や機能を外部に委託することを意味します。ITのアウトソーシングとは、ソフトウェアやハードウェア、ネットワークなど全般を専門業者に委託することや、 保守サービスや運用管理サービスなどがあります。 自社の本業に専念でき、コスト削減や効率化を図ることができます。</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">月額固定制(IT-Trust)でシステム開発を依頼した場合、システムの所有権はどうなりますか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">月額固定制(IT-Trust)のシステム開発の場合、契約期間は何年ですか？また、契約期間内に途中解約する場合はどうなりますか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">IT-Trustの契約期間である5年間の利用期間が終了したら、システムを買い取ることは可能ですか？</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">休日や夜間・深夜の対応はどうなりますか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">月額固定制(IT-Trust)の場合の、月額料金の内訳を教えてください</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- qa__contents -->
+
+                <div id="qa2" class="qa__contents">
+                  <h2 class="sub__contents--title"><span class="font-mincho">システムについて</span></h2>
+                  <div class="accordion_area gutter">
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">アウトソーシングとは、どういう意味ですか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">一般的に、アウトソーシングとは、一部業務や機能を外部に委託することを意味します。ITのアウトソーシングとは、ソフトウェアやハードウェア、ネットワークなど全般を専門業者に委託することや、 保守サービスや運用管理サービスなどがあります。 自社の本業に専念でき、コスト削減や効率化を図ることができます。</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">月額固定制(IT-Trust)でシステム開発を依頼した場合、システムの所有権はどうなりますか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">月額固定制(IT-Trust)のシステム開発の場合、契約期間は何年ですか？また、契約期間内に途中解約する場合はどうなりますか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">IT-Trustの契約期間である5年間の利用期間が終了したら、システムを買い取ることは可能ですか？</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">休日や夜間・深夜の対応はどうなりますか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">月額固定制(IT-Trust)の場合の、月額料金の内訳を教えてください</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- qa__contents -->
+
+                <div id="qa3" class="qa__contents">
+                  <h2 class="sub__contents--title"><span class="font-mincho">保守サポートについて</span></h2>
+                  <div class="accordion_area gutter">
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">アウトソーシングとは、どういう意味ですか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">一般的に、アウトソーシングとは、一部業務や機能を外部に委託することを意味します。ITのアウトソーシングとは、ソフトウェアやハードウェア、ネットワークなど全般を専門業者に委託することや、 保守サービスや運用管理サービスなどがあります。 自社の本業に専念でき、コスト削減や効率化を図ることができます。</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">月額固定制(IT-Trust)でシステム開発を依頼した場合、システムの所有権はどうなりますか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">月額固定制(IT-Trust)のシステム開発の場合、契約期間は何年ですか？また、契約期間内に途中解約する場合はどうなりますか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">IT-Trustの契約期間である5年間の利用期間が終了したら、システムを買い取ることは可能ですか？</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion_one qa__contents--box">
+                      <div class="ac_header qa__contents--row __ques">
+                        <div class="ques__inner">
+                          <p class="">休日や夜間・深夜の対応はどうなりますか？</p>
+                        </div>
+                        <div class="i_box"></div>
+                      </div>
+                      <div class="ac_inner">
+                        <div class="qa__contents--row __ans">
+                          <p class="">月額固定制(IT-Trust)の場合の、月額料金の内訳を教えてください</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- qa__contents -->
+
+              </div><!-- qa__inner -->
+
+            </section>
+            <!-- ./qa -->
+
+          </div><!-- ./l-column__main--inner -->
+        </div><!-- ./l-column__main -->
+
+        <div class="l-column__right-side"></div>
+
+        </div>
+      </div><!-- ./l-block -->
+
+    </main><!-- ./sub__container -->
 
 
-    <div class="common__inquiry">
-    </div><!--./common__inquiry-->
+    <!-- #contact -->
+    <section id="contact" class="contact">
+      <div class="contact__titleWrap">
+        <h2 class="contact__title">
+          <span class="font-mincho">DXの推進を実現させる<br class="sp">オーダーメイドの業務システム開発</span>
+        </h2>
+        <div class="contact__title--bg"></div>
+      </div>
+      <div class="contact__in">
+        <p class="contact__desc">
+          DXの推進に求められている現代において<br class="sp">必要不可欠な”システム”業務に合った<br>
+          最適なオーダーメイドのシステムを導入することで、<br class="sp">DX推進を支援します。</p>
+          <div class="contact__link">
+            <ul class="contact__link--list">
+              <li class="contact__link--item"><a href=""><span class="font-mincho">資料のご請求</span></a></li>
+              <li class="contact__link--item"><a href=""><span class="font-mincho">お問い合わせ</span></a></li>
+            </ul>
+          </div>
+      </div>
+    </section><!--./contact-->
 
+    <!-- footer -->
     <footer class="footer">
       <div class="footer__in">
-        <p class="footer__logo"><a href=""><img src="/assets/img/common/logo/logo_full.svg" alt="めざす明日を、共につくる。株式会社エイ・エヌ・エス"></a></p>
+        <p class="footer__logo"><a href=""><img src="../../assets/img/common/logo/logo_full.svg" alt="めざす明日を、共につくる。株式会社エイ・エヌ・エス"></a></p>
         <nav class="footer__nav">
           <ul class="footer__nav--list">
             <li class="footer__nav--item"><a href="" class="_textBold">私たちの強み</a></li>
@@ -140,8 +401,8 @@
           本ウェブサイト内において、アクセス状況などの統計情報を取得する目的、広告効果測定の目的で、当社もしくは第三者によるクッキーを使用することがあります。なお、お客様が個人情報を入力しない限り、お客様ご自身を識別することはできず、匿名性は維持されます。また、お客様がクッキーの活用を望まれない場合は、ご使用のWebブラウザでクッキーの受け入れを拒否する設定をすることが可能です。
         </p>
         <ul class="footer__cookie--links">
-          <li class="footer__cookie--link"><a href="" target="_blank"><img src="/assets/img/common/footer/pmark.png" alt=""></a></li>
-          <li class="footer__cookie--link"><a href="" target="_blank"><img src="/assets/img/common/footer/isms.png" alt=""></a></li>
+          <li class="footer__cookie--link"><a href="" target="_blank"><img src="../../assets/img/common/footer/pmark.png" alt=""></a></li>
+          <li class="footer__cookie--link"><a href="" target="_blank"><img src="../../assets/img/common/footer/isms.png" alt=""></a></li>
         </ul>
       </div>
       <div class="footer__copy">
