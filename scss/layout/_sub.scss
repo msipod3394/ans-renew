@@ -364,7 +364,7 @@
 
       > span {
         line-height: 1;
-        font-size: vw_min(28px);
+        font-size: vw_min(26px);
 
         @include mq(md, max) {
           // sp
@@ -388,6 +388,43 @@
       }
     }
 
+    &--subtitle {
+      margin-bottom: vw_min(48px);
+
+      @include mq(md, max) {
+        // sp
+        margin-bottom: vw_max(64px);
+      }
+
+      > span {
+        line-height: 1;
+        font-size: vw_min(22px);
+        font-weight: 500;
+        color: $color-blue-dark;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(28px);
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: vw_min(80px);
+          height: 1px;
+          background-color: $color-blue-dark;
+          margin-top: vw_min(24px);
+
+          @include mq(md, max) {
+            // sp
+            width: vw_max(80px);
+            margin-top: vw_max(32px);
+            margin-bottom: vw_max(32px);
+          }
+        }
+      }
+    }
+
     &--desc {
       font-size: vw_min(16px);
       line-height: 1.75;
@@ -400,9 +437,10 @@
       > .desc-large {
         display: block;
         font-size: vw_min(22px);
+        line-height: 1.5;
         font-weight: 500;
         color: $color-blue-dark;
-        margin-bottom: vw_min(16px);
+        margin-bottom: vw_min(24px);
 
         @include mq(md, max) {
           // sp
@@ -556,19 +594,19 @@
   }
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
 
-    @include mq(md, min) {
-      // pc
-      gap: vw_min(24px);
-    }
+    // @include mq(md, min) {
+    //   // pc
+    //   gap: vw_min(24px);
+    // }
 
-    @include mq(md, max) {
-      // sp
-      flex-direction: column;
-      margin: 0 vw_max(56px);
-    }
+    // @include mq(md, max) {
+    //   // sp
+    //   flex-direction: column;
+    //   margin: 0 vw_max(56px);
+    // }
   }
 
   &__title {
@@ -987,9 +1025,9 @@
           font-size: vw_max(26px);
         }
       }
+
       &--desc {
         font-size: vw_min(13px);
-
         font-weight: 400;
         line-height: 1.25;
         overflow: hidden;

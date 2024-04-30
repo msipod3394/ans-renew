@@ -112,7 +112,8 @@
 
   @include mq(md, max) {
     // sp
-    width: 68%;
+    width: 80%;
+    margin: 0 auto;
   }
 
   > a {
@@ -420,8 +421,8 @@
   @include mq(md, min) {
     // pc
     padding-top: 120px;
-    padding-right: 6%;
     padding-left: 6%;
+    // padding-right: 6%;
   }
 
   @include mq(md, max) {
@@ -436,10 +437,10 @@
   @include mq(md, min) {
     // pc
     display: grid;
-    grid-template: "sub main blank" 1fr/280px 1fr 160px;
+    // grid-template: "sub main blank" 1fr/280px 1fr 160px;
+    grid-template: "sub main" 1fr/280px 1fr;
     margin-bottom: 120px;
   }
-
 }
 
 /* l-column__sub */
@@ -465,13 +466,14 @@
   grid-area: main;
   overflow: hidden;
 
+  .l-section,
   &--inner {
     margin-right: auto;
     margin-left: auto;
 
     @include mq(md, min) {
       // pc
-      max-width: 960px;
+      max-width: 1080px;
       padding: 0 vw_min(64px);
     }
   }

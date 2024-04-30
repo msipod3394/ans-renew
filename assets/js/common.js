@@ -67,12 +67,12 @@ $(document).ready(function () {
 
     if (isWindowWidthAbove(1200)) {
       // 各セクションの位置を判定して active クラスを設定
-      $(".l-section").each(function () {
-        var top = $(this).offset().top - 40;
-        var bottom = top + $(this).outerHeight();
+      $(".js-target").each(function () {
+        let top = $(this).offset().top - 40;
+        let bottom = top + $(this).outerHeight();
 
         if (scrollPos >= top && scrollPos <= bottom) {
-          var targetId = "#" + $(this).attr("id");
+          const targetId = "#" + $(this).attr("id");
           $(".js-anchor").removeClass("_current"); // 全てのリンクから active クラスを削除
           $('.js-nav a[href="' + targetId + '"]').addClass("_current"); // 対応するリンクに active クラスを追加
         }

@@ -198,12 +198,13 @@
   }
 
   &__cards {
+    margin-top: vw_min(80px);
     @include mq(md, max) {
       // sp
       margin-top: vw_max(80px);
     }
   }
-  
+
   &__cards--list {
     display: flex;
 
@@ -218,6 +219,7 @@
       gap: vw_max(64px);
     }
   }
+
   &__cards--item {
     background-color: #fff;
     border: 1px solid $color-gray-200;
@@ -255,7 +257,7 @@
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(20px);
+        font-size: vw_max(24px);
       }
     }
 
@@ -269,7 +271,7 @@
       @include mq(md, max) {
         // sp
         margin-top: vw_max(20px);
-        font-size: vw_max(24px);
+        font-size: vw_max(28px);
         line-height: 1.5;
       }
     }
@@ -299,6 +301,7 @@
       max-width: 100%;
     }
   }
+
   &__cards--desc {
     margin-top: vw_min(24px);
 
@@ -313,7 +316,7 @@
 
       @include mq(md, max) {
         // sp
-        font-size: vw_min(36px);
+        font-size: vw_max(24px);
       }
     }
   }
