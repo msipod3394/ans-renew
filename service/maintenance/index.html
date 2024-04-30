@@ -19,7 +19,7 @@
   <meta name="theme-color" content="#0C3388">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script src="../../assets/js/common.js" defer></script> -->
+  <script src="../../assets/js/common.js" defer></script>
 </head>
 <body id="service-maintenance">
 <!-- Google Tag Manager (noscript) -->
@@ -129,27 +129,30 @@
         <div class="sub__headingImg"><img src="../../assets/img/service/fullorder/heading.jpg" alt=""></div>
       </section><!-- sub__heading -->
 
-      <div class="sub__contentWrap">
-        <div class="sub__side">
+      <div class="l-block">
+        <div class="l-column">
+
+        <div class="sub__side l-column__sub">
           <div class="sub__side--in">
             <p class="sub__side--heading">目次</p>
             <ul class="sub__side--list">
-              <li class="sub__side--item"><a href="#" class="_current">このような課題はありませんか？</a></li>
-              <li class="sub__side--item"><a href="#">サービス紹介</a></li>
-              <li class="sub__side--item"><a href="#">料金プラン</a></li>
-              <li class="sub__side--item"><a href="#">サポート体制</a></li>
-              <li class="sub__side--item"><a href="#">開発体制</a></li>
-              <li class="sub__side--item"><a href="#">開発フロー</a></li>
-              <li class="sub__side--item"><a href="#">システム保守引継ぎの事例</a></li>
-              <li class="sub__side--item"><a href="#">システム保守引継ぎに関するコラム</a></li>
+              <li class="sub__side--item js-nav"><a href="#onayami" class="js-anchor">このような課題はありませんか？</a></li>
+              <li class="sub__side--item js-nav"><a href="#service" class="js-anchor">システム保守引継ぎのサービス紹介</a></li>
+              <li class="sub__side--item js-nav"><a href="#strong" class="js-anchor">エイ・エヌ・エスの強み</a></li>
+              <li class="sub__side--item js-nav"><a href="#features" class="js-anchor">ご契約後、最短1ヶ月～保守実施が可能</a></li>
+              <li class="sub__side--item js-nav"><a href="#support" class="js-anchor">サービス紹介</a></li>
+              <li class="sub__side--item js-nav"><a href="#price" class="js-anchor">料金プラン</a></li>
+              <li class="sub__side--item js-nav"><a href="#flow" class="js-anchor">システム保守引継ぎのフロー</a></li>
+              <li class="sub__side--item js-nav"><a href="#case" class="js-anchor">システム保守引継ぎの事例</a></li>
+              <li class="sub__side--item js-nav"><a href="#column" class="js-anchor">システム保守引継ぎに関するコラム</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="sub__content maintenance">
+        <div class="l-column__main maintenance">
 
           <!-- #onayami -->
-          <section id="onayami" class="onayami">
+          <section id="onayami" class="onayami l-section js-target">
             <div class="onayami__inner">
               <h2 class="onayami__heading">このような課題はありませんか？</h2>
               <ul class="onayami__list">
@@ -167,7 +170,7 @@
           <!-- ./onayami -->
           
           <!-- #service -->
-          <section id="service" class="service">
+          <section id="service" class="service l-section js-target">
             <div class="service__inner">
               <div class="service__heading">
                 <h2 class="sub__contents--title"><span class="font-mincho">サービス紹介</span></h2>
@@ -181,7 +184,7 @@
           <!-- ./service -->
           
           <!-- #strong -->
-          <section id="strong" class="strong">
+          <section id="strong" class="strong l-section js-target">
             <div class="strong__inner">
               <h2 class="strong__title"><span class="font-mincho">エイ・エヌ・エスの強み</span></h2>
               <div class="strong__circle">
@@ -201,12 +204,13 @@
           <!-- ./strong -->
 
           <!-- #features -->
-          <section id="features" class="features">
+          <section id="features" class="features js-target">
             <div class="features__inner">
-              <div class="features__heading">
+              <div class="features__heading l-section">
                 <h2 class="sub__contents--title"><span class="font-mincho">ご契約後、最短1ヶ月～保守実施が可能</span></h2>
               </div>
-              <div class="features__img"><img src="../../assets/img/service/maintenance/features_img.jpg" alt="開発フロー"></div>
+              <div class="features__img p-over-img"><img src="../../assets/img/service/maintenance/features_img.jpg" alt="開発フロー"></div>
+              <div class="l-section">
               <div class="features__desc">
                 <p>
                   システム保守引継ぎ・引き継ぎには必要な分析・解析工程。保守実施までに、システム規模によっては数か月を要します。エイ・エヌ・エスの引継ぎは、初期解析と保守実施を平行して対応することで、最短期間の保守実施を実現します。(※但し、解析期間中は特約事項あり)<br><br>
@@ -223,12 +227,13 @@
                   <li>調査・解析作業を効率的に行う為、内容等々について詳細にご質問させて頂く場合がございます。</li>
                 </ul>
               </div>
+              </div>
             </div>
           </section>
           <!-- ./features -->
 
           <!-- #support -->
-          <section id="support" class="support">
+          <section id="support" class="support l-section js-target">
             <div class="support__inner">
               <div class="support__heading">
                 <h2 class="sub__contents--title"><span class="font-mincho">サービス紹介</span></h2>
@@ -362,9 +367,8 @@
           </section>
           <!-- ./support -->
 
-
           <!-- #price -->
-          <section id="price" class="price">
+          <section id="price" class="price l-section js-target">
             <div class="price__inner">
               <div class="price__heading">
                 <h2 class="sub__contents--title"><span class="font-mincho">料金プラン</span></h2>
@@ -436,58 +440,58 @@
           </section>
           <!-- ./price -->
 
-
           <!-- #flow -->
-          <section id="flow" class="flow">
+          <section id="flow" class="flow js-target">
             <div class="flow__inner">
-              <div class="flow__heading">
-                <h2 class="sub__contents--title"><span class="font-mincho">システム保守引継ぎの事例</span></h2>
+              <div class="flow__heading  l-section">
+                <h2 class="sub__contents--title"><span class="font-mincho">システム保守引継ぎのフロー</span></h2>
                 <p class="sub__contents--desc">
                   お問合せから、保守を引継ぐまでの基本的な流れと書く工程について説明します。<br>
                   お客様のご要望に沿って適切な担当者をアサインし、柔軟に対応します。
                 </p>
               </div>
-              <div class="flow__img"><img src="../../assets/img/service/fullorder/flow_main.jpg" alt="開発フロー"></div>
-              <dl class="flow__list">
-                <div class="flow__item">
-                  <dt class="flow__item--dt"><span class="icon-flow" data-num="01"></span>現行システム・サポート方法の分析</dt>
-                  <dd class="flow__item--dd">現行システムの状態や内容、保守実績等の概要を把握し、提案書にまとめます。</dd>
+              <div class="flow__img p-over-img"><img src="../../assets/img/service/fullorder/flow_main.jpg" alt="開発フロー"></div>
+              <div class="l-section">
+                <dl class="flow__list">
+                  <div class="flow__item">
+                    <dt class="flow__item--dt"><span class="icon-flow" data-num="01"></span>現行システム・サポート方法の分析</dt>
+                    <dd class="flow__item--dd">現行システムの状態や内容、保守実績等の概要を把握し、提案書にまとめます。</dd>
+                  </div>
+                  <div class="flow__item">
+                    <dt class="flow__item--dt"><span class="icon-flow" data-num="02"></span>提案・契約</dt>
+                    <dd class="flow__item--dd">提案内容や予算に問題がなければ、契約締結とさせていだたきます。</dd>
+                  </div>
+                  <div class="flow__item">
+                    <dt class="flow__item--dt"><span class="icon-flow" data-num="03"></span>事前準備・環境設定</dt>
+                    <dd class="flow__item--dd">弊社内に本番の稼働環境と同一のテスト環境を構築します。保守用回線の準備を行い、運用テストを実施します。</dd>
+                  </div>
+                  <div class="flow__item">
+                    <dt class="flow__item--dt"><span class="icon-flow" data-num="04"></span>システム解析</dt>
+                    <dd class="flow__item--dd">保守対応ができる状態まで、専任担当者がシステムのソースコードを解析します。</dd>
+                  </div>
+                  <div class="flow__item">
+                    <dt class="flow__item--dt"><span class="icon-flow" data-num="05"></span>サービス開始</dt>
+                    <dd class="flow__item--dd">保守引継ぎサービスを実施します。</dd>
+                  </div>
+                </dl>
+                <div class="common__caution">
+                  <p class="common__caution--title">注記事項</p>
+                  <ul class="common__caution--text">
+                    <li>保守引継ぎサービスのご契約期間<br>ご契約期間につきましては、1年間契約とさせて頂いております。2年目以降は1年単位で自動継続となります。</li>
+                    <li>リモート環境の通信費<br>リモート環境にかかる通信回線費用（初期費用及びランニング費用）につきましては、貴社ご負担となります。</li>
+                    <li>保守引継ぎサービスに必要となるハードウェア、ソフトウェア<br>
+                      サポートサービスを行う上で必須となるハードウェア、ソフトウェアに掛かる費用につきましては、
+                      貴社ご負担となります。</li>
+                    <li>お問い合わせ窓口<br>貴社からのお問い合わせにつきましては、予め定められたご担当者様より行って頂くことになります。</li>
+                  </ul>
                 </div>
-                <div class="flow__item">
-                  <dt class="flow__item--dt"><span class="icon-flow" data-num="02"></span>提案・契約</dt>
-                  <dd class="flow__item--dd">提案内容や予算に問題がなければ、契約締結とさせていだたきます。</dd>
-                </div>
-                <div class="flow__item">
-                  <dt class="flow__item--dt"><span class="icon-flow" data-num="03"></span>事前準備・環境設定</dt>
-                  <dd class="flow__item--dd">弊社内に本番の稼働環境と同一のテスト環境を構築します。保守用回線の準備を行い、運用テストを実施します。</dd>
-                </div>
-                <div class="flow__item">
-                  <dt class="flow__item--dt"><span class="icon-flow" data-num="04"></span>システム解析</dt>
-                  <dd class="flow__item--dd">保守対応ができる状態まで、専任担当者がシステムのソースコードを解析します。</dd>
-                </div>
-                <div class="flow__item">
-                  <dt class="flow__item--dt"><span class="icon-flow" data-num="05"></span>サービス開始</dt>
-                  <dd class="flow__item--dd">保守引継ぎサービスを実施します。</dd>
-                </div>
-              </dl>
-              <div class="common__caution">
-                <p class="common__caution--title">注記事項</p>
-                <ul class="common__caution--text">
-                  <li>保守引継ぎサービスのご契約期間<br>ご契約期間につきましては、1年間契約とさせて頂いております。2年目以降は1年単位で自動継続となります。</li>
-                  <li>リモート環境の通信費<br>リモート環境にかかる通信回線費用（初期費用及びランニング費用）につきましては、貴社ご負担となります。</li>
-                  <li>保守引継ぎサービスに必要となるハードウェア、ソフトウェア<br>
-                    サポートサービスを行う上で必須となるハードウェア、ソフトウェアに掛かる費用につきましては、
-                    貴社ご負担となります。</li>
-                  <li>お問い合わせ窓口<br>貴社からのお問い合わせにつきましては、予め定められたご担当者様より行って頂くことになります。</li>
-                </ul>
               </div>
             </div>
           </section>
           <!-- ./flow -->
 
-
           <!-- #case -->
-          <section id="case" class="subCase">
+          <section id="case" class="subCase l-section js-target">
             <div class="subCase__inner">
               <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">システム保守引継ぎに関するコラム</span></h2>
               <div class="subCase__cardList">
@@ -605,10 +609,9 @@
             </div>
             <div class="subColumn__linkButton common__linkButton"><a href=""><span class="font-mincho">全ての事例を見る</span></a></div>
           </section><!-- ./subCase -->
-
           
-          <!-- #subColumn -->
-          <section id="subColumn" class="subColumn">
+          <!-- #column -->
+          <section id="column" class="subColumn l-section js-target">
             <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">システム保守引継ぎに関するコラム</span></h2>
             <ul class="subColumn__list">
               <li class="subColumn__card">
@@ -676,7 +679,10 @@
           </section><!-- ./subColumn -->
 
         </div>
-      </div>
+
+      </div><!-- ./l-column -->
+    </div><!-- ./l-block -->
+
     </main><!-- ./sub__container -->
 
 

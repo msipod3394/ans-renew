@@ -466,12 +466,6 @@
   }
 
   &__side {
-    @include mq(md, min) {
-      // pc
-      width: vw_min(260px);
-      border-right: 1px solid $color-gray-200;
-    }
-
     &--in {
       @include mq(md, min) {
         // pc
@@ -498,14 +492,16 @@
         margin-top: vw_max(24px);
       }
     }
+
     &--item {
       > a {
-        font-size: vw_min(13px);
+        font-size: vw_min(12px);
+        letter-spacing: 0;
         font-weight: 400;
         line-height: 1;
         display: flex;
         align-items: center;
-        gap: vw_min(8px);
+        gap: vw_min(4px);
         position: relative;
 
         @include mq(md, max) {
@@ -518,12 +514,12 @@
         &::before {
           content: "";
           display: block;
+
           @include mq(md, min) {
             // pc
-            width: 6px;
-            height: 6px;
+            width: 4px;
+            height: 4px;
             background-color: $color-blue-dark;
-            margin-top: 2px;
             opacity: 0;
           }
 
@@ -574,7 +570,7 @@
     }
 
     &--item + &--item {
-      margin-top: vw_min(12px);
+      margin-top: 16px;
 
       @include mq(md, max) {
         // sp
@@ -586,11 +582,11 @@
 
 /* 下層コラム */
 .subColumn {
-  padding-top: vw_min(80px);
+  margin-top: vw_min(80px);
 
   @include mq(md, max) {
     // sp
-    padding-top: vw_max(120px);
+    margin-top: vw_max(120px);
   }
 
   &__inner {

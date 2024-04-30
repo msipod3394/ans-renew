@@ -16,9 +16,6 @@
     padding: 0;
   }
 
-  &__inner {
-  }
-
   &__title {
     > span {
       font-size: vw_min(28px);
@@ -34,7 +31,7 @@
   }
 
   &__circle {
-    margin-top: vw_min(32px);
+    margin-top: vw_min(56px);
 
     @include mq(md, max) {
       // sp
@@ -43,7 +40,9 @@
 
     &--list {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
+      gap: vw_min(32px);
 
       @include mq(md, max) {
         // sp
@@ -54,8 +53,8 @@
     }
 
     &--item {
-      width: vw_min(320px);
-      height: vw_min(320px);
+      width: vw_min(350px);
+      height: vw_min(350px);
       position: relative;
       display: inline-block;
       background: none;
@@ -152,8 +151,6 @@
 
   &__img {
     margin-top: vw_min(64px);
-    margin-left: -80px;
-    margin-right: vw_min(-80px);
 
     @include mq(md, max) {
       // sp
@@ -247,7 +244,8 @@
 
   &__cards {
     margin-top: vw_min(64px);
-    @include mq(md, max){ // sp
+    @include mq(md, max) {
+      // sp
       margin-top: vw_max(80px);
     }
   }

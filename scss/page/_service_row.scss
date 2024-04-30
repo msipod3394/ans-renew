@@ -179,12 +179,6 @@
 
   &__img {
     margin-top: vw_min(64px);
-    margin-left: -80px;
-    margin-right: vw_min(-80px);
-
-    > img {
-      width: 100%;
-    }
   }
 }
 
@@ -932,8 +926,6 @@
 
   &__img {
     margin-top: vw_min(64px);
-    margin-left: -80px;
-    margin-right: vw_min(-80px);
 
     > img {
       width: 100%;
@@ -1053,6 +1045,7 @@
     border: 1px solid $color-gray-200;
     padding: vw_min(40px) vw_min(32px);
     box-shadow: 1px 1px 10px 0px $color-gray-200;
+    overflow: hidden;
 
     @include mq(md, max) {
       // sp

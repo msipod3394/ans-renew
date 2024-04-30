@@ -36,8 +36,9 @@
       padding: vw_min(48px) vw_min(40px);
       box-shadow: 1px 1px 10px 0px $color-gray-200;
       margin-bottom: vw_min(40px);
-      
-      @include mq(md, max){ // sp
+
+      @include mq(md, max) {
+        // sp
         padding: vw_max(48px) vw_max(40px);
       }
     }
