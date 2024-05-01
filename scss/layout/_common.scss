@@ -1,6 +1,19 @@
 // top
 @import "../mixin/index";
 
+// color
+.c-color-blue {
+  color: $color-blue-dark;
+}
+.c-color-orange {
+  color: $color-orange;
+}
+
+// border
+.c-text-border {
+  text-decoration: underline;
+}
+
 // 共通幅
 .common-in-maxwidth {
   max-width: 1400px;
@@ -380,6 +393,23 @@
   }
 }
 
+/* icon-arrow3 */
+.icon-arrow3 {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: vw_min(40px) solid transparent;
+  border-right: vw_min(40px) solid transparent;
+  border-top: vw_min(32px) solid $color-blue-dark;
+
+  @include mq(md, max) {
+    // sp
+    border-left: vw_max(40px) solid transparent;
+    border-right: vw_max(40px) solid transparent;
+    border-top: vw_max(32px) solid $color-blue-dark;
+  }
+}
+
 /* icon-arrows */
 .icon-arrows {
   width: vw_min(32px);
@@ -396,6 +426,26 @@
   &._vetical {
     margin: vw_min(-24px);
     transform: rotate(90deg);
+  }
+}
+
+/* icon-plus */
+.icon-plus {
+  width: vw_min(40px);
+  height: vw_min(40px);
+
+  @include mq(md, max) {
+    // sp
+    width: vw_max(64px);
+    height: vw_max(64px);
+  }
+
+  &::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    @include icon-mask($path + "common/icon/icon-plus.svg", $color-blue-dark);
   }
 }
 
@@ -500,5 +550,152 @@
 
   > img {
     width: 100%;
+  }
+}
+
+/* 共通カードリスト */
+.common {
+  &__cards--list {
+    margin-top: vw_min(80px);
+    display: flex;
+    flex-direction: column;
+    gap: vw_min(32px);
+
+    @include mq(md, max) {
+      // sp
+      margin-top: vw_max(80px);
+      gap: vw_max(40px);
+    }
+  }
+  &__cards--item {
+    background-color: #fff;
+    border: 1px solid $color-gray-200;
+    padding: vw_min(40px) vw_min(32px);
+    box-shadow: 1px 1px 10px 0px $color-gray-200;
+    overflow: hidden;
+
+    @include mq(md, max) {
+      // sp
+      padding: vw_max(40px) vw_max(32px);
+    }
+
+    &.-bg-gray {
+      background-color: $color-gray-100;
+      box-shadow: none;
+
+      .common__cards--dt {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__cards--img {
+    margin: vw_min(-40px) vw_min(-32px) vw_min(32px);
+
+    @include mq(md, max) {
+      // sp
+      margin: vw_max(-48px) vw_max(-36px) vw_max(32px);
+    }
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  &__cards--dt {
+    font-size: vw_min(20px);
+    font-weight: 500;
+    color: $color-blue-dark;
+    display: flex;
+
+    @include mq(md, max) {
+      // sp
+      font-size: vw_max(28px);
+    }
+
+    &._hasBorder {
+      margin-top: vw_min(32px);
+      margin-bottom: vw_min(32px);
+      flex-direction: column;
+
+      &::after {
+        content: "";
+        display: block;
+        width: vw_min(32px);
+        height: 2px;
+        background-color: $color-blue-dark;
+        margin-top: vw_min(16px);
+
+        @include mq(md, max) {
+          // sp
+          width: vw_max(56px);
+          margin: vw_max(16px) 0;
+        }
+      }
+    }
+
+    &._hasIcon {
+      &::before {
+        content: attr(data-num);
+        display: block;
+        font-size: vw_min(18px);
+        font-family: $font-mincho;
+        margin-right: vw_min(10px);
+        letter-spacing: 0;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(24px);
+        }
+      }
+    }
+  }
+
+  &__cards--dd {
+    margin-top: vw_min(12px);
+    font-size: vw_min(15px);
+    line-height: 1.75;
+    letter-spacing: -0.025rm;
+
+    @include mq(md, max) {
+      // sp
+      margin-top: vw_max(16px);
+      font-size: vw_max(24px);
+    }
+
+    > p + p {
+      margin-top: 16px;
+    }
+
+    span.text-large {
+      font-size: vw_min(16px);
+      font-weight: 500;
+      color: $color-blue-dark;
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(24px);
+      }
+    }
+  }
+  &__cards--linkList {
+    margin-top: vw_min(32px);
+
+    @include mq(md, max) {
+      // sp
+      margin-top: vw_max(32px);
+    }
+  }
+  &__cards--link {
+    width: vw_min(160px);
+
+    @include mq(md, max) {
+      // sp
+      width: 50%;
+    }
+
+    > a {
+      width: 100%;
+    }
   }
 }

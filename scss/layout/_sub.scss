@@ -127,7 +127,7 @@
         width: vw_min(80px);
         height: 1px;
         background-color: $color-blue-dark;
-        margin-top: vw_min(24px);
+        margin-top: vw_min(16px);
 
         @include mq(md, max) {
           // sp
@@ -404,7 +404,7 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(28px);
+          font-size: vw_max(32px);
         }
 
         &::after {
@@ -436,7 +436,7 @@
 
       > .desc-large {
         display: block;
-        font-size: vw_min(22px);
+        font-size: vw_min(20px);
         line-height: 1.5;
         font-weight: 500;
         color: $color-blue-dark;
