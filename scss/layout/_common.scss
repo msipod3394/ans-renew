@@ -475,6 +475,13 @@
     // padding-right: 6%;
   }
 
+  &.-full {
+    @include mq(md, min) {
+      // pc
+      padding-right: 6%;
+    }
+  }
+
   @include mq(md, max) {
     // sp
     padding-right: 7.3%;
@@ -525,6 +532,13 @@
       // pc
       max-width: 1080px;
       padding: 0 vw_min(64px);
+    }
+
+    .-full & {
+      @include mq(md, min) {
+        // pc
+        max-width: 100%;
+      }
     }
   }
 }

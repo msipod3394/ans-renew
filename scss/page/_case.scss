@@ -1,0 +1,410 @@
+// top
+@import "../mixin/index";
+
+/*-----------------------------------------------
+* case
+-------------------------------------------------*/
+
+/* case */
+.case {
+  margin-bottom: 160px;
+
+  &__block + &__block {
+    margin-top: 80px;
+    padding-top: 80px;
+    border-top: 1px solid $color-gray-300;
+  }
+}
+
+/* case-pickup */
+.case-pickup {
+  .caseRow {
+    margin-top: 80px;
+
+    @include mq(md, max) {
+      // sp
+      margin-top: 80px;
+    }
+
+    &__title {
+      font-size: vw_min(24px);
+      color: $color-blue-dark;
+      letter-spacing: -0.05em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: vw_min(8px);
+      margin-bottom: vw_min(40px);
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(40px);
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: vw_min(40px);
+        height: 2px;
+        background-color: $color-orange;
+        margin-top: vw_min(10px);
+
+        @include mq(md, max) {
+          // sp
+          width: vw_max(40px);
+          margin-top: vw_max(10px);
+        }
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: vw_max(56px);
+        margin-bottom: vw_max(80px);
+      }
+    }
+
+    &__card {
+      position: relative;
+      border: 1px solid $color-gray-300;
+      background-color: #fff;
+      border-radius: 4px;
+
+      @include mq(md, max) {
+        // sp
+        gap: vw_max(32px);
+      }
+
+      &--link {
+        display: flex;
+
+        @include mq(md, max) {
+          // sp
+          flex-direction: column;
+        }
+
+        &::after {
+          position: absolute;
+          right: 0;
+          bottom: vw_min(24px);
+          width: $size-32;
+          height: $size-24;
+          transition: transform 0.3s ease;
+          @include icon-mask(
+            $path + "common/icon/icon-arrow.svg",
+            $color-blue-dark
+          );
+
+          @include mq(md, min) {
+            // pc
+            transform: translateX(-24px);
+          }
+
+          @include mq(md, max) {
+            // sp
+            right: 16px;
+            bottom: vw_max(24px);
+          }
+        }
+
+        &:hover {
+          background-color: rgba($color: $color-blue, $alpha: 0.05);
+          .caseRow__card--thumb img {
+            transform: scale(1.1);
+          }
+
+          &::after {
+            transform: translateX(-8px);
+            right: 0;
+          }
+        }
+      }
+
+      &--thumb {
+        overflow: hidden;
+        width: vw_min(240px);
+
+        @include mq(md, max) {
+          // sp
+          width: 100%;
+          height: 240px;
+        }
+
+        > img {
+          transition: 0.3s;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &--contents {
+        width: calc(100% - vw_min(240px) - vw_min(24px));
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        gap: 8px;
+        padding: vw_min(32px) vw_min(24px);
+
+        @include mq(md, max) {
+          // sp
+          width: 100%;
+          padding: vw_max(48px) vw_max(24px);
+          gap: vw_max(12px);
+        }
+      }
+
+      &--date {
+        color: #6d6b80;
+        font-size: vw_min(13px);
+        line-height: 1;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(24px);
+        }
+      }
+
+      &--company {
+        font-size: vw_min(14px);
+        line-height: 1;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(24px);
+        }
+      }
+
+      &--title {
+        margin-top: 8px;
+        font-size: vw_min(16px);
+        line-height: 1;
+        font-weight: 500;
+        color: $color-blue-dark;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(26px);
+          line-height: 1.5;
+        }
+
+        &:hover {
+          color: $color-blue;
+        }
+      }
+
+      &--desc {
+        margin-top: vw_min(8px);
+        font-size: vw_min(14px);
+
+        font-weight: 400;
+        line-height: 1.25;
+        overflow: hidden;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(22px);
+        }
+
+        > span {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      }
+
+      &--tag {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 8px;
+        margin-top: 4px;
+        font-size: vw_min(13px);
+        line-height: 1;
+
+        @include mq(md, max) {
+          // sp
+          font-size: vw_max(22px);
+          gap: vw_max(8px);
+        }
+
+        > span.tag {
+          color: $color-blue-dark;
+
+          @include mq(md, max) {
+            // sp
+            font-size: vw_max(22px);
+            line-height: 1;
+          }
+        }
+      }
+
+      &--tags {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 12px;
+        padding-top: 16px;
+        border-top: 1px solid rgba($color: #000, $alpha: 0.3);
+
+        @include mq(md, max) {
+          // sp
+          gap: 16px;
+          margin-top: 24px;
+          padding-top: 24px;
+        }
+      }
+    }
+
+    &__card + &__card {
+      border-top: 1px solid $color-gray-200;
+    }
+
+    &__linkButton {
+      margin: 40px auto 80px;
+
+      @include mq(md, max) {
+        // sp
+        margin: vw_max(40px) auto;
+      }
+    }
+  }
+
+  // &__block {
+  // }
+
+  // &__row {
+  // }
+  // .pickup__row {
+  //   display: flex;
+  //   gap: 32px;
+  //   background-color: #fff;
+  //   border-radius: 5px;
+  //   border: 1px solid $color-gray-300;
+  //   box-shadow: 1px 1px 10px 0px $color-gray-200;
+  //   overflow: hidden;
+
+  //   &:hover {
+  //     .pickup__row--thumbnail > img {
+  //       transform: scale(1.1);
+  //     }
+  //     .pickup__row--title {
+  //       color: $color-blue;
+  //     }
+  //   }
+
+  //   &--thumbnail {
+  //     width: 28%;
+  //     overflow: hidden;
+
+  //     > img {
+  //       max-width: 100%;
+  //       height: 100%;
+  //       object-fit: cover;
+  //       transition: 0.3s;
+  //     }
+  //   }
+
+  //   &--contents {
+  //     width: calc(100% - 28%);
+  //     padding: 8px 32px 8px 8px;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     gap: 16px;
+  //   }
+
+  //   &--sub,
+  //   &--title {
+  //     display: block;
+  //   }
+
+  //   &--sub {
+  //     font-size: vw_min(14px);
+  //     line-height: 1;
+  //   }
+  //   &--title {
+  //     font-size: vw_min(16px);
+  //     color: $color-blue-dark;
+  //     font-weight: 500;
+  //     line-height: 1;
+  //     transition: 0.3s;
+  //   }
+  //   &--desc {
+  //     font-size: vw_min(13px);
+  //     line-height: 1.25;
+  //     overflow: hidden;
+
+  //     > span {
+  //       display: -webkit-box;
+  //       -webkit-box-orient: vertical;
+  //       -webkit-line-clamp: 2;
+  //     }
+  //   }
+  //   &--tags {
+  //     padding-top: 12px;
+  //     border-top: 1px solid rgba($color: #000, $alpha: 0.3);
+
+  //     > ul {
+  //       display: flex;
+  //       gap: 16px;
+  //     }
+
+  //     ul + ul {
+  //       margin-top: 8px;
+  //     }
+  //   }
+  //   &--tagItem {
+  //     font-size: vw_min(13px);
+  //   }
+  // }
+  // .pickup__row + .pickup__row {
+  //   margin-top: 40px;
+  // }
+}
+
+/* case-types */
+.case-types {
+  &__listBox {
+    padding: 0 4%;
+    margin: 0 auto;
+  }
+  &__list {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(4, minmax(calc(100% / 4 - 8px), 1fr));
+  }
+  &__item {
+    > a {
+      border-radius: 3px;
+      background-color: $color-gray-100;
+      display: block;
+      padding: 4px 0;
+
+      &:hover {
+        background-color: rgba($color: $color-blue, $alpha: 0.2);
+      }
+
+      span {
+        display: block;
+        text-align: center;
+        font-size: vw_min(16px);
+        color: $color-blue-dark;
+        font-weight: 500;
+      }
+    }
+  }
+  &__linkButton {
+    margin: 40px auto 80px;
+
+    @include mq(md, max) {
+      // sp
+      margin: vw_max(40px) auto;
+    }
+  }
+}
