@@ -251,7 +251,7 @@
   position: relative;
   padding-bottom: vw_min(12px);
   font-size: vw_min(15px);
-  // font-weight: 500;
+  font-weight: 500;
   color: $color-blue-dark;
 
   @include mq(md, max) {
@@ -352,6 +352,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 
   &::after {
     position: relative;
@@ -710,6 +711,45 @@
 
     > a {
       width: 100%;
+    }
+  }
+}
+
+/* c-tags */
+.c-tags {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  &__item {
+    > a {
+      font-size: $size-16;
+      color: $color-blue-dark;
+
+      span {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &__item + &__item {
+    margin-left: 8px;
+  }
+}
+
+.icon-tag {
+  &::before {
+    position: relative;
+    width: $size-16;
+    height: $size-14;
+    @include icon-mask($path + "common/icon/icon-tag.svg", $color-blue-dark);
+    transition: $transition;
+
+    @include mq(md, max) {
+      // sp
+      width: $size-14;
+      height: $size-12;
     }
   }
 }
