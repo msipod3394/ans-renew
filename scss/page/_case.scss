@@ -8,16 +8,12 @@
 /* case */
 .case {
   margin-bottom: 160px;
+  overflow: hidden;
 
   &__block + &__block {
     margin-top: 80px;
     padding-top: 80px;
     border-top: 1px solid $color-gray-300;
-  }
-
-  @include mq(md, max) {
-    // sp
-    overflow-y: hidden;
   }
 }
 
@@ -417,7 +413,6 @@
 /* ページ詳細 */
 .caseDetail {
   padding-bottom: 80px;
-  border-bottom: 1px solid $color-gray-300;
 
   &__subtitle {
     font-size: 1rem;
@@ -458,33 +453,42 @@
     display: grid;
     height: -moz-fit-content;
     height: fit-content;
-    grid-template-areas:
-      "logo heading"
-      "logo company"
-      "logo interviewee";
     grid-template-rows: 1fr;
-    grid-template-columns: minmax(auto, 150px) 1fr;
     margin-top: 40px;
     margin-bottom: 40px;
     padding-bottom: 40px;
     border-bottom: 1px solid $color-gray-300;
-
     @include mq(md, max) {
       // sp
       margin-top: 24px;
       margin-bottom: 24px;
       padding-bottom: 24px;
     }
-
-    @include mq(md, max) {
-      // sp
-      gap: 16px;
+    .-detail-a & {
+      grid-template-columns: minmax(auto, 150px) 1fr;
       grid-template-areas:
-        "heading heading"
+        "logo heading"
         "logo company"
         "logo interviewee";
-      grid-template-columns: minmax(70px, 20%) 1fr;
-      grid-template-rows: auto auto 1fr;
+
+      @include mq(md, max) {
+        // sp
+        gap: 16px;
+        grid-template-areas:
+          "heading heading"
+          "logo company"
+          "logo interviewee";
+        grid-template-columns: minmax(70px, 20%) 1fr;
+        grid-template-rows: auto auto 1fr;
+      }
+    }
+
+    .-detail-b & {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "heading"
+        "company"
+        "interviewee";
     }
 
     &--logo {
@@ -505,6 +509,7 @@
       // line-height: 1.5;
       margin-bottom: 0;
       color: $color-blue-dark;
+      padding-bottom: 8px;
     }
     &--company {
       grid-area: company;
@@ -776,11 +781,33 @@
 
   &__contentsDesc {
     margin-top: 80px;
+    padding-top: 80px;
+
+    @include mq(md, max) {
+      // sp
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+
+    // position: relative;
+
+    // .-detail-b & {
+    //   &::before {
+    //     position: absolute;
+    //     top: 0;
+    //     width: 200%;
+    //     content: "";
+    //     display: block;
+    //     border-top: 1px solid $color-gray-300;
+    //     margin-left: -16%;
+    //     margin-right: -16%;
+    //   }
+    // }
 
     &--dl {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px 16px;
+      gap: 24px 16px;
 
       @include mq(md, max) {
         // sp
@@ -942,5 +969,9 @@
   &__linkBack {
     display: block;
     margin: 80px auto 0;
+  }
+
+  &__other {
+    padding-top: 80px;
   }
 }

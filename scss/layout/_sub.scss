@@ -370,7 +370,7 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(40px);
+          font-size: vw_max(32px);
         }
 
         &::before {
@@ -1094,7 +1094,7 @@
     display: flex;
     align-items: center;
     color: $color-blue-dark;
-    
+
     &::before {
       position: relative;
       width: $size-14;

@@ -738,6 +738,7 @@
   }
 }
 
+/* icon-tag */
 .icon-tag {
   &::before {
     position: relative;
@@ -751,5 +752,21 @@
       width: $size-14;
       height: $size-12;
     }
+  }
+}
+
+/* c-over-border */
+.c-over-border-top {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    width: 200%;
+    content: "";
+    display: block;
+    border-top: 1px solid $color-gray-300;
+    margin-left: -16%;
+    margin-right: -16%;
   }
 }
