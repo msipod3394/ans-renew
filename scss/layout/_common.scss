@@ -471,9 +471,8 @@
 .l-block {
   @include mq(md, min) {
     // pc
-    padding-top: 120px;
+    padding-top: 80px;
     padding-left: 6%;
-    // padding-right: 6%;
   }
 
   &.-full {
@@ -724,7 +723,7 @@
   }
   &__item {
     > a {
-      font-size: $size-16;
+      font-size: $size-14;
       color: $color-blue-dark;
 
       span {

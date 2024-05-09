@@ -35,23 +35,47 @@ $min-width: 1200px;
 $min-width-sp: 86%;
 
 // size
-$vw: 1vw; //ビューポート幅
+// $vw: 1vw; //ビューポート幅
 
-$size-8: min(#{$vw * 8}, 8px);
-$size-10: min(#{$vw * 10}, 10px);
-$size-12: min(#{$vw * 12}, 12px);
-$size-13: min(#{$vw * 13}, 13px);
-$size-14: min(#{$vw * 14}, 14px);
-$size-16: min(#{$vw * 16}, 16px);
-$size-18: min(#{$vw * 18}, 18px);
-$size-20: min(#{$vw * 20}, 20px);
-$size-22: min(#{$vw * 22}, 22px);
-$size-24: min(#{$vw * 24}, 24px);
-$size-26: min(#{$vw * 26}, 26px);
-$size-28: min(#{$vw * 28}, 28px);
-$size-32: min(#{$vw * 32}, 32px);
-$size-40: min(#{$vw * 40}, 40px);
-$size-80: min(#{$vw * 80}, 80px);
+// $size-8: min(#{$vw * 8}, 8px);
+// $size-10: min(#{$vw * 10}, 10px);
+// $size-12: min(#{$vw * 12}, 12px);
+// $size-13: min(#{$vw * 13}, 13px);
+// $size-14: min(#{$vw * 14}, 14px);
+// $size-16: min(#{$vw * 16}, 16px);
+// $size-18: min(#{$vw * 18}, 18px);
+// $size-20: min(#{$vw * 20}, 20px);
+// $size-22: min(#{$vw * 22}, 22px);
+// $size-24: min(#{$vw * 24}, 24px);
+// $size-26: min(#{$vw * 26}, 26px);
+// $size-28: min(#{$vw * 28}, 28px);
+// $size-32: min(#{$vw * 32}, 32px);
+// $size-40: min(#{$vw * 40}, 40px);
+// $size-80: min(#{$vw * 80}, 80px);
+
+$base-font-size: 16px;
+@function px-to-rem($size-in-px) {
+  @return $size-in-px / $base-font-size * 1rem;
+}
+$size-8: px-to-rem(8px);
+$size-10: px-to-rem(10px);
+$size-11: px-to-rem(11px);
+$size-12: px-to-rem(12px);
+$size-13: px-to-rem(13px);
+$size-14: px-to-rem(14px);
+$size-15: px-to-rem(15px);
+$size-16: px-to-rem(16px);
+$size-17: px-to-rem(17px);
+$size-18: px-to-rem(18px);
+$size-19: px-to-rem(19px);
+$size-20: px-to-rem(20px);
+$size-22: px-to-rem(22px);
+$size-24: px-to-rem(24px);
+$size-26: px-to-rem(26px);
+$size-28: px-to-rem(28px);
+$size-32: px-to-rem(32px);
+$size-40: px-to-rem(40px);
+$size-80: px-to-rem(80px);
 
 // transition
 $transition: transform 0.2s ease;

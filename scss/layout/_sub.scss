@@ -584,12 +584,12 @@
 
 /* 下層コラム */
 .subColumn {
-  margin-top: vw_min(80px);
+  // margin-top: vw_min(80px);
 
-  @include mq(md, max) {
-    // sp
-    margin-top: vw_max(120px);
-  }
+  // @include mq(md, max) {
+  //   // sp
+  //   margin-top: vw_max(120px);
+  // }
 
   &__inner {
     // display: flex;
@@ -786,7 +786,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 4px 8px;
-      margin-top: vw_min(8px);
+      align-items: center;
 
       @include mq(md, max) {
         // sp
@@ -794,8 +794,10 @@
       }
 
       > span.tag {
-        font-size: vw_min(14px);
+        font-size: $size-14;
+        line-height: 1;
         color: $color-blue-dark;
+        display: block;
 
         @include mq(md, max) {
           // sp
@@ -1072,25 +1074,23 @@
 
 .tag {
   display: flex;
-  gap: vw_min(8px);
+  flex-wrap: wrap;
+  gap: 4px;
 
-  @include mq(md, max) {
-    // sp
-    gap: vw_max(8px);
-  }
-
-  > span {
-    font-size: vw_min(13px);
+  &__item {
+    font-size: $size-12;
     line-height: 1;
-    font-weight: 500;
+    color: $color-blue-dark;
+    display: block;
 
     @include mq(md, max) {
       // sp
-      font-size: vw_max(18px);
+      font-size: vw_max(22px);
+      line-height: 1;
     }
   }
 
-  .icon-tag {
+  &.icon-tag {
     display: flex;
     align-items: center;
     color: $color-blue-dark;
@@ -1099,7 +1099,6 @@
       position: relative;
       width: $size-14;
       height: $size-12;
-      margin-right: 4px;
       @include icon-mask($path + "common/icon/icon-tag.svg", $color-blue-dark);
       transition: $transition;
 
