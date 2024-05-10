@@ -61,7 +61,7 @@
 
     &--link {
       display: grid;
-      grid-template-columns: minmax(auto, 150px) 1fr;
+      // grid-template-columns: minmax(auto, 320px) 1fr;
       grid-template-areas:
         "thumb date"
         "thumb title"
@@ -71,8 +71,8 @@
 
       @include mq(md, min) {
         // pc
-        grid-template-columns: minmax(auto, 150px) 1fr;
-        gap: 8px $size-32;
+        grid-template-columns: minmax(auto, 200px) 1fr;
+        gap: 8px $size-16;
         padding: $size-24;
       }
 
@@ -83,28 +83,28 @@
         padding: $size-16;
       }
 
-      &::after {
-        position: absolute;
-        right: 0;
-        bottom: $size-24;
-        width: $size-32;
-        height: $size-24;
-        transition: transform 0.3s ease;
-        @include icon-mask(
-          $path + "common/icon/icon-arrow.svg",
-          $color-blue-dark
-        );
+      // &::after {
+      //   position: absolute;
+      //   right: 0;
+      //   bottom: $size-24;
+      //   width: $size-32;
+      //   height: $size-24;
+      //   transition: transform 0.3s ease;
+      //   @include icon-mask(
+      //     $path + "common/icon/icon-arrow.svg",
+      //     $color-blue-dark
+      //   );
 
-        @include mq(md, min) {
-          // pc
-          transform: translateX(-24px);
-        }
+      //   @include mq(md, min) {
+      //     // pc
+      //     transform: translateX(-24px);
+      //   }
 
-        @include mq(md, max) {
-          // sp
-          bottom: $size-12;
-        }
-      }
+      //   @include mq(md, max) {
+      //     // sp
+      //     bottom: $size-12;
+      //   }
+      // }
 
       &:hover {
         background-color: rgba($color: $color-blue, $alpha: 0.05);
@@ -120,7 +120,6 @@
     }
 
     &--thumb {
-      width: vw_min(240px);
       grid-area: thumb;
 
       @include mq(md, max) {
@@ -204,6 +203,31 @@
           font-size: $size-15;
           line-height: 1;
         }
+      }
+    }
+
+    &--arrowlink {
+      grid-area: arrowlink;
+      display: flex;
+      gap: 8px;
+      align-items: flex-end;
+      margin-left: auto;
+
+      > span {
+        font-size: $size-14;
+        font-weight: 500;
+        color: $color-blue-dark;
+      }
+
+      &::after {
+        width: $size-24;
+        height: $size-24;
+        transition: transform 0.3s ease;
+
+        @include icon-mask(
+          $path + "common/icon/icon-arrow.svg",
+          $color-blue-dark
+        );
       }
     }
   }
