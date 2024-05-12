@@ -1,0 +1,408 @@
+// top
+@import "../mixin/index";
+
+/*-----------------------------------------------
+* company
+-------------------------------------------------*/
+
+/* company */
+.company {
+  .l-column {
+    @include mq(md, max) {
+      // sp
+      flex-direction: column;
+    }
+  }
+
+  &__sub {
+    margin-bottom: $size-80;
+
+    &--contents {
+      padding-right: 6%;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/**
+  代表メッセージ
+**/
+.company .topmessage {
+  &__main {
+    margin-bottom: 8rem;
+  }
+
+  &__contents {
+    margin-bottom: $size-80;
+  }
+
+  &__contents--wrap {
+    @include mq(md, min) {
+      // pc
+      display: grid;
+      gap: $size-80;
+      grid-template: "left right" 1fr / 1fr 360px;
+    }
+  }
+
+  &__contents--left {
+    grid-area: left;
+  }
+
+  &__contents--right {
+    grid-area: right;
+
+    @include mq(md, max) {
+      // sp
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__contents--ceo {
+    @include mq(md, min) {
+      // pc
+      position: sticky;
+      top: 20px;
+      left: 0;
+    }
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  &__contents--title {
+    font-size: $size-24;
+    line-height: 1.75;
+    font-weight: 500;
+    color: $color-blue-dark;
+
+    @include mq(md, max) {
+      // sp
+      font-size: $size-18;
+    }
+  }
+
+  &__contents--text {
+    margin-top: 2.4rem;
+
+    > p {
+      font-size: $size-16;
+      line-height: 1.75;
+
+      .text-ceoName {
+        margin-top: $size-24;
+        display: block;
+        font-size: $size-18;
+        font-weight: 600;
+        text-align: right;
+      }
+    }
+  }
+
+  &__book {
+    margin-bottom: $size-80;
+  }
+
+  &__book--wrap {
+    @include mq(md, min) {
+      // pc
+      display: grid;
+      grid-template: "left right" 1fr / 320px 1fr;
+      gap: $size-80;
+    }
+  }
+
+  &__book--left {
+    grid-area: left;
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  &__book--right {
+    grid-area: right;
+
+    @include mq(md, max) {
+      // sp
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__book--title {
+    font-size: $size-20;
+    line-height: 1.75;
+    font-weight: 500;
+    color: $color-blue-dark;
+
+    @include mq(md, max) {
+      // sp
+      font-size: $size-18;
+    }
+  }
+
+  &__book--text {
+    margin-top: $size-24;
+
+    > p {
+      font-size: $size-16;
+      line-height: 1.75;
+    }
+  }
+}
+
+/**
+  会社概要 / アクセス
+**/
+.company .outline {
+  .contentsList {
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      box-sizing: border-box;
+      padding: 1.6rem 0;
+      border-bottom: 1px solid $color-gray-300;
+      font-size: 1.0625rem;
+
+      @include mq(md, min) {
+        // pc
+        justify-content: right;
+      }
+
+      @include mq(md, max) {
+        // sp
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+    }
+    &__dt {
+      width: 160px;
+      display: flex;
+      gap: 0.8rem;
+      flex-shrink: 0;
+      font-weight: 500;
+      font-size: $size-16;
+      line-height: 1;
+      color: $color-blue-dark;
+
+      @include mq(md, max) {
+        // sp
+        font-size: $size-16;
+      }
+    }
+    &__dd {
+      line-height: 1.5;
+      font-size: 1rem;
+
+      > img {
+        max-width: 500px;
+        margin-top: $size-24;
+
+        @include mq(md, max) {
+          // sp
+          max-width: 100%;
+        }
+      }
+
+      @include mq(md, min) {
+        // pc
+        width: calc(100% - 160px - 1.6rem);
+      }
+
+      @include mq(md, max) {
+        // sp
+        font-size: $size-18;
+      }
+
+      > span {
+        white-space: nowrap;
+        margin-right: $size-24;
+        line-height: 1;
+      }
+
+      &--link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        > img {
+          max-width: 160px;
+        }
+
+        > span {
+          color: $color-blue-dark;
+          text-decoration: underline;
+          font-size: $size-14;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          margin-top: 12px;
+
+          &::after {
+            content: "";
+            background-color: $color-blue-dark;
+            display: block;
+            -webkit-mask-image: url($path + "common/icon/icon-blank.svg");
+            mask-image: url($path + "common/icon/icon-blank.svg");
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-size: 100%;
+            mask-size: 100%;
+            width: $size-18;
+            height: $size-18;
+            margin-right: 4px;
+            transition: background-color 0.3s ease;
+
+            @include mq(md, max) {
+              // sp
+              width: $size-24;
+              height: $size-24;
+              margin-right: vw_max(8px);
+              background-color: #fff;
+            }
+          }
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  &__access {
+    margin-top: 8rem;
+
+    @include mq(md, max) {
+      // sp
+      margin-top: 4rem;
+    }
+
+    &--map {
+      margin-top: 4rem;
+      aspect-ratio: 16 / 9;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: 2rem;
+      }
+
+      > iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--info {
+      margin-top: 4rem;
+      background-color: $color-gray-100;
+      padding: $size-24;
+      font-size: $size-16;
+      line-height: 1.5;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: 2rem;
+      }
+
+      dt {
+        font-weight: 600;
+        margin-bottom: $size-12;
+      }
+    }
+  }
+}
+
+/**
+  当社の体制
+**/
+.company .organization {
+  /* 組織図 */
+  &__chart {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  /* 沿革 */
+  &__history {
+    margin-top: 8rem;
+
+    @include mq(md, max) {
+      // sp
+
+      margin-top: 4rem;
+    }
+
+    .historyList {
+      &__item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.6rem 2.4rem;
+        box-sizing: border-box;
+        padding: 1.6rem 0;
+        border-bottom: 1px solid $color-gray-300;
+        font-size: 1.0625rem;
+
+        @include mq(md, min) {
+          // pc
+          justify-content: right;
+        }
+
+        @include mq(md, max) {
+          // sp
+          flex-direction: column;
+        }
+      }
+      &__dt {
+        width: 120px;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        flex-shrink: 0;
+        font-weight: 500;
+        font-size: $size-24;
+        line-height: 1;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 2.4rem;
+          height: 1px;
+          background-color: $color-blue-dark;
+
+          @include mq(md, max) {
+            // sp
+            width: 1.6rem;
+          }
+        }
+      }
+      &__dd {
+        display: flex;
+        line-height: 1.5;
+        font-size: 1rem;
+
+        @include mq(md, min) {
+          // pc
+          width: calc(100% - 120px - 2.4rem);
+        }
+
+        @include mq(md, max) {
+          // sp
+          font-size: $size-18;
+        }
+
+        > span {
+          white-space: nowrap;
+          margin-right: $size-24;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
