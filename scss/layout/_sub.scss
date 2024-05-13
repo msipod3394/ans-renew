@@ -365,7 +365,7 @@
       }
 
       > span {
-        line-height: 1;
+        line-height: 1.5;
         font-size: $size-24;
 
         &::before {
@@ -388,8 +388,8 @@
       }
 
       > span {
-        line-height: 1;
-        font-size: vw_min(22px);
+        font-size: $size-22;
+        line-height: 1.5;
         font-weight: 500;
         color: $color-blue-dark;
 
