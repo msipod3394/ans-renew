@@ -60,7 +60,7 @@
       width: vw_min(80px);
       height: 1px;
       background-color: $color-blue-dark;
-      margin-top: vw_min(16px);
+      margin-top: $size-16;
 
       @include mq(md, max) {
         // sp
@@ -107,7 +107,7 @@
   }
 
   &--desc {
-    font-size: vw_min(16px);
+    font-size: $size-16;
     font-weight: 400;
     margin-left: vw_min(88px);
 
@@ -133,7 +133,7 @@
     width: 100%;
     display: block;
     border: 1px solid $color-blue-dark;
-    padding: vw_min(16px) 0;
+    padding: $size-16 0;
     position: relative;
     overflow: hidden;
 
@@ -143,7 +143,7 @@
     }
 
     > span {
-      font-size: vw_min(18px);
+      font-size: $size-18;
       text-align: center;
       font-weight: 300;
       line-height: 1;
@@ -249,8 +249,8 @@
 .common__borderLink {
   display: inline-block;
   position: relative;
-  padding-bottom: vw_min(12px);
-  font-size: vw_min(15px);
+  padding-bottom: $size-16;
+  font-size: $size-15;
   font-weight: 500;
   color: $color-blue-dark;
 
@@ -310,7 +310,7 @@
   }
 
   &--title {
-    font-size: vw_min(16px);
+    font-size: $size-16;
     font-weight: 500;
     color: $color-blue-dark;
 
@@ -376,8 +376,8 @@
 
   &::before {
     position: relative;
-    width: vw_min(16px);
-    height: vw_min(12px);
+    width: $size-16;
+    height: $size-16;
     margin-right: vw_min(4px);
     @include icon-mask(
       $path + "/common/icon/icon-arrow2.svg",
@@ -401,7 +401,7 @@
   height: 0;
   border-left: $size-40 solid transparent;
   border-right: $size-40 solid transparent;
-  border-top: vw_min(32px) solid $color-blue-dark;
+  border-top: $size-32 solid $color-blue-dark;
 
   @include mq(md, max) {
     // sp
@@ -413,8 +413,15 @@
 
 /* icon-arrows */
 .icon-arrows {
-  width: vw_min(32px);
-  height: vw_min(136px);
+  width: $size-32;
+  height: 12rem;
+
+  @include mq(md, max) {
+    // sp
+    height: 10rem;
+    transform: rotate(90deg);
+    margin: -40px;
+  }
 
   &::after {
     width: 100%;
@@ -515,6 +522,7 @@
   @include mq(md, min) {
     // pc
     border-right: 1px solid $color-gray-200;
+    padding-right: $size-24;
   }
 
   @include mq(md, max) {
@@ -578,7 +586,7 @@
     margin-top: vw_min(80px);
     display: flex;
     flex-direction: column;
-    gap: vw_min(32px);
+    gap: $size-32;
 
     @include mq(md, max) {
       // sp
@@ -589,7 +597,7 @@
   &__cards--item {
     background-color: #fff;
     border: 1px solid $color-gray-200;
-    padding: $size-40 vw_min(32px);
+    padding: $size-40 $size-32;
     box-shadow: 1px 1px 10px 0px $color-gray-200;
     overflow: hidden;
 
@@ -609,7 +617,7 @@
   }
 
   &__cards--img {
-    margin: vw_min(-40px) vw_min(-32px) vw_min(32px);
+    margin: vw_min(-40px) vw_min(-32px) $size-32;
 
     @include mq(md, max) {
       // sp
@@ -622,28 +630,34 @@
   }
 
   &__cards--dt {
-    font-size: vw_min(20px);
+    font-size: $size-20;
     font-weight: 500;
     color: $color-blue-dark;
     display: flex;
 
     @include mq(md, max) {
       // sp
-      font-size: vw_max(28px);
+      font-size: $size-18;
     }
 
     &._hasBorder {
-      margin-top: vw_min(32px);
-      margin-bottom: vw_min(32px);
+      margin-top: $size-32;
+      margin-bottom: $size-32;
       flex-direction: column;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: $size-16;
+        margin-bottom: $size-16;
+      }
 
       &::after {
         content: "";
         display: block;
-        width: vw_min(32px);
+        width: $size-32;
         height: 2px;
         background-color: $color-blue-dark;
-        margin-top: vw_min(16px);
+        margin-top: $size-16;
 
         @include mq(md, max) {
           // sp
@@ -657,29 +671,23 @@
       &::before {
         content: attr(data-num);
         display: block;
-        font-size: vw_min(18px);
+        font-size: $size-18;
         font-family: $font-mincho;
-        margin-right: vw_min(10px);
+        margin-right: 10px;
         letter-spacing: 0;
-
-        @include mq(md, max) {
-          // sp
-          font-size: vw_max(24px);
-        }
       }
     }
   }
 
   &__cards--dd {
-    margin-top: vw_min(12px);
-    font-size: vw_min(15px);
-    line-height: 1.75;
+    margin-top: $size-16;
+    font-size: $size-15;
+    line-height: 1.5;
     letter-spacing: -0.025rm;
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(16px);
-      font-size: vw_max(24px);
+      font-size: $size-14;
     }
 
     > p + p {
@@ -687,23 +695,18 @@
     }
 
     span.text-large {
-      font-size: vw_min(16px);
+      font-size: $size-16;
       font-weight: 500;
       color: $color-blue-dark;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(24px);
+        font-size: $size-15;
       }
     }
   }
   &__cards--linkList {
-    margin-top: vw_min(32px);
-
-    @include mq(md, max) {
-      // sp
-      margin-top: vw_max(32px);
-    }
+    margin-top: $size-32;
   }
   &__cards--link {
     width: vw_min(160px);

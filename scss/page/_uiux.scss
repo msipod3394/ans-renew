@@ -10,29 +10,23 @@
   &__cards--tagsdl {
     display: flex;
     flex-direction: column;
-    gap: vw_min(32px);
-    margin-top: vw_min(56px);
-
-    @include mq(md, max) {
-      // sp
-      margin-top: vw_max(32px);
-      gap: vw_max(16px);
-    }
+    gap: $size-32;
+    margin-top: $size-56;
   }
 
   &__cards--tags {
     background-color: $color-gray-100;
-    padding: vw_min(24px) vw_min(32px);
+    padding: $size-24 $size-32;
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(24px);
-      padding: vw_max(32px);
+      margin-top: $size-16;
+      padding: $size-24 $size-16;
     }
   }
 
   &__cards--tagdt {
-    font-size: vw_min(18px);
+    font-size: $size-18;
     color: $color-blue-dark;
     font-weight: 500;
     letter-spacing: 0;
@@ -40,55 +34,45 @@
     &::after {
       content: "";
       display: block;
-      width: vw_min(40px);
+      width: $size-40;
       height: 2px;
       background-color: $color-blue-dark;
       margin-top: 16px;
-
-      @include mq(md, max) {
-        // sp
-        width: vw_max(40px);
-      }
     }
 
     @include mq(md, max) {
       // sp
-      font-size: vw_max(28px);
+      font-size: $size-16;
+      line-height: 1.5;
     }
   }
 
   &__cards--tagList {
     display: flex;
     flex-wrap: wrap;
-    gap: vw_min(12px);
-    margin-top: vw_min(24px);
-
-    @include mq(md, max) {
-      // sp
-      margin-top: vw_max(48px);
-      gap: vw_max(16px);
-    }
+    gap: $size-12;
+    margin-top: $size-24;
   }
 
   &__cards--tagItem {
-    width: calc(50% - vw_min(6px));
+    width: calc(50% - $size-8);
     position: relative;
     background-color: #fff;
-    padding: vw_min(16px) vw_min(32px);
-    font-size: vw_min(14px);
+    padding: $size-16 $size-32;
+    font-size: $size-14;
     line-height: 1.25;
 
     @include mq(md, max) {
       // sp
       width: 100%;
-      padding: vw_max(24px) vw_max(24px);
-      font-size: vw_max(24px);
+      padding: $size-16 $size-16;
+      font-size: $size-14;
     }
 
     > span {
       display: block;
       color: $color-blue-dark;
-      font-size: vw_min(15px);
+      font-size: $size-15;
       line-height: 1;
       font-weight: 500;
       margin-bottom: 8px;
@@ -96,7 +80,6 @@
       @include mq(md, max) {
         // sp
         display: block;
-        font-size: vw_max(24px);
       }
     }
 
@@ -113,43 +96,34 @@
   }
 
   &__linkButton {
-    @include mq(md, min) {
-      // pc
-      width: vw_min(360px);
-      margin: 40px auto 0;
-    }
-
-    @include mq(md, max) {
-      // sp
-      margin: 40px auto;
-    }
+    margin: 40px auto 0;
   }
 }
 
 /* features */
 .usability .features {
-  margin-top: vw_min(80px);
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
 }
 
 /* userneeds */
 .usability .userneeds {
-  margin-top: vw_min(80px);
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
 
   &__figure {
     margin-top: 40px;
     background-color: #fff;
     border: 1px solid $color-gray-200;
-    padding: vw_min(40px) vw_min(56px);
+    padding: $size-40 $size-56;
     box-shadow: 1px 1px 10px 0px $color-gray-200;
     overflow: hidden;
     display: flex;
@@ -159,7 +133,7 @@
 
     @include mq(md, max) {
       // sp
-      padding: vw_max(48px) vw_max(40px);
+      padding: $size-24 $size-16;
     }
 
     &--arrow,
@@ -172,30 +146,37 @@
         display: flex;
         justify-content: center;
         gap: 24px;
+
+        @include mq(md, max) {
+          // sp
+          gap: 8px;
+          flex-direction: column;
+        }
       }
       &__item {
         padding: 12px 16px;
         background-color: $color-orange;
-        font-size: vw_min(16px);
+        font-size: $size-16;
         line-height: 1;
         color: #fff;
         text-align: center;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(24px);
+          font-size: $size-16;
           line-height: 1.25;
+          padding: 12px $size-16;
         }
       }
       &__text {
         margin-top: 24px;
         text-align: center;
-        font-size: vw_min(16px);
+        font-size: $size-16;
         font-weight: 500;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(24px);
+          font-size: $size-16;
           line-height: 1.25;
         }
       }
@@ -220,7 +201,7 @@
         width: calc(100% / 4 - 4px);
         padding: 24px 8px;
         background-color: $color-gray-100;
-        font-size: vw_min(14px);
+        font-size: $size-14;
         letter-spacing: 0;
         line-height: 1.25;
         font-weight: 500;
@@ -233,21 +214,23 @@
         @include mq(md, max) {
           // sp
           width: calc(100% / 2 - 8px);
+          padding: 24px $size-16;
           flex-direction: column;
-          font-size: vw_max(22px);
+          font-size: $size-14;
         }
       }
 
       &__text {
         padding: 12px 24px;
         background-color: $color-blue-dark;
-        font-size: vw_min(16px);
+        font-size: $size-16;
         line-height: 1;
         color: #fff;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(24px);
+          padding: 12px $size-16;
+          font-size: $size-16;
           line-height: 1.5;
           text-align: center;
         }
@@ -262,36 +245,31 @@
 }
 
 /* case */
-.usability .case {
-  margin-top: vw_min(80px);
+.usability .cases {
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
 
   &__cards {
-    margin-top: vw_min(64px);
-
-    @include mq(md, max) {
-      // sp
-      margin-top: vw_max(80px);
-    }
+    margin-top: $size-64;
   }
   &__cards--list {
     display: flex;
     flex-direction: column;
-    gap: vw_min(40px);
+    gap: $size-40;
   }
   &__cards--item {
     background-color: #fff;
     border: 1px solid $color-gray-200;
-    padding: vw_min(40px) vw_min(32px) vw_min(40px) 0;
+    padding: $size-40 $size-32 $size-40 0;
     box-shadow: 1px 1px 10px 0px $color-gray-200;
 
     @include mq(md, max) {
       // sp
-      padding: vw_max(56px) vw_max(40px) vw_max(56px) 0;
+      padding: $size-24 $size-16 $size-24 0;
     }
   }
   &__cards--title {
@@ -302,24 +280,24 @@
     .title-obi {
       min-width: 50%;
       display: inline-block;
-      font-size: vw_min(20px);
+      font-size: $size-20;
       line-height: 1;
       background-color: $color-blue-dark;
       color: #fff;
-      padding: vw_min(8px) vw_min(32px) vw_min(10px) vw_min(28px);
+      padding: $size-8 $size-32;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(25px);
+        padding: $size-8 $size-16;
+        font-size: $size-18;
         line-height: 1.5;
-        padding: vw_max(8px) vw_max(32px) vw_max(10px) vw_max(28px);
       }
     }
   }
 
   &__cards--itemIn {
     margin-top: 40px;
-    padding-left: vw_min(32px);
+    padding-left: $size-32;
     display: flex;
     justify-content: space-between;
 
@@ -329,9 +307,6 @@
       flex-direction: column;
       gap: vw_max(40px);
     }
-  }
-
-  &__cards--list {
   }
 
   .itemBox {
@@ -360,25 +335,25 @@
       background-color: $color-gray-100;
 
       > span {
-        font-size: vw_min(18px);
+        font-size: $size-18;
         font-weight: 500;
         display: block;
         text-align: center;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(24px);
+          font-size: $size-16;
         }
       }
     }
 
     &__desc {
-      font-size: vw_min(15px);
+      font-size: $size-15;
       line-height: 1.35;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(22px);
+        font-size: $size-14;
       }
     }
 
@@ -414,19 +389,19 @@
 
 /* uiux */
 .usability .uiux {
-  padding-top: vw_min(80px);
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    padding-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
 
   &__prosess {
-    padding-top: vw_min(80px);
+    padding-top: 80px;
 
     @include mq(md, max) {
       // sp
-      padding-top: vw_max(80px);
+      padding-top: 40px;
     }
 
     &--img {
@@ -446,22 +421,16 @@
     &--arrow {
       display: flex;
       justify-content: center;
-      margin-top: vw_min(32px);
-      margin-bottom: vw_min(32px);
-
-      @include mq(md, max) {
-        // sp
-        margin-top: vw_max(32px);
-        margin-bottom: vw_max(32px);
-      }
+      margin-top: $size-32;
+      margin-bottom: $size-32;
 
       > span {
         display: block;
         width: 0;
         height: 0;
-        border-left: vw_min(40px) solid transparent;
-        border-right: vw_min(40px) solid transparent;
-        border-top: vw_min(32px) solid $color-blue-dark;
+        border-left: $size-40 solid transparent;
+        border-right: $size-40 solid transparent;
+        border-top: $size-32 solid $color-blue-dark;
 
         @include mq(md, max) {
           // sp
@@ -473,7 +442,7 @@
     }
     &--result {
       > p {
-        font-size: vw_min(22px);
+        font-size: $size-22;
         text-align: center;
         color: $color-blue-dark;
         text-decoration: underline;
@@ -481,35 +450,36 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(28px);
+          font-size: $size-16;
         }
       }
     }
   }
 
   &__mockup {
-    padding-top: vw_min(80px);
+    margin-top: $section-gap;
 
     @include mq(md, max) {
       // sp
-      padding-top: vw_max(80px);
+      margin-top: calc($section-gap / 2);
     }
 
     &--list {
       margin-top: 40px;
       display: flex;
-      gap: 32px;
+      gap: $size-32;
 
       @include mq(md, max) {
         // sp
-        gap: vw_max(16px);
+        flex-direction: column;
+        gap: $size-16;
       }
     }
     &--item {
       width: 50%;
       background-color: #fff;
       border: 1px solid $color-gray-200;
-      padding: vw_min(40px) vw_min(56px);
+      padding: $size-40 $size-56;
       box-shadow: 1px 1px 10px 0px $color-gray-200;
       display: flex;
       flex-direction: column;
@@ -518,7 +488,8 @@
 
       @include mq(md, max) {
         // sp
-        padding: vw_max(24px) vw_max(32px);
+        width: 100%;
+        padding: $size-24 $size-16;
       }
 
       > img {
@@ -529,24 +500,19 @@
       padding: 8px 16px;
       background-color: $color-blue-dark;
       color: #fff;
-      font-size: vw_min(16px);
+      font-size: $size-16;
       line-height: 1;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(22px);
+        font-size: $size-16;
         text-align: center;
       }
     }
     &--dd {
       width: 100%;
       margin: 24px 0;
-      font-size: vw_min(15px);
-
-      @include mq(md, max) {
-        // sp
-        font-size: vw_max(18px);
-      }
+      font-size: $size-14;
 
       > span {
         display: block;
@@ -559,13 +525,18 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(18px);
+          font-size: $size-15;
         }
       }
     }
     &--arrows {
       display: flex;
       align-items: center;
+
+      @include mq(md, max) {
+        // sp
+        justify-content: center;
+      }
 
       > span {
         display: block;
@@ -575,12 +546,7 @@
     &--arrow {
       display: flex;
       justify-content: center;
-      margin: vw_min(32px);
-
-      @include mq(md, max) {
-        // sp
-        margin: vw_max(40px);
-      }
+      margin: $size-32;
 
       > span {
         display: block;
@@ -598,13 +564,14 @@
         background-color: #fff;
         text-align: center;
         padding: 16px 40px;
-        font-size: vw_min(17px);
+        font-size: $size-18;
         font-weight: 500;
         line-height: 1;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(22px);
+          font-size: $size-15;
+          padding: 16px 24px;
         }
       }
     }
@@ -639,7 +606,7 @@
 
       &--item {
         display: flex;
-        gap: vw_min(40px);
+        gap: $size-40;
 
         @include mq(md, max) {
           // sp
@@ -675,14 +642,14 @@
       }
 
       &--dt {
-        font-size: vw_min(22px);
+        font-size: $size-22;
         line-height: 1.5;
         font-weight: 500;
         color: $color-blue-dark;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(28px);
+          font-size: $size-18;
         }
 
         &::before {
@@ -690,28 +657,18 @@
           display: block;
           font-family: $font-mincho;
           letter-spacing: 0;
-
-          @include mq(md, min) {
-            // pc
-            font-size: vw_min(22px);
-            margin-bottom: 16px;
-          }
-
-          @include mq(md, max) {
-            // sp
-            font-size: vw_max(32px);
-            margin-bottom: 8px;
-          }
+          font-size: $size-20;
+          margin-bottom: $size-16;
         }
 
         &::after {
           content: "";
           display: block;
-          width: vw_min(40px);
+          width: $size-40;
           height: 2px;
           background-color: $color-blue-dark;
-          margin-top: vw_min(32px);
-          margin-bottom: vw_min(32px);
+          margin-top: $size-32;
+          margin-bottom: $size-32;
 
           @include mq(md, max) {
             // sp
@@ -723,12 +680,12 @@
       }
 
       &--dd {
-        font-size: vw_min(15px);
+        font-size: $size-15;
         line-height: 1.75;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(24px);
+          margin-top: 24px;
         }
       }
     }

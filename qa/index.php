@@ -79,7 +79,6 @@ include($site_root . 'functions.php');
               <!-- #qa -->
               <section class="l-section">
                 <div class="qa__inner">
-
                   <div id="qa1" class="qa__contents js-target">
                     <h2 class="sub__contents--title"><span class="font-mincho">サービス内容・契約について</span></h2>
                     <div class="accordion_area gutter">

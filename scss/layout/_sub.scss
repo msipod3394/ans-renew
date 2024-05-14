@@ -174,12 +174,6 @@
       font-size: $size-16;
       font-weight: 400;
       margin-left: vw_min(88px);
-
-      @include mq(md, max) {
-        // sp
-        font-size: vw_max(24px);
-        margin: 0 vw_max(56px);
-      }
     }
   }
 
@@ -360,7 +354,7 @@
 
         @include mq(md, max) {
           // sp
-          font-size: $size-22;
+          font-size: $size-20;
         }
 
         &::before {
@@ -383,6 +377,11 @@
         font-weight: 500;
         color: $color-blue-dark;
 
+        @include mq(md, max) {
+          // sp
+          font-size: $size-18;
+        }
+
         &::after {
           content: "";
           display: block;
@@ -393,8 +392,8 @@
 
           @include mq(md, max) {
             // sp
-            margin-top: 32px;
-            margin-bottom: 32px;
+            margin-top: 16px;
+            margin-bottom: 16px;
           }
         }
       }
@@ -403,6 +402,11 @@
     &--desc {
       font-size: $size-16;
       line-height: 1.75;
+
+      @include mq(md, max) {
+        // sp
+        font-size: $size-15;
+      }
 
       > .desc-large {
         display: block;
@@ -414,8 +418,7 @@
 
         @include mq(md, max) {
           // sp
-          margin-bottom: vw_max(32px);
-          font-size: vw_max(28px);
+          font-size: $size-16;
         }
       }
     }

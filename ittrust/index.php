@@ -589,8 +589,6 @@ include($site_root . 'functions.php');
               <div class="subColumn__linkButton common__linkButton"><a href="<?= $site_root; ?>column"><span class="font-mincho">全てのコラムを見る</span></a></div>
             </section><!-- ./subColumn -->
 
-            <!-- </div> -->
-            <!-- ./l-column__main--inner -->
           </div><!-- ./l-column__main -->
 
           <!-- <div class="l-column__right-side"></div> -->

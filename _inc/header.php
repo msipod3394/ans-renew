@@ -1,6 +1,6 @@
 <?php // header
 $isTopPage = ($pagename == 'top');
-$ac = array_fill_keys(array('top', 'qa', 'ittrust', 'character', 'caststaff', 'story'), '');
+$ac = array_fill_keys(array('top', 'qa', 'ittrust', 'uiux', 'service', 'case', 'column', 'company'), '');
 $ac[$cn] = 'is-active';
 ?>
 
@@ -18,12 +18,12 @@ $ac[$cn] = 'is-active';
         <div class="header__nav--in _navMain">
           <ul class="header__nav--list">
             <li class="header__nav--item <?= ($ac['ittrust'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>ittrust">私たちの強み</a></li>
-            <li class="header__nav--item"><a href="<?= $site_root; ?>usability">UI/UX</a></li>
-            <li class="header__nav--item js-hover-service"><a href="<?= $site_root; ?>service">サービス</a></li>
-            <li class="header__nav--item"><a href="<?= $site_root; ?>case">お客様導入事例</a></li>
+            <li class="header__nav--item <?= ($ac['uiux'] == 'is-active') ? 'is-active' : ''; ?>"><a href=" <?= $site_root; ?>usability">UI/UX</a></li>
+            <li class="header__nav--item js-hover-service <?= ($ac['service'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>service">サービス</a></li>
+            <li class="header__nav--item <?= ($ac['case'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>case">お客様導入事例</a></li>
             <li class="header__nav--item <?= ($ac['qa'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>qa">Q&A</a></li>
-            <li class="header__nav--item"><a href="<?= $site_root; ?>column">コラム</a></li>
-            <li class="header__nav--item js-hover-company"><a href="<?= $site_root; ?>company">会社情報</a></li>
+            <li class="header__nav--item <?= ($ac['column'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>column">コラム</a></li>
+            <li class="header__nav--item js-hover-company  <?= ($ac['company'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>company">会社情報</a></li>
           </ul>
         </div>
         <div class="header__nav--in _navSub">
