@@ -23,12 +23,12 @@
 .common__inner {
   @include mq(md, min) {
     // pc
-    margin: $size-64 $size-80 0;
+    margin: 0 $size-80;
   }
 
   @include mq(md, max) {
     // sp
-    margin: vw_max(32px) $size-40 0;
+    margin: 0 $size-24 0;
   }
 }
 
@@ -84,37 +84,36 @@
       line-height: 1.5;
 
       &.font-en {
-        font-size: vw_min(24px);
+        font-size: $size-24;
         color: $color-blue-dark;
         letter-spacing: -0.01em;
 
         @include mq(md, max) {
           // sp
-          font-size: $size-40;
+          font-size: $size-24;
         }
       }
 
       &.font-mincho {
-        font-size: vw_min(28px);
+        font-size: $size-24;
         letter-spacing: 0.05em;
 
         @include mq(md, max) {
           // sp
-          font-size: $size-40;
+          font-size: $size-28;
         }
       }
     }
   }
 
   &--desc {
+    // margin-left: $size-80;
     font-size: $size-16;
-    font-weight: 400;
-    margin-left: vw_min(88px);
 
     @include mq(md, max) {
       // sp
-      font-size: vw_max(24px);
-      margin: 0 vw_max(56px);
+      font-size: $size-15;
+      margin: 0 $size-40;
     }
   }
 }
@@ -139,7 +138,7 @@
 
     @include mq(md, max) {
       // sp
-      padding: vw_max(24px) 0;
+      padding: $size-16 0;
     }
 
     > span {
@@ -181,7 +180,7 @@
       display: block;
       content: "";
       width: 100%;
-      height: vw_min(56px);
+      height: $size-56;
       background-color: #fff;
       position: absolute;
       top: 0;
@@ -196,7 +195,7 @@
       content: "";
       display: block;
       width: 100%;
-      height: vw_min(56px);
+      height: $size-56;
       background-color: $color-blue-dark;
       position: absolute;
       top: 0;
@@ -205,11 +204,6 @@
       transform: scale(1, 1);
       transform-origin: left;
       transition: $transition;
-
-      @include mq(md, max) {
-        // sp
-        height: vw_max(75px);
-      }
     }
 
     &:hover {
@@ -256,8 +250,8 @@
 
   @include mq(md, max) {
     // sp
-    font-size: vw_max(24px);
-    padding-bottom: vw_max(20px);
+    font-size: $size-14;
+    padding-bottom: $size-12;
   }
 
   &::before {
@@ -287,17 +281,35 @@
     transition: $transition;
   }
 
+  .icon-arrow {
+    padding-left: 8px;
+    font-size: $size-14;
+
+    &::after {
+      transition: $transition;
+      transform: translateX(-4px);
+    }
+  }
+
   &:hover {
     &::after {
+      background-color: $color-blue;
       transform-origin: left;
       transform: scale(1, 1);
+    }
+    .icon-arrow {
+      color: $color-blue;
+      &::after {
+        background-color: $color-blue;
+        transform: translateX(0px);
+      }
     }
   }
 }
 
 /* common__caution */
 .common__caution {
-  padding: vw_min(24px);
+  padding: $size-24;
   background-color: #fff;
 
   @include mq(md, max) {
@@ -316,13 +328,13 @@
 
     @include mq(md, max) {
       // sp
-      font-size: vw_max(20px);
+      font-size: $size-20;
     }
   }
 
   &--text {
     margin-top: $size-8;
-    margin-left: vw_min(24px);
+    margin-left: $size-24;
 
     @include mq(md, max) {
       // sp
@@ -337,7 +349,7 @@
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(20px);
+        font-size: $size-20;
       }
     }
 
@@ -388,7 +400,7 @@
     @include mq(md, max) {
       // sp
       margin-right: vw_max(8px);
-      width: vw_max(24px);
+      width: $size-16;
       height: vw_max(18px);
     }
   }

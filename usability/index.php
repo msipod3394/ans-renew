@@ -32,8 +32,6 @@ include($site_root . 'functions.php');
 <?php include($site_root . "_inc/gac.php"); ?>
 
 <body id="uiux">
-  <!-- Google Tag Manager (noscript) -->
-  <!-- End Google Tag Manager (noscript) -->
   <div id="fullWrap">
 
     <!-- ▼ inc/header -->
@@ -338,7 +336,7 @@ include($site_root . 'functions.php');
             <!-- #column -->
             <section id="column" class="subColumn js-target">
               <div class="subColumn__inner l-section">
-                <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">UI/UXデザインに関するコラム</span></h2>
+                <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">システム開発に関するコラム</span></h2>
                 <ul class="subColumn__list">
                   <li class="subColumn__card">
                     <a href="" class="subColumn__card--link">
@@ -402,8 +400,8 @@ include($site_root . 'functions.php');
                   </li><!-- subColumn__card -->
                 </ul>
               </div>
-              <div class="subColumn__linkButton common__linkButton"><a href="<?= $site_root; ?>column"><span class="font-mincho">全てのコラムを見る</span></a></div>
             </section>
+
 
           </div><!-- ./l-column__main -->
         </div><!-- ./l-column -->

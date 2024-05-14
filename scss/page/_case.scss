@@ -10,6 +10,11 @@
   margin-bottom: 160px;
   overflow: hidden;
 
+  @include mq(md, max) {
+    // sp
+    margin-bottom: 80px;
+  }
+
   &__block + &__block {
     margin-top: 80px;
     padding-top: 80px;
