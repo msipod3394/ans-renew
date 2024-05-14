@@ -34,8 +34,7 @@ include($site_root . 'functions.php');
 <body id="qa">
   <div id="fullWrap">
     <!-- ▼ inc/header -->
-    <?php
-    include($site_root . "_inc/header.php"); ?>
+    <?php include($site_root . "_inc/header.php"); ?>
 
     <main class="sub__container">
 

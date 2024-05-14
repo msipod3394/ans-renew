@@ -1,6 +1,6 @@
 <?php // header
 $isTopPage = ($pagename == 'top');
-$ac = array_fill_keys(array('top', 'qa', 'onair', 'character', 'caststaff', 'story'), '');
+$ac = array_fill_keys(array('top', 'qa', 'ittrust', 'character', 'caststaff', 'story'), '');
 $ac[$cn] = 'is-active';
 ?>
 
@@ -12,12 +12,12 @@ $ac[$cn] = 'is-active';
     <span></span>
   </button>
   <div class="header__in">
-    <p class="header__logo"><a href=""><img src="<?= $site_root; ?>assets/img/common/logo/logo.svg" alt="株式会社エイ・エヌ・エス"></a></p>
+    <p class="header__logo"><a href="<?= $site_root; ?>"><img src="<?= $site_root; ?>assets/img/common/logo/logo.svg" alt="株式会社エイ・エヌ・エス"></a></p>
     <div class="header__navin">
       <nav class="header__nav">
         <div class="header__nav--in _navMain">
           <ul class="header__nav--list">
-            <li class="header__nav--item"><a href="<?= $site_root; ?>ittrust">私たちの強み</a></li>
+            <li class="header__nav--item <?= ($ac['ittrust'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>ittrust">私たちの強み</a></li>
             <li class="header__nav--item"><a href="<?= $site_root; ?>usability">UI/UX</a></li>
             <li class="header__nav--item js-hover-service"><a href="<?= $site_root; ?>service">サービス</a></li>
             <li class="header__nav--item"><a href="<?= $site_root; ?>case">お客様導入事例</a></li>

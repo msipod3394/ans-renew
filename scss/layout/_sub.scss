@@ -96,16 +96,14 @@
 
   &__heading {
     position: relative;
-    padding-top: vw_min(80px);
+    padding-top: $size-80;
     display: flex;
     flex-direction: column;
-    gap: vw_min(40px);
+    gap: $size-40;
 
     @include mq(md, max) {
       // sp
-      gap: vw_max(40px);
-      padding-top: vw_max(80px);
-      margin-bottom: $size-80;
+      margin-bottom: $size-40;
     }
 
     &--text {
@@ -121,7 +119,7 @@
       &::before {
         content: "";
         display: block;
-        width: vw_min(80px);
+        width: $size-80;
         height: 1px;
         background-color: $color-blue-dark;
         margin-top: $size-16;
@@ -188,7 +186,7 @@
   &__headingAction {
     width: 100%;
     background-color: $color-blue-dark;
-    margin-top: vw_min(48px);
+    margin-top: 40px;
 
     @include mq(md, max) {
       // sp
@@ -344,8 +342,8 @@
   }
 
   &__contents {
-    margin: vw_min(80px) 0;
-    padding: 0 vw_min(80px);
+    margin: $size-80 0;
+    padding: 0 $size-80;
 
     @include mq(md, max) {
       // sp
@@ -354,16 +352,16 @@
     }
 
     &--title {
-      margin-bottom: vw_min(48px);
-
-      @include mq(md, max) {
-        // sp
-        margin-bottom: $size-32;
-      }
+      margin-bottom: 40px;
 
       > span {
         line-height: 1.5;
         font-size: $size-24;
+
+        @include mq(md, max) {
+          // sp
+          font-size: $size-22;
+        }
 
         &::before {
           content: "";
@@ -377,12 +375,7 @@
     }
 
     &--subtitle {
-      margin-bottom: vw_min(48px);
-
-      @include mq(md, max) {
-        // sp
-        margin-bottom: vw_max(64px);
-      }
+      margin-bottom: 48px;
 
       > span {
         font-size: $size-22;
@@ -390,24 +383,18 @@
         font-weight: 500;
         color: $color-blue-dark;
 
-        @include mq(md, max) {
-          // sp
-          font-size: vw_max(32px);
-        }
-
         &::after {
           content: "";
           display: block;
-          width: vw_min(80px);
+          width: $size-80;
           height: 1px;
           background-color: $color-blue-dark;
           margin-top: $size-24;
 
           @include mq(md, max) {
             // sp
-            width: vw_max(80px);
-            margin-top: vw_max(32px);
-            margin-bottom: vw_max(32px);
+            margin-top: 32px;
+            margin-bottom: 32px;
           }
         }
       }
@@ -417,18 +404,13 @@
       font-size: $size-16;
       line-height: 1.75;
 
-      @include mq(md, max) {
-        // sp
-        font-size: vw_max(24px);
-      }
-
       > .desc-large {
         display: block;
         font-size: $size-20;
         line-height: 1.5;
         font-weight: 500;
         color: $color-blue-dark;
-        margin-bottom: $size-24;
+        margin-bottom: 32px;
 
         @include mq(md, max) {
           // sp
@@ -440,7 +422,7 @@
   }
 
   &__contentWrap {
-    // margin: vw_min(80px) vw_min(80px) 0;
+    // margin: $size-80 $size-80 0;
     display: flex;
     justify-content: space-between;
   }
@@ -449,7 +431,7 @@
     @include mq(md, min) {
       // pc
       width: calc(100% - vw_min(260px));
-      margin-left: vw_min(80px);
+      margin-left: $size-80;
     }
   }
 
@@ -466,20 +448,10 @@
       font-size: $size-14;
       font-weight: 500;
       color: $color-blue-dark;
-
-      @include mq(md, max) {
-        // sp
-        font-size: vw_max(32px);
-      }
     }
     &--list {
       margin-top: $size-12;
       margin-bottom: $size-12;
-
-      @include mq(md, max) {
-        // sp
-        margin-top: vw_max(24px);
-      }
     }
 
     &--item {
@@ -490,12 +462,12 @@
         line-height: 1;
         display: flex;
         align-items: center;
-        gap: vw_min(4px);
+        gap: 4px;
         position: relative;
 
         @include mq(md, max) {
           // sp
-          font-size: $size-16;
+          font-size: $size-14;
           padding: 16px 0;
           border-bottom: 1px solid $color-gray-300;
         }
@@ -516,8 +488,8 @@
             // sp
             box-sizing: border-box;
             position: absolute;
-            width: 5px;
-            height: 5px;
+            width: 8px;
+            height: 8px;
             border-style: solid;
             border-width: 0 1px 1px 0;
             transform: translate(0, -50%) rotate(45deg);
@@ -526,7 +498,7 @@
               border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
             backface-visibility: hidden;
             top: 48%;
-            right: 6px;
+            right: 8px;
           }
         }
 
@@ -540,8 +512,8 @@
             right: 0;
             top: 50%;
             transform: translate(0, -50%);
-            width: 17px;
-            height: 17px;
+            width: 24px;
+            height: 24px;
             border: solid 1px #ddd;
             border-radius: 50%;
             transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
@@ -571,27 +543,14 @@
 
 /* 下層コラム */
 .subColumn {
-  // margin-top: vw_min(80px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: $section-gap;
 
-  // @include mq(md, max) {
-  //   // sp
-  //   margin-top: vw_max(120px);
-  // }
-
-  &__inner {
-    // display: flex;
-    // justify-content: space-between;
-
-    // @include mq(md, min) {
-    //   // pc
-    //   gap: $size-24;
-    // }
-
-    // @include mq(md, max) {
-    //   // sp
-    //   flex-direction: column;
-    //   margin: 0 vw_max(56px);
-    // }
+  @include mq(md, max) {
+    // sp
+    margin-top: calc($section-gap / 2);
   }
 
   &__title {
@@ -602,8 +561,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: vw_min(8px);
-    margin-bottom: vw_min(40px);
+    gap: $size-8;
+    margin-bottom: 40px;
 
     @include mq(md, max) {
       // sp
@@ -800,22 +759,20 @@
   }
 
   &__linkButton {
-    margin: 40px auto 80px;
-
-    @include mq(md, max) {
-      // sp
-      margin: vw_max(40px) auto;
-    }
+    margin-top: 40px;
   }
 }
 
 /* 下層事例 */
 .subCase {
-  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
 
   &__titleImg {
@@ -863,7 +820,7 @@
 
     @include mq(md, min) {
       // pc
-      margin: 0 vw_min(80px) vw_min(64px);
+      margin: 0 $size-80 vw_min(64px);
       padding: vw_min(32px) vw_min(40px);
     }
 
@@ -930,10 +887,6 @@
     }
   }
 
-  &__inner {
-    margin-bottom: vw_min(80px);
-  }
-
   &__cardList {
     @include mq(md, max) {
       // sp
@@ -946,7 +899,7 @@
 
       @include mq(md, max) {
         // sp
-        gap: 24px;
+        gap: 8px;
       }
     }
   }
@@ -957,13 +910,13 @@
 
     @include mq(md, min) {
       // pc
-      width: calc(100% / 4);
+      width: calc(100% / 3);
       margin-right: -1px;
     }
 
     @include mq(md, max) {
       // sp
-      width: calc(100% / 2 - 12px);
+      width: calc(100% / 2 - 4px);
     }
 
     &__link {
@@ -994,7 +947,7 @@
       @include mq(md, max) {
         // sp
         padding: 8% 4%;
-        gap: 16px;
+        gap: 8px;
       }
 
       &--company {
@@ -1002,7 +955,8 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(18px);
+          font-size: $size-10;
+          line-height: 1.5;
         }
       }
       &--title {
@@ -1013,19 +967,19 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(22px);
+          font-size: $size-14;
         }
       }
 
       &--desc {
-        font-size: vw_min(13px);
+        font-size: $size-14;
         font-weight: 400;
         line-height: 1.25;
         overflow: hidden;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(18px);
+          font-size: $size-12;
         }
 
         > span {
@@ -1037,23 +991,13 @@
       &--tagWrap {
         display: flex;
         flex-wrap: wrap;
-        gap: vw_min(8px);
-
-        @include mq(md, max) {
-          // sp
-          gap: vw_max(24px);
-        }
+        gap: 8px;
       }
 
       &--tag {
         display: flex;
-        font-size: vw_min(13px);
+        font-size: $size-14;
         color: $color-blue-dark;
-
-        @include mq(md, max) {
-          // sp
-          font-size: vw_max(18px);
-        }
       }
     }
   }
@@ -1069,12 +1013,6 @@
     line-height: 1;
     color: $color-blue-dark;
     display: block;
-
-    @include mq(md, max) {
-      // sp
-      font-size: vw_max(22px);
-      line-height: 1;
-    }
   }
 
   &.icon-tag {

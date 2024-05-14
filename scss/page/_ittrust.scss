@@ -7,35 +7,33 @@
 
 /* strong */
 .ittrust .strong {
-  margin-top: vw_min(80px);
-  // padding: vw_min(80px) 0;
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(120px);
-    // padding: 0;
+    margin-top: calc($section-gap / 2);
   }
 
   &__title {
     > span {
-      font-size: vw_min(28px);
+      font-size: $size-24;
       color: $color-blue-dark;
       text-align: center;
       display: block;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(40px);
+        font-size: $size-20;
       }
     }
   }
 
   &__circle {
-    margin-top: vw_min(32px);
+    margin-top: 48px;
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(80px);
+      margin-top: 32px;
     }
 
     &--list {
@@ -144,11 +142,11 @@
 
 /* approach */
 .ittrust .approach {
-  margin-top: vw_min(80px);
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
 
   &__cards--tagsdl {
@@ -272,11 +270,11 @@
 
 /* plan */
 .ittrust .plan {
-  padding-top: vw_min(80px);
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    padding-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
 
   &__cards--result {
@@ -321,7 +319,7 @@
 
   @include mq(md, max) {
     // sp
-    padding-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
 
   &__prosess {

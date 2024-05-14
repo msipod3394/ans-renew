@@ -5,6 +5,11 @@
   width: 100%;
   transition: all 0.3s ease;
 
+  @include mq(md, max) {
+    // sp
+    overflow: hidden;
+  }
+
   #top & {
     top: 0;
     left: 0;
