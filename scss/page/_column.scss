@@ -530,16 +530,3 @@
     padding-top: 80px;
   }
 }
-
-.column {
-  margin-bottom: 80px;
-}
-
-.l-column {
-  @include mq(md, max) {
-    // sp
-    display: flex;
-    flex-direction: column-reverse;
-    
-  }
-}

@@ -233,6 +233,10 @@
         }
       }
     }
+
+    &.is-active a::before {
+      transform: scale(1, 1);
+    }
   }
 
   &__inquiry {

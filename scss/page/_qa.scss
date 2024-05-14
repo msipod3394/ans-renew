@@ -13,7 +13,7 @@
 
     &--box {
       border-top: 1px solid $color-gray-300;
-      padding-top: vw_min(16px);
+      padding-top: $size-16;
 
       @include mq(md, max) {
         // sp
@@ -25,7 +25,7 @@
       position: relative;
       display: flex;
       align-items: flex-start;
-      padding: vw_min(16px) 0;
+      padding: $size-16 0;
       color: $color-blue-dark;
 
       @include mq(md, max) {
@@ -37,22 +37,22 @@
         display: block;
         font-family: $font-mincho;
         margin-right: 8px;
-        font-size: vw_min(18px);
+        font-size: $size-18;
+
         @include mq(md, max) {
           // sp
-          font-size: vw_max(20px);
+          font-size: $size-18;
         }
       }
 
       &.__ques {
-        font-size: vw_min(18px);
+        font-size: $size-18;
         line-height: 1.5;
         margin-bottom: 16px;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(26px);
-          padding: vw_max(24px) 0;
+          font-size: $size-16;
           margin-bottom: 4px;
         }
 
@@ -62,44 +62,29 @@
 
           @include mq(md, max) {
             // sp
-            font-size: vw_max(24px);
+            font-size: $size-16;
           }
         }
 
         span.icon-plus-in-circle::after {
-          width: vw_min(32px);
-          height: vw_min(32px);
+          width: $size-32;
+          height: $size-32;
           position: absolute;
           top: 50%;
           right: 0;
           transform: translate(0%, -50%);
           z-index: 10;
           border-radius: 50rem;
-
-          @include mq(md, max) {
-            // sp
-            width: vw_max(64px);
-            height: vw_max(64px);
-          }
         }
       }
       &.__ans {
-        font-size: vw_min(16px);
-        line-height: 1.75;
-
-        @include mq(md, max) {
-          // sp
-          font-size: vw_max(24px);
-        }
+        font-size: $size-16;
+        line-height: 1.5;
 
         &::before {
           content: "A.";
           color: $color-orange;
-
-          @include mq(md, max) {
-            // sp
-            font-size: vw_max(24px);
-          }
+          font-size: $size-16;
         }
       }
     }
@@ -187,8 +172,8 @@ accordion
   padding: 1.5rem 2rem 1.5rem 2rem;
   box-sizing: border-box;
   background: #fff;
-  margin-bottom: vw_min(32px);
-  
+  margin-bottom: $size-32;
+
   @include mq(md, max) {
     // sp
     padding: vw_max(24px);

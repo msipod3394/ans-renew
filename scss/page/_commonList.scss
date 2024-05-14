@@ -554,6 +554,6 @@
   @include mq(md, max) {
     // sp
     display: flex;
-    flex-direction: column-reverse;
+    // flex-direction: column-reverse;
   }
 }

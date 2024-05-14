@@ -23,12 +23,12 @@
 .common__inner {
   @include mq(md, min) {
     // pc
-    margin: vw_min(64px) vw_min(88px) 0;
+    margin: $size-64 $size-80 0;
   }
 
   @include mq(md, max) {
     // sp
-    margin: vw_max(32px) vw_max(40px) 0;
+    margin: vw_max(32px) $size-40 0;
   }
 }
 
@@ -36,18 +36,18 @@
 .common__title {
   display: flex;
   flex-direction: column;
-  gap: vw_min(40px);
+  gap: $size-40;
 
   @include mq(md, max) {
     // sp
-    gap: vw_max(40px);
-    margin-bottom: vw_max(56px);
+    gap: $size-40;
+    margin-bottom: 40px;
   }
 
   &--text {
     position: relative;
     display: flex;
-    gap: vw_min(8px);
+    gap: $size-8;
 
     @include mq(md, max) {
       // sp
@@ -64,7 +64,7 @@
 
       @include mq(md, max) {
         // sp
-        width: vw_max(40px);
+        width: $size-40;
         margin-top: vw_max(30px);
       }
     }
@@ -90,7 +90,7 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(40px);
+          font-size: $size-40;
         }
       }
 
@@ -100,7 +100,7 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(40px);
+          font-size: $size-40;
         }
       }
     }
@@ -151,8 +151,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: vw_min(8px);
-      margin-left: vw_min(8px);
+      gap: $size-8;
+      margin-left: $size-8;
       position: relative;
       z-index: 2;
 
@@ -321,7 +321,7 @@
   }
 
   &--text {
-    margin-top: vw_min(8px);
+    margin-top: $size-8;
     margin-left: vw_min(24px);
 
     @include mq(md, max) {
@@ -342,7 +342,7 @@
     }
 
     > li + li {
-      margin-top: vw_min(8px);
+      margin-top: $size-8;
     }
   }
 }
@@ -399,14 +399,14 @@
   display: block;
   width: 0;
   height: 0;
-  border-left: vw_min(40px) solid transparent;
-  border-right: vw_min(40px) solid transparent;
+  border-left: $size-40 solid transparent;
+  border-right: $size-40 solid transparent;
   border-top: vw_min(32px) solid $color-blue-dark;
 
   @include mq(md, max) {
     // sp
-    border-left: vw_max(40px) solid transparent;
-    border-right: vw_max(40px) solid transparent;
+    border-left: $size-40 solid transparent;
+    border-right: $size-40 solid transparent;
     border-top: vw_max(32px) solid $color-blue-dark;
   }
 }
@@ -432,8 +432,8 @@
 
 /* icon-plus */
 .icon-plus {
-  width: vw_min(40px);
-  height: vw_min(40px);
+  width: $size-40;
+  height: $size-40;
 
   @include mq(md, max) {
     // sp
@@ -495,9 +495,14 @@
   @include mq(md, min) {
     // pc
     display: grid;
-    // grid-template: "sub main blank" 1fr/280px 1fr 160px;
-    grid-template: "sub main" 1fr/280px 1fr;
-    margin-bottom: 120px;
+    grid-template: "sub main" 1fr/240px 1fr;
+    margin-bottom: 80px;
+  }
+
+  @include mq(md, max) {
+    // sp
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -509,7 +514,6 @@
 
   @include mq(md, min) {
     // pc
-    padding-right: 20px;
     border-right: 1px solid $color-gray-200;
   }
 
@@ -532,7 +536,7 @@
     @include mq(md, min) {
       // pc
       max-width: 1080px;
-      padding: 0 vw_min(64px);
+      padding: 0 $size-40;
     }
 
     .-full & {
@@ -561,7 +565,7 @@
 
 /* p-over-img */
 .p-over-img {
-  margin-top: vw_min(64px);
+  margin-top: $size-64;
 
   > img {
     width: 100%;
@@ -579,19 +583,19 @@
     @include mq(md, max) {
       // sp
       margin-top: vw_max(80px);
-      gap: vw_max(40px);
+      gap: $size-40;
     }
   }
   &__cards--item {
     background-color: #fff;
     border: 1px solid $color-gray-200;
-    padding: vw_min(40px) vw_min(32px);
+    padding: $size-40 vw_min(32px);
     box-shadow: 1px 1px 10px 0px $color-gray-200;
     overflow: hidden;
 
     @include mq(md, max) {
       // sp
-      padding: vw_max(40px) vw_max(32px);
+      padding: $size-40 vw_max(32px);
     }
 
     &.-bg-gray {

@@ -41,7 +41,8 @@
     }
 
     &--item {
-      > a {
+      > a,
+      span {
         display: block;
         font-size: vw_min(10px);
         line-height: 1;
@@ -55,13 +56,9 @@
           color: $color-blue-dark;
         }
 
-        > span {
-          font-weight: 400;
-
-          &._current {
-            font-weight: 500;
-            color: $color-blue-dark;
-          }
+        &._current {
+          font-weight: 500;
+          color: $color-blue-dark;
         }
       }
     }

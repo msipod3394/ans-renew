@@ -65,7 +65,7 @@ $(document).ready(function () {
   $(document).on("scroll", function () {
     let scrollPos = $(document).scrollTop();
 
-    if (isWindowWidthAbove(1200)) {
+    if (isWindowWidthAbove(1080)) {
       // 各セクションの位置を判定して active クラスを設定
       $(".js-target").each(function () {
         let top = $(this).offset().top - 40;
@@ -73,6 +73,7 @@ $(document).ready(function () {
 
         if (scrollPos >= top && scrollPos <= bottom) {
           const targetId = "#" + $(this).attr("id");
+
           $(".js-anchor").removeClass("_current"); // 全てのリンクから active クラスを削除
           $('.js-nav a[href="' + targetId + '"]').addClass("_current"); // 対応するリンクに active クラスを追加
         }
