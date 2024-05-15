@@ -20,6 +20,7 @@
     @include mq(md, max) {
       // sp
       flex-direction: column;
+      margin-bottom: $size-32;
     }
   }
 
@@ -39,15 +40,15 @@
 
     @include mq(md, min) {
       // pc
-      gap: $size-32;
+      gap: $size-56;
       margin-left: $size-24;
     }
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(80px);
-      gap: vw_max(24px);
+      margin-top: 40px;
       flex-direction: column;
+      gap: $size-16;
     }
   }
 
@@ -55,25 +56,31 @@
   }
 
   &__nav--item {
-    > a {
-      &._textBold {
-        font-weight: 600;
-        font-size: $size-14;
-        line-height: 1;
+    line-height: 1;
+    padding: 6px 0;
 
-        @include mq(md, max) {
-          // sp
-          font-size: vw_max(24px);
-        }
+    > a {
+      display: block;
+
+      &._textBold {
+        font-size: $size-14;
+        font-weight: 600;
+        line-height: 1;
       }
 
       &._textThin {
         font-size: $size-13;
         line-height: 1;
+
+        @include mq(md, max) {
+          // sp
+          font-size: $size-12;
+        }
       }
 
       &:hover {
         color: $color-blue;
+        text-decoration: underline;
       }
     }
   }
@@ -86,7 +93,7 @@
     margin-bottom: $size-32;
     padding-bottom: $size-32;
     border-bottom: $border;
-    
+
     @include mq(md, max) {
       // sp
       flex-direction: column;
@@ -106,17 +113,52 @@
         font-size: vw_max(18px);
       }
     }
-    &--links {
+    &--link {
       display: flex;
-      gap: $size-16;
-    }
-    &__cookie--link {
-      > a {
+      align-items: center;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: 24px;
+      }
+
+      &--item {
+        width: 50%;
+
         img {
           width: 100%;
+          margin: 0 auto;
         }
-        &:hover {
-          opacity: 0.7;
+
+        &.-privacymark img {
+          @include mq(md, min) {
+            // pc
+            max-width: 80px;
+          }
+
+          @include mq(md, max) {
+            // sp
+            max-width: 80px;
+          }
+        }
+
+        &.-isms img {
+          @include mq(md, min) {
+            // pc
+            max-width: 280px;
+          }
+
+          @include mq(md, max) {
+            // sp
+            max-width: 160px;
+          }
+        }
+
+        > a {
+          display: block;
+          &:hover {
+            opacity: 0.7;
+          }
         }
       }
     }
@@ -133,7 +175,8 @@
 
     @include mq(md, max) {
       // sp
-      flex-direction: column;
+      margin-top: $size-40;
+      flex-direction: column-reverse;
     }
 
     &--text {
@@ -153,6 +196,10 @@
       font-size: $size-10;
       line-height: 1.5;
       letter-spacing: 0;
+      &:hover {
+        color: $color-blue;
+        text-decoration: underline;
+      }
     }
   }
 }

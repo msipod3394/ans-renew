@@ -240,7 +240,7 @@
 }
 
 /* common__borderLink */
-.common__borderLink {
+a.common__borderLink {
   display: inline-block;
   position: relative;
   padding-bottom: $size-16;
@@ -248,8 +248,14 @@
   font-weight: 500;
   color: $color-blue-dark;
 
+  @include mq(md, min) {
+    // pc
+    min-width: 12rem;
+  }
+
   @include mq(md, max) {
     // sp
+    display: block;
     font-size: $size-14;
     padding-bottom: $size-12;
   }
@@ -284,6 +290,11 @@
   .icon-arrow {
     padding-left: 8px;
     font-size: $size-14;
+
+    @include mq(md, max) {
+      // sp
+      padding-left: 4px;
+    }
 
     &::after {
       transition: $transition;
@@ -328,7 +339,7 @@
 
     @include mq(md, max) {
       // sp
-      font-size: $size-20;
+      font-size: $size-15;
     }
   }
 
@@ -336,21 +347,10 @@
     margin-top: $size-8;
     margin-left: $size-24;
 
-    @include mq(md, max) {
-      // sp
-      margin-top: vw_max(16px);
-      margin-left: vw_max(32px);
-    }
-
     > li {
       list-style-type: decimal;
-      font-size: vw_min(14px);
+      font-size: $size-14;
       line-height: 1.5;
-
-      @include mq(md, max) {
-        // sp
-        font-size: $size-20;
-      }
     }
 
     > li + li {
@@ -364,7 +364,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: $size-24;
+
+  @include mq(md, max) {
+    // sp
+    gap: $size-16;
+  }
 
   &::after {
     position: relative;
@@ -444,7 +449,7 @@
   }
 
   &._vetical {
-    margin: vw_min(-24px);
+    margin: calc($size-40 * -1);
     transform: rotate(90deg);
   }
 }
@@ -483,6 +488,27 @@
       $path + "common/icon/icon-plus-in-circle.svg",
       $color-blue-dark
     );
+  }
+}
+
+/* icon-arrow */
+.icon-blank {
+  display: flex;
+  align-items: center;
+  gap: $size-8;
+
+  &::after {
+    position: relative;
+    width: $size-16;
+    height: $size-12;
+    @include icon-mask($path + "/common/icon/icon-blank.svg", $color-blue-dark);
+    transition: $transition;
+
+    @include mq(md, max) {
+      // sp
+      width: $size-18;
+      height: $size-12;
+    }
   }
 }
 
@@ -539,14 +565,18 @@
 
   @include mq(md, max) {
     // sp
-    margin-bottom: 4rem;
+    // margin-bottom: 2rem;
   }
 }
 
 /* l-column__main */
 .l-column__main {
   grid-area: main;
-  overflow: hidden;
+
+  @include mq(md, min) {
+    // pc
+    overflow: hidden;
+  }
 
   .l-section,
   &--inner {
@@ -577,15 +607,16 @@
   height: max-content;
   top: 200px;
   position: relative;
-
-  @include mq(md, min) {
-    // pc
-  }
 }
 
 /* p-over-img */
 .p-over-img {
   margin-top: $size-64;
+
+  @include mq(md, max) {
+    // sp
+    margin: 0 -10%;
+  }
 
   > img {
     width: 100%;
@@ -595,15 +626,15 @@
 /* 共通カードリスト */
 .common {
   &__cards--list {
-    margin-top: vw_min(80px);
+    margin-top: $section-gap;
     display: flex;
     flex-direction: column;
     gap: $size-32;
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(80px);
-      gap: $size-40;
+      margin-top: calc($section-gap / 2);
+      gap: $size-24;
     }
   }
   &__cards--item {
@@ -633,7 +664,7 @@
 
     @include mq(md, max) {
       // sp
-      margin: vw_max(-48px) vw_max(-36px) vw_max(32px);
+      margin: -3rem -2.5rem 0;
     }
 
     > img {
@@ -649,7 +680,7 @@
 
     @include mq(md, max) {
       // sp
-      font-size: $size-18;
+      font-size: $size-16;
     }
 
     &._hasBorder {
@@ -659,8 +690,8 @@
 
       @include mq(md, max) {
         // sp
-        margin-top: $size-16;
-        margin-bottom: $size-16;
+        margin-top: $size-24;
+        margin-bottom: $size-24;
       }
 
       &::after {
@@ -673,8 +704,7 @@
 
         @include mq(md, max) {
           // sp
-          width: vw_max(56px);
-          margin: vw_max(16px) 0;
+          height: 1px;
         }
       }
     }
@@ -700,6 +730,7 @@
     @include mq(md, max) {
       // sp
       font-size: $size-14;
+      line-height: 1.75;
     }
 
     > p + p {
@@ -721,15 +752,11 @@
     margin-top: $size-32;
   }
   &__cards--link {
-    width: vw_min(160px);
+    // width: vw_min(160px);
 
     @include mq(md, max) {
       // sp
       width: 50%;
-    }
-
-    > a {
-      width: 100%;
     }
   }
 }

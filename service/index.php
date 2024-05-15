@@ -71,7 +71,7 @@ include($site_root . 'functions.php');
                 </div>
                 <ul class="serviceTop__mainItem--linkList">
                   <li class="serviceTop__mainItem--link">
-                    <a href="<?= $site_root; ?>fullorder/" class="common__borderLink"><span class="icon-arrow">詳しく見る</span></a>
+                    <a href="<?= $site_root; ?>/service/fullorder/" class="common__borderLink"><span class="icon-arrow">詳しく見る</span></a>
                   </li>
                   <li class="serviceTop__mainItem--link">
                     <a href="<?= $site_root; ?>case/" class="common__borderLink"><span class="icon-arrow">導入事例</span></a>
@@ -93,7 +93,7 @@ include($site_root . 'functions.php');
                 </div>
                 <ul class="serviceTop__mainItem--linkList">
                   <li class="serviceTop__mainItem--link">
-                    <a href="<?= $site_root; ?>renewal/" class="common__borderLink"><span class="icon-arrow">詳しく見る</span></a>
+                    <a href="<?= $site_root; ?>service/renewal/" class="common__borderLink"><span class="icon-arrow">詳しく見る</span></a>
                   </li>
                   <li class="serviceTop__mainItem--link">
                     <a href="<?= $site_root; ?>case/" class="common__borderLink"><span class="icon-arrow">導入事例</span></a>
@@ -115,7 +115,7 @@ include($site_root . 'functions.php');
                 </div>
                 <ul class="serviceTop__mainItem--linkList">
                   <li class="serviceTop__mainItem--link">
-                    <a href="<?= $site_root; ?>maintenance/" class="common__borderLink"><span class="icon-arrow">詳しく見る</span></a>
+                    <a href="<?= $site_root; ?>/service/maintenance/" class="common__borderLink"><span class="icon-arrow">詳しく見る</span></a>
                   </li>
                   <li class="serviceTop__mainItem--link">
                     <a href="<?= $site_root; ?>case/" class="common__borderLink"><span class="icon-arrow">導入事例</span></a>
@@ -399,77 +399,77 @@ include($site_root . 'functions.php');
       <!-- #column -->
       <section id="column" class="subColumn js-target">
         <div class="common__inner">
-          <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">UI/UXデザインに関するコラム</span></h2>
-          <ul class="subColumn__list">
-            <li class="subColumn__card">
-              <a href="" class="subColumn__card--link">
-                <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                <div class="subColumn__card--contents">
-                  <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
-                  <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
-                  <p class="subColumn__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                  <div class="subColumn__card--tag">
-                    <span class="tag">#IT-Trust</span>
-                    <span class="tag">#システム開発</span>
-                    <span class="tag">#販売管理システム</span>
+          <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">基幹システムに関するコラム</span></h2>
+          <div class=" subColumn__inner">
+            <ul class="subColumn__list">
+              <li class="subColumn__card">
+                <a href="" class="subColumn__card--link">
+                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                  <div class="subColumn__card--contents">
+                    <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
+                    <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
+                    <p class="subColumn__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="subColumn__card--tag">
+                      <span class="tag">#IT-Trust</span>
+                      <span class="tag">#システム開発</span>
+                      <span class="tag">#販売管理システム</span>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </li><!-- subColumn__card -->
-            <li class="subColumn__card">
-              <a href="" class="subColumn__card--link">
-                <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                <div class="subColumn__card--contents">
-                  <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
-                  <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
-                  <p class="subColumn__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                  <div class="subColumn__card--tag">
-                    <span class="tag">#IT-Trust</span>
-                    <span class="tag">#システム開発</span>
-                    <span class="tag">#販売管理システム</span>
+                </a>
+              </li><!-- subColumn__card -->
+              <li class="subColumn__card">
+                <a href="" class="subColumn__card--link">
+                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                  <div class="subColumn__card--contents">
+                    <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
+                    <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
+                    <p class="subColumn__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="subColumn__card--tag">
+                      <span class="tag">#IT-Trust</span>
+                      <span class="tag">#システム開発</span>
+                      <span class="tag">#販売管理システム</span>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </li><!-- subColumn__card -->
-            <li class="subColumn__card">
-              <a href="" class="subColumn__card--link">
-                <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                <div class="subColumn__card--contents">
-                  <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
-                  <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
-                  <p class="subColumn__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                  <div class="subColumn__card--tag">
-                    <span class="tag">#IT-Trust</span>
-                    <span class="tag">#システム開発</span>
-                    <span class="tag">#販売管理システム</span>
+                </a>
+              </li><!-- subColumn__card -->
+              <li class="subColumn__card">
+                <a href="" class="subColumn__card--link">
+                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                  <div class="subColumn__card--contents">
+                    <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
+                    <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
+                    <p class="subColumn__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="subColumn__card--tag">
+                      <span class="tag">#IT-Trust</span>
+                      <span class="tag">#システム開発</span>
+                      <span class="tag">#販売管理システム</span>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </li><!-- subColumn__card -->
-            <li class="subColumn__card">
-              <a href="" class="subColumn__card--link">
-                <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                <div class="subColumn__card--contents">
-                  <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
-                  <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
-                  <p class="subColumn__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                  <div class="subColumn__card--tag">
-                    <span class="tag">#IT-Trust</span>
-                    <span class="tag">#システム開発</span>
-                    <span class="tag">#販売管理システム</span>
+                </a>
+              </li><!-- subColumn__card -->
+              <li class="subColumn__card">
+                <a href="" class="subColumn__card--link">
+                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                  <div class="subColumn__card--contents">
+                    <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
+                    <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
+                    <p class="subColumn__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="subColumn__card--tag">
+                      <span class="tag">#IT-Trust</span>
+                      <span class="tag">#システム開発</span>
+                      <span class="tag">#販売管理システム</span>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </li><!-- subColumn__card -->
-          </ul>
-          <div class="subColumn__linkButton common__linkButton"><a href="<?= $site_root; ?>column"><span class="font-mincho">全てのコラムを見る</span></a></div>
+                </a>
+              </li><!-- subColumn__card -->
+            </ul>
+            <div class="subColumn__linkButton common__linkButton"><a href="<?= $site_root; ?>column"><span class="font-mincho">全てのコラムを見る</span></a></div>
+          </div>
         </div>
       </section>
-
-
     </main><!-- ./sub__container -->
 
-    <!-- ▼ inc/gac -->
+    <!-- ▼ inc/contact -->
     <?php include($site_root . "_inc/contact.php"); ?>
 
     <!-- ▼ inc/footer -->

@@ -7,25 +7,23 @@
 
 /* strong */
 .maintenance .strong {
-  margin-top: vw_min(80px);
-  padding: vw_min(80px) 0;
+  margin-top: $size-56;
 
   @include mq(md, max) {
     // sp
-    margin-top: vw_max(120px);
     padding: 0;
   }
 
   &__title {
     > span {
-      font-size: vw_min(28px);
+      font-size: $size-24;
       color: $color-blue-dark;
       text-align: center;
       display: block;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(40px);
+        font-size: $size-20;
       }
     }
   }
@@ -126,7 +124,7 @@
       }
 
       &__text {
-        margin-top: vw_min(16px);
+        margin-top: $size-16;
         font-size: vw_min(17px);
         font-weight: 500;
 
@@ -142,20 +140,10 @@
 
 /* features */
 .maintenance .features {
-  margin-top: vw_min(80px);
-
-  @include mq(md, max) {
-    // sp
-    margin-top: vw_max(120px);
-  }
+  margin-top: $section-gap;
 
   &__img {
-    margin-top: vw_min(64px);
-
-    @include mq(md, max) {
-      // sp
-      margin-top: vw_max(80px);
-    }
+    margin-top: $size-40;
 
     > img {
       width: 100%;
@@ -163,31 +151,20 @@
   }
 
   &__desc {
-    margin-top: vw_min(40px);
-
-    @include mq(md, max) {
-      // sp
-      margin-top: vw_max(80px);
-    }
+    margin-top: $size-40;
 
     > p {
-      font-size: vw_min(15px);
+      font-size: $size-16;
       line-height: 1.75;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_min(36px);
+        font-size: $size-14;
       }
     }
 
     &--comparison {
-      margin: vw_min(40px) auto;
-
-      @include mq(md, max) {
-        // sp
-        margin: vw_max(80px) auto;
-      }
-
+      margin: $size-40 auto;
       > img {
         max-width: 100%;
       }
@@ -201,15 +178,14 @@
     &--tagItem {
       display: flex;
       flex-direction: column;
-      gap: vw_min(8px);
-      padding: vw_min(16px) vw_min(24px);
-      font-size: vw_min(14px);
+      gap: $size-8;
+      padding: $size-16 $size-24;
+      font-size: $size-15;
       line-height: 1.3;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(20px);
-        padding: vw_max(16px) vw_max(24px);
+        font-size: $size-14;
       }
 
       &.__harf {
@@ -217,16 +193,16 @@
 
         @include mq(md, min) {
           // pc
-          width: calc(50% - vw_min(8px));
+          width: calc(50% - $size-8);
         }
       }
 
       > span {
-        font-size: vw_min(15px);
+        font-size: $size-15;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(20px);
+          font-size: $size-14;
         }
       }
     }
@@ -235,7 +211,7 @@
 
 /* price */
 .maintenance .price {
-  margin-top: vw_min(80px);
+  margin-top: $size-80;
 
   @include mq(md, max) {
     // sp
@@ -284,8 +260,8 @@
 
     @include mq(md, min) {
       // pc
-      width: calc(50% - vw_min(16px));
-      padding: vw_min(40px) vw_min(24px);
+      width: calc(50% - $size-16);
+      padding: $size-40 $size-24;
     }
 
     @include mq(md, max) {
@@ -316,7 +292,7 @@
     &::after {
       content: "";
       display: block;
-      width: vw_min(40px);
+      width: $size-40;
       height: 2px;
       background-color: $color-orange;
       margin-top: vw_min(10px);
@@ -330,8 +306,8 @@
   }
 
   &__cards--desc {
-    margin-top: vw_min(24px);
-    font-size: vw_min(15px);
+    margin-top: $size-24;
+    font-size: $size-15;
     line-height: 1.5;
     text-align: center;
 
@@ -350,7 +326,7 @@
       // pc
       min-height: vw_min(200px);
       margin-top: vw_min(32px);
-      gap: vw_min(16px);
+      gap: $size-16;
     }
 
     @include mq(md, max) {
@@ -362,7 +338,7 @@
 
     .detailItem {
       background-color: $color-gray-100;
-      padding: vw_min(16px);
+      padding: $size-16;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -377,7 +353,7 @@
       &.__harf {
         @include mq(md, min) {
           // pc
-          width: calc(50% - vw_min(8px));
+          width: calc(50% - $size-8);
         }
       }
 
@@ -391,10 +367,10 @@
 
       &__dt {
         > span {
-          padding: 0 vw_min(8px);
+          padding: 0 $size-8;
           display: inline-block;
           background-color: $color-blue-dark;
-          font-size: vw_min(14px);
+          font-size: $size-14;
           color: #fff;
 
           @include mq(md, max) {
@@ -405,7 +381,7 @@
         }
       }
       &__dd {
-        margin-top: vw_min(16px);
+        margin-top: $size-16;
 
         @include mq(md, max) {
           // sp
@@ -414,7 +390,7 @@
 
         p {
           text-align: center;
-          font-size: vw_min(14px);
+          font-size: $size-14;
           line-height: 1.5;
 
           @include mq(md, max) {
@@ -428,7 +404,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: vw_min(8px);
+          gap: $size-8;
 
           @include mq(md, max) {
             // sp
@@ -442,7 +418,7 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding-bottom: vw_min(8px);
+          padding-bottom: $size-8;
           line-height: 1.25;
 
           @include mq(md, max) {
@@ -453,11 +429,11 @@
           &::before {
             content: "";
             display: block;
-            width: vw_min(40px);
+            width: $size-40;
             height: 2px;
             background-color: $color-blue-dark;
-            margin-top: vw_min(16px);
-            margin-bottom: vw_min(16px);
+            margin-top: $size-16;
+            margin-bottom: $size-16;
 
             @include mq(md, max) {
               // sp
@@ -498,7 +474,7 @@
     }
 
     > p {
-      font-size: vw_min(14px);
+      font-size: $size-14;
       line-height: 1.5;
 
       @include mq(md, max) {
@@ -511,7 +487,7 @@
   &__caution {
     margin-top: vw_min(48px);
     background-color: $color-gray-200;
-    padding: vw_min(24px) vw_min(32px);
+    padding: $size-24 vw_min(32px);
 
     @include mq(md, max) {
       // sp
@@ -520,7 +496,7 @@
     }
 
     > p {
-      font-size: vw_min(14px);
+      font-size: $size-14;
       line-height: 1.5;
 
       @include mq(md, max) {

@@ -7,28 +7,28 @@
 
 /* necessity */
 .bcp .necessity {
-  padding-top: vw_min(80px);
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    padding-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
 
   &__inner {
     border: 1px solid $color-gray-300;
-    padding: vw_min(32px) vw_min(32px);
-    margin-top: vw_min(64px);
+    padding: $size-32 $size-32;
+    margin-top: $size-64;
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(80px);
+      margin-top: $size-40;
       padding: vw_max(48px) vw_max(40px);
     }
   }
 
   &__heading {
-    margin-bottom: vw_min(24px);
-    font-size: vw_min(22px);
+    margin-bottom: $size-24;
+    font-size: $size-22;
     font-weight: 500;
 
     @include mq(md, max) {
@@ -40,15 +40,15 @@
     &::after {
       content: "";
       display: block;
-      width: vw_min(40px);
+      width: $size-40;
       height: 2px;
       background-color: $color-blue-dark;
-      margin-top: vw_min(16px);
+      margin-top: $size-16;
 
       @include mq(md, max) {
         // sp
         width: vw_max(56px);
-        margin-top: vw_max(28px);
+        margin-top: $size-16;
       }
     }
   }
@@ -57,14 +57,14 @@
     display: flex;
     flex-wrap: wrap;
     // flex-direction: column;
-    gap: vw_min(16px);
-    margin-top: vw_min(40px);
+    gap: $size-16;
+    margin-top: $size-40;
     align-items: flex-start;
 
     @include mq(md, max) {
       // sp
       gap: vw_max(24px);
-      margin-top: vw_max(32px);
+      margin-top: $size-16;
     }
   }
 
@@ -72,7 +72,7 @@
     // width: calc(50% - vw_min(8px));
     position: relative;
     background-color: $color-gray-100;
-    padding: vw_min(16px) vw_min(24px);
+    padding: $size-16 $size-24;
     font-size: vw_min(14px);
     letter-spacing: 0;
 
@@ -85,7 +85,7 @@
 
     > span {
       color: $color-blue-dark;
-      font-size: vw_min(16px);
+      font-size: $size-16;
       line-height: 1;
       font-weight: 500;
       letter-spacing: 0;
@@ -113,34 +113,27 @@
   &__arrow {
     display: flex;
     justify-content: center;
-    margin-top: vw_min(32px);
-    margin-bottom: vw_min(32px);
-
-    @include mq(md, max) {
-      // sp
-      margin-top: vw_max(32px);
-      margin-bottom: vw_max(32px);
-    }
-
+    margin-top: $size-32;
+    margin-bottom: $size-32;
     > span {
       display: block;
       width: 0;
       height: 0;
-      border-left: vw_min(40px) solid transparent;
-      border-right: vw_min(40px) solid transparent;
-      border-top: vw_min(32px) solid $color-blue-dark;
+      border-left: $size-40 solid transparent;
+      border-right: $size-40 solid transparent;
+      border-top: $size-32 solid $color-blue-dark;
 
       @include mq(md, max) {
         // sp
         border-left: vw_max(40px) solid transparent;
         border-right: vw_max(40px) solid transparent;
-        border-top: vw_max(32px) solid $color-blue-dark;
+        border-top: $size-16 solid $color-blue-dark;
       }
     }
   }
   &__result {
     > p {
-      font-size: vw_min(22px);
+      font-size: $size-22;
       text-align: center;
       color: $color-blue-dark;
       text-decoration: underline;
@@ -148,7 +141,8 @@
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(32px);
+        font-size: $size-16;
+        line-height: 1.5;
       }
     }
   }
@@ -156,34 +150,26 @@
 
 /* secure */
 .bcp .secure {
-  padding-top: vw_min(80px);
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    padding-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
 
   &__img {
-    // margin-top: vw_min(64px);
-    // margin-left: -80px;
-    // margin-right: vw_min(-80px);
-
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(80px);
-    }
-
-    > img {
-      // width: 100%;
+      margin-top: $size-40;
     }
   }
 
   &__cards {
-    margin-top: vw_min(40px);
+    margin-top: $size-40;
 
     @include mq(md, max) {
       // sp
-      margin-top: vw_max(80px);
+      margin-top: $size-40;
     }
 
     &--list {
@@ -192,7 +178,7 @@
     }
 
     &--item {
-      width: calc(50% - vw_min(16px));
+      width: calc(50% - $size-16);
 
       @include mq(md, max) {
         // sp
@@ -204,31 +190,31 @@
 
 /* plan */
 .bcp .plan {
-  padding-top: vw_min(80px);
+  margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
-    padding-top: vw_max(120px);
+    margin-top: calc($section-gap / 2);
   }
-  
+
   &__cards {
     &--list {
       display: flex;
       flex-direction: column;
-      gap: vw_min(64px);
+      gap: $size-64;
 
       @include mq(md, max) {
         // sp
-        gap: vw_max(120px);
+        gap: $size-60;
       }
     }
     &--item {
       display: flex;
-      gap: vw_min(40px);
+      gap: $size-40;
 
       @include mq(md, max) {
         // sp
-        gap: vw_max(32px);
+        gap: $size-16;
       }
 
       &._reverse {
@@ -249,42 +235,42 @@
     }
     &--contents {
       width: calc(100% - vw_min(320px));
-      // margin-left: vw_min(32px);
+      // margin-left: $size-32;
     }
     &--dt {
-      font-size: vw_min(24px);
+      font-size: $size-24;
       font-weight: 500;
       color: $color-blue-dark;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(28px);
+        font-size: $size-16;
       }
 
       &::after {
         content: "";
         display: block;
-        width: vw_min(40px);
+        width: $size-40;
         height: 2px;
         background-color: $color-blue-dark;
-        margin-top: vw_min(32px);
-        margin-bottom: vw_min(32px);
+        margin-top: $size-32;
+        margin-bottom: $size-32;
 
         @include mq(md, max) {
           // sp
-          width: vw_max(56px);
-          margin-top: vw_max(32px);
-          margin-bottom: vw_max(32px);
+          height: 1px;
+          margin-top: $size-16;
+          margin-bottom: $size-24;
         }
       }
     }
     &--dd {
-      font-size: vw_min(16px);
+      font-size: $size-16;
       line-height: 1.75;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(22px);
+        font-size: $size-14;
       }
     }
   }

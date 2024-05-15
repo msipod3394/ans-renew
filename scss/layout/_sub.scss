@@ -3,18 +3,6 @@
 
 // 共通幅
 .sub {
-  &__container {
-    @include mq(md, min) {
-      // pc
-      // margin-top: vw_min(90px);
-    }
-
-    @include mq(md, max) {
-      // sp
-      // margin-top: vw_max(84px);
-    }
-  }
-
   &__breadcrumbs {
     border-top: 1px solid $color-gray-300;
     border-bottom: 1px solid $color-gray-300;
@@ -335,6 +323,15 @@
     }
   }
 
+  &__container {
+    margin-bottom: $section-gap;
+
+    @include mq(md, max) {
+      // sp
+      margin-bottom: calc($section-gap / 2);
+    }
+  }
+
   &__contents {
     margin: $size-80 0;
     padding: 0 $size-80;
@@ -346,7 +343,12 @@
     }
 
     &--title {
-      margin-bottom: 40px;
+      margin-bottom: $size-40;
+
+      @include mq(md, max) {
+        // sp
+        margin-bottom: $size-32;
+      }
 
       > span {
         line-height: 1.5;
@@ -369,7 +371,7 @@
     }
 
     &--subtitle {
-      margin-bottom: 48px;
+      margin-bottom: $size-48;
 
       > span {
         font-size: $size-22;
@@ -425,7 +427,6 @@
   }
 
   &__contentWrap {
-    // margin: $size-80 $size-80 0;
     display: flex;
     justify-content: space-between;
   }
@@ -546,14 +547,17 @@
 
 /* 下層コラム */
 .subColumn {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   margin-top: $section-gap;
 
   @include mq(md, max) {
     // sp
     margin-top: calc($section-gap / 2);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__title {
@@ -593,12 +597,6 @@
     flex-direction: column;
     border-bottom: 1px solid $color-gray-200;
     border-top: 1px solid $color-gray-200;
-
-    @include mq(md, max) {
-      // sp
-      margin-top: vw_max(56px);
-      margin-bottom: vw_max(80px);
-    }
   }
 
   &__card {
