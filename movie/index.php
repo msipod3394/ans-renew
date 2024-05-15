@@ -1,7 +1,7 @@
 <?php
 $site_root = '../';
-$cn = 'column';
-$page_title = "お悩み解決コラム";
+$cn = 'movie';
+$page_title = "配信動画";
 include($site_root . 'functions.php');
 ?>
 <!DOCTYPE html>
@@ -48,8 +48,8 @@ include($site_root . 'functions.php');
       <section class="sub__heading">
         <h1 class="sub__heading--text">
           <span class="sub__heading--textIn">
-            <span class="font-en line-left">Column</span>
-            <span class="font-mincho">お悩み解決コラム</span>
+            <span class="font-en line-left">movie</span>
+            <span class="font-mincho">配信動画</span>
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>

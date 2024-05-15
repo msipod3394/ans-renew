@@ -218,8 +218,9 @@
 }
 
 /* ページ詳細 */
-.columnDetail {
-  margin-bottom: $size-80;
+// .columnDetail {
+.c-contentsDetail {
+margin-bottom: $size-80;
 
   &__subtitle {
     font-size: 1rem;
@@ -477,9 +478,6 @@
       // sp
       margin-top: $size-40;
       padding: $size-24;
-    }
-
-    &--inner {
     }
 
     &--heading {
