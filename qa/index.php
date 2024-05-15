@@ -31,7 +31,7 @@ include($site_root . 'functions.php');
 <!-- ▼ inc/gac -->
 <?php include($site_root . "_inc/gac.php"); ?>
 
-<body id="qa">
+<body id="<?= $cn; ?>">
   <div id="fullWrap">
     <!-- ▼ inc/header -->
     <?php include($site_root . "_inc/header.php"); ?>

@@ -120,7 +120,10 @@
 
 /* linkButton */
 .common__linkButton {
-  min-width: 320px;
+  @include mq(md, min) {
+    // pc
+    min-width: 320px;
+  }
 
   @include mq(md, max) {
     // sp
@@ -548,6 +551,7 @@ a.common__borderLink {
     // sp
     display: flex;
     flex-direction: column;
+    gap: $size-40;
   }
 }
 
