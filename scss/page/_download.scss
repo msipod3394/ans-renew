@@ -2,32 +2,28 @@
 @import "../mixin/index";
 
 /*-----------------------------------------------
-* whitepaper
+* download
 -------------------------------------------------*/
 
-/* whitepaper */
-.whitepaper {
+/* download */
+.download {
   margin-bottom: 80px;
 
-  &__block + &__block {
-    margin-top: 160px;
-    // border-top: 1px solid $color-gray-300;
-  }
+  &__section + &__section {
+    margin-top: $section-gap;
 
-  .c-contentsList__card--link {
-    grid-template-areas:
-      "thumb title"
-      "thumb desc"
-      "thumb arrowlink";
-    height: fit-content;
+    @include mq(md, max) {
+      // sp
+      margin-top: calc($section-gap / 2);
+    }
   }
 }
 
 /* ページ詳細 */
-.whitepaperDetail {
-  margin-top: 64px;
+.downloadDetail {
+  margin-top: $size-40;
 
-  &._detail {
+  &__flex {
     display: flex;
     gap: $size-32;
 
@@ -49,6 +45,11 @@
   &__text {
     font-size: $size-16;
     line-height: 1.5;
+
+    @include mq(md, max) {
+      // sp
+      font-size: $size-15;
+    }
 
     ._complete & {
       text-align: center;
@@ -110,13 +111,14 @@
 
     @include mq(md, max) {
       // sp
-      margin-top: 80px;
+      margin-top: 40px;
     }
   }
 
-
-  &__download{
-    
+  &__complete {
+    @include mq(md, max) {
+      // sp
+      margin-bottom: 80px;
+    }
   }
-
 }

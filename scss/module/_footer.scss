@@ -10,7 +10,7 @@
 
   @include mq(md, max) {
     // sp
-    padding: vw_max(80px) vw_max(64px);
+    padding: $size-32 $size-16;
   }
 
   &__in {
@@ -28,6 +28,7 @@
     > a {
       width: 100%;
       display: block;
+
       img {
         width: 100%;
       }

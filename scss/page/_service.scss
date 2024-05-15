@@ -374,33 +374,25 @@
     &--card--title {
       display: flex;
       text-align: center;
-      font-size: vw_min(15px);
+      font-size: $size-15;
+      line-height: 1.25;
       letter-spacing: 0;
       flex-direction: column;
       justify-content: center;
+      gap: 8px;
 
       @include mq(md, max) {
         // sp
         min-width: 110px;
-      }
-
-      @include mq(md, max) {
-        // sp
         font-size: $size-15;
-        line-height: 1.5;
         gap: 8px;
       }
 
       > .font-mincho {
-        font-size: vw_min(14px);
+        font-size: $size-12;
         line-height: 1;
         color: $color-gray-300;
         letter-spacing: 0;
-
-        @include mq(md, max) {
-          // sp
-          font-size: vw_max(18px);
-        }
       }
 
       &::before {

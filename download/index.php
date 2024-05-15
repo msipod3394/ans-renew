@@ -1,7 +1,7 @@
 <?php
 $site_root = '../';
-$cn = 'movie';
-$page_title = "配信動画";
+$cn = 'download';
+$page_title = "お役立ち資料";
 include($site_root . 'functions.php');
 ?>
 <!DOCTYPE html>
@@ -36,7 +36,6 @@ include($site_root . 'functions.php');
 
     <!-- ▼ inc/header -->
     <?php include($site_root . "_inc/header.php"); ?>
-
     <main id="contents-column" class="sub__container column">
       <div class="sub__breadcrumbs">
         <ul class="sub__breadcrumbs--list">
@@ -48,12 +47,12 @@ include($site_root . 'functions.php');
       <section class="sub__heading">
         <h1 class="sub__heading--text">
           <span class="sub__heading--textIn">
-            <span class="font-en line-left">movie</span>
-            <span class="font-mincho">配信動画</span>
+            <span class="font-en line-left">Download</span>
+            <span class="font-mincho">お役立ち資料</span>
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>
-        <div class="sub__headingImg"><img src="<?= $site_root; ?>assets/img/column/heading.jpg" alt="お悩み解決コラム"></div>
+        <div class="sub__headingImg"><img src="<?= $site_root; ?>assets/img/download/heading.jpg" alt=""></div>
       </section><!-- sub__heading -->
 
       <div id="column" class="l-block">
@@ -61,7 +60,17 @@ include($site_root . 'functions.php');
 
           <div class="l-column__sub">
             <div class="sub__side--in">
-              <p class="sub__side--heading">カテゴリ</p>
+              <p class="sub__side--heading">サービス資料</p>
+              <ul class="sub__side--list">
+                <li class="sub__side--item js-nav"><a href="" class="js-anchor">テストカテゴリ (10)</a></li>
+                <li class="sub__side--item js-nav"><a href="" class="js-anchor">テストカテゴリ (10)</a></li>
+                <li class="sub__side--item js-nav"><a href="" class="js-anchor">テストカテゴリ (10)</a></li>
+                <li class="sub__side--item js-nav"><a href="" class="js-anchor">テストカテゴリ (10)</a></li>
+                <li class="sub__side--item js-nav"><a href="" class="js-anchor">テストカテゴリ (10)</a></li>
+                <li class="sub__side--item js-nav"><a href="" class="js-anchor">テストカテゴリ (10)</a></li>
+                <li class="sub__side--item js-nav"><a href="" class="js-anchor">テストカテゴリ (10)</a></li>
+              </ul>
+              <p class="sub__side--heading">ホワイトペーパー</p>
               <ul class="sub__side--list">
                 <li class="sub__side--item js-nav"><a href="" class="js-anchor">テストカテゴリ (10)</a></li>
                 <li class="sub__side--item js-nav"><a href="" class="js-anchor">テストカテゴリ (10)</a></li>
@@ -75,11 +84,12 @@ include($site_root . 'functions.php');
           </div>
           <!--./l-column__sub-->
 
-          <div class="l-column__main column">
+          <div class="l-column__main download">
 
-            <!-- #column -->
-            <section class="c-columnRow js-target">
+            <!-- #サービス資料 -->
+            <section class="c-columnRow js-target download__section">
               <div class="c-columnRow__inner l-section">
+                <h2 class="sub__contents--title"><span class="font-mincho">サービス資料</span></h2>
                 <ul class="c-columnRow__list">
                   <li class="c-columnRow__card">
                     <a href="./detail.php" class="c-columnRow__card--link">
@@ -233,11 +243,171 @@ include($site_root . 'functions.php');
                   </li><!-- c-columnRow__card -->
                 </ul>
               </div>
-            </section><!-- ./column -->
+            </section>
+
+            <!-- #ホワイトペーパー -->
+            <section class="c-columnRow js-target download__section">
+              <div class="c-columnRow__inner l-section">
+                <h2 class="sub__contents--title"><span class="font-mincho">ホワイトペーパー</span></h2>
+                <ul class="c-columnRow__list">
+                  <li class="c-columnRow__card">
+                    <a href="./detail.php" class="c-columnRow__card--link">
+                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--contents">
+                        <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                        <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                        <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <ul class="tag icon-tag">
+                          <li class="tag__item">#IT-Trust</li>
+                          <li class="tag__item">#システム開発</li>
+                          <li class="tag__item">#販売管理システム</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li><!-- c-columnRow__card -->
+                  <li class="c-columnRow__card">
+                    <a href="./detail.php" class="c-columnRow__card--link">
+                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--contents">
+                        <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                        <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                        <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <ul class="tag icon-tag">
+                          <li class="tag__item">#IT-Trust</li>
+                          <li class="tag__item">#システム開発</li>
+                          <li class="tag__item">#販売管理システム</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li><!-- c-columnRow__card -->
+                  <li class="c-columnRow__card">
+                    <a href="./detail.php" class="c-columnRow__card--link">
+                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--contents">
+                        <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                        <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                        <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <ul class="tag icon-tag">
+                          <li class="tag__item">#IT-Trust</li>
+                          <li class="tag__item">#システム開発</li>
+                          <li class="tag__item">#販売管理システム</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li><!-- c-columnRow__card -->
+                  <li class="c-columnRow__card">
+                    <a href="./detail.php" class="c-columnRow__card--link">
+                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--contents">
+                        <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                        <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                        <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <ul class="tag icon-tag">
+                          <li class="tag__item">#IT-Trust</li>
+                          <li class="tag__item">#システム開発</li>
+                          <li class="tag__item">#販売管理システム</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li><!-- c-columnRow__card -->
+                  <li class="c-columnRow__card">
+                    <a href="./detail.php" class="c-columnRow__card--link">
+                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--contents">
+                        <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                        <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                        <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <ul class="tag icon-tag">
+                          <li class="tag__item">#IT-Trust</li>
+                          <li class="tag__item">#システム開発</li>
+                          <li class="tag__item">#販売管理システム</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li><!-- c-columnRow__card -->
+                  <li class="c-columnRow__card">
+                    <a href="./detail.php" class="c-columnRow__card--link">
+                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--contents">
+                        <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                        <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                        <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <ul class="tag icon-tag">
+                          <li class="tag__item">#IT-Trust</li>
+                          <li class="tag__item">#システム開発</li>
+                          <li class="tag__item">#販売管理システム</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li><!-- c-columnRow__card -->
+                  <li class="c-columnRow__card">
+                    <a href="./detail.php" class="c-columnRow__card--link">
+                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--contents">
+                        <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                        <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                        <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <ul class="tag icon-tag">
+                          <li class="tag__item">#IT-Trust</li>
+                          <li class="tag__item">#システム開発</li>
+                          <li class="tag__item">#販売管理システム</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li><!-- c-columnRow__card -->
+                  <li class="c-columnRow__card">
+                    <a href="./detail.php" class="c-columnRow__card--link">
+                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--contents">
+                        <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                        <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                        <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <ul class="tag icon-tag">
+                          <li class="tag__item">#IT-Trust</li>
+                          <li class="tag__item">#システム開発</li>
+                          <li class="tag__item">#販売管理システム</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li><!-- c-columnRow__card -->
+                  <li class="c-columnRow__card">
+                    <a href="./detail.php" class="c-columnRow__card--link">
+                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--contents">
+                        <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                        <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                        <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <ul class="tag icon-tag">
+                          <li class="tag__item">#IT-Trust</li>
+                          <li class="tag__item">#システム開発</li>
+                          <li class="tag__item">#販売管理システム</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li><!-- c-columnRow__card -->
+                  <li class="c-columnRow__card">
+                    <a href="./detail.php" class="c-columnRow__card--link">
+                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--contents">
+                        <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                        <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                        <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <ul class="tag icon-tag">
+                          <li class="tag__item">#IT-Trust</li>
+                          <li class="tag__item">#システム開発</li>
+                          <li class="tag__item">#販売管理システム</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li><!-- c-columnRow__card -->
+                </ul>
+              </div>
+            </section>
 
           </div><!-- ./l-column__main -->
         </div><!-- ./l-column -->
       </div><!-- ./l-block -->
+
     </main><!-- ./sub__container -->
 
     <!-- ▼ inc/gac -->

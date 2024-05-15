@@ -15,12 +15,22 @@
   }
 
   &__sub {
-    margin-bottom: $size-80;
+    margin-bottom: 120px;
+
+    @include mq(md, max) {
+      // sp
+      margin-bottom: $size-80;
+    }
 
     &--contents {
       padding-right: 6%;
       max-width: 1600px;
       margin: 0 auto $size-80;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: 40px;
+      }
     }
   }
 }
@@ -35,7 +45,7 @@
       display: grid;
       gap: $size-80;
       grid-template: "left right" 1fr / 1fr 400px;
-      margin-bottom: $size-80;
+      margin-bottom: 160px;
     }
     &--left {
       grid-area: left;
@@ -95,6 +105,11 @@
     }
     &--text {
       font-size: $size-16;
+
+      @include mq(md, max) {
+        // sp
+        font-size: $size-14;
+      }
     }
     &--link {
       margin-top: $size-56;
@@ -123,9 +138,13 @@
   }
 
   .otherLink {
-    border-top: 1px solid $color-gray-200;
-    border-bottom: 1px solid $color-gray-200;
     display: flex;
+
+    @include mq(md, min) {
+      // pc
+      border-top: 1px solid $color-gray-300;
+      // border-bottom: 1px solid $color-gray-200;
+    }
 
     @include mq(md, max) {
       // sp
@@ -140,6 +159,11 @@
         // pc
         width: 50%;
       }
+
+      @include mq(md, max) {
+        // sp
+        width: 100%;
+      }
     }
 
     &__link {
@@ -149,6 +173,11 @@
       flex-direction: column;
       justify-content: space-between;
       position: relative;
+
+      @include mq(md, max) {
+        // sp
+        padding: $size-32 $size-24;
+      }
 
       &::before {
         content: "";
@@ -162,6 +191,12 @@
         transition: 0.2s;
         filter: brightness(0.8) blur(0.5px);
         opacity: 0;
+
+        @include mq(md, max) {
+          // sp
+          opacity: 1;
+          filter: brightness(0.5) blur(0.5px);
+        }
       }
 
       &[data-bg="company"]::before {
@@ -175,23 +210,26 @@
       }
 
       &:hover {
-        &::before {
-          opacity: 1;
-          transform: scale(1.05);
-        }
+        @include mq(md, min) {
+          // pc
+          &::before {
+            opacity: 1;
+            transform: scale(1.05);
+          }
 
-        .otherLink__heading,
-        .otherLink__text {
-          color: #fff;
-        }
+          .otherLink__heading,
+          .otherLink__text {
+            color: #fff;
+          }
 
-        .c-btn-circle__circle {
-          background-color: transparent;
-          border: 1px solid #fff;
-          transform: scale(1.1);
+          .c-btn-circle__circle {
+            background-color: transparent;
+            border: 1px solid #fff;
+            transform: scale(1.1);
 
-          &::after {
-            background-color: #fff;
+            &::after {
+              background-color: #fff;
+            }
           }
         }
       }
@@ -202,28 +240,67 @@
       color: $color-blue-dark;
       font-weight: 500;
 
+      @include mq(md, max) {
+        // sp
+        color: #fff;
+        font-size: $size-24;
+      }
+
       > span {
         display: block;
         font-size: $size-24;
+
+        @include mq(md, max) {
+          // sp
+          font-size: $size-20;
+        }
       }
     }
 
     &__text {
       margin-top: $size-24;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: $size-15;
+        line-height: 1.5;
+        color: #fff;
+        letter-spacing: 0.025em;
+      }
     }
 
     &__circle {
       margin-top: $size-48;
 
+      @include mq(md, max) {
+        // sp
+        margin-top: $size-32;
+        margin-left: auto;
+      }
+
       .c-btn-circle__circle {
         width: $size-80;
         height: $size-80;
+
+        @include mq(md, max) {
+          // sp
+          width: $size-64;
+          height: $size-64;
+          border-color: #fff;
+
+          &::after {
+            background-color: #fff;
+          }
+        }
       }
     }
   }
 
   .otherLink__item + .otherLink__item {
-    border-left: 1px solid $color-gray-200;
+    @include mq(md, min) {
+      // pc
+      border-left: 1px solid $color-gray-200;
+    }
   }
 }
 
@@ -260,7 +337,7 @@
 
         @include mq(md, max) {
           // sp
-          font-size: $size-20;
+          font-size: $size-18;
         }
 
         &::after {
@@ -270,6 +347,11 @@
     }
     &--text {
       font-size: $size-16;
+
+      @include mq(md, max) {
+        // sp
+        font-size: $size-15;
+      }
     }
   }
   &__element {
@@ -285,6 +367,12 @@
     .philosophyList {
       margin-top: $size-80;
       border-top: 1px solid $color-gray-300;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: $size-40;
+      }
+
       &__item {
         padding: $size-40 $size-24;
         border-bottom: 1px solid $color-gray-300;
@@ -349,7 +437,7 @@
 
         &--heading {
           padding: $size-12 0;
-          font-size: $size-24;
+          font-size: $size-20;
           font-weight: 500;
           line-height: 1.5;
           color: $color-blue-dark;
@@ -368,6 +456,7 @@
           @include mq(md, max) {
             // sp
             margin-top: $size-20;
+            font-size: $size-15;
           }
 
           &.-onbg {
@@ -378,6 +467,7 @@
             @include mq(md, max) {
               // sp
               padding: $size-16;
+              font-size: $size-14;
             }
           }
 
@@ -455,7 +545,7 @@
 
     @include mq(md, max) {
       // sp
-      font-size: $size-18;
+      font-size: $size-20;
     }
   }
 
@@ -466,12 +556,23 @@
       font-size: $size-16;
       line-height: 1.75;
 
+      @include mq(md, max) {
+        // sp
+        font-size: $size-15;
+      }
+
       .text-ceoName {
         margin-top: $size-24;
         display: block;
         font-size: $size-18;
         font-weight: 600;
         text-align: right;
+
+        @include mq(md, max) {
+          // sp
+          margin-top: $size-56;
+          font-size: $size-16;
+        }
       }
     }
   }
@@ -487,11 +588,21 @@
       grid-template: "left right" 1fr / 320px 1fr;
       gap: $size-80;
     }
+
+    @include mq(md, max) {
+      // sp
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__book--left {
     grid-area: left;
 
+    @include mq(md, max) {
+      // sp
+      margin-top: 3.2rem;
+    }
     > img {
       max-width: 100%;
     }
@@ -499,11 +610,6 @@
 
   &__book--right {
     grid-area: right;
-
-    @include mq(md, max) {
-      // sp
-      margin-top: 3.2rem;
-    }
   }
 
   &__book--title {
@@ -514,7 +620,7 @@
 
     @include mq(md, max) {
       // sp
-      font-size: $size-18;
+      font-size: $size-14;
     }
   }
 
@@ -522,7 +628,7 @@
     margin-top: $size-24;
 
     > p {
-      font-size: $size-16;
+      font-size: $size-14;
       line-height: 1.75;
     }
   }
@@ -565,12 +671,17 @@
 
       @include mq(md, max) {
         // sp
-        font-size: $size-16;
+        font-size: $size-14;
       }
     }
     &__dd {
       line-height: 1.5;
       font-size: 1rem;
+
+      @include mq(md, max) {
+        // sp
+        font-size: $size-14;
+      }
 
       > img {
         max-width: 500px;
@@ -585,11 +696,6 @@
       @include mq(md, min) {
         // pc
         width: calc(100% - 160px - 1.6rem);
-      }
-
-      @include mq(md, max) {
-        // sp
-        font-size: $size-18;
       }
 
       > span {
@@ -665,6 +771,7 @@
       @include mq(md, max) {
         // sp
         margin-top: 2rem;
+        aspect-ratio: 4 / 3;
       }
 
       > iframe {
@@ -683,6 +790,7 @@
       @include mq(md, max) {
         // sp
         margin-top: 2rem;
+        font-size: $size-14;
       }
 
       dt {
@@ -710,7 +818,6 @@
 
     @include mq(md, max) {
       // sp
-
       margin-top: 4rem;
     }
 
@@ -744,6 +851,11 @@
         font-size: $size-24;
         line-height: 1;
 
+        @include mq(md, max) {
+          // sp
+          font-size: $size-18;
+        }
+
         &::before {
           content: "";
           display: block;
@@ -753,7 +865,7 @@
 
           @include mq(md, max) {
             // sp
-            width: 1.6rem;
+            content: none;
           }
         }
       }
@@ -764,18 +876,17 @@
 
         @include mq(md, min) {
           // pc
-          width: calc(100% - 120px - 2.4rem);
+          width: calc(100% - 160px - 2.4rem);
         }
 
         @include mq(md, max) {
           // sp
-          font-size: $size-18;
+          font-size: $size-14;
         }
 
         > span {
           white-space: nowrap;
           margin-right: $size-24;
-          line-height: 1;
         }
       }
     }

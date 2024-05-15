@@ -64,8 +64,8 @@
 
       @include mq(md, max) {
         // sp
-        width: $size-40;
-        margin-top: vw_max(30px);
+        width: $size-16;
+        margin-top: $size-16;
       }
     }
   }
@@ -90,7 +90,7 @@
 
         @include mq(md, max) {
           // sp
-          font-size: $size-24;
+          font-size: $size-20;
         }
       }
 
@@ -100,7 +100,7 @@
 
         @include mq(md, max) {
           // sp
-          font-size: $size-28;
+          font-size: $size-20;
         }
       }
     }
@@ -112,23 +112,23 @@
 
     @include mq(md, max) {
       // sp
-      font-size: $size-15;
-      margin: 0 $size-40;
+      font-size: $size-14;
+      margin: 0 6%;
     }
   }
 }
 
 /* linkButton */
 .common__linkButton {
+  margin: 0 auto;
   @include mq(md, min) {
     // pc
-    min-width: 320px;
+    max-width: 400px;
   }
 
   @include mq(md, max) {
     // sp
     width: 80%;
-    margin: 0 auto;
   }
 
   > a {

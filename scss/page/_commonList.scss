@@ -5,7 +5,7 @@
 * commonList
 -------------------------------------------------*/
 /* 共通コラム 一覧 */
-.c-contentsList {
+.c-columnRow {
   &__title {
     font-size: $size-24;
     color: $color-blue-dark;
@@ -14,41 +14,24 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: vw_min(8px);
-    margin-bottom: vw_min(40px);
-
-    @include mq(md, max) {
-      // sp
-      font-size: vw_max(40px);
-    }
+    gap: $size-8;
+    margin-bottom: $size-40;
 
     &::after {
       content: "";
       display: block;
-      width: vw_min(40px);
+      width: $size-40;
       height: 2px;
       background-color: $color-orange;
-      margin-top: vw_min(10px);
-
-      @include mq(md, max) {
-        // sp
-        width: vw_max(40px);
-        margin-top: vw_max(10px);
-      }
+      margin-top: $size-10;
     }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid $color-gray-200;
-    border-top: 1px solid $color-gray-200;
-
-    @include mq(md, max) {
-      // sp
-      margin-top: vw_max(56px);
-      margin-bottom: vw_max(80px);
-    }
+    border-bottom: 1px solid $color-gray-300;
+    border-top: 1px solid $color-gray-300;
   }
 
   &__card {
@@ -56,55 +39,44 @@
 
     @include mq(md, max) {
       // sp
-      gap: vw_max(32px);
+      gap: $size-8;
     }
 
     &--link {
-      display: grid;
-      // grid-template-columns: minmax(auto, 320px) 1fr;
-      grid-template-areas:
-        "thumb date"
-        "thumb title"
-        "thumb desc"
-        "thumb tag";
-      height: fit-content;
-
-      @include mq(md, min) {
-        // pc
-        grid-template-columns: minmax(auto, 200px) 1fr;
-        gap: 8px $size-16;
-        padding: $size-24;
-      }
+      display: flex;
+      gap: $size-24;
+      padding: $size-32 $size-24;
 
       @include mq(md, max) {
         // sp
-        grid-template-columns: minmax(auto, 80px) 1fr;
-        gap: 8px $size-8;
-        padding: $size-16;
+        gap: $size-16;
+        padding: $size-24 0;
       }
 
-      // &::after {
-      //   position: absolute;
-      //   right: 0;
-      //   bottom: $size-24;
-      //   width: $size-32;
-      //   height: $size-24;
-      //   transition: transform 0.3s ease;
-      //   @include icon-mask(
-      //     $path + "common/icon/icon-arrow.svg",
-      //     $color-blue-dark
-      //   );
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: $size-24;
+        width: $size-32;
+        height: $size-24;
+        transition: transform 0.3s ease;
+        @include icon-mask(
+          $path + "common/icon/icon-arrow.svg",
+          $color-blue-dark
+        );
 
-      //   @include mq(md, min) {
-      //     // pc
-      //     transform: translateX(-24px);
-      //   }
+        @include mq(md, min) {
+          // pc
+          transform: translateX(-24px);
+        }
 
-      //   @include mq(md, max) {
-      //     // sp
-      //     bottom: $size-12;
-      //   }
-      // }
+        @include mq(md, max) {
+          // sp
+          width: $size-24;
+          height: $size-16;
+          bottom: $size-16;
+        }
+      }
 
       &:hover {
         background-color: rgba($color: $color-blue, $alpha: 0.05);
@@ -120,11 +92,11 @@
     }
 
     &--thumb {
-      grid-area: thumb;
+      width: 16rem;
 
       @include mq(md, max) {
         // sp
-        width: vw_max(160px);
+        width: 6rem;
       }
 
       > img {
@@ -132,11 +104,23 @@
       }
     }
 
+    &--contents {
+      width: calc(100% - 16rem - $size-24);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: $size-8;
+
+      @include mq(md, max) {
+        // sp
+        width: calc(100% - 6rem);
+      }
+    }
+
     &--date {
       color: #6d6b80;
-      font-size: vw_min(13px);
+      font-size: $size-14;
       line-height: 1;
-      grid-area: date;
 
       @include mq(md, max) {
         // sp
@@ -148,12 +132,11 @@
       font-size: $size-16;
       line-height: 1;
       font-weight: 500;
-      color: $color-blue-dark;
-      grid-area: title;
+      margin-top: $size-8;
 
       @include mq(md, max) {
         // sp
-        font-size: $size-16;
+        font-size: vw_max(26px);
         line-height: 1.5;
       }
 
@@ -163,20 +146,22 @@
     }
 
     &--desc {
-      grid-area: desc;
+      margin-top: $size-8;
+      font-size: vw_min(14px);
+
+      font-weight: 400;
+      line-height: 1.25;
+      overflow: hidden;
+
+      @include mq(md, max) {
+        // sp
+        font-size: vw_max(22px);
+      }
 
       > span {
-        font-size: $size-14;
-        line-height: 1.25;
-        overflow: hidden;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
-
-        @include mq(md, max) {
-          // sp
-          font-size: $size-14;
-        }
       }
     }
 
@@ -185,12 +170,6 @@
       flex-wrap: wrap;
       gap: 4px 8px;
       align-items: center;
-      grid-area: tag;
-
-      @include mq(md, max) {
-        // sp
-        gap: vw_max(8px);
-      }
 
       > span.tag {
         font-size: $size-14;
@@ -200,382 +179,346 @@
 
         @include mq(md, max) {
           // sp
-          font-size: $size-15;
           line-height: 1;
         }
-      }
-    }
-
-    &--arrowlink {
-      grid-area: arrowlink;
-      display: flex;
-      gap: 8px;
-      align-items: flex-end;
-      margin-left: auto;
-
-      > span {
-        font-size: $size-14;
-        font-weight: 500;
-        color: $color-blue-dark;
-      }
-
-      &::after {
-        width: $size-24;
-        height: $size-24;
-        transition: transform 0.3s ease;
-
-        @include icon-mask(
-          $path + "common/icon/icon-arrow.svg",
-          $color-blue-dark
-        );
       }
     }
   }
 
   &__card + &__card {
-    border-top: 1px solid $color-gray-200;
+    border-top: 1px solid $color-gray-300;
   }
 
   &__linkButton {
-    margin: 40px auto 80px;
-
-    @include mq(md, max) {
-      // sp
-      margin: vw_max(40px) auto;
-    }
+    margin: $size-40 auto 80px;
   }
 }
 
 /* ページ詳細 */
-// .c-contentsDetail {
-//   margin-bottom: 80px;
+.c-contentsDetail {
+  margin-bottom: $size-80;
 
-//   &__subtitle {
-//     font-size: 1rem;
-//     color: $color-blue-dark;
-//     margin-bottom: 24px;
-//     line-height: 1;
-//     font-weight: 500;
+  &__subtitle {
+    font-size: 1rem;
+    color: $color-blue-dark;
+    margin-bottom: 24px;
+    line-height: 1;
+    font-weight: 500;
 
-//     &::after {
-//       content: "";
-//       display: block;
-//       width: 100%;
-//       height: 1px;
-//       margin-top: 16px;
-//       background-color: $color-blue-dark;
-//     }
-//   }
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin-top: 16px;
+      background-color: $color-blue-dark;
+    }
+  }
 
-//   &__share {
-//     display: flex;
-//     justify-content: flex-end;
-//     gap: 16px;
-//     margin-top: $size-32;
+  &__share {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: $size-32;
 
-//     .shareLists__dt > span {
-//       display: block;
-//       line-height: 1;
-//       font-size: $size-13;
-//     }
-//   }
+    .shareLists__dt > span {
+      display: block;
+      line-height: 1;
+      font-size: $size-13;
+    }
+  }
 
-//   &__update {
-//     display: flex;
-//     justify-content: flex-end;
-//     gap: 16px;
-//     margin-top: $size-32;
+  &__update {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: $size-32;
 
-//     &--date {
-//       display: flex;
-//       align-items: center;
-//       gap: 16px;
+    &--date {
+      display: flex;
+      align-items: center;
+      gap: 16px;
 
-//       > span {
-//         display: block;
-//         line-height: 1;
-//         font-size: $size-13;
-//       }
-//     }
-//     &--share {
-//       .shareLists__dt > span {
-//         display: block;
-//         line-height: 1;
-//         font-size: $size-13;
-//       }
-//     }
-//   }
+      > span {
+        display: block;
+        line-height: 1;
+        font-size: $size-13;
+      }
+    }
+    &--share {
+      .shareLists__dt > span {
+        display: block;
+        line-height: 1;
+        font-size: $size-13;
+      }
+    }
+  }
 
-//   &__head {
-//     margin-bottom: $size-32;
-//     padding-bottom: $size-32;
-//     border-bottom: 1px solid $color-gray-300;
+  &__head {
+    margin-bottom: $size-32;
+    padding-bottom: $size-32;
+    border-bottom: 1px solid $color-gray-300;
 
-//     @include mq(md, max) {
-//       // sp
-//       margin-top: 24px;
-//       margin-bottom: 24px;
-//       padding-bottom: 24px;
-//     }
+    @include mq(md, max) {
+      // sp
+      margin-top: 24px;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+    }
 
-//     &--heading {
-//       margin-bottom: 0;
-//       color: $color-blue-dark;
-//     }
-//   }
+    &--heading {
+      margin-bottom: 0;
+      color: $color-blue-dark;
+    }
+  }
 
-//   &__headDesc {
-//     background-color: $color-gray-100;
-//     padding: 24px;
+  &__headDesc {
+    background-color: $color-gray-100;
+    padding: 24px;
 
-//     &--dl {
-//       display: flex;
-//       flex-wrap: wrap;
-//       gap: 16px;
+    &--dl {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
 
-//       @include mq(md, max) {
-//         // sp
-//         gap: 8px;
-//       }
-//     }
-//     &--item {
-//       display: flex;
+      @include mq(md, max) {
+        // sp
+        gap: 8px;
+      }
+    }
+    &--item {
+      display: flex;
 
-//       &.__full {
-//         @include mq(md, max) {
-//           // sp
-//           flex-direction: column;
-//         }
-//       }
-//     }
-//     &--dt,
-//     &--dd {
-//       font-size: 0.875rem;
-//       line-height: 1.3;
-//     }
-//     &--dt {
-//       display: flex;
-//       justify-content: flex-start;
+      &.__full {
+        @include mq(md, max) {
+          // sp
+          flex-direction: column;
+        }
+      }
+    }
+    &--dt,
+    &--dd {
+      font-size: 0.875rem;
+      line-height: 1.3;
+    }
+    &--dt {
+      display: flex;
+      justify-content: flex-start;
 
-//       .__full & {
-//         width: 72px;
-//       }
+      .__full & {
+        width: 72px;
+      }
 
-//       &::after {
-//         content: "：";
-//         display: block;
-//       }
-//     }
-//     &--dd {
-//       .__full & {
-//         @include mq(md, min) {
-//           // pc
-//           width: calc(100% - 72px);
-//         }
-//       }
-//     }
-//   }
+      &::after {
+        content: "：";
+        display: block;
+      }
+    }
+    &--dd {
+      .__full & {
+        @include mq(md, min) {
+          // pc
+          width: calc(100% - 72px);
+        }
+      }
+    }
+  }
 
-//   &__tag {
-//     margin-top: $size-16;
+  &__tag {
+    margin-top: $size-16;
 
-//     &__list {
-//       display: flex;
-//       align-items: center;
-//     }
-//   }
+    &__list {
+      display: flex;
+      align-items: center;
+    }
+  }
 
-//   &__images {
-//     margin-top: $size-40;
-//     overflow: hidden;
-//     position: relative;
+  &__images {
+    margin-top: $size-40;
+    overflow: hidden;
+    position: relative;
 
-//     @include mq(md, min) {
-//       // pc
-//       aspect-ratio: 3 / 1;
-//     }
+    @include mq(md, min) {
+      // pc
+      aspect-ratio: 3 / 1;
+    }
 
-//     > img {
-//       width: 100%;
-//       display: block;
-//       object-fit: cover;
+    > img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
 
-//       @include mq(md, min) {
-//         // pc
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//       }
-//     }
-//   }
+      @include mq(md, min) {
+        // pc
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
 
-//   &__contents {
-//     margin-top: 80px;
+  &__contents {
+    margin-top: 80px;
 
-//     @include mq(md, max) {
-//       // sp
-//       margin-top: $size-40;
-//     }
+    @include mq(md, max) {
+      // sp
+      margin-top: 40px;
+    }
 
-//     > p {
-//       font-size: 1rem;
+    > p {
+      font-size: 1rem;
 
-//       @include mq(md, max) {
-//         // sp
-//         font-size: $size-14;
-//       }
-//     }
-//     > img {
-//       max-width: 100%;
-//     }
+      @include mq(md, max) {
+        // sp
+        font-size: $size-14;
+      }
+    }
+    > img {
+      max-width: 100%;
+    }
 
-//     &--share {
-//       margin-top: 80px;
-//     }
-//   }
+    &--share {
+      margin-top: 80px;
+    }
+  }
 
-//   &__use {
-//     margin-top: 80px;
-//     background-color: $color-gray-100;
+  &__use {
+    margin-top: 80px;
+    background-color: $color-gray-100;
 
-//     @include mq(md, min) {
-//       // pc
-//       padding: 40px;
-//     }
+    @include mq(md, min) {
+      // pc
+      padding: 40px;
+    }
 
-//     &--inner {
-//       display: grid;
-//       grid:
-//         "heading img" auto
-//         "text img" auto
-//         "button img" 1fr / 1fr auto;
-//       -moz-column-gap: 56px;
-//       column-gap: 56px;
+    &--inner {
+      display: grid;
+      grid:
+        "heading img" auto
+        "text img" auto
+        "button img" 1fr / 1fr auto;
+      -moz-column-gap: 56px;
+      column-gap: 56px;
 
-//       @include mq(md, max) {
-//         // sp
-//         grid:
-//           "img" auto
-//           "heading" auto
-//           "text" auto
-//           "button" auto / auto;
-//         row-gap: 1rem;
-//         padding: 1.25rem;
-//       }
-//     }
+      @include mq(md, max) {
+        // sp
+        grid:
+          "img" auto
+          "heading" auto
+          "text" auto
+          "button" auto / auto;
+        row-gap: 1rem;
+        padding: 1.25rem;
+      }
+    }
 
-//     &--heading {
-//       grid-area: heading;
-//       font-size: $size-18;
-//       font-weight: 500;
-//     }
-//     &--text {
-//       margin-top: 16px;
-//       grid-area: text;
-//       font-size: $size-16;
-//       line-height: 1.5;
-//     }
-//     &--link {
-//       margin-top: 32px;
-//     }
-//     &--img {
-//       grid-area: img;
-//       justify-self: center;
+    &--heading {
+      grid-area: heading;
+      font-size: $size-18;
+      font-weight: 500;
+    }
+    &--text {
+      margin-top: 16px;
+      grid-area: text;
+      font-size: $size-16;
+      line-height: 1.5;
+    }
+    &--link {
+      margin-top: 32px;
+    }
+    &--img {
+      grid-area: img;
+      justify-self: center;
 
-//       @include mq(md, min) {
-//         // pc
-//         width: 360px;
-//       }
+      @include mq(md, min) {
+        // pc
+        width: 360px;
+      }
 
-//       > img {
-//         max-width: 100%;
-//         display: block;
-//         object-fit: fill;
-//       }
-//     }
-//   }
+      > img {
+        max-width: 100%;
+        display: block;
+        object-fit: fill;
+      }
+    }
+  }
 
-//   &__inquiry {
-//     margin-top: $section-gap;
-//     padding: $size-40;
-//     background-color: #fff;
-//     box-shadow: 1px 1px 5px 0px $color-gray-100;
+  &__inquiry {
+    margin-top: $section-gap;
+    padding: $size-40;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 0px $color-gray-100;
 
-//     @include mq(md, max) {
-//       // sp
-//       margin-top: $size-40;
-//       padding: $size-24;
-//     }
+    @include mq(md, max) {
+      // sp
+      margin-top: $size-40;
+      padding: $size-24;
+    }
 
-//     &--heading {
-//       font-size: $size-18;
-//       font-weight: 500;
-//       text-align: center;
+    &--heading {
+      font-size: $size-18;
+      font-weight: 500;
+      text-align: center;
 
-//       @include mq(md, max) {
-//         // sp
-//         font-size: $size-15;
-//         line-height: 1.5;
-//       }
-//     }
-//     &--links {
-//       width: 100%;
-//       display: flex;
-//       justify-content: center;
-//       gap: 24px;
+      @include mq(md, max) {
+        // sp
+        font-size: $size-15;
+        line-height: 1.5;
+      }
+    }
+    &--links {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
 
-//       .sub__headingAction--list {
-//         width: 100%;
+      .sub__headingAction--list {
+        width: 100%;
 
-//         @include mq(md, min) {
-//           // pc
-//           max-width: 60%;
-//         }
+        @include mq(md, min) {
+          // pc
+          max-width: 60%;
+        }
 
-//         @include mq(md, max) {
-//           // sp
-//           flex-direction: column;
-//         }
-//       }
+        @include mq(md, max) {
+          // sp
+          flex-direction: column;
+        }
+      }
 
-//       .sub__headingAction--item {
-//         @include mq(md, max) {
-//           // sp
-//           width: 100%;
-//         }
-//       }
-//     }
-//   }
+      .sub__headingAction--item {
+        @include mq(md, max) {
+          // sp
+          width: 100%;
+        }
+      }
+    }
+  }
 
-//   &__linkBack {
-//     display: block;
+  &__linkBack {
+    display: block;
 
-//     @include mq(md, min) {
-//       // pc
-//       max-width: 400px;
-//       margin: 80px auto 0;
-//     }
+    @include mq(md, min) {
+      // pc
+      max-width: 400px;
+      margin: 80px auto 0;
+    }
 
-//     @include mq(md, max) {
-//       // sp
-//       margin: 40px auto 0;
-//     }
-//   }
+    @include mq(md, max) {
+      // sp
+      margin: 40px auto 0;
+    }
+  }
 
-//   &__other {
-//     padding-top: 80px;
-//   }
-// }
+  &__other {
+    padding-top: 80px;
+  }
+}
 
-// .l-list {
-//   margin-bottom: 80px;
-// }
-
-// .l-column {
-//   @include mq(md, max) {
-//     // sp
-//     display: flex;
-//     // flex-direction: column-reverse;
-//   }
-// }
+#contents-column .l-column {
+  @include mq(md, max) {
+    // sp
+    flex-direction: column-reverse;
+  }
+}

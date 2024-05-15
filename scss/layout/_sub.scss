@@ -9,12 +9,13 @@
 
     @include mq(md, min) {
       // pc
-      padding: vw_min(4px) vw_min(40px);
+      padding: $size-8 $size-40;
     }
 
     @include mq(md, max) {
       // sp
-      padding: vw_max(8px) vw_max(24px);
+      padding: 1% 2%;
+      // padding: vw_max(8px) vw_max(24px);
     }
 
     &--list {
@@ -91,7 +92,7 @@
 
     @include mq(md, max) {
       // sp
-      margin-bottom: $size-40;
+      padding-top: $size-40;
     }
 
     &--text {
@@ -132,6 +133,7 @@
 
       > span {
         line-height: 1.5;
+        text-shadow: -1px 2px 2px #fff;
 
         &.font-en {
           font-size: $size-24;
@@ -170,11 +172,16 @@
     background-color: $color-blue-dark;
     margin-top: $size-40;
 
+    @include mq(md, max) {
+      // sp
+      margin-top: $size-24;
+    }
+
     &--in {
       @include mq(md, min) {
         // pc
         width: 50%;
-        padding: vw_min(40px) vw_min(56px) vw_min(56px) vw_min(88px);
+        padding: $size-40 vw_min(56px) vw_min(56px) vw_min(88px);
       }
 
       @include mq(md, max) {
@@ -198,8 +205,9 @@
       display: flex;
       margin-top: $size-24;
       gap: $size-24;
-      
-      @include mq(md, max){ // sp
+
+      @include mq(md, max) {
+        // sp
         gap: $size-16;
       }
     }
@@ -304,14 +312,21 @@
 
     @include mq(md, max) {
       // sp
-      opacity: 0.3;
       z-index: -1;
+      filter: blur(2px);
+      opacity: 0.35;
+      overflow: hidden;
     }
 
     > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: -10px;
+      }
     }
   }
 
@@ -349,6 +364,7 @@
         @include mq(md, max) {
           // sp
           font-size: $size-20;
+          letter-spacing: 0;
         }
 
         &::before {
@@ -571,7 +587,7 @@
     &::after {
       content: "";
       display: block;
-      width: vw_min(40px);
+      width: $size-40;
       height: 2px;
       background-color: $color-orange;
       margin-top: vw_min(10px);
@@ -814,7 +830,7 @@
     @include mq(md, min) {
       // pc
       margin: 0 $size-80 vw_min(64px);
-      padding: vw_min(32px) vw_min(40px);
+      padding: vw_min(32px) $size-40;
     }
 
     @include mq(md, max) {

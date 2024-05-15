@@ -65,7 +65,11 @@
 
     @include mq(md, max) {
       // sp
-      padding: vw_max(24px);
+      padding: 1% 2% 2%;
+
+      img {
+        max-width: 80px;
+      }
     }
   }
 

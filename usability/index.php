@@ -401,8 +401,6 @@ include($site_root . 'functions.php');
                 </ul>
               </div>
             </section>
-
-
           </div><!-- ./l-column__main -->
         </div><!-- ./l-column -->
       </div><!-- ./l-block -->
