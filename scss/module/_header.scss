@@ -52,6 +52,15 @@
     opacity: 1;
   }
 
+  &._contact {
+    padding: $size-16 0;
+
+    @include mq(md, max) {
+      // sp
+      padding: $size-8 0;
+    }
+  }
+
   &__in {
     width: 100%;
     display: flex;
@@ -326,11 +335,12 @@
     height: 0;
     visibility: hidden;
     transition: opacity 0.2s ease;
+    border-top: $border;
     border-bottom: $border;
     position: absolute;
     z-index: 999;
     background-color: #fff;
-    box-shadow: #eee 0 8px 16px;
+    // box-shadow: #eee 0 8px 16px;
     opacity: 0;
 
     &._isShow {
@@ -367,6 +377,7 @@
       }
       &--text {
         display: flex;
+        justify-content: flex-start;
         align-items: center;
         gap: 16px;
         font-size: $size-20;
@@ -390,6 +401,11 @@
     &--item {
       position: relative;
       // @include calc-width-size(240);
+
+      @include mq(md, min) {
+        // pc
+        min-width: 160px;
+      }
 
       > a {
         width: 100%;

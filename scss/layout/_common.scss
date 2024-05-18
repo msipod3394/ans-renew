@@ -121,9 +121,10 @@
 /* linkButton */
 .common__linkButton {
   margin: 0 auto;
+
   @include mq(md, min) {
     // pc
-    max-width: 400px;
+    width: 20rem;
   }
 
   @include mq(md, max) {
@@ -898,4 +899,12 @@ a.common__borderLink {
       transition: 0.2s;
     }
   }
+}
+
+.c-text-right {
+  text-align: right;
+}
+
+.c-bg-white {
+  background-color: #fff;
 }

@@ -8,7 +8,7 @@ include($site_root . 'functions.php');
 
 <head>
   <meta charset="UTF-8">
-  <title><?= $page_title; ?> | <?= SITE_TITLE; ?></title>
+  <title><?= SITE_TITLE; ?></title>
   <meta name="description" content="<?= $page_title; ?> | <?= SITE_DESCRIPTION; ?>">
   <meta name="keywords" content="<?= SITE_KEYWORDS; ?>">
   <meta property="og:site_name" content="<?= $page_title; ?> | <?= OG_TITLE; ?>">
@@ -527,7 +527,7 @@ include($site_root . 'functions.php');
             <h3 class="columns__title"><span class="font-mincho">お悩み解決コラム</span></h3>
             <ul class="c-columnRow__list">
               <li class="c-columnRow__card">
-                <a href="./detail.php" class="c-columnRow__card--link">
+                <a href="<?= $site_root; ?>case/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="c-columnRow__card--contents">
                     <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
@@ -542,7 +542,7 @@ include($site_root . 'functions.php');
                 </a>
               </li><!-- c-columnRow__card -->
               <li class="c-columnRow__card">
-                <a href="./detail.php" class="c-columnRow__card--link">
+                <a href="<?= $site_root; ?>case/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="c-columnRow__card--contents">
                     <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
@@ -557,7 +557,7 @@ include($site_root . 'functions.php');
                 </a>
               </li><!-- c-columnRow__card -->
               <li class="c-columnRow__card">
-                <a href="./detail.php" class="c-columnRow__card--link">
+                <a href="<?= $site_root; ?>case/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="c-columnRow__card--contents">
                     <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
@@ -572,7 +572,7 @@ include($site_root . 'functions.php');
                 </a>
               </li><!-- c-columnRow__card -->
               <li class="c-columnRow__card">
-                <a href="./detail.php" class="c-columnRow__card--link">
+                <a href="<?= $site_root; ?>case/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="c-columnRow__card--contents">
                     <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
@@ -593,7 +593,7 @@ include($site_root . 'functions.php');
             <h3 class="columns__title"><span class="font-mincho">配信動画</span></h3>
             <ul class="c-columnRow__list">
               <li class="c-columnRow__card">
-                <a href="./detail.php" class="c-columnRow__card--link">
+                <a href="<?= $site_root; ?>movie/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="c-columnRow__card--contents">
                     <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
@@ -608,7 +608,7 @@ include($site_root . 'functions.php');
                 </a>
               </li><!-- c-columnRow__card -->
               <li class="c-columnRow__card">
-                <a href="./detail.php" class="c-columnRow__card--link">
+                <a href="<?= $site_root; ?>movie/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="c-columnRow__card--contents">
                     <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
@@ -623,7 +623,7 @@ include($site_root . 'functions.php');
                 </a>
               </li><!-- c-columnRow__card -->
               <li class="c-columnRow__card">
-                <a href="./detail.php" class="c-columnRow__card--link">
+                <a href="<?= $site_root; ?>movie/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="c-columnRow__card--contents">
                     <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
@@ -638,7 +638,7 @@ include($site_root . 'functions.php');
                 </a>
               </li><!-- c-columnRow__card -->
               <li class="c-columnRow__card">
-                <a href="./detail.php" class="c-columnRow__card--link">
+                <a href="<?= $site_root; ?>movie/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="c-columnRow__card--contents">
                     <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>

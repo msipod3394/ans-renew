@@ -48,7 +48,7 @@ $ac[$cn] = 'is-active';
       <nav class="header__toggle--nav">
         <a href="<?= $site_root; ?>service/" class="header__toggle--heading">
           <span class="font-en">Service</span>
-          <span class="header__toggle--heading--text">サービス一覧</span>
+          <span class="header__toggle--heading--text icon-arrow _after">サービス一覧</span>
         </a>
         <ul class="header__toggle--list">
           <li class="header__toggle--item"><a href="<?= $site_root; ?>service/fullorder/" class="icon-arrow _after">フルオーダーシステム開発</a></li>

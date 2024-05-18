@@ -1,0 +1,142 @@
+// top
+@import "../mixin/index";
+
+/*-----------------------------------------------
+* others
+-------------------------------------------------*/
+.others {
+  padding: $size-80 0 0 0;
+
+  @include mq(md, max) {
+    // sp
+    padding: $size-40 0 0 0;
+  }
+
+  &__inner {
+    @include mq(md, max) {
+      // sp
+      padding: $size-40 6%;
+    }
+  }
+
+  &__section {
+    color: #222;
+    line-height: 1.75;
+
+    &--in {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: $size-24 0;
+    }
+
+    &--heading {
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-bottom: $size-80;
+
+      @include mq(md, max) {
+        // sp
+        margin-bottom: $size-40;
+      }
+    }
+
+    &--subtitle {
+      font-size: $size-18;
+      line-height: 1;
+      color: $color-blue-dark;
+      font-family: $font-mincho;
+      margin-bottom: $size-16;
+      padding: $size-16 $size-8;
+      border-bottom: 1px solid $color-gray-300;
+
+      @include mq(md, max) {
+        // sp
+        padding: 0 0 $size-8 0;
+        margin-bottom: $size-16;
+        font-size: $size-16;
+        line-height: 1.5;
+      }
+    }
+
+    p {
+      font-size: $size-15;
+      line-height: 1.75;
+
+      @include mq(md, max) {
+        // sp
+        font-size: $size-14;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &__bg {
+    font-size: $size-15;
+    padding: $size-24 $size-40;
+    line-height: 1.75;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto $size-80;
+
+    @include mq(md, max) {
+      // sp
+      margin: 0 6% $size-40;
+      font-size: $size-14;
+      padding: $size-24;
+      line-height: 1.5;
+    }
+  }
+
+  .bg {
+    background-color: $color-gray-100;
+    padding: $size-40 0;
+  }
+}
+
+/* isms */
+.isms {
+  background-color: #fff;
+  padding: 0;
+  margin: 0 6%;
+
+  &__in {
+    padding: $size-40 $size-48;
+
+    @include mq(md, max) {
+      // sp
+      padding: $size-32 $size-8;
+    }
+  }
+
+  &__list {
+    margin-left: $size-16;
+    margin-bottom: $size-80;
+
+    @include mq(md, max) {
+      // sp
+      margin-left: $size-8;
+      margin-bottom: $size-24;
+    }
+  }
+  &__item {
+    list-style-type: decimal;
+    font-size: $size-15;
+
+    @include mq(md, max) {
+      // sp
+      font-size: $size-13;
+    }
+  }
+  &__item + &__item {
+    margin-top: 16px;
+  }
+  > p {
+    font-size: $size-14;
+    line-height: 1.5;
+
+    @include mq(md, max) {
+      // sp
+      font-size: $size-13;
+    }
+  }
+}

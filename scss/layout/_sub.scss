@@ -95,6 +95,11 @@
       padding-top: $size-40;
     }
 
+    &._type-simple {
+      padding: $size-40 0;
+      border-bottom: 1px solid $color-gray-300;
+    }
+
     &--text {
       position: relative;
       display: flex;
@@ -119,16 +124,25 @@
           margin-top: vw_max(24px);
         }
       }
+
+      ._type-simple & {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        &::before {
+          content: none;
+        }
+      }
     }
 
     &--textIn {
       display: flex;
-      flex-direction: column;
-      gap: 16px;
+      flex-direction: column-reverse;
+      gap: $size-24;
 
       @include mq(md, max) {
         // sp
-        gap: vw_max(8px);
+        gap: $size-8;
       }
 
       > span {
@@ -142,7 +156,7 @@
 
           @include mq(md, max) {
             // sp
-            font-size: vw_max(32px);
+            font-size: $size-18;
             font-weight: 500;
           }
         }
@@ -153,8 +167,34 @@
 
           @include mq(md, max) {
             // sp
-            font-size: vw_max(42px);
+            font-size: $size-22;
             font-weight: 600;
+          }
+        }
+      }
+
+      ._type-simple & {
+        text-align: center;
+
+        span.font-en.line-left {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          &::before {
+            content: "";
+            display: block;
+            width: $size-80;
+            height: 1px;
+            background-color: $color-blue-dark;
+            margin-bottom: $size-24;
+
+            @include mq(md, max) {
+              // sp
+              width: vw_max(40px);
+              margin-top: $size-16;
+            }
           }
         }
       }
@@ -350,6 +390,7 @@
     }
 
     &--title {
+      width: 100%;
       margin-bottom: $size-40;
 
       @include mq(md, max) {
@@ -768,7 +809,12 @@
   }
 
   &__linkButton {
-    margin-top: 40px;
+    margin-top: 64px;
+
+    @include mq(md, max) {
+      // sp
+      margin-top: 40px;
+    }
   }
 }
 

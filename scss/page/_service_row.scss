@@ -226,7 +226,7 @@
     }
 
     .title-obi {
-      font-size: $size-16;
+      font-size: $size-18;
       line-height: 1;
       background-color: $color-blue-dark;
       color: #fff;
@@ -356,7 +356,7 @@
     .title-obi {
       min-width: 50%;
       display: inline-block;
-      font-size: $size-16;
+      font-size: $size-20;
       line-height: 1;
       background-color: $color-blue-dark;
       color: #fff;
@@ -364,7 +364,7 @@
 
       @include mq(md, max) {
         // sp
-        font-size: $size-14;
+        font-size: $size-16;
         padding: vw_max(8px) vw_max(32px) vw_max(10px) vw_max(28px);
       }
     }

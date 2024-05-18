@@ -1,0 +1,5 @@
+
+#AuthUserFile "/home/xb261589/ans-net.co.jp/htpasswd/stg.static/.htpasswd"
+#AuthName "Member Site"
+#AuthType BASIC
+#require valid-user

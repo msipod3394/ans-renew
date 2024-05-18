@@ -67,7 +67,7 @@ include($site_root . 'functions.php');
             <div class="caseRow">
               <ul class="caseRow__list">
                 <li class="caseRow__card">
-                  <a href="" class="caseRow__card--link">
+                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                     <div class="caseRow__card--contents">
                       <time class="caseRow__card--company">株式会社〇〇〇〇</time>
@@ -88,7 +88,7 @@ include($site_root . 'functions.php');
                   </a>
                 </li><!-- caseRow__card -->
                 <li class="caseRow__card">
-                  <a href="" class="caseRow__card--link">
+                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                     <div class="caseRow__card--contents">
                       <time class="caseRow__card--company">株式会社〇〇〇〇</time>
@@ -109,7 +109,7 @@ include($site_root . 'functions.php');
                   </a>
                 </li><!-- caseRow__card -->
                 <li class="caseRow__card">
-                  <a href="" class="caseRow__card--link">
+                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                     <div class="caseRow__card--contents">
                       <time class="caseRow__card--company">株式会社〇〇〇〇</time>
@@ -130,7 +130,7 @@ include($site_root . 'functions.php');
                   </a>
                 </li><!-- caseRow__card -->
                 <li class="caseRow__card">
-                  <a href="" class="caseRow__card--link">
+                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                     <div class="caseRow__card--contents">
                       <time class="caseRow__card--company">株式会社〇〇〇〇</time>
@@ -151,7 +151,7 @@ include($site_root . 'functions.php');
                   </a>
                 </li><!-- caseRow__card -->
                 <li class="caseRow__card">
-                  <a href="" class="caseRow__card--link">
+                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                     <div class="caseRow__card--contents">
                       <time class="caseRow__card--company">株式会社〇〇〇〇</time>
@@ -172,7 +172,7 @@ include($site_root . 'functions.php');
                   </a>
                 </li><!-- caseRow__card -->
                 <li class="caseRow__card">
-                  <a href="" class="caseRow__card--link">
+                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                     <div class="caseRow__card--contents">
                       <time class="caseRow__card--company">株式会社〇〇〇〇</time>
@@ -193,7 +193,7 @@ include($site_root . 'functions.php');
                   </a>
                 </li><!-- caseRow__card -->
                 <li class="caseRow__card">
-                  <a href="" class="caseRow__card--link">
+                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                     <div class="caseRow__card--contents">
                       <time class="caseRow__card--company">株式会社〇〇〇〇</time>
@@ -214,7 +214,7 @@ include($site_root . 'functions.php');
                   </a>
                 </li><!-- caseRow__card -->
                 <li class="caseRow__card">
-                  <a href="" class="caseRow__card--link">
+                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                     <div class="caseRow__card--contents">
                       <time class="caseRow__card--company">株式会社〇〇〇〇</time>
@@ -235,7 +235,7 @@ include($site_root . 'functions.php');
                   </a>
                 </li><!-- caseRow__card -->
                 <li class="caseRow__card">
-                  <a href="" class="caseRow__card--link">
+                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                     <div class="caseRow__card--contents">
                       <time class="caseRow__card--company">株式会社〇〇〇〇</time>
@@ -256,7 +256,7 @@ include($site_root . 'functions.php');
                   </a>
                 </li><!-- caseRow__card -->
                 <li class="caseRow__card">
-                  <a href="" class="caseRow__card--link">
+                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                     <div class="caseRow__card--contents">
                       <time class="caseRow__card--company">株式会社〇〇〇〇</time>
@@ -514,7 +514,7 @@ include($site_root . 'functions.php');
               <div class="subCase__cardList">
                 <ul class="subCase__cardList--list">
                   <li class="subCase__cardList--item subCaseItem">
-                    <a href="./detail_A.php" class="subCaseItem__link">
+                    <a href="<?= $site_root; ?>case/detail_B.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -532,7 +532,7 @@ include($site_root . 'functions.php');
                     </a>
                   </li>
                   <li class="subCase__cardList--item subCaseItem">
-                    <a href="./detail_A.php" class="subCaseItem__link">
+                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -550,7 +550,7 @@ include($site_root . 'functions.php');
                     </a>
                   </li>
                   <li class="subCase__cardList--item subCaseItem">
-                    <a href="./detail_A.php" class="subCaseItem__link">
+                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -568,7 +568,7 @@ include($site_root . 'functions.php');
                     </a>
                   </li>
                   <li class="subCase__cardList--item subCaseItem">
-                    <a href="./detail_A.php" class="subCaseItem__link">
+                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -586,7 +586,7 @@ include($site_root . 'functions.php');
                     </a>
                   </li>
                   <li class="subCase__cardList--item subCaseItem">
-                    <a href="./detail_A.php" class="subCaseItem__link">
+                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -604,7 +604,7 @@ include($site_root . 'functions.php');
                     </a>
                   </li>
                   <li class="subCase__cardList--item subCaseItem">
-                    <a href="./detail_A.php" class="subCaseItem__link">
+                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -622,7 +622,7 @@ include($site_root . 'functions.php');
                     </a>
                   </li>
                   <li class="subCase__cardList--item subCaseItem">
-                    <a href="./detail_A.php" class="subCaseItem__link">
+                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -640,7 +640,7 @@ include($site_root . 'functions.php');
                     </a>
                   </li>
                   <li class="subCase__cardList--item subCaseItem">
-                    <a href="./detail_A.php" class="subCaseItem__link">
+                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -659,7 +659,7 @@ include($site_root . 'functions.php');
                   </li>
                 </ul>
               </div>
-              <div class="case-types__linkButton common__linkButton"><a href=""><span class="font-mincho">全ての事例を見る</span></a></div>
+              <!-- <div class="case-types__linkButton common__linkButton"><a href=""><span class="font-mincho">全ての事例を見る</span></a></div> -->
             </div>
           </section>
           <!-- ./case -->

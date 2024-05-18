@@ -136,7 +136,6 @@
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(26px);
         line-height: 1.5;
       }
 
@@ -146,16 +145,13 @@
     }
 
     &--desc {
-      margin-top: $size-8;
-      font-size: vw_min(14px);
-
+      font-size: $size-14;
       font-weight: 400;
       line-height: 1.25;
       overflow: hidden;
-
-      @include mq(md, max) {
-        // sp
-        font-size: vw_max(22px);
+      
+      @include mq(md, min){ // pc
+        margin-top: $size-8;
       }
 
       > span {
@@ -514,6 +510,8 @@
   &__other {
     padding-top: 80px;
   }
+
+  
 }
 
 #contents-column .l-column {
