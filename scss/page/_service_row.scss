@@ -187,7 +187,7 @@
 
     @include mq(md, min) {
       // pc
-      gap: $size-32;
+      gap: $size-24;
     }
 
     @include mq(md, max) {
@@ -201,16 +201,28 @@
     background-color: #fff;
     border: 1px solid $color-gray-200;
     box-shadow: 1px 1px 10px 0px $color-gray-200;
+    position: relative;
 
     @include mq(md, min) {
       // pc
-      // width: calc(50% - $size-16);
+      width: calc(50% - $size-8);
       padding: $size-40 $size-32;
     }
 
     @include mq(md, max) {
       // sp
       padding: vw_max(40px) vw_max(32px);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $color-blue-dark;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
@@ -226,7 +238,7 @@
     }
 
     .title-obi {
-      font-size: $size-18;
+      font-size: $size-16;
       line-height: 1;
       background-color: $color-blue-dark;
       color: #fff;
@@ -242,7 +254,7 @@
       margin-top: $size-16;
       font-size: $size-16;
       color: $color-blue-dark;
-      line-height: 1.75;
+      line-height: 1.5;
       letter-spacing: 0;
 
       @include mq(md, max) {
@@ -283,7 +295,7 @@
     margin-top: $size-24;
 
     > p {
-      font-size: $size-16;
+      font-size: $size-15;
       line-height: 1.5;
 
       @include mq(md, max) {
@@ -299,7 +311,7 @@
     padding: $size-24 $size-32;
 
     > p {
-      font-size: $size-16;
+      font-size: $size-15;
       line-height: 1.5;
 
       @include mq(md, max) {

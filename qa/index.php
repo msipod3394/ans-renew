@@ -47,11 +47,11 @@ include($site_root . 'functions.php');
       </div><!-- ./sub__breadcrumbs -->
 
       <!-- ▼ heading  -->
-      <section class="sub__heading">
+      <section class="sub__heading js-subHeading-show">
         <h1 class="sub__heading--text">
           <span class="sub__heading--textIn">
-            <span class="font-en line-left">Q&A</span>
-            <span class="font-mincho">よくあるご質問</span>
+            <span class="font-en line-left text-progress" data-txt="Q&A">Q&A</span>
+            <span class="font-mincho text-progress" data-txt="<?= $page_title ?>"><?= $page_title ?></span>
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>
@@ -63,12 +63,12 @@ include($site_root . 'functions.php');
 
           <!-- ▼ l-column__sub  -->
           <div class="l-column__sub">
-            <div class="sub__side--in">
+            <div class="sub__side--in js-ani-fade">
               <p class="sub__side--heading">目次</p>
               <ul class="sub__side--list">
-                <li class="sub__side--item js-nav"><a href="#qa1" class="js-anchor">サービス内容・契約について</a></li>
-                <li class="sub__side--item js-nav"><a href="#qa2" class="js-anchor">システムについて</a></li>
-                <li class="sub__side--item js-nav"><a href="#qa3" class="js-anchor">保守サポートについて</a></li>
+                <li class="sub__side--item js-nav"><a href="#qa1" class="js-anchor"><span>サービス内容・契約について</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#qa2" class="js-anchor"><span>システムについて</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#qa3" class="js-anchor"><span>保守サポートについて</span></a></li>
               </ul>
             </div>
           </div>
@@ -80,9 +80,9 @@ include($site_root . 'functions.php');
               <section class="l-section">
                 <div class="qa__inner">
                   <div id="qa1" class="qa__contents js-target">
-                    <h2 class="sub__contents--title"><span class="font-mincho">サービス内容・契約について</span></h2>
+                    <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">サービス内容・契約について</span></h2>
                     <div class="accordion_area gutter">
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">アウトソーシングとは、どういう意味ですか？</p>
@@ -95,7 +95,7 @@ include($site_root . 'functions.php');
                           </div>
                         </div>
                       </div>
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">月額固定制(IT-Trust)でシステム開発を依頼した場合、システムの所有権はどうなりますか？</p>
@@ -108,7 +108,7 @@ include($site_root . 'functions.php');
                           </div>
                         </div>
                       </div>
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">月額固定制(IT-Trust)のシステム開発の場合、契約期間は何年ですか？また、契約期間内に途中解約する場合はどうなりますか？</p>
@@ -117,11 +117,24 @@ include($site_root . 'functions.php');
                         </div>
                         <div class="ac_inner">
                           <div class="qa__contents--row __ans">
-                            <p class="">IT-Trustの契約期間である5年間の利用期間が終了したら、システムを買い取ることは可能ですか？</p>
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                           </div>
                         </div>
                       </div>
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">IT-Trustの契約期間である5年間の利用期間が終了したら、システムを買い取ることは可能ですか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">休日や夜間・深夜の対応はどうなりますか？</p>
@@ -130,7 +143,85 @@ include($site_root . 'functions.php');
                         </div>
                         <div class="ac_inner">
                           <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
                             <p class="">月額固定制(IT-Trust)の場合の、月額料金の内訳を教えてください</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">月額固定制(IT-Trust)は、１ユーザーあたりライセンス料が発生するのですか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">自社（お客様）のシステム保守を引き継いでほしいのですが、条件はありますか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">システム保守引継ぎの際、追加開発や改修も依頼したいのですが対応可能ですか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">システム保守引継ぎを急いでいるのですが、契約後、すぐに対応してもらえませんか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">保守引継ぎサービスの最低利用期間はありますか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                           </div>
                         </div>
                       </div>
@@ -138,9 +229,9 @@ include($site_root . 'functions.php');
                   </div><!-- qa__contents -->
 
                   <div id="qa2" class="qa__contents js-target">
-                    <h2 class="sub__contents--title"><span class="font-mincho">システムについて</span></h2>
+                    <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">システムについて</span></h2>
                     <div class="accordion_area gutter">
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">アウトソーシングとは、どういう意味ですか？</p>
@@ -153,7 +244,7 @@ include($site_root . 'functions.php');
                           </div>
                         </div>
                       </div>
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">月額固定制(IT-Trust)でシステム開発を依頼した場合、システムの所有権はどうなりますか？</p>
@@ -166,7 +257,7 @@ include($site_root . 'functions.php');
                           </div>
                         </div>
                       </div>
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">月額固定制(IT-Trust)のシステム開発の場合、契約期間は何年ですか？また、契約期間内に途中解約する場合はどうなりますか？</p>
@@ -175,11 +266,24 @@ include($site_root . 'functions.php');
                         </div>
                         <div class="ac_inner">
                           <div class="qa__contents--row __ans">
-                            <p class="">IT-Trustの契約期間である5年間の利用期間が終了したら、システムを買い取ることは可能ですか？</p>
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                           </div>
                         </div>
                       </div>
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">IT-Trustの契約期間である5年間の利用期間が終了したら、システムを買い取ることは可能ですか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">休日や夜間・深夜の対応はどうなりますか？</p>
@@ -188,7 +292,85 @@ include($site_root . 'functions.php');
                         </div>
                         <div class="ac_inner">
                           <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
                             <p class="">月額固定制(IT-Trust)の場合の、月額料金の内訳を教えてください</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">月額固定制(IT-Trust)は、１ユーザーあたりライセンス料が発生するのですか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">自社（お客様）のシステム保守を引き継いでほしいのですが、条件はありますか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">システム保守引継ぎの際、追加開発や改修も依頼したいのですが対応可能ですか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">システム保守引継ぎを急いでいるのですが、契約後、すぐに対応してもらえませんか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">保守引継ぎサービスの最低利用期間はありますか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                           </div>
                         </div>
                       </div>
@@ -196,9 +378,9 @@ include($site_root . 'functions.php');
                   </div><!-- qa__contents -->
 
                   <div id="qa3" class="qa__contents js-target">
-                    <h2 class="sub__contents--title"><span class="font-mincho">保守サポートについて</span></h2>
+                    <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">保守サポートについて</span></h2>
                     <div class="accordion_area gutter">
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">アウトソーシングとは、どういう意味ですか？</p>
@@ -211,7 +393,7 @@ include($site_root . 'functions.php');
                           </div>
                         </div>
                       </div>
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">月額固定制(IT-Trust)でシステム開発を依頼した場合、システムの所有権はどうなりますか？</p>
@@ -224,7 +406,7 @@ include($site_root . 'functions.php');
                           </div>
                         </div>
                       </div>
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">月額固定制(IT-Trust)のシステム開発の場合、契約期間は何年ですか？また、契約期間内に途中解約する場合はどうなりますか？</p>
@@ -233,11 +415,24 @@ include($site_root . 'functions.php');
                         </div>
                         <div class="ac_inner">
                           <div class="qa__contents--row __ans">
-                            <p class="">IT-Trustの契約期間である5年間の利用期間が終了したら、システムを買い取ることは可能ですか？</p>
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                           </div>
                         </div>
                       </div>
-                      <div class="accordion_one qa__contents--box">
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">IT-Trustの契約期間である5年間の利用期間が終了したら、システムを買い取ることは可能ですか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
                         <div class="ac_header qa__contents--row __ques">
                           <div class="ques__inner">
                             <p class="">休日や夜間・深夜の対応はどうなりますか？</p>
@@ -246,7 +441,85 @@ include($site_root . 'functions.php');
                         </div>
                         <div class="ac_inner">
                           <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
                             <p class="">月額固定制(IT-Trust)の場合の、月額料金の内訳を教えてください</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">月額固定制(IT-Trust)は、１ユーザーあたりライセンス料が発生するのですか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">自社（お客様）のシステム保守を引き継いでほしいのですが、条件はありますか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">システム保守引継ぎの際、追加開発や改修も依頼したいのですが対応可能ですか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">システム保守引継ぎを急いでいるのですが、契約後、すぐに対応してもらえませんか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion_one qa__contents--box  js-ani-fade">
+                        <div class="ac_header qa__contents--row __ques">
+                          <div class="ques__inner">
+                            <p class="">保守引継ぎサービスの最低利用期間はありますか？</p>
+                          </div>
+                          <div class="i_box"></div>
+                        </div>
+                        <div class="ac_inner">
+                          <div class="qa__contents--row __ans">
+                            <p class="">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                           </div>
                         </div>
                       </div>

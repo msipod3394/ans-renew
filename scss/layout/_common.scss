@@ -248,7 +248,7 @@ a.common__borderLink {
   display: inline-block;
   position: relative;
   padding-bottom: $size-16;
-  font-size: $size-15;
+  font-size: $size-16;
   font-weight: 500;
   color: $color-blue-dark;
 
@@ -526,6 +526,7 @@ a.common__borderLink {
 
   @include mq(md, max) {
     // sp
+    padding-top: 2.4rem;
     padding-right: 7.3%;
     padding-left: 7.3%;
     margin-bottom: 4rem;
@@ -631,27 +632,27 @@ a.common__borderLink {
 /* 共通カードリスト */
 .common {
   &__cards--list {
-    margin-top: $section-gap;
+    margin-top: $size-64;
     display: flex;
     flex-direction: column;
-    gap: $size-32;
+    gap: $size-24;
 
     @include mq(md, max) {
       // sp
       margin-top: calc($section-gap / 2);
-      gap: $size-24;
+      gap: $size-16;
     }
   }
   &__cards--item {
     background-color: #fff;
     border: 1px solid $color-gray-200;
-    padding: $size-40 $size-32;
+    padding: $size-24 $size-32 $size-48;
     box-shadow: 1px 1px 10px 0px $color-gray-200;
     overflow: hidden;
 
     @include mq(md, max) {
       // sp
-      padding: $size-40 vw_max(32px);
+      padding: $size-24 $size-16;
     }
 
     &.-bg-gray {
@@ -678,7 +679,7 @@ a.common__borderLink {
   }
 
   &__cards--dt {
-    font-size: $size-20;
+    font-size: $size-18;
     font-weight: 500;
     color: $color-blue-dark;
     display: flex;
@@ -686,6 +687,7 @@ a.common__borderLink {
     @include mq(md, max) {
       // sp
       font-size: $size-16;
+      line-height: 1.5;
     }
 
     &._hasBorder {
@@ -722,6 +724,26 @@ a.common__borderLink {
         font-family: $font-mincho;
         margin-right: 10px;
         letter-spacing: 0;
+      }
+    }
+
+    &._hasObi {
+      margin-left: ($size-32 * -1);
+      margin-bottom: $size-32;
+      padding: $size-8 $size-32;
+      font-size: $size-16;
+      color: #fff;
+      background-color: $color-blue-dark;
+
+      @include mq(md, min) {
+        // pc
+        width: 50%;
+      }
+
+      @include mq(md, max) {
+        // sp
+        margin-top: $size-24;
+        margin-bottom: $size-24;
       }
     }
   }

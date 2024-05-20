@@ -31,7 +31,7 @@ include($site_root . 'functions.php');
 <!-- ▼ inc/gac -->
 <?php include($site_root . "_inc/gac.php"); ?>
 
-<body id="ittrust">
+<body id="<?= $cn ?>">
   <div id="fullWrap">
 
     <!-- ▼ inc/header -->
@@ -42,16 +42,16 @@ include($site_root . 'functions.php');
       <div class="sub__breadcrumbs">
         <ul class="sub__breadcrumbs--list">
           <li class="sub__breadcrumbs--item"><a href="<?= $site_root; ?>"><span>トップ</span></a></li>
-          <li class="sub__breadcrumbs--item"><span class="_current">私たちの強み</span></li>
+          <li class="sub__breadcrumbs--item"><span class="_current"><?= $page_title ?></span></li>
         </ul>
       </div><!-- ./sub__breadcrumbs -->
 
       <!-- ▼ heading  -->
-      <section class="sub__heading">
+      <section class="sub__heading js-subHeading-show">
         <h1 class="sub__heading--text">
           <span class="sub__heading--textIn">
-            <span class="font-en line-left">Strength</span>
-            <span class="font-mincho">私たちの強み</span>
+            <span class="font-en line-left text-progress" data-txt="Strength">Strength</span>
+            <span class="font-mincho text-progress" data-txt="<?= $page_title ?>"><?= $page_title ?></span>
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>
@@ -63,18 +63,17 @@ include($site_root . 'functions.php');
 
           <!-- ▼ l-column__sub  -->
           <div class="l-column__sub">
-            <div class="sub__side--in">
+            <div class="sub__side--in js-ani-fade">
               <p class="sub__side--heading">目次</p>
               <ul class="sub__side--list">
-                <li class="sub__side--item js-nav"><a href="#heading" class="js-anchor">ANSが解決できるお客様の課題</a></li>
-                <li class="sub__side--item js-nav"><a href="#strong" class="js-anchor">フルオーダーシステム開発について</a></li>
-                <li class="sub__side--item js-nav"><a href="#approach" class="js-anchor">課題解決へのアプローチ</a></li>
-                <li class="sub__side--item js-nav"><a href="#plan" class="js-anchor">システム導入のご提案について</a></li>
-                <li class="sub__side--item js-nav"><a href="#price" class="js-anchor">料金プラン</a></li>
-                <li class="sub__side--item js-nav"><a href="#uiux" class="js-anchor">使い心地を追求したUI/UXデザイン</a></li>
-                <li class="sub__side--item js-nav"><a href="#support" class="js-anchor">サポート体制</a></li>
-                <li class="sub__side--item js-nav"><a href="#case" class="js-anchor">業務システム開発事例</a></li>
-                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor">業務システムに関するコラム</a></li>
+                <li class="sub__side--item js-nav"><a href="#heading" class="js-anchor"><span>”システム”ではなく、確実な導入効果とメリットをご提供します</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#approach" class="js-anchor"><span>業務に合ったフルオーダーのシステム開発で課題解決にアプローチ</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#plan" class="js-anchor"><span>DX推進に貢献するシステム導入をご提案</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#price" class="js-anchor"><span>料金プラン</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#uiux" class="js-anchor"><span>使い心地を追求したUI/UXデザイン</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#support" class="js-anchor"><span>システム保守・インフラ管理まで安心で長期的なサポート体制をご提供</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#case" class="js-anchor"><span>業務システム開発事例</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>業務システムに関するコラム</span></a></li>
               </ul>
             </div>
           </div>
@@ -85,10 +84,10 @@ include($site_root . 'functions.php');
 
             <!-- #heading -->
             <section id="heading" class="heading l-section js-target">
-              <h2 class="sub__contents--title"><span class="font-mincho">
-                  ”システム”ではなく、<br class="sp">確実な導入効果とメリットを<br class="sp">ご提供します
+              <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">
+                  ”システム”ではなく、<br>確実な導入効果とメリットを<br class="sp">ご提供します
                 </span></h2>
-              <p class="sub__contents--desc">
+              <p class="sub__contents--desc js-ani-fade">
                 <span class="desc-large">
                   初期費用0円、導入リスクを抑え、<br>貴社の運用に合わせた業務系システムをフルオーダーメイドで構築
                 </span>
@@ -104,8 +103,8 @@ include($site_root . 'functions.php');
             <!-- #strong -->
             <section id="strong" class="strong l-section js-target">
               <div class="strong__inner">
-                <h2 class="strong__title"><span class="font-mincho">ANSが解決できるお客様の課題</span></h2>
-                <div class="strong__circle">
+                <h2 class="strong__title js-ani-fade"><span class="font-mincho">ANSが解決できるお客様の課題</span></h2>
+                <div class="strong__circle js-ani-fade">
                   <dl class="strong__circle--list">
                     <div class="circle_width _item01">
                       <div class="circle_height">
@@ -130,13 +129,13 @@ include($site_root . 'functions.php');
 
             <!-- #approach -->
             <section id="approach" class="approach l-section js-target">
-              <h2 class="sub__contents--title"><span class="font-mincho">
+              <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">
                   業務に合ったフルオーダーの<br class="sp">システム開発で課題解決に<br class="sp">アプローチ
                 </span></h2>
-              <p class="sub__contents--desc">
+              <p class="sub__contents--desc js-ani-fade">
                 自社独自の運用で事業の根幹を支える業務や、他社と差別化している基幹業務を運用するには、オーダーメイドのシステム開発が適しています。エイ・エヌ・エスのシステム開発は、業務の流れは管理方法を詳しく分析し、ご要望に合わせた改善案を提案。確実に業務効率化を促進するシステムを導入します。
               </p>
-              <dl class="approach__cards--tagsdl">
+              <dl class="approach__cards--tagsdl js-ani-fade">
                 <div class="approach__cards--tags">
                   <dt class="approach__cards--tagdt">システム開発の事例</dt>
                   <dd class="approach__cards--tagdd">
@@ -155,45 +154,45 @@ include($site_root . 'functions.php');
                   </dd>
                 </div>
               </dl>
-              <div class="approach__linkButton common__linkButton"><a href="<?= $site_root; ?>service/fullorder"><span class="font-mincho">フルオーダーシステム開発について</span></a></div>
+              <div class="approach__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>service/fullorder"><span class="font-mincho">フルオーダーシステム開発について</span></a></div>
             </section>
             <!-- ./approach -->
 
             <!-- #plan -->
             <section id="plan" class="plan js-target">
               <div class="l-section">
-                <h2 class="sub__contents--title"><span class="font-mincho">
+                <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">
                     DX推進に貢献するシステム導入をご提案
                   </span></h2>
-                <p class="sub__contents--desc">
+                <p class="sub__contents--desc js-ani-fade">
                   DX(デジタルトランスフォーメーション)とは、デジタル技術の活用によって企業のビジネスモデルを変革し、自社の競争力を高めていくことです。 DX推進が叫ばれている今、重要な位置づけとなるIT投資。エイ・エヌ・エスは、事業発展に貢献するシステム導入や老朽化したシステムの再構築・保守を担っています。システム導入において、検討しなければならない課題は多くあります。課題や懸念点を解消し、ご納得いただいた上でご要望に合わせたサービスを提供します。柔軟に対応可能ですので、何でもご相談ください。
                 </p>
               </div>
-              <div class="plan__img p-over-img"><img src="<?= $site_root; ?>assets/img/service/bcp/secure_img.jpg" alt="企業が取り組むべきセキュリティ対策"></div>
+              <div class="plan__img p-over-img js-ani-fade-ho"><img src="<?= $site_root; ?>assets/img/ittrust/plan_img.jpg" alt="DX推進に貢献するシステム導入をご提案"></div>
               <div class="plan__cards common__cards l-section">
                 <dl class="common__cards--list">
-                  <div class="common__cards--item">
+                  <div class="common__cards--item js-ani-fade">
                     <dt class="common__cards--dt _hasIcon" data-num="#01">DX推進のため、生産性が向上できるシステムを導入したい</dt>
                     <dd class="plan__cards--result common__cards--dd">
                       <p class="plan__cards--result--title">現行の業務内容と要望に沿った最適なシステムを構築します。</p>
                       <p class="plan__cards--result--text">オーダーメイドのシステムでも、要件定義の段階から動くモックアップ画面をご覧いただき、適格なご意見・ご要望を 反映した設計をすることが可能です。利用品質の良さを追求したオーダーメイドのシステムを構築します。</p>
                     </dd>
                   </div><!-- ./common__cards--item -->
-                  <div class="common__cards--item">
+                  <div class="common__cards--item js-ani-fade">
                     <dt class="common__cards--dt _hasIcon" data-num="#02">既存システムが老朽化しているため、対策が必要である。</dt>
                     <dd class="plan__cards--result common__cards--dd">
                       <p class="plan__cards--result--title">システムの良い機能を踏襲し、現行の運用に沿った新システムへ再構築します。</p>
                       <p class="plan__cards--result--text">DX推進のためのシステム再構築や、追加・改修を重ねたことによりブラックボックス化した問題等を解決します。良い機能は踏襲し、業務と乖離が発生している機能や必要な機能は新たに搭載し、現状の業務に最適化したシステムを構築します。</p>
                     </dd>
                   </div><!-- ./common__cards--item -->
-                  <div class="common__cards--item">
-                    <dt class="common__cards--dt _hasIcon" data-num="#03">システムは必要。だけど、予算がない。</dt>
+                  <div class="common__cards--item js-ani-fade">
+                    <dt class="common__cards--dt _hasIcon" data-num="#03">システムは必要。<br class="sp">だけど、予算がない。</dt>
                     <dd class="plan__cards--result common__cards--dd">
                       <p class="plan__cards--result--title">初期コスト0円の料金プラン「IT-Trust」をご提案します。</p>
                       <p class="plan__cards--result--text">一般的な一括契約の場合、初期費用が多く発生しますが、システム開発にかかる費用をシステム利用料として月額で支払いいただくことで、初期投資を抑えることができる「IT-Trust」料金プランをご提案します。</p>
                     </dd>
                   </div><!-- ./common__cards--item -->
-                  <div class="common__cards--item">
+                  <div class="common__cards--item js-ani-fade">
                     <dt class="common__cards--dt _hasIcon" data-num="#04">システムやインフラの管理に不安がある</dt>
                     <dd class="plan__cards--result common__cards--dd">
                       <p class="plan__cards--result--title">システム保守、インフラ管理も一貫して対応します。</p>
@@ -209,14 +208,14 @@ include($site_root . 'functions.php');
             <section id="price" class="price js-target">
               <div class="price__inner l-section">
                 <div class="price__heading">
-                  <h2 class="sub__contents--title"><span class="font-mincho">料金プラン</span></h2>
-                  <p class="sub__contents--desc">
+                  <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">料金プラン</span></h2>
+                  <p class="sub__contents--desc js-ani-fade">
                     初期コスト０円/月額利用料でシステム開発が可能な料金プランを選択できます。<br />一般的な一括受託でも大丈夫です。ご要望・ご状況に合わせた料金提案が可能です。
                   </p>
                 </div>
                 <div class="price__cards">
                   <ul class="price__cards--list">
-                    <li class="price__cards--item">
+                    <li class="price__cards--item js-ani-fade">
                       <h3 class="price__cards--title">
                         <span class="title-obi">初期投資を抑えたいなら</span>
                         <span class="title-small font-mincho">初期費用０円/月額制<br>オーダーメイドのシステム開発</span>
@@ -229,7 +228,7 @@ include($site_root . 'functions.php');
                         </p>
                       </div>
                     </li><!-- ./price__cards--item -->
-                    <li class="price__cards--item">
+                    <li class="price__cards--item js-ani-fade">
                       <h3 class="price__cards--title">
                         <span class="title-obi">一括受託で開発したいなら</span>
                         <span class="title-small font-mincho">一括受託で<br>オーダーメイドのシステム開発</span>
@@ -244,7 +243,7 @@ include($site_root . 'functions.php');
                     </li><!-- ./price__cards--item -->
                   </ul>
                 </div>
-                <div class="price__caution">
+                <div class="price__caution js-ani-fade">
                   <p>※ネットワーク回線費用等は、お客様負担。<br>
                     ※IT-Trustの場合、システムの所有権は弊社エイ・エヌ・エスが保持することとなり、お客様はシステム利用料をお支払いいただくことでシステムを独占的に利用することができます。</p>
                 </div>
@@ -255,23 +254,24 @@ include($site_root . 'functions.php');
             <!-- #uiux -->
             <section id="uiux" class="uiux js-target">
               <div class="l-section">
-                <h2 class="sub__contents--title"><span class="font-mincho">
+                <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">
                     使い心地を追求したUI/UXデザイン
                   </span></h2>
-                <p class="sub__contents--desc">
+                <p class="sub__contents--desc js-ani-fade">
                   <span class="desc-large">
                     システムを利用するユーザーの目的やニーズを主体に考え、<br class="pc">使い心地の良さを追求したシステム開発を実現します。
                   </span>
                   エイ・エヌ・エスでは、要件定義の段階から動作可能なモックアップを提供することにより、プロジェクトの早い段階から実際にシステムはどのように動作するかを確認できます。 さらに、この「見える化」によって、誤解やコミュニケーションの不明確さを排除し 進行中の作業における手戻りや漏れを効果的に防止できます。
                 </p>
               </div>
-              <div class="uiux__img p-over-img"><img src="<?= $site_root; ?>assets/img/ittrust/uiux.jpg" alt="使い心地を追求したUI/UXデザイン"></div>
+              <div class="uiux__img p-over-img js-ani-fade-ho"><img src="<?= $site_root; ?>assets/img/ittrust/uiux.jpg" alt="使い心地を追求したUI/UXデザイン"></div>
               <div class="uiux__prosess l-section">
-                <h3 class="sub__contents--subtitle"><span>エイ・エヌ・エスのシステム開発プロセス</span></h3>
-                <div class="uiux__prosess--img"><img src="<?= $site_root; ?>assets/img/ittrust/uiux_prosess.jpg" alt=""></div>
-                <div class="uiux__prosess--arrow"><span></span></div>
-                <div class="uiux__prosess--result">
-                  <p>”システム”ではなく、<br>確実な導入効果とメリットをご提供します</p>
+                <h3 class="sub__contents--subtitle js-ani-fade"><span>エイ・エヌ・エスのシステム開発プロセス</span></h3>
+                <div class="uiux__prosess--img js-ani-fade"><img src="<?= $site_root; ?>assets/img/ittrust/uiux_prosess.jpg" alt=""></div>
+                <div class="uiux__prosess--arrow js-ani-fade"><span></span></div>
+                <div class="uiux__prosess--result js-ani-fade">
+                  <p>システムがどのように動作できるかの<br class="sp">「見える化」によって、<br>
+                    誤解やコミュニケーションの不明確さを<br class="sp">排除し、進行中の作業における手戻りや<br class="sp">漏れを効果的に防止できます。</p>
                 </div>
               </div>
             </section>
@@ -281,12 +281,12 @@ include($site_root . 'functions.php');
             <section id="support" class="support js-target">
               <div class="support__inner l-section">
                 <div class="support__heading">
-                  <h2 class="sub__contents--title"><span class="font-mincho">システム保守・インフラ管理まで安心で長期的なサポート体制をご提供</span></h2>
-                  <p class="sub__contents--desc">システム保守・インフラ管理まで安心で長期的なサポート体制をご提供</p>
+                  <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">システム保守・インフラ管理まで安心で長期的なサポート体制をご提供</span></h2>
+                  <p class="sub__contents--desc js-ani-fade">システム保守・インフラ管理まで<br class="sp">安心で長期的なサポート体制をご提供</p>
                 </div>
                 <div class="support__cards">
                   <ul class="support__cards--list">
-                    <li class="support__cards--item">
+                    <li class="support__cards--item js-ani-fade">
                       <h3 class="support__cards--title"><span class="title-obi">システム保守</span></h3>
                       <div class="support__cards--itemIn">
                         <p class="support__cards--desc">
@@ -341,7 +341,7 @@ include($site_root . 'functions.php');
                         </div>
                       </div>
                     </li>
-                    <li class="support__cards--item">
+                    <li class="support__cards--item js-ani-fade">
                       <h3 class="support__cards--title"><span class="title-obi">インフラ管理</span></h3>
                       <div class="support__cards--itemIn">
                         <p class="support__cards--desc">
@@ -378,7 +378,7 @@ include($site_root . 'functions.php');
                         </dl>
                       </div>
                     </li>
-                    <li class="support__cards--item">
+                    <li class="support__cards--item js-ani-fade">
                       <h3 class="support__cards--title"><span class="title-obi">サービスに合わせた保守体制</span></h3>
                       <div class="support__cards--itemIn">
                         <p class="support__cards--desc">
@@ -402,10 +402,10 @@ include($site_root . 'functions.php');
             <!-- #case -->
             <section id="case" class="subCase js-target">
               <div class="subCase__inner l-section">
-                <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">業務システム開発事例</span></h2>
+                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">業務システム開発事例</span></h2>
                 <div class="subCase__cardList">
                   <ul class="subCase__cardList--list">
-                    <li class="subCase__cardList--item subCaseItem">
+                    <li class="subCase__cardList--item subCaseItem js-ani-fade">
                       <a href="<?= $site_root; ?>case" class="subCaseItem__link">
                         <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                         <div class="subCaseItem__contents">
@@ -423,7 +423,7 @@ include($site_root . 'functions.php');
                         </div>
                       </a>
                     </li>
-                    <li class="subCase__cardList--item subCaseItem">
+                    <li class="subCase__cardList--item subCaseItem js-ani-fade">
                       <a href="<?= $site_root; ?>case" class="subCaseItem__link">
                         <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                         <div class="subCaseItem__contents">
@@ -441,7 +441,7 @@ include($site_root . 'functions.php');
                         </div>
                       </a>
                     </li>
-                    <li class="subCase__cardList--item subCaseItem">
+                    <li class="subCase__cardList--item subCaseItem js-ani-fade">
                       <a href="<?= $site_root; ?>case" class="subCaseItem__link">
                         <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                         <div class="subCaseItem__contents">
@@ -459,7 +459,7 @@ include($site_root . 'functions.php');
                         </div>
                       </a>
                     </li>
-                    <li class="subCase__cardList--item subCaseItem">
+                    <li class="subCase__cardList--item subCaseItem js-ani-fade">
                       <a href="<?= $site_root; ?>case" class="subCaseItem__link">
                         <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                         <div class="subCaseItem__contents">
@@ -477,7 +477,7 @@ include($site_root . 'functions.php');
                         </div>
                       </a>
                     </li>
-                    <li class="subCase__cardList--item subCaseItem">
+                    <li class="subCase__cardList--item subCaseItem js-ani-fade">
                       <a href="<?= $site_root; ?>case" class="subCaseItem__link">
                         <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                         <div class="subCaseItem__contents">
@@ -495,7 +495,7 @@ include($site_root . 'functions.php');
                         </div>
                       </a>
                     </li>
-                    <li class="subCase__cardList--item subCaseItem">
+                    <li class="subCase__cardList--item subCaseItem js-ani-fade">
                       <a href="<?= $site_root; ?>case" class="subCaseItem__link">
                         <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                         <div class="subCaseItem__contents">
@@ -516,15 +516,15 @@ include($site_root . 'functions.php');
                   </ul>
                 </div>
               </div>
-              <div class="subColumn__linkButton common__linkButton"><a href="<?= $site_root; ?>case"><span class="font-mincho">全ての事例を見る</span></a></div>
+              <div class="subColumn__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>case"><span class="font-mincho">全ての事例を見る</span></a></div>
             </section><!-- ./subCase -->
 
             <!-- #subColumn -->
             <section id="subColumn" class="subColumn js-target">
               <div class="subColumn__inner l-section">
-                <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">業務システムに関するコラム</span></h2>
+                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">業務システムに関するコラム</span></h2>
                 <ul class="subColumn__list">
-                  <li class="subColumn__card">
+                  <li class="subColumn__card js-ani-fade">
                     <a href="<?= $site_root; ?>column" class="subColumn__card--link">
                       <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                       <div class="subColumn__card--contents">
@@ -539,7 +539,7 @@ include($site_root . 'functions.php');
                       </div>
                     </a>
                   </li><!-- subColumn__card -->
-                  <li class="subColumn__card">
+                  <li class="subColumn__card js-ani-fade">
                     <a href="<?= $site_root; ?>column" class="subColumn__card--link">
                       <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                       <div class="subColumn__card--contents">
@@ -554,7 +554,7 @@ include($site_root . 'functions.php');
                       </div>
                     </a>
                   </li><!-- subColumn__card -->
-                  <li class="subColumn__card">
+                  <li class="subColumn__card js-ani-fade">
                     <a href="<?= $site_root; ?>column" class="subColumn__card--link">
                       <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                       <div class="subColumn__card--contents">
@@ -569,7 +569,7 @@ include($site_root . 'functions.php');
                       </div>
                     </a>
                   </li><!-- subColumn__card -->
-                  <li class="subColumn__card">
+                  <li class="subColumn__card js-ani-fade">
                     <a href="<?= $site_root; ?>column" class="subColumn__card--link">
                       <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                       <div class="subColumn__card--contents">
@@ -586,13 +586,10 @@ include($site_root . 'functions.php');
                   </li><!-- subColumn__card -->
                 </ul>
               </div>
-              <div class="subColumn__linkButton common__linkButton"><a href="<?= $site_root; ?>column"><span class="font-mincho">全てのコラムを見る</span></a></div>
+              <div class="subColumn__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>column"><span class="font-mincho">全てのコラムを見る</span></a></div>
             </section><!-- ./subColumn -->
 
           </div><!-- ./l-column__main -->
-
-          <!-- <div class="l-column__right-side"></div> -->
-
         </div><!-- ./l-column -->
       </div><!-- ./l-block -->
 

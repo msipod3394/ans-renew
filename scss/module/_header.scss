@@ -252,7 +252,7 @@
       }
     }
 
-    &.is-active a::before {
+    &.is-current a::before {
       transform: scale(1, 1);
     }
   }

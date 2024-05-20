@@ -115,7 +115,7 @@ accordion
 }
 .accordion_area .accordion_one .ac_header .i_box {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 5px);
   right: 1rem;
   width: 20px;
   height: 20px;
@@ -127,6 +127,7 @@ accordion
   @include mq(md, max) {
     // sp
     margin-top: -16px;
+    top: calc(50% - 2px);
     right: 0;
     width: vw_max(20px);
     height: vw_max(20px);

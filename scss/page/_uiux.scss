@@ -12,6 +12,11 @@
     flex-direction: column;
     gap: $size-32;
     margin-top: $size-56;
+
+    @include mq(md, max) {
+      // sp
+      margin-top: $size-32;
+    }
   }
 
   &__cards--tags {
@@ -123,7 +128,7 @@
     margin-top: 40px;
     background-color: #fff;
     border: 1px solid $color-gray-200;
-    padding: $size-40 $size-56;
+    padding: $size-40 $size-32;
     box-shadow: 1px 1px 10px 0px $color-gray-200;
     overflow: hidden;
     display: flex;
@@ -194,12 +199,12 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: $size-16;
       }
 
       &__item {
-        width: calc(100% / 4 - 4px);
-        padding: 24px 8px;
+        width: calc(100% / 4 - $size-12);
+        padding: $size-24 $size-8;
         background-color: $color-gray-100;
         font-size: $size-14;
         letter-spacing: 0;
@@ -289,7 +294,7 @@
       @include mq(md, max) {
         // sp
         padding: $size-8 $size-16;
-        font-size: $size-18;
+        font-size: $size-16;
         line-height: 1.5;
       }
     }
@@ -394,6 +399,13 @@
   @include mq(md, max) {
     // sp
     margin-top: calc($section-gap / 2);
+  }
+
+  &__img {
+    @include mq(md, max) {
+      // sp
+      margin-top: $size-40;
+    }
   }
 
   &__prosess {

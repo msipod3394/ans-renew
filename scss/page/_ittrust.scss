@@ -216,7 +216,7 @@
     width: calc(50% - vw_min(6px));
     position: relative;
     background-color: #fff;
-    padding: vw_min(16px) vw_min(32px);
+    padding: $size-16 vw_min(32px);
     font-size: vw_min(14px);
     line-height: 1.25;
 
@@ -278,17 +278,15 @@
   }
 
   &__cards--result {
-    background-color: $color-gray-100;
-    padding: vw_min(24px);
-
-    @include mq(md, max) {
-      // sp
-      padding: vw_max(24px);
+    @include mq(md, min) {
+      // pc
+      background-color: $color-gray-100;
+      padding: $size-24;
     }
 
     &--title {
-      padding: vw_min(8px) vw_min(16px);
-      font-size: vw_min(18px);
+      padding: vw_min(8px) $size-16;
+      font-size: $size-16;
       font-weight: 400;
       color: #fff;
       background-color: $color-blue-dark;
@@ -296,26 +294,37 @@
 
       @include mq(md, max) {
         // sp
-        padding: vw_max(8px) vw_max(16px);
+        padding: $size-8;
         margin-bottom: 8px;
-        font-size: vw_max(25px);
-        line-height: 1.5;
+        font-size: $size-14;
+        line-height: 1.3;
       }
     }
     &--text {
-      font-size: vw_min(16px);
+      font-size: $size-16;
 
       @include mq(md, max) {
         // sp
-        font-size: vw_max(24px);
+        font-size: $size-14;
+        line-height: 1.5;
       }
+    }
+  }
+
+  &__img {
+    @include mq(md, max) {
+      // sp
+      margin-top: $size-24;
     }
   }
 }
 
 /* uiux */
 .ittrust .uiux {
-  padding-top: vw_min(80px);
+  @include mq(md, min) {
+    // pc
+    padding-top: $section-gap;
+  }
 
   @include mq(md, max) {
     // sp
@@ -323,7 +332,12 @@
   }
 
   &__prosess {
-    margin-top: vw_min(64px);
+    margin-top: $section-gap;
+
+    @include mq(md, max) {
+      // sp
+      margin-top: calc($section-gap / 2);
+    }
 
     &--img {
       width: vw_min(720px);
@@ -347,8 +361,8 @@
 
       @include mq(md, max) {
         // sp
-        margin-top: vw_max(32px);
-        margin-bottom: vw_max(32px);
+        margin-top: $size-40;
+        margin-bottom: $size-40;
       }
 
       > span {
@@ -369,17 +383,25 @@
     }
     &--result {
       > p {
-        font-size: vw_min(22px);
+        font-size: $size-20;
         text-align: center;
         color: $color-blue-dark;
         text-decoration: underline;
         font-weight: 500;
+        letter-spacing: 0;
 
         @include mq(md, max) {
           // sp
           font-size: vw_max(32px);
         }
       }
+    }
+  }
+
+  &__img {
+    @include mq(md, max) {
+      // sp
+      margin-top: $size-40;
     }
   }
 }

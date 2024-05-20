@@ -74,8 +74,8 @@ $(document).ready(function () {
         if (scrollPos >= top && scrollPos <= bottom) {
           const targetId = "#" + $(this).attr("id");
 
-          $(".js-anchor").removeClass("_current"); // 全てのリンクから active クラスを削除
-          $('.js-nav a[href="' + targetId + '"]').addClass("_current"); // 対応するリンクに active クラスを追加
+          $(".js-anchor").removeClass("is-current"); // 全てのリンクから active クラスを削除
+          $('.js-nav a[href="' + targetId + '"]').addClass("is-current"); // 対応するリンクに active クラスを追加
         }
       });
     }
@@ -107,4 +107,29 @@ $(document).ready(function () {
       $(".js-hover-company").removeClass("_isShow");
     }
   );
+});
+
+// アニメーション
+const fadeTargets = document.querySelectorAll(
+  ".js-ani-fade, .js-ani-fade-ho, .js-subHeading-show, .js-ani-zoom"
+);
+const fadeOption = {
+  root: null,
+  rootMargin: "-10% 0px",
+  threshold: [0],
+};
+
+const targets = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-ani");
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const fadeObserver = new IntersectionObserver(targets, fadeOption);
+
+fadeTargets.forEach((target) => {
+  fadeObserver.observe(target);
 });

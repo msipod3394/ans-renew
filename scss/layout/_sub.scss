@@ -105,18 +105,13 @@
       display: flex;
       gap: $size-16;
 
-      @include mq(md, max) {
-        // sp
-        gap: vw_max(16px);
-      }
-
       &::before {
         content: "";
         display: block;
         width: $size-80;
         height: 1px;
         background-color: $color-blue-dark;
-        margin-top: $size-16;
+        margin-top: $size-18;
 
         @include mq(md, max) {
           // sp
@@ -146,14 +141,9 @@
       }
 
       > span {
-        line-height: 1.5;
-        text-shadow: -1px 2px 2px #fff;
+        display: block;
 
         &.font-en {
-          font-size: $size-24;
-          color: $color-blue-dark;
-          letter-spacing: -0.01em;
-
           @include mq(md, max) {
             // sp
             font-size: $size-18;
@@ -210,11 +200,10 @@
   &__headingAction {
     width: 100%;
     background-color: $color-blue-dark;
-    margin-top: $size-40;
 
-    @include mq(md, max) {
-      // sp
-      margin-top: $size-24;
+    @include mq(md, min) {
+      // pc
+      margin-top: $size-40;
     }
 
     &--in {
@@ -352,10 +341,7 @@
 
     @include mq(md, max) {
       // sp
-      z-index: -1;
-      filter: blur(2px);
-      opacity: 0.35;
-      overflow: hidden;
+      display: none;
     }
 
     > img {
@@ -501,6 +487,11 @@
       font-size: $size-14;
       font-weight: 500;
       color: $color-blue-dark;
+
+      @include mq(md, max) {
+        // sp
+        font-size: $size-16;
+      }
     }
     &--list {
       margin-top: $size-12;
@@ -509,10 +500,6 @@
 
     &--item {
       > a {
-        font-size: $size-12;
-        letter-spacing: 0;
-        font-weight: 400;
-        line-height: 1;
         display: flex;
         align-items: center;
         gap: 4px;
@@ -521,8 +508,23 @@
         @include mq(md, max) {
           // sp
           font-size: $size-14;
-          padding: 16px 0;
+          padding: $size-16 0;
           border-bottom: 1px solid $color-gray-300;
+        }
+
+        > span {
+          width: calc(100% - 4px - 4px);
+          font-size: $size-12;
+          letter-spacing: 0;
+          font-weight: 400;
+          line-height: 1;
+
+          @include mq(md, max) {
+            // sp
+            width: calc(100% - $size-16 - $size-16);
+            font-size: $size-14;
+            line-height: 1.2;
+          }
         }
 
         &::before {
@@ -533,7 +535,7 @@
             // pc
             width: 4px;
             height: 4px;
-            background-color: $color-blue-dark;
+            background-color: $color-blue;
             opacity: 0;
           }
 
@@ -573,8 +575,11 @@
           }
         }
 
-        &._current {
-          font-weight: 500;
+        &.is-current {
+          > span {
+            color: $color-blue;
+            font-weight: 500;
+          }
 
           &::before {
             opacity: 1;
@@ -584,11 +589,9 @@
     }
 
     &--item + &--item {
-      margin-top: 16px;
-
-      @include mq(md, max) {
-        // sp
-        margin-top: vw_max(16px);
+      @include mq(md, min) {
+        // pc
+        margin-top: $size-16;
       }
     }
   }

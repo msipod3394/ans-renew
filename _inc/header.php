@@ -1,11 +1,11 @@
 <?php // header
 $isTopPage = ($pagename == 'top');
 $ac = array_fill_keys(array('top', 'qa', 'ittrust', 'uiux', 'service', 'case', 'column', 'company'), '');
-$ac[$cn] = 'is-active';
+$ac[$cn] = 'is-current';
 ?>
 
 <!-- ▼ header -->
-<header id="header" class="header js-header _top">
+<header id="header" class="header js-header">
   <button class="header__hamburger hamburger" id="js-hamburger">
     <span></span>
     <span></span>
@@ -17,13 +17,13 @@ $ac[$cn] = 'is-active';
       <nav class="header__nav">
         <div class="header__nav--in _navMain">
           <ul class="header__nav--list">
-            <li class="header__nav--item <?= ($ac['ittrust'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>ittrust/">私たちの強み</a></li>
-            <li class="header__nav--item <?= ($ac['uiux'] == 'is-active') ? 'is-active' : ''; ?>"><a href=" <?= $site_root; ?>usability/">UI/UX</a></li>
-            <li class="header__nav--item js-hover-service <?= ($ac['service'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>service">サービス</a></li>
-            <li class="header__nav--item <?= ($ac['case'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>case/">お客様導入事例</a></li>
-            <li class="header__nav--item <?= ($ac['qa'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>qa/">Q&A</a></li>
-            <li class="header__nav--item <?= ($ac['column'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>column/">コラム</a></li>
-            <li class="header__nav--item js-hover-company  <?= ($ac['company'] == 'is-active') ? 'is-active' : ''; ?>"><a href="<?= $site_root; ?>company/">会社情報</a></li>
+            <li class="header__nav--item <?= ($ac['ittrust'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>ittrust/">私たちの強み</a></li>
+            <li class="header__nav--item <?= ($ac['uiux'] == 'is-current') ? 'is-current' : ''; ?>"><a href=" <?= $site_root; ?>usability/">UI/UX</a></li>
+            <li class="header__nav--item js-hover-service <?= ($ac['service'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>service">サービス</a></li>
+            <li class="header__nav--item <?= ($ac['case'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>case/">お客様導入事例</a></li>
+            <li class="header__nav--item <?= ($ac['qa'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>qa/">Q&A</a></li>
+            <li class="header__nav--item <?= ($ac['column'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>column/">コラム</a></li>
+            <li class="header__nav--item js-hover-company  <?= ($ac['company'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>company/">会社情報</a></li>
           </ul>
         </div>
         <div class="header__nav--in _navSub">

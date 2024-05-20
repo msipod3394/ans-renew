@@ -31,7 +31,7 @@ include($site_root . 'functions.php');
 <!-- ▼ inc/gac -->
 <?php include($site_root . "_inc/gac.php"); ?>
 
-<body id="service-top">
+<body id="<?= $cn ?>">
   <div id="fullWrap">
 
     <!-- ▼ inc/header -->
@@ -45,11 +45,11 @@ include($site_root . 'functions.php');
         </ul>
       </div><!-- ./sub__breadcrumbs -->
 
-      <section class="sub__heading">
+      <section class="sub__heading js-subHeading-show">
         <h1 class="sub__heading--text">
           <span class="sub__heading--textIn">
-            <span class="font-en line-left">Service</span>
-            <span class="font-mincho">サービス一覧</span>
+            <span class="font-en line-left text-progress" data-txt="Service">Service</span>
+            <span class="font-mincho text-progress" data-txt="<?= $page_title ?>"><?= $page_title ?></span>
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>
@@ -58,10 +58,10 @@ include($site_root . 'functions.php');
 
       <section id="serviceTop" class="serviceTop">
         <div class="serviceTop__main">
-          <h2 class="sub__contents--title"><span class="font-mincho">各サービスのご紹介</span></h2>
+          <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">各サービスのご紹介</span></h2>
           <div class="serviceTop__mainList">
             <div class="serviceTop__mainItem -fullorder">
-              <div class="serviceTop__mainItem--contents">
+              <div class="serviceTop__mainItem--contents js-ani-fade">
                 <h3 class="serviceTop__mainItem--title">
                   <span class="font-en">Full Order</span>
                   <span class="font-mincho">フルオーダーシステム開発</span>
@@ -78,12 +78,13 @@ include($site_root . 'functions.php');
                   </li>
                 </ul>
               </div>
-              <div class="serviceTop__mainItem--img">
+              <div class="serviceTop__mainItem--img js-ani-zoom">
                 <img src="<?= $site_root; ?>assets/img/service/service-top_fullorder.jpg" alt="フルオーダーシステム開発" loading="lazy">
               </div>
             </div>
+
             <div class="serviceTop__mainItem -renewal">
-              <div class="serviceTop__mainItem--contents">
+              <div class="serviceTop__mainItem--contents js-ani-fade">
                 <h3 class="serviceTop__mainItem--title">
                   <span class="font-en">Renewal</span>
                   <span class="font-mincho">基幹システム再構築</span>
@@ -100,12 +101,12 @@ include($site_root . 'functions.php');
                   </li>
                 </ul>
               </div>
-              <div class="serviceTop__mainItem--img">
+              <div class="serviceTop__mainItem--img js-ani-zoom">
                 <img src="<?= $site_root; ?>assets/img/service/service-top_renewal.jpg" alt="基幹システム再構築" loading="lazy">
               </div>
             </div>
             <div class="serviceTop__mainItem -maintenance">
-              <div class="serviceTop__mainItem--contents">
+              <div class="serviceTop__mainItem--contents js-ani-fade">
                 <h3 class="serviceTop__mainItem--title">
                   <span class="font-en">Maintenance</span>
                   <span class="font-mincho">システム保守引継ぎ</span>
@@ -122,7 +123,7 @@ include($site_root . 'functions.php');
                   </li>
                 </ul>
               </div>
-              <div class="serviceTop__mainItem--img">
+              <div class="serviceTop__mainItem--img js-ani-zoom">
                 <img src="<?= $site_root; ?>assets/img/service/service-top_maintenance.jpg" alt="システム保守引継ぎ" loading="lazy">
               </div>
             </div>
@@ -130,9 +131,9 @@ include($site_root . 'functions.php');
         </div><!-- serviceTop__main -->
 
         <div class=" serviceTop__other -onbg">
-          <h3 class="sub__contents--title"><span class="font-mincho">自社サービスのご紹介</span></h3>
+          <h3 class="sub__contents--title js-ani-fade"><span class="font-mincho">自社サービスのご紹介</span></h3>
           <dl class="serviceTop__other--dl">
-            <div class="serviceTop__other--item -kintai">
+            <div class="serviceTop__other--item js-ani-fade -kintai">
               <img src="<?= $site_root; ?>assets/img/top/service_kintai.jpg" alt="勤怠Trust（勤怠トラスト）" loading="lazy">
               <dt class="serviceTop__other--dt">
                 <span class="font-mincho">勤怠Trust（勤怠トラスト）</span>
@@ -144,7 +145,7 @@ include($site_root . 'functions.php');
                 <a href="" target="_blank" class="common__borderLink"><span class="icon-link">勤怠トラスト 公式サイト</span></a>
               </div>
             </div><!-- ./serviceTop__other--item -->
-            <div class="serviceTop__other--item -kintai">
+            <div class="serviceTop__other--item js-ani-fade -kintai">
               <img src="<?= $site_root; ?>assets/img/top/service_idl.jpg" alt="イノベーションデザインラボ" loading="lazy">
               <dt class="serviceTop__other--dt">
                 <span class="font-mincho">イノベーションデザインラボ</span>
@@ -152,7 +153,7 @@ include($site_root . 'functions.php');
               <dd class="serviceTop__other--dd">
                 生産性・効率性を向上させる”ユーザーフレンドリー”な業務システムデザインを提供します。
               </dd>
-              <div class="serviceTop__other--link">
+              <div class="serviceTop__other--link js-ani-fade">
                 <a href="" target="_blank" class="common__borderLink"><span class="icon-link">イノベーションデザインラボ 公式サイト</span></a>
               </div>
             </div><!-- ./serviceTop__other--item -->
@@ -161,8 +162,8 @@ include($site_root . 'functions.php');
 
         <div class="serviceTop__sub">
           <div class="serviceTop__sub--in">
-            <div class="serviceTop__sub--card --advice">
-              <div class="serviceTop__sub--card--img"><img src="<?= $site_root; ?>assets/img/top/service_advice.jpg" alt="IT相談" loading="lazy"></div>
+            <div class="serviceTop__sub--card --advice js-ani-fade">
+              <div class="serviceTop__sub--card--img js-ani-zoom"><img src="<?= $site_root; ?>assets/img/top/service_advice.jpg" alt="IT相談" loading="lazy"></div>
               <div class="serviceTop__sub--card--wrap">
                 <h3 class="serviceTop__sub--card--title">IT相談<span class="font-mincho">Advice</span></h3>
                 <div class="serviceTop__sub--card--content">
@@ -173,8 +174,8 @@ include($site_root . 'functions.php');
                 </div>
               </div>
             </div><!-- serviceTop__sub--card -->
-            <div class="serviceTop__sub--card --insourcing">
-              <div class="serviceTop__sub--card--img"><img src="<?= $site_root; ?>assets/img/top/service_insourcing.jpg" alt="システム開発内製化支援" loading="lazy"></div>
+            <div class="serviceTop__sub--card --insourcing js-ani-fade">
+              <div class="serviceTop__sub--card--img js-ani-zoom"><img src="<?= $site_root; ?>assets/img/top/service_insourcing.jpg" alt="システム開発内製化支援" loading="lazy"></div>
               <div class="serviceTop__sub--card--wrap">
                 <h3 class="serviceTop__sub--card--title">システム開発<br>内製化支援<span class="font-mincho">Insourcing</span></h3>
                 <div class="serviceTop__sub--card--content">
@@ -185,8 +186,8 @@ include($site_root . 'functions.php');
                 </div>
               </div>
             </div><!-- serviceTop__sub--card -->
-            <div class="serviceTop__sub--card --bcp">
-              <div class="serviceTop__sub--card--img"><img src="<?= $site_root; ?>assets/img/top/service_bcp.jpg" alt="BCP対策" loading="lazy"></div>
+            <div class="serviceTop__sub--card --bcp js-ani-fade">
+              <div class="serviceTop__sub--card--img js-ani-zoom"><img src="<?= $site_root; ?>assets/img/top/service_bcp.jpg" alt="BCP対策" loading="lazy"></div>
               <div class="serviceTop__sub--card--wrap">
                 <h3 class="serviceTop__sub--card--title">BCP対策<span class="font-mincho">BCP</span></h3>
                 <div class="serviceTop__sub--card--content">
@@ -197,8 +198,8 @@ include($site_root . 'functions.php');
                 </div>
               </div>
             </div><!-- serviceTop__sub--card -->
-            <div class="serviceTop__sub--card --offshore">
-              <div class="serviceTop__sub--card--img"><img src="<?= $site_root; ?>assets/img/top/service_offshore.jpg" alt="オフショア開発" loading="lazy"></div>
+            <div class="serviceTop__sub--card --offshore js-ani-fade">
+              <div class="serviceTop__sub--card--img js-ani-zoom"><img src="<?= $site_root; ?>assets/img/top/service_offshore.jpg" alt="オフショア開発" loading="lazy"></div>
               <div class="serviceTop__sub--card--wrap">
                 <h3 class="serviceTop__sub--card--title">オフショア開発<span class="font-mincho">Offshore</span></h3>
                 <div class="serviceTop__sub--card--content">
@@ -219,7 +220,7 @@ include($site_root . 'functions.php');
       <section id="case" class="case">
         <div class="case__titleImg">
           <div class="case__titleImg--in">
-            <div class="common__title">
+            <div class="common__title js-ani-fade">
               <h2 class="common__title--text">
                 <span class="common__title--textIn">
                   <span class="font-en line-left">Case</span>
@@ -231,7 +232,7 @@ include($site_root . 'functions.php');
           </div>
         </div><!-- ./case__titleImg -->
         <div class="case__inner common__inner">
-          <div class="case__toggle">
+          <div class="case__toggle js-ani-fade">
             <h3 class="case__toggle--title"><span class="font-mincho">業種別でみる</span></h3>
             <ul class="case__toggle--list">
               <li class="case__toggle--item"><a href="<?= $site_root; ?>">業種A</a></li>
@@ -246,7 +247,7 @@ include($site_root . 'functions.php');
           </div><!-- ./case__toggle -->
           <div class="case__cardList">
             <ul class="case__cardList--list">
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -264,7 +265,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -282,7 +283,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -300,7 +301,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -318,7 +319,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -336,7 +337,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -354,7 +355,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -372,7 +373,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -392,17 +393,17 @@ include($site_root . 'functions.php');
               </li>
             </ul>
           </div>
-          <div class="case__linkButton common__linkButton"><a href="<?= $site_root; ?>case"><span class="font-mincho">全ての事例を見る</span></a></div>
+          <div class="case__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>case"><span class="font-mincho">全ての事例を見る</span></a></div>
         </div>
       </section><!-- ./case -->
 
       <!-- #column -->
       <section id="column" class="subColumn js-target">
         <div class="common__inner">
-          <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">基幹システムに関するコラム</span></h2>
+          <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">基幹システムに関するコラム</span></h2>
           <div class=" subColumn__inner">
             <ul class="subColumn__list">
-              <li class="subColumn__card">
+              <li class="subColumn__card js-ani-fade">
                 <a href="" class="subColumn__card--link">
                   <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="subColumn__card--contents">
@@ -417,7 +418,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li><!-- subColumn__card -->
-              <li class="subColumn__card">
+              <li class="subColumn__card js-ani-fade">
                 <a href="" class="subColumn__card--link">
                   <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="subColumn__card--contents">
@@ -432,7 +433,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li><!-- subColumn__card -->
-              <li class="subColumn__card">
+              <li class="subColumn__card js-ani-fade">
                 <a href="" class="subColumn__card--link">
                   <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="subColumn__card--contents">
@@ -447,7 +448,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li><!-- subColumn__card -->
-              <li class="subColumn__card">
+              <li class="subColumn__card js-ani-fade">
                 <a href="" class="subColumn__card--link">
                   <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
                   <div class="subColumn__card--contents">
@@ -463,7 +464,7 @@ include($site_root . 'functions.php');
                 </a>
               </li><!-- subColumn__card -->
             </ul>
-            <div class="subColumn__linkButton common__linkButton"><a href="<?= $site_root; ?>column"><span class="font-mincho">全てのコラムを見る</span></a></div>
+            <div class="subColumn__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>column"><span class="font-mincho">全てのコラムを見る</span></a></div>
           </div>
         </div>
       </section>
