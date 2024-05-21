@@ -51,20 +51,20 @@ include($site_root . 'functions.php');
 
             <!-- ロゴ・タイトル -->
             <div class="c-contentsDetail__head">
-              <h1 class="c-contentsDetail__head--heading sub__contents--title">
+              <h1 class="c-contentsDetail__head--heading sub__contents--title js-ani-fade">
                 <span class="font-mincho">サービス資料と企業情報</span>
               </h1>
             </div>
 
             <!-- ダウンロードコンテンツ -->
             <div class="downloadDetail__complete">
-              <div class="downloadDetail__contents">
+              <div class="downloadDetail__contents js-ani-fade">
                 <p class="downloadDetail__text">
                   資料ダウンロードありがとうございます。下記から資料ダウンロードが可能です。
                 </p>
               </div>
               <!--downloadDetail__contents-->
-              <div class="downloadDetail__download">
+              <div class="downloadDetail__download js-ani-fade">
                 <div class="c-contentsDetail__linkBack common__linkButton"><a href=""><span class="font-mincho">ダウンロードする</span></a></div>
               </div>
             </div>
@@ -73,7 +73,7 @@ include($site_root . 'functions.php');
             <!-- お問い合わせ導線 -->
             <?php include($site_root . "_inc/inquiry.php"); ?>
 
-            <div class="c-contentsDetail__linkBack common__linkButton"><a href="<?= $site_root; ?>download"><span class="font-mincho">お役立ち資料 一覧に戻る</span></a></div>
+            <div class="c-contentsDetail__linkBack common__linkButton js-ani-fade"><a href="<?= $site_root; ?>download"><span class="font-mincho">お役立ち資料 一覧に戻る</span></a></div>
           </section><!-- ./c-contentsDetail -->
 
         </div><!-- ./l-column__main--inner -->

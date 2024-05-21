@@ -53,7 +53,7 @@ include($site_root . 'functions.php');
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>
-        <div class="sub__headingImg"><img src="<?= $site_root; ?>assets/img/service/service-top_heading.jpg" alt=""></div>
+        <div class="sub__headingImg"><img src="<?= $site_root; ?>assets/img/service/service-top_heading.jpg" loading="lazy"></div>
       </section><!-- sub__heading -->
 
       <section id="serviceTop" class="serviceTop">
@@ -71,7 +71,7 @@ include($site_root . 'functions.php');
                 </div>
                 <ul class="serviceTop__mainItem--linkList">
                   <li class="serviceTop__mainItem--link">
-                    <a href="<?= $site_root; ?>/service/fullorder/" class="common__borderLink"><span class="icon-arrow">詳しく見る</span></a>
+                    <a href="<?= $site_root; ?>service/fullorder/" class="common__borderLink"><span class="icon-arrow">詳しく見る</span></a>
                   </li>
                   <li class="serviceTop__mainItem--link">
                     <a href="<?= $site_root; ?>case/" class="common__borderLink"><span class="icon-arrow">導入事例</span></a>
@@ -116,7 +116,7 @@ include($site_root . 'functions.php');
                 </div>
                 <ul class="serviceTop__mainItem--linkList">
                   <li class="serviceTop__mainItem--link">
-                    <a href="<?= $site_root; ?>/service/maintenance/" class="common__borderLink"><span class="icon-arrow">詳しく見る</span></a>
+                    <a href="<?= $site_root; ?>service/maintenance/" class="common__borderLink"><span class="icon-arrow">詳しく見る</span></a>
                   </li>
                   <li class="serviceTop__mainItem--link">
                     <a href="<?= $site_root; ?>case/" class="common__borderLink"><span class="icon-arrow">導入事例</span></a>
@@ -142,7 +142,7 @@ include($site_root . 'functions.php');
                 多様な働き方に対応し、カスタマイズの要望にお応えするクラウド型勤怠管理システムです。
               </dd>
               <div class="serviceTop__other--link">
-                <a href="" target="_blank" class="common__borderLink"><span class="icon-link">勤怠トラスト 公式サイト</span></a>
+                <a href="https://www.kintai-trust.com/" target="_blank" class="common__borderLink"><span class="icon-link">勤怠トラスト 公式サイト</span></a>
               </div>
             </div><!-- ./serviceTop__other--item -->
             <div class="serviceTop__other--item js-ani-fade -kintai">
@@ -153,8 +153,8 @@ include($site_root . 'functions.php');
               <dd class="serviceTop__other--dd">
                 生産性・効率性を向上させる”ユーザーフレンドリー”な業務システムデザインを提供します。
               </dd>
-              <div class="serviceTop__other--link js-ani-fade">
-                <a href="" target="_blank" class="common__borderLink"><span class="icon-link">イノベーションデザインラボ 公式サイト</span></a>
+              <div class="serviceTop__other--link">
+                <a href="https://innovation-design-lab.com/" target="_blank" class="common__borderLink"><span class="icon-link">イノベーションデザインラボ 公式サイト</span></a>
               </div>
             </div><!-- ./serviceTop__other--item -->
           </dl>
@@ -169,7 +169,7 @@ include($site_root . 'functions.php');
                 <div class="serviceTop__sub--card--content">
                   <p>IT・システムに関するお悩み・ご相談を無料で受付する、IT相談サービスを提供します。</p>
                   <div class="serviceTop__sub--card--link">
-                    <a href="<?= $site_root; ?>" class="common__borderLink"><span class="icon-arrow">詳細を見る</span></a>
+                    <a href="https://www.ans-net.co.jp/it-advice/" class="common__borderLink" target="_blank"><span class="icon-arrow">詳細を見る</span></a>
                   </div>
                 </div>
               </div>
@@ -181,7 +181,7 @@ include($site_root . 'functions.php');
                 <div class="serviceTop__sub--card--content">
                   <p>システム開発の内製化を多角的にサポートし、DX推進に向けた課題解決のお手伝いをします。</p>
                   <div class="serviceTop__sub--card--link">
-                    <a href="<?= $site_root; ?>" class="common__borderLink"><span class="icon-arrow">詳細を見る</span></a>
+                    <a href="https://www.ans-net.co.jp/lp/insourcing/" class="common__borderLink" target="_blank"><span class="icon-arrow">詳細を見る</span></a>
                   </div>
                 </div>
               </div>
@@ -193,7 +193,7 @@ include($site_root . 'functions.php');
                 <div class="serviceTop__sub--card--content">
                   <p>リスクに備えてシステムやデータを守る対策を講じ、インフラ環境の保守・管理をしています。</p>
                   <div class="serviceTop__sub--card--link">
-                    <a href="<?= $site_root; ?>" class="common__borderLink"><span class="icon-arrow">詳細を見る</span></a>
+                    <a href="<?= $site_root; ?>service/bcp/" class="common__borderLink"><span class="icon-arrow">詳細を見る</span></a>
                   </div>
                 </div>
               </div>
@@ -205,14 +205,13 @@ include($site_root . 'functions.php');
                 <div class="serviceTop__sub--card--content">
                   <p>高い技術力で開発を担うベトナム子会社ANSAsia。オフショアでのラボ型開発を提供します。</p>
                   <div class="serviceTop__sub--card--link">
-                    <a href="<?= $site_root; ?>" class="common__borderLink"><span class="icon-arrow">詳細を見る</span></a>
+                    <a href="https://www.ans-net.co.jp/lp/offshore/" class="common__borderLink" target="_blank"><span class="icon-arrow">詳細を見る</span></a>
                   </div>
                 </div>
               </div>
             </div><!-- serviceTop__sub--card -->
           </div>
         </div><!-- serviceTop__sub -->
-
       </section>
       <!--./serviceMain-->
 
@@ -235,21 +234,21 @@ include($site_root . 'functions.php');
           <div class="case__toggle js-ani-fade">
             <h3 class="case__toggle--title"><span class="font-mincho">業種別でみる</span></h3>
             <ul class="case__toggle--list">
-              <li class="case__toggle--item"><a href="<?= $site_root; ?>">業種A</a></li>
-              <li class="case__toggle--item"><a href="<?= $site_root; ?>">業種A</a></li>
-              <li class="case__toggle--item"><a href="<?= $site_root; ?>">業種A</a></li>
-              <li class="case__toggle--item"><a href="<?= $site_root; ?>">業種A</a></li>
-              <li class="case__toggle--item"><a href="<?= $site_root; ?>">業種A</a></li>
-              <li class="case__toggle--item"><a href="<?= $site_root; ?>">業種A</a></li>
-              <li class="case__toggle--item"><a href="<?= $site_root; ?>">業種A</a></li>
-              <li class="case__toggle--item"><a href="<?= $site_root; ?>">業種A</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case/">業種A</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case/">業種A</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case/">業種A</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case/">業種A</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case/">業種A</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case/">業種A</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case/">業種A</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case/">業種A</a></li>
             </ul>
           </div><!-- ./case__toggle -->
           <div class="case__cardList">
             <ul class="case__cardList--list">
               <li class="case__cardList--item caseItem js-ani-fade">
-                <a href="<?= $site_root; ?>" class="caseItem__link">
-                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
+                <a href="<?= $site_root; ?>case/detail_A.php" class="caseItem__link">
+                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" loading="lazy"></div>
                   <div class="caseItem__contents">
                     <p class="caseItem__contents--company">株式会社フロンティアコンサルティング</p>
                     <p class="caseItem__contents--title">〇〇システム開発</p>
@@ -266,8 +265,8 @@ include($site_root . 'functions.php');
                 </a>
               </li>
               <li class="case__cardList--item caseItem js-ani-fade">
-                <a href="<?= $site_root; ?>" class="caseItem__link">
-                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
+                <a href="<?= $site_root; ?>case/detail_A.php" class="caseItem__link">
+                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" loading="lazy"></div>
                   <div class="caseItem__contents">
                     <p class="caseItem__contents--company">株式会社フロンティアコンサルティング</p>
                     <p class="caseItem__contents--title">〇〇システム開発</p>
@@ -284,8 +283,8 @@ include($site_root . 'functions.php');
                 </a>
               </li>
               <li class="case__cardList--item caseItem js-ani-fade">
-                <a href="<?= $site_root; ?>" class="caseItem__link">
-                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
+                <a href="<?= $site_root; ?>case/detail_A.php" class="caseItem__link">
+                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" loading="lazy"></div>
                   <div class="caseItem__contents">
                     <p class="caseItem__contents--company">株式会社フロンティアコンサルティング</p>
                     <p class="caseItem__contents--title">〇〇システム開発</p>
@@ -302,8 +301,8 @@ include($site_root . 'functions.php');
                 </a>
               </li>
               <li class="case__cardList--item caseItem js-ani-fade">
-                <a href="<?= $site_root; ?>" class="caseItem__link">
-                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
+                <a href="<?= $site_root; ?>case/detail_A.php" class="caseItem__link">
+                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" loading="lazy"></div>
                   <div class="caseItem__contents">
                     <p class="caseItem__contents--company">株式会社フロンティアコンサルティング</p>
                     <p class="caseItem__contents--title">〇〇システム開発</p>
@@ -320,8 +319,8 @@ include($site_root . 'functions.php');
                 </a>
               </li>
               <li class="case__cardList--item caseItem js-ani-fade">
-                <a href="<?= $site_root; ?>" class="caseItem__link">
-                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
+                <a href="<?= $site_root; ?>case/detail_A.php" class="caseItem__link">
+                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" loading="lazy"></div>
                   <div class="caseItem__contents">
                     <p class="caseItem__contents--company">株式会社フロンティアコンサルティング</p>
                     <p class="caseItem__contents--title">〇〇システム開発</p>
@@ -338,8 +337,8 @@ include($site_root . 'functions.php');
                 </a>
               </li>
               <li class="case__cardList--item caseItem js-ani-fade">
-                <a href="<?= $site_root; ?>" class="caseItem__link">
-                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
+                <a href="<?= $site_root; ?>case/detail_A.php" class="caseItem__link">
+                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" loading="lazy"></div>
                   <div class="caseItem__contents">
                     <p class="caseItem__contents--company">株式会社フロンティアコンサルティング</p>
                     <p class="caseItem__contents--title">〇〇システム開発</p>
@@ -356,8 +355,8 @@ include($site_root . 'functions.php');
                 </a>
               </li>
               <li class="case__cardList--item caseItem js-ani-fade">
-                <a href="<?= $site_root; ?>" class="caseItem__link">
-                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
+                <a href="<?= $site_root; ?>case/detail_A.php" class="caseItem__link">
+                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" loading="lazy"></div>
                   <div class="caseItem__contents">
                     <p class="caseItem__contents--company">株式会社フロンティアコンサルティング</p>
                     <p class="caseItem__contents--title">〇〇システム開発</p>
@@ -374,8 +373,8 @@ include($site_root . 'functions.php');
                 </a>
               </li>
               <li class="case__cardList--item caseItem js-ani-fade">
-                <a href="<?= $site_root; ?>" class="caseItem__link">
-                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
+                <a href="<?= $site_root; ?>case/detail_A.php" class="caseItem__link">
+                  <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" loading="lazy"></div>
                   <div class="caseItem__contents">
                     <p class="caseItem__contents--company">株式会社フロンティアコンサルティング</p>
                     <p class="caseItem__contents--title">〇〇システム開発</p>
@@ -404,8 +403,8 @@ include($site_root . 'functions.php');
           <div class=" subColumn__inner">
             <ul class="subColumn__list">
               <li class="subColumn__card js-ani-fade">
-                <a href="" class="subColumn__card--link">
-                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                <a href="<?= $site_root; ?>column/detail.php" class="subColumn__card--link">
+                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" loading="lazy"></div>
                   <div class="subColumn__card--contents">
                     <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
                     <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
@@ -419,8 +418,8 @@ include($site_root . 'functions.php');
                 </a>
               </li><!-- subColumn__card -->
               <li class="subColumn__card js-ani-fade">
-                <a href="" class="subColumn__card--link">
-                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                <a href="<?= $site_root; ?>column/detail.php" class="subColumn__card--link">
+                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" loading="lazy"></div>
                   <div class="subColumn__card--contents">
                     <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
                     <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
@@ -434,8 +433,8 @@ include($site_root . 'functions.php');
                 </a>
               </li><!-- subColumn__card -->
               <li class="subColumn__card js-ani-fade">
-                <a href="" class="subColumn__card--link">
-                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                <a href="<?= $site_root; ?>column/detail.php" class="subColumn__card--link">
+                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" loading="lazy"></div>
                   <div class="subColumn__card--contents">
                     <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
                     <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>
@@ -449,8 +448,8 @@ include($site_root . 'functions.php');
                 </a>
               </li><!-- subColumn__card -->
               <li class="subColumn__card js-ani-fade">
-                <a href="" class="subColumn__card--link">
-                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                <a href="<?= $site_root; ?>column/detail.php" class="subColumn__card--link">
+                  <div class="subColumn__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" loading="lazy"></div>
                   <div class="subColumn__card--contents">
                     <time class="subColumn__card--date" datetime="2024-04-03">2023.12.15</time>
                     <p class="subColumn__card--title">IT需要拡大とIT人材不足の背景</p>

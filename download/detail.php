@@ -47,7 +47,7 @@ include($site_root . 'functions.php');
 
       <div id="" class="l-block -full downloadDetail">
         <div class="l-column__main--inner">
-          <section class="c-contentsDetail">
+          <section class="c-contentsDetail js-ani-fade">
 
             <!-- ロゴ・タイトル -->
             <div class="c-contentsDetail__head">
@@ -86,7 +86,7 @@ include($site_root . 'functions.php');
             <!-- お問い合わせ導線 -->
             <?php include($site_root . "_inc/inquiry.php"); ?>
 
-            <div class="c-contentsDetail__linkBack common__linkButton"><a href="<?= $site_root; ?>download"><span class="font-mincho">お役立ち資料 一覧に戻る</span></a></div>
+            <div class="c-contentsDetail__linkBack common__linkButton js-ani-fade"><a href="<?= $site_root; ?>download"><span class="font-mincho">お役立ち資料 一覧に戻る</span></a></div>
           </section><!-- ./c-contentsDetail -->
 
         </div><!-- ./l-column__main--inner -->

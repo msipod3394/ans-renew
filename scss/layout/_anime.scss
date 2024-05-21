@@ -30,8 +30,8 @@
 }
 
 .js-ani-zoom-bg {
-  
-  &.is-ani  {}
+  &.is-ani {
+  }
 }
 
 /* フェードイン：横から */
@@ -115,7 +115,7 @@
     transition-delay: 0.25s;
 
     .is-ani & {
-      clip: rect(0, 300px, 100px, 0);
+      clip: rect(0, 400px, 100px, 0);
     }
   }
 

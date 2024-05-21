@@ -7,13 +7,6 @@
 
 /* necessity */
 .bcp .necessity {
-  margin-top: $section-gap;
-
-  @include mq(md, max) {
-    // sp
-    margin-top: calc($section-gap / 2);
-  }
-
   &__inner {
     border: 1px solid $color-gray-300;
     padding: $size-32 $size-32;
@@ -28,7 +21,7 @@
 
   &__heading {
     margin-bottom: $size-24;
-    font-size: $size-22;
+    font-size: $size-20;
     font-weight: 500;
 
     @include mq(md, max) {

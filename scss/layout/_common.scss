@@ -247,8 +247,8 @@
 a.common__borderLink {
   display: inline-block;
   position: relative;
-  padding-bottom: $size-16;
-  font-size: $size-16;
+  padding-bottom: $size-12;
+  font-size: $size-15;
   font-weight: 500;
   color: $color-blue-dark;
 
@@ -545,7 +545,7 @@ a.common__borderLink {
   @include mq(md, min) {
     // pc
     display: grid;
-    grid-template: "sub main" 1fr/240px 1fr;
+    grid-template: "sub main" 1fr/250px 1fr;
     margin-bottom: 80px;
   }
 
@@ -568,11 +568,6 @@ a.common__borderLink {
     border-right: 1px solid $color-gray-200;
     padding-right: $size-24;
   }
-
-  @include mq(md, max) {
-    // sp
-    // margin-bottom: 2rem;
-  }
 }
 
 /* l-column__main */
@@ -592,7 +587,7 @@ a.common__borderLink {
     @include mq(md, min) {
       // pc
       max-width: 1080px;
-      padding: 0 $size-40;
+      padding: 0 $size-56;
     }
 
     .-full & {
@@ -674,7 +669,7 @@ a.common__borderLink {
     }
 
     > img {
-      max-width: 100%;
+      width: 100%;
     }
   }
 
@@ -752,7 +747,7 @@ a.common__borderLink {
     margin-top: $size-16;
     font-size: $size-15;
     line-height: 1.5;
-    letter-spacing: -0.025rm;
+    // letter-spacing: -0.025rm;
 
     @include mq(md, max) {
       // sp

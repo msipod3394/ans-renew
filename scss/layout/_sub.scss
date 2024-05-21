@@ -111,7 +111,7 @@
         width: $size-80;
         height: 1px;
         background-color: $color-blue-dark;
-        margin-top: $size-18;
+        margin-top: $size-28;
 
         @include mq(md, max) {
           // sp
@@ -447,7 +447,7 @@
 
       > .desc-large {
         display: block;
-        font-size: $size-20;
+        font-size: $size-22;
         line-height: 1.5;
         font-weight: 500;
         color: $color-blue-dark;
@@ -517,7 +517,8 @@
           font-size: $size-12;
           letter-spacing: 0;
           font-weight: 400;
-          line-height: 1;
+          line-height: 1.25;
+          letter-spacing: 0;
 
           @include mq(md, max) {
             // sp
@@ -591,7 +592,7 @@
     &--item + &--item {
       @include mq(md, min) {
         // pc
-        margin-top: $size-16;
+        margin-top: $size-12;
       }
     }
   }
@@ -600,10 +601,12 @@
 /* 下層コラム */
 .subColumn {
   margin-top: $section-gap;
+  padding-bottom: $size-40 !important;
 
   @include mq(md, max) {
     // sp
     margin-top: calc($section-gap / 2);
+    padding-bottom: $size-24;
   }
 
   &__inner {
@@ -826,11 +829,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: $section-gap;
 
-  @include mq(md, max) {
-    // sp
-    margin-top: calc($section-gap / 2);
+  @include mq(md, min) {
+    // pc
+    margin-top: $size-64;
   }
 
   &__titleImg {
@@ -974,11 +976,43 @@
 
     &__link {
       display: block;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: $size-18;
+        width: $size-24;
+        height: $size-18;
+        transition: transform 0.3s ease;
+
+        @include icon-mask(
+          $path + "common/icon/icon-arrow.svg",
+          $color-blue-dark
+        );
+
+        @include mq(md, min) {
+          // pc
+          transform: translateX(-24px);
+        }
+
+        @include mq(md, max) {
+          // sp
+          right: $size-8;
+          bottom: $size-8;
+        }
+      }
 
       &:hover {
         background-color: rgba($color: $color-blue, $alpha: 0.05);
+
         .caseItem__img img {
           transform: scale(1.1);
+        }
+
+        &::after {
+          transform: translateX(-8px);
+          right: 0;
         }
       }
     }
@@ -992,15 +1026,15 @@
     }
 
     &__contents {
-      padding: $size-24;
+      padding: $size-20;
       display: flex;
       flex-direction: column;
-      gap: $size-12;
+      gap: $size-16;
 
       @include mq(md, max) {
         // sp
-        padding: 8% 4%;
-        gap: 8px;
+        padding: $size-12 $size-12 $size-40;
+        gap: $size-12;
       }
 
       &--company {
@@ -1059,13 +1093,18 @@
 .tag {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: $size-8;
 
   &__item {
-    font-size: $size-12;
+    font-size: $size-14;
     line-height: 1;
     color: $color-blue-dark;
     display: block;
+
+    @include mq(md, max) {
+      // sp
+      font-size: $size-12;
+    }
   }
 
   &.icon-tag {
@@ -1075,8 +1114,8 @@
 
     &::before {
       position: relative;
-      width: $size-14;
-      height: $size-12;
+      width: $size-16;
+      height: $size-14;
       @include icon-mask($path + "common/icon/icon-tag.svg", $color-blue-dark);
       transition: $transition;
 

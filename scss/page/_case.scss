@@ -74,7 +74,6 @@
       position: relative;
       border: 1px solid $color-gray-300;
       background-color: #fff;
-      // border-radius: 4px;
 
       @include mq(md, max) {
         // sp
@@ -82,21 +81,32 @@
       }
 
       &--link {
-        display: flex;
-        gap: $size-24;
-        padding: $size-24;
+        gap: $size-16;
+        padding: $size-24 $size-24 $size-56;
+        display: grid;
+        grid:
+          "thumb company" auto
+          "thumb title" auto
+          "thumb desc" auto
+          "thumb tag" 1fr / 1fr auto;
+        column-gap: $size-24;
 
         @include mq(md, max) {
           // sp
           flex-direction: column;
           gap: $size-16;
-          padding: $size-16;
+          padding: $size-16 $size-16 $size-48;
+          grid:
+            "thumb company" auto
+            "thumb title" auto
+            "desc desc" auto
+            "tag tag" auto;
         }
 
         &::after {
           position: absolute;
           right: 0;
-          bottom: $size-24;
+          bottom: $size-20;
           width: $size-32;
           height: $size-24;
           transition: transform 0.3s ease;
@@ -131,13 +141,13 @@
       }
 
       &--thumb {
-        // margin-top: $size-40;
         overflow: hidden;
         position: relative;
+        grid-area: thumb;
 
         @include mq(md, min) {
           // pc
-          aspect-ratio: 3 / 1;
+          width: 16rem;
         }
 
         > img {
@@ -156,35 +166,25 @@
         }
       }
 
-      &--contents {
-        width: calc(100% - vw_min(240px) - $size-24);
-        display: flex;
-        flex-direction: column;
-        // justify-content: space-between;
-        gap: 8px;
+      // &--contents {
+      //   width: calc(100% - vw_min(240px) - $size-24);
+      //   display: flex;
+      //   flex-direction: column;
+      //   // justify-content: space-between;
+      //   gap: 8px;
 
-        @include mq(md, max) {
-          // sp
-          width: 100%;
-          padding: $size-24 $size-16;
-          gap: $size-8;
-        }
-      }
-
-      &--date {
-        color: #6d6b80;
-        font-size: vw_min(13px);
-        line-height: 1;
-
-        @include mq(md, max) {
-          // sp
-          font-size: vw_max(24px);
-        }
-      }
+      //   @include mq(md, max) {
+      //     // sp
+      //     width: 100%;
+      //     padding: $size-24 $size-16;
+      //     gap: $size-8;
+      //   }
+      // }
 
       &--company {
         font-size: $size-14;
         line-height: 1;
+        grid-area: company;
 
         @include mq(md, max) {
           // sp
@@ -198,6 +198,7 @@
         line-height: 1;
         font-weight: 500;
         color: $color-blue-dark;
+        grid-area: title;
 
         @include mq(md, max) {
           // sp
@@ -211,17 +212,11 @@
       }
 
       &--desc {
-        margin-top: $size-8;
         font-size: $size-14;
-
         font-weight: 400;
         line-height: 1.25;
         overflow: hidden;
-
-        @include mq(md, max) {
-          // sp
-          font-size: vw_max(22px);
-        }
+        grid-area: desc;
 
         > span {
           display: -webkit-box;
@@ -234,13 +229,13 @@
         display: flex;
         flex-wrap: wrap;
         gap: 4px 8px;
-        margin-top: 4px;
-        font-size: vw_min(13px);
+        font-size: $size-14;
         line-height: 1;
+        grid-area: tag;
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(22px);
+          font-size: $size-13;
           gap: $size-8;
         }
 
@@ -258,17 +253,10 @@
       &--tags {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        margin-top: 12px;
-        padding-top: 16px;
-        border-top: 1px solid rgba($color: #000, $alpha: 0.3);
-
-        @include mq(md, max) {
-          // sp
-          gap: $size-8;
-          margin-top: $size-16;
-          padding-top: $size-16;
-        }
+        gap: $size-8;
+        padding: $size-16;
+        background-color: $color-gray-100;
+        grid-area: tag;
       }
     }
 
@@ -391,6 +379,12 @@
     padding: $size-24;
     margin: 0 auto;
     border: 1px solid $color-gray-300;
+
+    @include mq(md, max) {
+      // sp
+      padding: $size-16;
+      margin-bottom: $size-40;
+    }
   }
   &__list {
     display: grid;
@@ -399,7 +393,7 @@
 
     @include mq(md, max) {
       // sp
-      grid-template-columns: repeat(3, minmax(calc(100% / 3 - 8px), 1fr));
+      grid-template-columns: repeat(2, minmax(calc(100% / 2 - 8px), 1fr));
     }
   }
   &__item {
@@ -463,6 +457,13 @@
     justify-content: flex-end;
     gap: 16px;
 
+    @include mq(md, max) {
+      // sp
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
     &--date {
       > span {
         font-size: $size-14;
@@ -485,12 +486,15 @@
     margin-bottom: 40px;
     padding-bottom: 40px;
     border-bottom: 1px solid $color-gray-300;
+
     @include mq(md, max) {
       // sp
+      gap: $size-24 $size-32;
       margin-top: 24px;
       margin-bottom: 24px;
       padding-bottom: 24px;
     }
+
     .-detail-a & {
       grid-template-columns: minmax(auto, 150px) 1fr;
       grid-template-areas:
@@ -505,7 +509,7 @@
           "heading heading"
           "logo company"
           "logo interviewee";
-        grid-template-columns: minmax(70px, 20%) 1fr;
+        grid-template-columns: minmax(90px, 20%) 1fr;
         grid-template-rows: auto auto 1fr;
       }
     }
@@ -529,6 +533,7 @@
         object-fit: fill;
       }
     }
+
     &--heading {
       grid-area: heading;
       // font-size: 2rem;
@@ -816,21 +821,6 @@
       padding-top: 40px;
     }
 
-    // position: relative;
-
-    // .-detail-b & {
-    //   &::before {
-    //     position: absolute;
-    //     top: 0;
-    //     width: 200%;
-    //     content: "";
-    //     display: block;
-    //     border-top: 1px solid $color-gray-300;
-    //     margin-left: -16%;
-    //     margin-right: -16%;
-    //   }
-    // }
-
     &--dl {
       display: flex;
       flex-wrap: wrap;
@@ -838,7 +828,7 @@
 
       @include mq(md, max) {
         // sp
-        gap: 16px;
+        gap: $size-24;
       }
     }
     &--item {
@@ -874,10 +864,15 @@
   }
 
   &__contents {
-    margin-top: 80px;
+    margin-top: $size-80;
+
+    @include mq(md, max) {
+      // sp
+      margin-top: $size-40;
+    }
 
     > p {
-      font-size: 1rem;
+      font-size: $size-15;
 
       @include mq(md, max) {
         // sp
@@ -889,17 +884,17 @@
     }
 
     &--share {
-      margin-top: 80px;
+      margin-top: $size-80;
     }
   }
 
   &__use {
-    margin-top: 80px;
+    margin-top: $size-80;
     background-color: $color-gray-100;
 
     @include mq(md, min) {
       // pc
-      padding: 40px;
+      padding: $size-40;
     }
 
     &--inner {
@@ -908,8 +903,8 @@
         "heading img" auto
         "text img" auto
         "button img" 1fr / 1fr auto;
-      -moz-column-gap: 56px;
-      column-gap: 56px;
+      -moz-column-gap: $size-40;
+      column-gap: $size-40;
 
       @include mq(md, max) {
         // sp
@@ -918,8 +913,8 @@
           "heading" auto
           "text" auto
           "button" auto / auto;
-        row-gap: 1rem;
-        padding: 1.25rem;
+        row-gap: $size-20;
+        padding: $size-24;
       }
     }
 
@@ -927,15 +922,31 @@
       grid-area: heading;
       font-size: $size-18;
       font-weight: 500;
+
+      @include mq(md, max) {
+        // sp
+        font-size: $size-16;
+        line-height: 1.5;
+      }
     }
     &--text {
-      margin-top: 16px;
+      margin-top: $size-16;
       grid-area: text;
-      font-size: $size-16;
+      font-size: $size-15;
       line-height: 1.5;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: $size-10;
+      }
     }
     &--link {
-      margin-top: 32px;
+      margin-top: $size-32;
+
+      @include mq(md, max) {
+        // sp
+        margin-top: $size-16;
+      }
     }
     &--img {
       grid-area: img;
@@ -949,7 +960,8 @@
       > img {
         max-width: 100%;
         display: block;
-        object-fit: fill;
+        object-fit: cover;
+        aspect-ratio: 3 / 2;
       }
     }
   }

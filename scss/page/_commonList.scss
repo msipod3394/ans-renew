@@ -43,14 +43,25 @@
     }
 
     &--link {
-      display: flex;
-      gap: $size-24;
-      padding: $size-32 $size-24;
+      padding: $size-24 $size-24;
+      display: grid;
+      gap: $size-16;
+      grid:
+        "thumb date" auto
+        "thumb title" auto
+        "thumb desc" auto
+        "thumb tag" 1fr / 1fr auto;
+      column-gap: $size-24;
 
       @include mq(md, max) {
         // sp
-        gap: $size-16;
         padding: $size-24 0;
+        gap: $size-16;
+        grid:
+          "thumb date" auto
+          "thumb title" auto
+          "desc desc" auto
+          "tag tag" 1fr / 1fr auto;
       }
 
       &::after {
@@ -92,15 +103,16 @@
     }
 
     &--thumb {
-      width: 16rem;
+      grid-area: thumb;
 
-      @include mq(md, max) {
-        // sp
-        width: 6rem;
+      @include mq(md, min) {
+        // pc
+        width: 16rem;
       }
 
       > img {
-        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
       }
     }
 
@@ -118,9 +130,10 @@
     }
 
     &--date {
-      color: #6d6b80;
+      color: #666;
       font-size: $size-14;
       line-height: 1;
+      grid-area: date;
 
       @include mq(md, max) {
         // sp
@@ -129,13 +142,18 @@
     }
 
     &--title {
-      font-size: $size-16;
-      line-height: 1;
       font-weight: 500;
-      margin-top: $size-8;
+      grid-area: title;
+
+      @include mq(md, min) {
+        // pc
+        font-size: $size-16;
+        line-height: 1;
+      }
 
       @include mq(md, max) {
         // sp
+        font-size: $size-14;
         line-height: 1.5;
       }
 
@@ -145,13 +163,19 @@
     }
 
     &--desc {
-      font-size: $size-14;
-      font-weight: 400;
       line-height: 1.25;
       overflow: hidden;
-      
-      @include mq(md, min){ // pc
+      grid-area: desc;
+
+      @include mq(md, min) {
+        // pc
         margin-top: $size-8;
+        font-size: $size-14;
+      }
+
+      @include mq(md, max) {
+        // sp
+        font-size: $size-13;
       }
 
       > span {
@@ -162,13 +186,10 @@
     }
 
     &--tag {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px 8px;
-      align-items: center;
+      grid-area: tag;
 
       > span.tag {
-        font-size: $size-14;
+        font-size: $size-16;
         line-height: 1;
         color: $color-blue-dark;
         display: block;
@@ -215,7 +236,11 @@
     display: flex;
     justify-content: flex-end;
     gap: 16px;
-    margin-top: $size-32;
+
+    @include mq(md, min) {
+      // pc
+      margin-top: $size-32;
+    }
 
     .shareLists__dt > span {
       display: block;
@@ -510,8 +535,6 @@
   &__other {
     padding-top: 80px;
   }
-
-  
 }
 
 #contents-column .l-column {

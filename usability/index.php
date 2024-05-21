@@ -81,7 +81,7 @@ include($site_root . 'functions.php');
           <div class="l-column__main usability">
             <!-- #about -->
             <section id="about" class="about l-section js-target">
-              <h2 class="sub__contents--title js-ani-fade js-ani-fade"><span class="font-mincho">
+              <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">
                   UI/UXデザインを業務システムに取り入れる
                 </span></h2>
               <p class="sub__contents--desc js-ani-fade">

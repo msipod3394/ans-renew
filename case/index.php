@@ -45,11 +45,11 @@ include($site_root . 'functions.php');
         </ul>
       </div><!-- ./sub__breadcrumbs -->
 
-      <section class="sub__heading">
+      <section class="sub__heading js-subHeading-show">
         <h1 class="sub__heading--text">
           <span class="sub__heading--textIn">
-            <span class="font-en line-left">Case</span>
-            <span class="font-mincho">お客様導入事例</span>
+            <span class="font-en line-left text-progress" data-txt="Case">Case</span>
+            <span class="font-mincho text-progress" data-txt="<?= $page_title ?>"><?= $page_title ?></span>
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>
@@ -62,216 +62,158 @@ include($site_root . 'functions.php');
 
           <!-- #case-pickup -->
           <section id="case-pickup" class="case__block case-pickup">
-            <h2 class="sub__contents--title"><span class="font-mincho">ピックアップ事例</span></h2>
+            <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">ピックアップ事例</span></h2>
 
             <div class="caseRow">
               <ul class="caseRow__list">
-                <li class="caseRow__card">
+                <li class="caseRow__card js-ani-fade">
                   <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                    <div class="caseRow__card--contents">
-                      <time class="caseRow__card--company">株式会社〇〇〇〇</time>
-                      <p class="caseRow__card--title">〇〇システム開発の事例</p>
-                      <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="caseRow__card--tags">
-                        <div class="caseRow__card--tag">
-                          <span class="">業種：〇〇</span>
-                          <span class="">業種：〇〇</span>
-                        </div>
-                        <div class="caseRow__card--tag">
-                          <span class="tag">#IT-Trust</span>
-                          <span class="tag">#システム開発</span>
-                          <span class="tag">#販売管理システム</span>
-                        </div>
+                    <p class="caseRow__card--company">株式会社〇〇〇〇</p>
+                    <p class="caseRow__card--title">〇〇システム開発の事例</p>
+                    <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="caseRow__card--tags">
+                      <div class="caseRow__card--tag">
+                        <span class="">業種：〇〇</span>
+                        <span class="">業種：〇〇</span>
+                      </div>
+                      <div class="caseRow__card--tag">
+                        <span class="tag">#IT-Trust</span>
+                        <span class="tag">#システム開発</span>
+                        <span class="tag">#販売管理システム</span>
                       </div>
                     </div>
                   </a>
                 </li><!-- caseRow__card -->
-                <li class="caseRow__card">
+                <li class="caseRow__card js-ani-fade">
                   <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                    <div class="caseRow__card--contents">
-                      <time class="caseRow__card--company">株式会社〇〇〇〇</time>
-                      <p class="caseRow__card--title">〇〇システム開発の事例</p>
-                      <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="caseRow__card--tags">
-                        <div class="caseRow__card--tag">
-                          <span class="">業種：〇〇</span>
-                          <span class="">業種：〇〇</span>
-                        </div>
-                        <div class="caseRow__card--tag">
-                          <span class="tag">#IT-Trust</span>
-                          <span class="tag">#システム開発</span>
-                          <span class="tag">#販売管理システム</span>
-                        </div>
+                    <p class="caseRow__card--company">株式会社〇〇〇〇</p>
+                    <p class="caseRow__card--title">〇〇システム開発の事例</p>
+                    <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="caseRow__card--tags">
+                      <div class="caseRow__card--tag">
+                        <span class="">業種：〇〇</span>
+                        <span class="">業種：〇〇</span>
+                      </div>
+                      <div class="caseRow__card--tag">
+                        <span class="tag">#IT-Trust</span>
+                        <span class="tag">#システム開発</span>
+                        <span class="tag">#販売管理システム</span>
                       </div>
                     </div>
                   </a>
                 </li><!-- caseRow__card -->
-                <li class="caseRow__card">
+                <li class="caseRow__card js-ani-fade">
                   <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                    <div class="caseRow__card--contents">
-                      <time class="caseRow__card--company">株式会社〇〇〇〇</time>
-                      <p class="caseRow__card--title">〇〇システム開発の事例</p>
-                      <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="caseRow__card--tags">
-                        <div class="caseRow__card--tag">
-                          <span class="">業種：〇〇</span>
-                          <span class="">業種：〇〇</span>
-                        </div>
-                        <div class="caseRow__card--tag">
-                          <span class="tag">#IT-Trust</span>
-                          <span class="tag">#システム開発</span>
-                          <span class="tag">#販売管理システム</span>
-                        </div>
+                    <p class="caseRow__card--company">株式会社〇〇〇〇</p>
+                    <p class="caseRow__card--title">〇〇システム開発の事例</p>
+                    <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="caseRow__card--tags">
+                      <div class="caseRow__card--tag">
+                        <span class="">業種：〇〇</span>
+                        <span class="">業種：〇〇</span>
+                      </div>
+                      <div class="caseRow__card--tag">
+                        <span class="tag">#IT-Trust</span>
+                        <span class="tag">#システム開発</span>
+                        <span class="tag">#販売管理システム</span>
                       </div>
                     </div>
                   </a>
                 </li><!-- caseRow__card -->
-                <li class="caseRow__card">
+                <li class="caseRow__card js-ani-fade">
                   <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                    <div class="caseRow__card--contents">
-                      <time class="caseRow__card--company">株式会社〇〇〇〇</time>
-                      <p class="caseRow__card--title">〇〇システム開発の事例</p>
-                      <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="caseRow__card--tags">
-                        <div class="caseRow__card--tag">
-                          <span class="">業種：〇〇</span>
-                          <span class="">業種：〇〇</span>
-                        </div>
-                        <div class="caseRow__card--tag">
-                          <span class="tag">#IT-Trust</span>
-                          <span class="tag">#システム開発</span>
-                          <span class="tag">#販売管理システム</span>
-                        </div>
+                    <p class="caseRow__card--company">株式会社〇〇〇〇</p>
+                    <p class="caseRow__card--title">〇〇システム開発の事例</p>
+                    <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="caseRow__card--tags">
+                      <div class="caseRow__card--tag">
+                        <span class="">業種：〇〇</span>
+                        <span class="">業種：〇〇</span>
+                      </div>
+                      <div class="caseRow__card--tag">
+                        <span class="tag">#IT-Trust</span>
+                        <span class="tag">#システム開発</span>
+                        <span class="tag">#販売管理システム</span>
                       </div>
                     </div>
                   </a>
                 </li><!-- caseRow__card -->
-                <li class="caseRow__card">
+                <li class="caseRow__card js-ani-fade">
                   <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                    <div class="caseRow__card--contents">
-                      <time class="caseRow__card--company">株式会社〇〇〇〇</time>
-                      <p class="caseRow__card--title">〇〇システム開発の事例</p>
-                      <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="caseRow__card--tags">
-                        <div class="caseRow__card--tag">
-                          <span class="">業種：〇〇</span>
-                          <span class="">業種：〇〇</span>
-                        </div>
-                        <div class="caseRow__card--tag">
-                          <span class="tag">#IT-Trust</span>
-                          <span class="tag">#システム開発</span>
-                          <span class="tag">#販売管理システム</span>
-                        </div>
+                    <p class="caseRow__card--company">株式会社〇〇〇〇</p>
+                    <p class="caseRow__card--title">〇〇システム開発の事例</p>
+                    <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="caseRow__card--tags">
+                      <div class="caseRow__card--tag">
+                        <span class="">業種：〇〇</span>
+                        <span class="">業種：〇〇</span>
+                      </div>
+                      <div class="caseRow__card--tag">
+                        <span class="tag">#IT-Trust</span>
+                        <span class="tag">#システム開発</span>
+                        <span class="tag">#販売管理システム</span>
                       </div>
                     </div>
                   </a>
                 </li><!-- caseRow__card -->
-                <li class="caseRow__card">
+                <li class="caseRow__card js-ani-fade">
                   <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                    <div class="caseRow__card--contents">
-                      <time class="caseRow__card--company">株式会社〇〇〇〇</time>
-                      <p class="caseRow__card--title">〇〇システム開発の事例</p>
-                      <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="caseRow__card--tags">
-                        <div class="caseRow__card--tag">
-                          <span class="">業種：〇〇</span>
-                          <span class="">業種：〇〇</span>
-                        </div>
-                        <div class="caseRow__card--tag">
-                          <span class="tag">#IT-Trust</span>
-                          <span class="tag">#システム開発</span>
-                          <span class="tag">#販売管理システム</span>
-                        </div>
+                    <p class="caseRow__card--company">株式会社〇〇〇〇</p>
+                    <p class="caseRow__card--title">〇〇システム開発の事例</p>
+                    <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="caseRow__card--tags">
+                      <div class="caseRow__card--tag">
+                        <span class="">業種：〇〇</span>
+                        <span class="">業種：〇〇</span>
+                      </div>
+                      <div class="caseRow__card--tag">
+                        <span class="tag">#IT-Trust</span>
+                        <span class="tag">#システム開発</span>
+                        <span class="tag">#販売管理システム</span>
                       </div>
                     </div>
                   </a>
                 </li><!-- caseRow__card -->
-                <li class="caseRow__card">
+                <li class="caseRow__card js-ani-fade">
                   <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                    <div class="caseRow__card--contents">
-                      <time class="caseRow__card--company">株式会社〇〇〇〇</time>
-                      <p class="caseRow__card--title">〇〇システム開発の事例</p>
-                      <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="caseRow__card--tags">
-                        <div class="caseRow__card--tag">
-                          <span class="">業種：〇〇</span>
-                          <span class="">業種：〇〇</span>
-                        </div>
-                        <div class="caseRow__card--tag">
-                          <span class="tag">#IT-Trust</span>
-                          <span class="tag">#システム開発</span>
-                          <span class="tag">#販売管理システム</span>
-                        </div>
+                    <p class="caseRow__card--company">株式会社〇〇〇〇</p>
+                    <p class="caseRow__card--title">〇〇システム開発の事例</p>
+                    <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="caseRow__card--tags">
+                      <div class="caseRow__card--tag">
+                        <span class="">業種：〇〇</span>
+                        <span class="">業種：〇〇</span>
+                      </div>
+                      <div class="caseRow__card--tag">
+                        <span class="tag">#IT-Trust</span>
+                        <span class="tag">#システム開発</span>
+                        <span class="tag">#販売管理システム</span>
                       </div>
                     </div>
                   </a>
                 </li><!-- caseRow__card -->
-                <li class="caseRow__card">
+                <li class="caseRow__card js-ani-fade">
                   <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
                     <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                    <div class="caseRow__card--contents">
-                      <time class="caseRow__card--company">株式会社〇〇〇〇</time>
-                      <p class="caseRow__card--title">〇〇システム開発の事例</p>
-                      <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="caseRow__card--tags">
-                        <div class="caseRow__card--tag">
-                          <span class="">業種：〇〇</span>
-                          <span class="">業種：〇〇</span>
-                        </div>
-                        <div class="caseRow__card--tag">
-                          <span class="tag">#IT-Trust</span>
-                          <span class="tag">#システム開発</span>
-                          <span class="tag">#販売管理システム</span>
-                        </div>
+                    <p class="caseRow__card--company">株式会社〇〇〇〇</p>
+                    <p class="caseRow__card--title">〇〇システム開発の事例</p>
+                    <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                    <div class="caseRow__card--tags">
+                      <div class="caseRow__card--tag">
+                        <span class="">業種：〇〇</span>
+                        <span class="">業種：〇〇</span>
                       </div>
-                    </div>
-                  </a>
-                </li><!-- caseRow__card -->
-                <li class="caseRow__card">
-                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
-                    <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                    <div class="caseRow__card--contents">
-                      <time class="caseRow__card--company">株式会社〇〇〇〇</time>
-                      <p class="caseRow__card--title">〇〇システム開発の事例</p>
-                      <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="caseRow__card--tags">
-                        <div class="caseRow__card--tag">
-                          <span class="">業種：〇〇</span>
-                          <span class="">業種：〇〇</span>
-                        </div>
-                        <div class="caseRow__card--tag">
-                          <span class="tag">#IT-Trust</span>
-                          <span class="tag">#システム開発</span>
-                          <span class="tag">#販売管理システム</span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </li><!-- caseRow__card -->
-                <li class="caseRow__card">
-                  <a href="<?= $site_root; ?>case/detail_A.php" class="caseRow__card--link">
-                    <div class="caseRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                    <div class="caseRow__card--contents">
-                      <time class="caseRow__card--company">株式会社〇〇〇〇</time>
-                      <p class="caseRow__card--title">〇〇システム開発の事例</p>
-                      <p class="caseRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                      <div class="caseRow__card--tags">
-                        <div class="caseRow__card--tag">
-                          <span class="">業種：〇〇</span>
-                          <span class="">業種：〇〇</span>
-                        </div>
-                        <div class="caseRow__card--tag">
-                          <span class="tag">#IT-Trust</span>
-                          <span class="tag">#システム開発</span>
-                          <span class="tag">#販売管理システム</span>
-                        </div>
+                      <div class="caseRow__card--tag">
+                        <span class="tag">#IT-Trust</span>
+                        <span class="tag">#システム開発</span>
+                        <span class="tag">#販売管理システム</span>
                       </div>
                     </div>
                   </a>
@@ -279,226 +221,13 @@ include($site_root . 'functions.php');
               </ul>
             </div>
 
-            <!-- <div class="case-pickup__block">
-              <a href="" class="case-pickup__row pickup__row">
-                <div class="pickup__row--thumbnail"><img src="/assets/img/case/heading.jpg" alt="〇〇〇システム開発の事例"></div>
-                <div class="pickup__row--contents">
-                  <span class="pickup__row--sub">株式会社〇〇〇〇</span>
-                  <span class="pickup__row--title">〇〇〇システム開発の事例</span>
-                  <p class="pickup__row--desc">
-                    <span>
-                      データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。
-                    </span>
-                  </p>
-                  <div class="pickup__row--tags">
-                    <ul class="tag icon-tag">
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                    </ul>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item"><span class="">#IT-Trust</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="case-pickup__row pickup__row">
-                <div class="pickup__row--thumbnail"><img src="/assets/img/case/heading.jpg" alt="〇〇〇システム開発の事例"></div>
-                <div class="pickup__row--contents">
-                  <span class="pickup__row--sub">株式会社〇〇〇〇</span>
-                  <span class="pickup__row--title">〇〇〇システム開発の事例</span>
-                  <p class="pickup__row--desc">
-                    <span>
-                      データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。
-                    </span>
-                  </p>
-                  <div class="pickup__row--tags">
-                    <ul class="tag icon-tag">
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                    </ul>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item"><span class="">#IT-Trust</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="case-pickup__row pickup__row">
-                <div class="pickup__row--thumbnail"><img src="/assets/img/case/heading.jpg" alt="〇〇〇システム開発の事例"></div>
-                <div class="pickup__row--contents">
-                  <span class="pickup__row--sub">株式会社〇〇〇〇</span>
-                  <span class="pickup__row--title">〇〇〇システム開発の事例</span>
-                  <p class="pickup__row--desc">
-                    <span>
-                      データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。
-                    </span>
-                  </p>
-                  <div class="pickup__row--tags">
-                    <ul class="tag icon-tag">
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                    </ul>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item"><span class="">#IT-Trust</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="case-pickup__row pickup__row">
-                <div class="pickup__row--thumbnail"><img src="/assets/img/case/heading.jpg" alt="〇〇〇システム開発の事例"></div>
-                <div class="pickup__row--contents">
-                  <span class="pickup__row--sub">株式会社〇〇〇〇</span>
-                  <span class="pickup__row--title">〇〇〇システム開発の事例</span>
-                  <p class="pickup__row--desc">
-                    <span>
-                      データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。
-                    </span>
-                  </p>
-                  <div class="pickup__row--tags">
-                    <ul class="tag icon-tag">
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                    </ul>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item"><span class="">#IT-Trust</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="case-pickup__row pickup__row">
-                <div class="pickup__row--thumbnail"><img src="/assets/img/case/heading.jpg" alt="〇〇〇システム開発の事例"></div>
-                <div class="pickup__row--contents">
-                  <span class="pickup__row--sub">株式会社〇〇〇〇</span>
-                  <span class="pickup__row--title">〇〇〇システム開発の事例</span>
-                  <p class="pickup__row--desc">
-                    <span>
-                      データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。
-                    </span>
-                  </p>
-                  <div class="pickup__row--tags">
-                    <ul class="tag icon-tag">
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                    </ul>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item"><span class="">#IT-Trust</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="case-pickup__row pickup__row">
-                <div class="pickup__row--thumbnail"><img src="/assets/img/case/heading.jpg" alt="〇〇〇システム開発の事例"></div>
-                <div class="pickup__row--contents">
-                  <span class="pickup__row--sub">株式会社〇〇〇〇</span>
-                  <span class="pickup__row--title">〇〇〇システム開発の事例</span>
-                  <p class="pickup__row--desc">
-                    <span>
-                      データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。
-                    </span>
-                  </p>
-                  <div class="pickup__row--tags">
-                    <ul class="tag icon-tag">
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                    </ul>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item"><span class="">#IT-Trust</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="case-pickup__row pickup__row">
-                <div class="pickup__row--thumbnail"><img src="/assets/img/case/heading.jpg" alt="〇〇〇システム開発の事例"></div>
-                <div class="pickup__row--contents">
-                  <span class="pickup__row--sub">株式会社〇〇〇〇</span>
-                  <span class="pickup__row--title">〇〇〇システム開発の事例</span>
-                  <p class="pickup__row--desc">
-                    <span>
-                      データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。
-                    </span>
-                  </p>
-                  <div class="pickup__row--tags">
-                    <ul class="tag icon-tag">
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                    </ul>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item"><span class="">#IT-Trust</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="case-pickup__row pickup__row">
-                <div class="pickup__row--thumbnail"><img src="/assets/img/case/heading.jpg" alt="〇〇〇システム開発の事例"></div>
-                <div class="pickup__row--contents">
-                  <span class="pickup__row--sub">株式会社〇〇〇〇</span>
-                  <span class="pickup__row--title">〇〇〇システム開発の事例</span>
-                  <p class="pickup__row--desc">
-                    <span>
-                      データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。
-                    </span>
-                  </p>
-                  <div class="pickup__row--tags">
-                    <ul class="tag icon-tag">
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                    </ul>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item"><span class="">#IT-Trust</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="case-pickup__row pickup__row">
-                <div class="pickup__row--thumbnail"><img src="/assets/img/case/heading.jpg" alt="〇〇〇システム開発の事例"></div>
-                <div class="pickup__row--contents">
-                  <span class="pickup__row--sub">株式会社〇〇〇〇</span>
-                  <span class="pickup__row--title">〇〇〇システム開発の事例</span>
-                  <p class="pickup__row--desc">
-                    <span>
-                      データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。
-                    </span>
-                  </p>
-                  <div class="pickup__row--tags">
-                    <ul class="tag icon-tag">
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                    </ul>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item"><span class="">#IT-Trust</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="case-pickup__row pickup__row">
-                <div class="pickup__row--thumbnail"><img src="/assets/img/case/heading.jpg" alt="〇〇〇システム開発の事例"></div>
-                <div class="pickup__row--contents">
-                  <span class="pickup__row--sub">株式会社〇〇〇〇</span>
-                  <span class="pickup__row--title">〇〇〇システム開発の事例</span>
-                  <p class="pickup__row--desc">
-                    <span>
-                      データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。
-                    </span>
-                  </p>
-                  <div class="pickup__row--tags">
-                    <ul class="tag icon-tag">
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                      <li class="pickup__row--tagItem">業種：〇〇</li>
-                    </ul>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item"><span class="">#IT-Trust</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </a>
-            </div> -->
           </section>
           <!-- ./case-pickup -->
 
           <!-- #case-types -->
           <section id="case-types" class="case__block case-types ">
-            <h2 class="sub__contents--title"><span class="font-mincho">業種別でみる</span></h2>
-
-            <div class="case-types__listBox">
+            <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">業種別でみる</span></h2>
+            <div class="case-types__listBox js-ani-fade">
               <ul class="case-types__list">
                 <li class="case-types__item"><a href=""><span>業種A</span></a></li>
                 <li class="case-types__item"><a href=""><span>業種B</span></a></li>
@@ -509,11 +238,10 @@ include($site_root . 'functions.php');
                 <li class="case-types__item"><a href=""><span>業種G</span></a></li>
               </ul>
             </div>
-
             <div class="subCase">
               <div class="subCase__cardList">
                 <ul class="subCase__cardList--list">
-                  <li class="subCase__cardList--item subCaseItem">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
                     <a href="<?= $site_root; ?>case/detail_B.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
@@ -531,8 +259,8 @@ include($site_root . 'functions.php');
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
+                    <a href="<?= $site_root; ?>case/detail_B.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -549,8 +277,8 @@ include($site_root . 'functions.php');
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
+                    <a href="<?= $site_root; ?>case/detail_B.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -567,8 +295,8 @@ include($site_root . 'functions.php');
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
+                    <a href="<?= $site_root; ?>case/detail_B.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -585,8 +313,8 @@ include($site_root . 'functions.php');
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
+                    <a href="<?= $site_root; ?>case/detail_B.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -603,8 +331,8 @@ include($site_root . 'functions.php');
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
+                    <a href="<?= $site_root; ?>case/detail_B.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -621,8 +349,8 @@ include($site_root . 'functions.php');
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
+                    <a href="<?= $site_root; ?>case/detail_B.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -639,8 +367,26 @@ include($site_root . 'functions.php');
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
-                    <a href="<?= $site_root; ?>case/detail_A.php" class="subCaseItem__link">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
+                    <a href="<?= $site_root; ?>case/detail_B.php" class="subCaseItem__link">
+                      <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
+                      <div class="subCaseItem__contents">
+                        <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
+                        <p class="subCaseItem__contents--title">〇〇システム開発</p>
+                        <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                        <div class="subCaseItem__contents--tagWrap">
+                          <div class="subCaseItem__contents--tag">
+                            <ul class="tag icon-tag">
+                              <li class="tag__item"><span class="">IT-Trust</span></li>
+                              <li class="tag__item"><span class="">業種：〇〇</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
+                    <a href="<?= $site_root; ?>case/detail_B.php" class="subCaseItem__link">
                       <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社〇〇〇〇</p>
@@ -659,11 +405,9 @@ include($site_root . 'functions.php');
                   </li>
                 </ul>
               </div>
-              <!-- <div class="case-types__linkButton common__linkButton"><a href=""><span class="font-mincho">全ての事例を見る</span></a></div> -->
             </div>
           </section>
           <!-- ./case -->
-
         </div>
       </div><!-- ./l-block -->
 

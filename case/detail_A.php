@@ -45,15 +45,15 @@ include($site_root . 'functions.php');
         </ul>
       </div><!-- ./sub__breadcrumbs -->
 
-      <section class="sub__heading">
+      <section class="sub__heading js-subHeading-show">
         <h1 class="sub__heading--text">
           <span class="sub__heading--textIn">
-            <span class="font-en line-left">Case</span>
-            <span class="font-mincho">お客様導入事例</span>
+            <span class="font-en line-left text-progress" data-txt="Case">Case</span>
+            <span class="font-mincho text-progress" data-txt="<?= $page_title ?>"><?= $page_title ?></span>
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>
-        <div class="sub__headingImg"><img src="../assets/img/case/heading.jpg" alt=""></div>
+        <div class="sub__headingImg"><img src="<?= $site_root; ?>assets/img/case/heading.jpg" alt="お客様導入事例"></div>
       </section><!-- sub__heading -->
 
       <div id="case" class="l-block -full case">
@@ -62,11 +62,11 @@ include($site_root . 'functions.php');
           <section class="caseDetail -detail-a">
 
             <!-- 公開日/シェア -->
-            <div class="caseDetail__update">
-              <div class="caseDetail__heading--date">
+            <div class="caseDetail__update js-ani-fade-ho">
+              <div class="caseDetail__update--date">
                 <span>公開日：2024年04月03日</span>
               </div>
-              <div class="caseDetail__heading--share">
+              <div class="caseDetail__update--share">
                 <dl class="shareLists">
                   <dt class="shareLists__dt"><span class="font-robot">SHARE</span></dt>
                   <div class="shareLists__wrap">
@@ -91,7 +91,7 @@ include($site_root . 'functions.php');
             </div>
 
             <!-- ロゴ・タイトル -->
-            <div class="caseDetail__head">
+            <div class="caseDetail__head js-ani-fade">
               <div class="caseDetail__head--logo"><img loading="lazy" src="../assets/img/case/sample_logo.jpg" alt="ロゴ画像"></div>
               <h1 class="caseDetail__head--heading sub__contents--title">
                 <span class="font-mincho">
@@ -103,7 +103,7 @@ include($site_root . 'functions.php');
             </div>
 
             <!-- 会社情報 -->
-            <div class="caseDetail__headDesc">
+            <div class="caseDetail__headDesc js-ani-fade">
               <dl class="caseDetail__headDesc--dl">
                 <div class="caseDetail__headDesc--item">
                   <dt class="caseDetail__headDesc--dt">業種</dt>
@@ -127,7 +127,7 @@ include($site_root . 'functions.php');
             </div>
 
             <!-- 関連タグ -->
-            <div class="caseDetail__tag c-tags">
+            <div class="caseDetail__tag c-tags js-ani-fade">
               <ul class="c-tags__list icon-tag">
                 <li class="c-tags__item"><a href="">#IT-Trust</a></li>
                 <li class="c-tags__item"><a href="">#IT-Trust</a></li>
@@ -136,24 +136,24 @@ include($site_root . 'functions.php');
             </div>
 
             <!-- 画像 -->
-            <div class="caseDetail__images">
+            <div class="caseDetail__images js-ani-fade">
               <ul class="caseDetail__images--list">
-                <li class="caseDetail__images--item"><img src="../assets/img/case/sample_img_1.jpg" alt="" srcset=""></li>
-                <li class="caseDetail__images--item"><img src="../assets/img/case/sample_img_2.jpg" alt="" srcset=""></li>
+                <li class="caseDetail__images--item"><img src="../assets/img/case/sample_img_1.jpg" alt="" loading="lazy"></li>
+                <li class="caseDetail__images--item"><img src="../assets/img/case/sample_img_2.jpg" alt="" loading="lazy"></li>
               </ul>
             </div>
 
             <!-- 課題 -->
-            <div class="caseDetail__mission">
+            <div class="caseDetail__mission js-ani-fade">
               <div class="caseDetail__mission--inner">
-                <h3 class="caseDetail__mission--heading">課題</h3>
-                <ul class="caseDetail__mission--list">
+                <h3 class="caseDetail__mission--heading js-ani-fade">課題</h3>
+                <ul class="caseDetail__mission--list js-ani-fade">
                   <li class="caseDetail__mission--item"><span class="icon_circle_in_check"></span>中小企業向けのシステムを、オーダーメイドで開発してくれる会社がない。</li>
                   <li class="caseDetail__mission--item"><span class="icon_circle_in_check"></span>パッケージシステムでは自社の運用に合わず、管理できる機能がない。</li>
                   <li class="caseDetail__mission--item"><span class="icon_circle_in_check"></span>売上の基礎をつくる自社独自の業務に合わせたシステムを開発したい。</li>
                 </ul>
-                <div class="caseDetail__mission--arrow"><span></span></div>
-                <div class="caseDetail__mission--result">
+                <div class="caseDetail__mission--arrow js-ani-fade"><span></span></div>
+                <div class="caseDetail__mission--result js-ani-fade">
                   <p>
                     システムがどのように動作できるかの<br class="sp">「見える化」によって、<br>
                     誤解やコミュニケーションの<br class="sp">不明確さを排除し、<br>
@@ -165,8 +165,8 @@ include($site_root . 'functions.php');
 
             <!-- システム情報 -->
             <div class="caseDetail__contentsDesc">
-              <h3 class="caseDetail__subtitle">システム情報</h3>
-              <dl class="caseDetail__contentsDesc--dl">
+              <h3 class="caseDetail__subtitle js-ani-fade">システム情報</h3>
+              <dl class="caseDetail__contentsDesc--dl js-ani-fade">
                 <div class="caseDetail__contentsDesc--item __full">
                   <dt class="caseDetail__contentsDesc--dt">導入システム</dt>
                   <dd class="caseDetail__contentsDesc--dd">
@@ -216,59 +216,63 @@ include($site_root . 'functions.php');
 
             <!-- 課題背景 -->
             <div class="caseDetail__contents">
-              <h3 class="caseDetail__subtitle">課題背景</h3>
-              <p>
-                新たにシステム開発を検討する際、企業は何を軸にプロジェクトをすすめるべきなのでしょう。
-                システム開発のプロジェクトは、実際にシステムを使うことになる現場担当者の協力は必要不可欠です。いかにプロジェクトの成功も現場担当者を巻き込めるかどうかが鍵となります。
-                しかし、実際に現場担当者に意見を求めると、現行の業務フローが変化することを避ける傾向が強く、業務はそのままに操作性の向上や応答時間の短縮という要望にとどまることが多いのが実情です。
-                現場担当者は、“現行の業務”については精通していますが、会社全体の効率化や改善という視点でみている立場ではないためと推測できます。また、現場担当者にとって、慣れない業務に変更する改革は受け入れにくいでしょう。
-                反対に、「画面遷移が多く入力に時間がかかるので、入力画面を見やすくまとめてほしい。」「帳票の出力が簡単にできるようにしてほしい。」など、現行の業務を軸にした意見は多く挙がります。もちろん、利便性をシステムに反映させることは必要であっても、業務効率化に繋がらないということになり、根本的な効率化に直結することは難しくなります。
-              </p>
+              <h3 class="caseDetail__subtitle js-ani-fade">課題背景</h3>
+              <div class="js-ani-fade">
+                <p class="">
+                  新たにシステム開発を検討する際、企業は何を軸にプロジェクトをすすめるべきなのでしょう。
+                  システム開発のプロジェクトは、実際にシステムを使うことになる現場担当者の協力は必要不可欠です。いかにプロジェクトの成功も現場担当者を巻き込めるかどうかが鍵となります。
+                  しかし、実際に現場担当者に意見を求めると、現行の業務フローが変化することを避ける傾向が強く、業務はそのままに操作性の向上や応答時間の短縮という要望にとどまることが多いのが実情です。
+                  現場担当者は、“現行の業務”については精通していますが、会社全体の効率化や改善という視点でみている立場ではないためと推測できます。また、現場担当者にとって、慣れない業務に変更する改革は受け入れにくいでしょう。
+                  反対に、「画面遷移が多く入力に時間がかかるので、入力画面を見やすくまとめてほしい。」「帳票の出力が簡単にできるようにしてほしい。」など、現行の業務を軸にした意見は多く挙がります。もちろん、利便性をシステムに反映させることは必要であっても、業務効率化に繋がらないということになり、根本的な効率化に直結することは難しくなります。
+                </p>
+              </div>
             </div>
 
             <!-- 導入効果・メリット -->
             <div class="caseDetail__contents">
-              <h3 class="caseDetail__subtitle">導入効果・メリット</h3>
-              <p>
-                新たにシステム開発を検討する際、企業は何を軸にプロジェクトをすすめるべきなのでしょう。
-                システム開発のプロジェクトは、実際にシステムを使うことになる現場担当者の協力は必要不可欠です。いかにプロジェクトの成功も現場担当者を巻き込めるかどうかが鍵となります。
-                しかし、実際に現場担当者に意見を求めると、現行の業務フローが変化することを避ける傾向が強く、業務はそのままに操作性の向上や応答時間の短縮という要望にとどまることが多いのが実情です。
-                現場担当者は、“現行の業務”については精通していますが、会社全体の効率化や改善という視点でみている立場ではないためと推測できます。また、現場担当者にとって、慣れない業務に変更する改革は受け入れにくいでしょう。
-                反対に、「画面遷移が多く入力に時間がかかるので、入力画面を見やすくまとめてほしい。」「帳票の出力が簡単にできるようにしてほしい。」など、現行の業務を軸にした意見は多く挙がります。もちろん、利便性をシステムに反映させることは必要であっても、業務効率化に繋がらないということになり、根本的な効率化に直結することは難しくなります。
-              </p>
-            </div>
-
-            <!-- 概要図 -->
-            <div class="caseDetail__contents">
-              <img src="../assets/img/case/sample_img_3.jpg" alt="">
-
-              <!-- シェア・下部 -->
-              <div class="caseDetail__contents--share">
-                <dl class="shareLists">
-                  <dt class="shareLists__dt"><span class="font-robot">SHARE</span></dt>
-                  <div class="shareLists__wrap">
-                    <dd class="shareLists__item is-twitter">
-                      <a href="https://twitter.com/intent/tweet?url=[URL]&text=[text]" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow" class="shareLists__link">
-                        <span class="hd">Twitter share</span>
-                      </a>
-                    </dd>
-                    <dd class="shareLists__item is-facebook">
-                      <a href="https://www.facebook.com/share.php?u=[URL]" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="shareLists__link">
-                        <span class="hd">Facebook share</span>
-                      </a>
-                    </dd>
-                    <dd class="shareLists__item is-copy">
-                      <a href="" onclick="" class="shareLists__link">
-                        <span class="hd">copy share</span>
-                      </a>
-                    </dd>
-                  </div>
-                </dl>
+              <h3 class="caseDetail__subtitle js-ani-fade">導入効果・メリット</h3>
+              <div class="js-ani-fade">
+                <p class="">
+                  新たにシステム開発を検討する際、企業は何を軸にプロジェクトをすすめるべきなのでしょう。
+                  システム開発のプロジェクトは、実際にシステムを使うことになる現場担当者の協力は必要不可欠です。いかにプロジェクトの成功も現場担当者を巻き込めるかどうかが鍵となります。
+                  しかし、実際に現場担当者に意見を求めると、現行の業務フローが変化することを避ける傾向が強く、業務はそのままに操作性の向上や応答時間の短縮という要望にとどまることが多いのが実情です。
+                  現場担当者は、“現行の業務”については精通していますが、会社全体の効率化や改善という視点でみている立場ではないためと推測できます。また、現場担当者にとって、慣れない業務に変更する改革は受け入れにくいでしょう。
+                  反対に、「画面遷移が多く入力に時間がかかるので、入力画面を見やすくまとめてほしい。」「帳票の出力が簡単にできるようにしてほしい。」など、現行の業務を軸にした意見は多く挙がります。もちろん、利便性をシステムに反映させることは必要であっても、業務効率化に繋がらないということになり、根本的な効率化に直結することは難しくなります。
+                </p>
               </div>
             </div>
 
+            <!-- 概要図 -->
+            <div class="caseDetail__contents js-ani-fade">
+              <img src="../assets/img/case/sample_img_3.jpg" alt="">
+            </div>
+
+            <!-- シェア・下部 -->
+            <div class="caseDetail__contents--share js-ani-fade">
+              <dl class="shareLists">
+                <dt class="shareLists__dt"><span class="font-robot">SHARE</span></dt>
+                <div class="shareLists__wrap">
+                  <dd class="shareLists__item is-twitter">
+                    <a href="https://twitter.com/intent/tweet?url=[URL]&text=[text]" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow" class="shareLists__link">
+                      <span class="hd">Twitter share</span>
+                    </a>
+                  </dd>
+                  <dd class="shareLists__item is-facebook">
+                    <a href="https://www.facebook.com/share.php?u=[URL]" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="shareLists__link">
+                      <span class="hd">Facebook share</span>
+                    </a>
+                  </dd>
+                  <dd class="shareLists__item is-copy">
+                    <a href="" onclick="" class="shareLists__link">
+                      <span class="hd">copy share</span>
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
             <!-- この事例は〇〇をご利用いただいています -->
-            <div class="caseDetail__use">
+            <div class="caseDetail__use js-ani-fade">
               <div class="caseDetail__use--inner">
                 <h4 class="caseDetail__use--heading">この事例はフルオーダーシステム開発をご利用いただいています</h4>
                 <p class="caseDetail__use--text">
@@ -285,119 +289,124 @@ include($site_root . 'functions.php');
             <!-- お問い合わせ導線 -->
             <?php include($site_root . "_inc/inquiry.php"); ?>
 
-            <div class="caseDetail__linkBack common__linkButton"><a href=""><span class="font-mincho">事例 一覧に戻る</span></a></div>
-
+            <div class="caseDetail__linkBack common__linkButton js-ani-fade"><a href="<?= $site_root; ?>case"><span class="font-mincho">事例 一覧に戻る</span></a></div>
 
           </section><!-- ./caseDetail -->
 
           <!-- #case -->
           <section class="subCase l-section js-target">
             <div class="subCase__inner">
-              <h2 class="serviceTop__mainTitle sub__contents--title"><span class="font-mincho">〇〇に関連する記事</span></h2>
+              <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">〇〇に関連する記事</span></h2>
               <div class="subCase__cardList">
                 <ul class="subCase__cardList--list">
-                  <li class="subCase__cardList--item subCaseItem">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
                     <a href="" class="subCaseItem__link">
-                      <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
+                      <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
                         <p class="subCaseItem__contents--title">〇〇システム開発</p>
                         <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                         <div class="subCaseItem__contents--tagWrap">
                           <div class="subCaseItem__contents--tag">
-                            <ul class="tag">
-                              <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                              <li class="tag__item"><span class="">業種：〇〇</span></li>
+                            <ul class="tag icon-tag">
+                              <li class="tag__item">#IT-Trust</li>
+                              <li class="tag__item">#システム開発</li>
+                              <li class="tag__item">#販売管理システム</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
                     <a href="" class="subCaseItem__link">
-                      <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
+                      <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
                         <p class="subCaseItem__contents--title">〇〇システム開発</p>
                         <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                         <div class="subCaseItem__contents--tagWrap">
                           <div class="subCaseItem__contents--tag">
-                            <ul class="tag">
-                              <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                              <li class="tag__item"><span class="">業種：〇〇</span></li>
+                            <ul class="tag icon-tag">
+                              <li class="tag__item">#IT-Trust</li>
+                              <li class="tag__item">#システム開発</li>
+                              <li class="tag__item">#販売管理システム</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
                     <a href="" class="subCaseItem__link">
-                      <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
+                      <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
                         <p class="subCaseItem__contents--title">〇〇システム開発</p>
                         <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                         <div class="subCaseItem__contents--tagWrap">
                           <div class="subCaseItem__contents--tag">
-                            <ul class="tag">
-                              <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                              <li class="tag__item"><span class="">業種：〇〇</span></li>
+                            <ul class="tag icon-tag">
+                              <li class="tag__item">#IT-Trust</li>
+                              <li class="tag__item">#システム開発</li>
+                              <li class="tag__item">#販売管理システム</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
                     <a href="" class="subCaseItem__link">
-                      <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
+                      <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
                         <p class="subCaseItem__contents--title">〇〇システム開発</p>
                         <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                         <div class="subCaseItem__contents--tagWrap">
                           <div class="subCaseItem__contents--tag">
-                            <ul class="tag">
-                              <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                              <li class="tag__item"><span class="">業種：〇〇</span></li>
+                            <ul class="tag icon-tag">
+                              <li class="tag__item">#IT-Trust</li>
+                              <li class="tag__item">#システム開発</li>
+                              <li class="tag__item">#販売管理システム</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
                     <a href="" class="subCaseItem__link">
-                      <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
+                      <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
                         <p class="subCaseItem__contents--title">〇〇システム開発</p>
                         <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                         <div class="subCaseItem__contents--tagWrap">
                           <div class="subCaseItem__contents--tag">
-                            <ul class="tag">
-                              <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                              <li class="tag__item"><span class="">業種：〇〇</span></li>
+                            <ul class="tag icon-tag">
+                              <li class="tag__item">#IT-Trust</li>
+                              <li class="tag__item">#システム開発</li>
+                              <li class="tag__item">#販売管理システム</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <li class="subCase__cardList--item subCaseItem">
+                  <li class="subCase__cardList--item subCaseItem js-ani-fade">
                     <a href="" class="subCaseItem__link">
-                      <div class="subCaseItem__img"><img src="../../assets/img/top/case/case_sample.jpg" alt=""></div>
+                      <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                       <div class="subCaseItem__contents">
                         <p class="subCaseItem__contents--company">株式会社フロンティアコンサルティング</p>
                         <p class="subCaseItem__contents--title">〇〇システム開発</p>
                         <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                         <div class="subCaseItem__contents--tagWrap">
                           <div class="subCaseItem__contents--tag">
-                            <ul class="tag">
-                              <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
-                              <li class="tag__item"><span class="">業種：〇〇</span></li>
+                            <ul class="tag icon-tag">
+                              <li class="tag__item">#IT-Trust</li>
+                              <li class="tag__item">#システム開発</li>
+                              <li class="tag__item">#販売管理システム</li>
                             </ul>
                           </div>
                         </div>
@@ -407,7 +416,7 @@ include($site_root . 'functions.php');
                 </ul>
               </div>
             </div>
-            <div class="subColumn__linkButton common__linkButton"><a href=""><span class="font-mincho">全ての事例を見る</span></a></div>
+            <div class="subColumn__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>case"><span class="font-mincho">全ての事例を見る</span></a></div>
           </section><!-- ./subCase -->
 
         </div><!-- ./l-column__main--inner -->
