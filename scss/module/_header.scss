@@ -89,15 +89,19 @@
     @include mq(md, max) {
       // sp
       width: 100%;
-      height: 100dvh;
-      overflow: hidden;
+      height: 100%;
+      padding-bottom: 64px;
+      overflow-y: auto;
+      overflow-x: hidden;
       position: fixed;
+      top: 0;
       flex-direction: column;
       background-color: $color-blue-dark;
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.5s ease;
       z-index: 999;
+      pointer-events: auto;
 
       ._active & {
         opacity: 1;
@@ -116,11 +120,9 @@
     @include mq(md, max) {
       // sp
       width: 100%;
-      height: calc(100vh - 160px);
-      margin: 0 vw_max(56px);
+      padding: $size-24 0 0;
       flex-direction: column;
       justify-content: center;
-      gap: vw_max(64px);
     }
   }
 
@@ -131,6 +133,11 @@
       // pc
       justify-content: flex-end;
     }
+
+    @include mq(md, max) {
+      // sp
+      padding: $size-16 0;
+    }
   }
 
   &__nav--list {
@@ -140,7 +147,7 @@
     @include mq(md, max) {
       // sp
       flex-direction: column;
-      gap: vw_max(40px);
+      gap: $size-16;
     }
   }
 
@@ -153,17 +160,17 @@
 
       ._navMain & {
         font-weight: 500;
+        font-size: $size-14;
 
         @include mq(md, min) {
           // pc
           padding: $size-16 0;
-          font-size: $size-14;
         }
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(32px);
           color: #fff;
+          font-size: $size-15;
         }
 
         &::before {
@@ -196,7 +203,7 @@
 
         @include mq(md, max) {
           // sp
-          font-size: vw_max(32px);
+          font-size: $size-15;
           color: #fff;
         }
 
@@ -257,6 +264,14 @@
     }
   }
 
+  &__nav--item--childList {
+    margin-left: $size-16;
+
+    .header__nav--item + .header__nav--item {
+      margin-top: $size-16;
+    }
+  }
+
   &__inquiry {
     width: 164px;
 
@@ -264,15 +279,18 @@
       // sp
       width: calc(100% - vw_max(80px));
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: vw_max(40px);
-      margin: vw_max(40px) auto;
-      padding-bottom: vw_max(40px);
+      gap: $size-16;
+      margin: $size-16 auto;
     }
 
     &--btn {
       width: 100%;
+
+      @include mq(md, max) {
+        // sp
+        width: 50%;
+      }
 
       > a {
         width: 100%;
@@ -288,8 +306,8 @@
 
         @include mq(md, max) {
           // sp
-          padding: $size-24 0;
-          font-size: vw_max(32px);
+          padding: $size-16 0;
+          font-size: $size-18;
         }
 
         &._download {
@@ -303,8 +321,8 @@
 
             @include mq(md, max) {
               // sp
-              width: $size-18;
-              height: $size-24;
+              width: $size-16;
+              height: $size-20;
               margin-right: vw_max(16px);
             }
           }

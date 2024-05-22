@@ -20,10 +20,23 @@ $ac[$cn] = 'is-current';
             <li class="header__nav--item <?= ($ac['ittrust'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>ittrust/">私たちの強み</a></li>
             <li class="header__nav--item <?= ($ac['uiux'] == 'is-current') ? 'is-current' : ''; ?>"><a href=" <?= $site_root; ?>usability/">UI/UX</a></li>
             <li class="header__nav--item js-hover-service <?= ($ac['service'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>service">サービス</a></li>
+            <ul class="sp header__nav--item--childList">
+              <li class="header__nav--item"><a href="<?= $site_root; ?>service/fullorder/" class="">フルオーダーシステム開発</a></li>
+              <li class="header__nav--item"><a href="<?= $site_root; ?>service/renewal/" class="">基幹システム再構築</a></li>
+              <li class="header__nav--item"><a href="<?= $site_root; ?>service/maintenance/" class="">システム保守引継ぎ</a></li>
+              <li class="header__nav--item"><a href="<?= $site_root; ?>service/bcp/" class="">BCP対策</a></li>
+            </ul>
             <li class="header__nav--item <?= ($ac['case'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>case/">お客様導入事例</a></li>
             <li class="header__nav--item <?= ($ac['qa'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>qa/">Q&A</a></li>
             <li class="header__nav--item <?= ($ac['column'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>column/">コラム</a></li>
+            <li class="header__nav--item <?= ($ac['movie'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>movie/">配信動画</a></li>
             <li class="header__nav--item js-hover-company  <?= ($ac['company'] == 'is-current') ? 'is-current' : ''; ?>"><a href="<?= $site_root; ?>company/">会社情報</a></li>
+            <ul class="sp header__nav--item--childList">
+              <li class="header__nav--item"><a href="<?= $site_root; ?>company/philosophy/" class="">企業理念</a></li>
+              <li class="header__nav--item"><a href="<?= $site_root; ?>company/topmessage/" class="">代表メッセージ</a></li>
+              <li class="header__nav--item"><a href="<?= $site_root; ?>company/outline/" class="">会社概要・アクセス</a></li>
+              <li class="header__nav--item"><a href="<?= $site_root; ?>company/organization/" class="">当社の体制</a></li>
+            </ul>
           </ul>
         </div>
         <div class="header__nav--in _navSub">
@@ -54,8 +67,6 @@ $ac[$cn] = 'is-current';
           <li class="header__toggle--item"><a href="<?= $site_root; ?>service/fullorder/" class="icon-arrow _after">フルオーダーシステム開発</a></li>
           <li class="header__toggle--item"><a href="<?= $site_root; ?>service/renewal/" class="icon-arrow _after">基幹システム再構築</a></li>
           <li class="header__toggle--item"><a href="<?= $site_root; ?>service/maintenance/" class="icon-arrow _after">システム保守引継ぎ</a></li>
-          <!-- <li class="header__toggle--item"><a href="https://www.ans-net.co.jp/it-advice/" target="_blank" class="icon-arrow _after">IT相談</a></li> -->
-          <!-- <li class="header__toggle--item"><a href="https://www.ans-net.co.jp/lp/insourcing/" target="_blank" class="icon-arrow _after">システム開発内製化支援</a></li> -->
           <li class="header__toggle--item"><a href="<?= $site_root; ?>service/bcp/" class="icon-arrow _after">BCP対策</a></li>
         </ul>
       </nav>
