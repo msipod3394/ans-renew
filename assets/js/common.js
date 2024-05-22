@@ -133,3 +133,22 @@ const fadeObserver = new IntersectionObserver(targets, fadeOption);
 fadeTargets.forEach((target) => {
   fadeObserver.observe(target);
 });
+
+// トップへ戻る
+$(function () {
+  const $backtop = $(".js-backtop");
+  let isActive = false;
+
+  $(window).scroll(function () {
+    const shouldBeActive = $(this).scrollTop() > 1;
+    if (shouldBeActive !== isActive) {
+      isActive = shouldBeActive;
+      $backtop.toggleClass("is-active", isActive);
+    }
+  });
+
+  $backtop.on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, 1000);
+  });
+});
