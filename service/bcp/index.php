@@ -68,6 +68,9 @@ include($site_root . 'functions.php');
                 <li class="sub__side--item js-nav"><a href="#plan" class="js-anchor"><span>ITインフラBCP対策</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>コラム</span></a></li>
               </ul>
+              <div class="sub__side--inquiry pc">
+                <a href="<?= $site_root; ?>inquiry"><span class="icon-mail">お問合せ</span></a>
+              </div>
             </div>
           </div>
           <div class="l-column__main bcp">

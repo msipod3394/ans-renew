@@ -72,6 +72,9 @@ include($site_root . 'functions.php');
                 <li class="sub__side--item js-nav"><a href="#case" class="js-anchor"><span>事例</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>コラム</span></a></li>
               </ul>
+              <div class="sub__side--inquiry pc">
+                <a href="<?= $site_root; ?>inquiry"><span class="icon-mail">お問合せ</span></a>
+              </div>
             </div>
           </div>
 

@@ -74,6 +74,9 @@ include($site_root . 'functions.php');
                 <li class="sub__side--item js-nav"><a href="#uiux" class="js-anchor"><span>モックアップアプローチによる効率的なシステム開発</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>UI/UXデザインに関するコラム</span></a></li>
               </ul>
+              <div class="sub__side--inquiry pc">
+                <a href="<?= $site_root; ?>inquiry"><span class="icon-mail">お問合せ</span></a>
+              </div>
             </div>
           </div>
 

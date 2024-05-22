@@ -516,6 +516,22 @@ a.common__borderLink {
   }
 }
 
+/* icon-mail */
+.icon-mail {
+  &::before {
+    width: $size-18;
+    height: $size-14;
+    @include icon-mask($path + "/common/icon/icon-mail.svg", #fff);
+    transition: $transition;
+
+    @include mq(md, max) {
+      // sp
+      width: $size-18;
+      height: $size-12;
+    }
+  }
+}
+
 /* .l-block */
 .l-block {
   @include mq(md, min) {

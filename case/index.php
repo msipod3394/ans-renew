@@ -57,9 +57,7 @@ include($site_root . 'functions.php');
       </section><!-- sub__heading -->
 
       <div id="case" class="l-block -full case">
-
         <div class="l-column__main--inner">
-
           <!-- #case-pickup -->
           <section id="case-pickup" class="case__block case-pickup">
             <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">ピックアップ事例</span></h2>

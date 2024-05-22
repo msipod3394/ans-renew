@@ -46,8 +46,8 @@
         </p>
         <ul class="footer__copy--links">
           <li class="footer__copy--link"><a href="<?= $site_root; ?>privacy">個人情報保護方針</a></li>
-          <li class="footer__copy--link"><a href="<?= $site_root; ?>">情報セキュリティー</a></li>
-          <li class="footer__copy--link"><a href="<?= $site_root; ?>">サイトマップ</a></li>
+          <li class="footer__copy--link"><a href="<?= $site_root; ?>isms">情報セキュリティー</a></li>
+          <li class="footer__copy--link"><a href="<?= $site_root; ?>sitemap">サイトマップ</a></li>
         </ul>
       </div>
     </footer>

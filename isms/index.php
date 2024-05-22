@@ -33,11 +33,8 @@ include($site_root . 'functions.php');
 <body id="<?= $cn; ?>">
   <div id="fullWrap">
 
-    <!-- ▼ header -->
-    <header id="header" class="header js-header _contact">
-      <p class="header__logo"><a href="<?= $site_root; ?>"><img src="<?= $site_root; ?>assets/img/common/logo/logo.svg" alt="株式会社エイ・エヌ・エス"></a></p>
-    </header>
-    <!--./header-->
+    <!-- ▼ inc/header -->
+    <?php include($site_root . "_inc/header.php"); ?>
 
     <main id="" class="sub__container">
       <div class="sub__breadcrumbs">
