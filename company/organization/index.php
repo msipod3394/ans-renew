@@ -1,6 +1,6 @@
 <?php
 $site_root = '../../';
-$cn = 'company';
+$cn = 'company-organization';
 $page_title = "当社の体制";
 include($site_root . 'functions.php');
 ?>
@@ -38,17 +38,17 @@ include($site_root . 'functions.php');
     <main class="sub__container company company__sub">
       <div class="sub__breadcrumbs">
         <ul class="sub__breadcrumbs--list">
-          <li class="sub__breadcrumbs--item"><a href=""><span>トップ</span></a></li>
-          <li class="sub__breadcrumbs--item"><a href=""><span class="">会社情報</span></a></li>
+          <li class="sub__breadcrumbs--item"><a href="<?= $site_root; ?>"><span>トップ</span></a></li>
+          <li class="sub__breadcrumbs--item"><a href="<?= $site_root; ?>company"><span class="">会社情報</span></a></li>
           <li class="sub__breadcrumbs--item"><span class="_current"><?= $page_title; ?></span></li>
         </ul>
       </div><!-- ./sub__breadcrumbs -->
 
-      <section class="sub__heading">
+      <section class="sub__heading js-subHeading-show">
         <h1 class="sub__heading--text">
           <span class="sub__heading--textIn">
-            <span class="font-en line-left">Organization</span>
-            <span class="font-mincho">当社の体制</span>
+            <span class="font-en line-left text-progress" data-txt="Organization">Organization</span>
+            <span class="font-mincho text-progress" data-txt="<?= $page_title ?>"><?= $page_title ?></span>
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>
@@ -57,43 +57,42 @@ include($site_root . 'functions.php');
 
       <div id="organization" class="l-block company__sub--contents organization">
         <div class="l-column__main organization__main">
-          <!-- <div class="l-column__main--inner"> -->
 
           <!-- #organization-chart -->
-          <section id="organization-chart" class="l-section js-target organization__chart">
-            <h2 class="sub__contents--title"><span class="font-mincho">組織図</span></h2>
-            <div class="organization__chart--modal">
+          <section id="organization-chart" class=" js-target organization__chart">
+            <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">組織図</span></h2>
+            <div class="organization__chart--modal js-ani-fade">
               <img src="<?= $site_root; ?>assets/img/company/organization/organization_chart.jpg" alt="組織図" loading="lazy">
             </div>
           </section><!-- ./organization__chart -->
 
           <!-- #organization-history -->
-          <section id="organization-history" class="l-section js-target organization__history">
-            <h2 class="sub__contents--title"><span class="font-mincho">沿革</span></h2>
+          <section id="organization-history" class=" js-target organization__history">
+            <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">沿革</span></h2>
             <div class="organization__history--list">
               <dl class="historyList">
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2023</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">12月</span>創業35周年を迎えました。</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2022</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">09月</span>「システム開発の内製」を支援しDX（デジタル変革）推進　「内製化支援サービス」をリリースしました。</dd>
                   <dd class="historyList__dd"><span class="c-color-blue">05月</span>週2日、在宅勤務(テレワーク)を導入しております。</dd>
                   <dd class="historyList__dd"><span class="c-color-blue">01月</span>テレワーク対応・書類電子化を推進する取り組みを継続的に実施しております。</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2017</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">04月</span>クラウド型勤怠管理システム「勤怠Trust」リリース</dd>
                   <dd class="historyList__dd"><span class="c-color-blue">03月</span>子会社ANSASIA CO.,LTD.　ダナン支社にて、BrSEスクールを開校</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2015</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">10月</span>本社を中央区新川THE WALL 6F に移転</dd>
                   <dd class="historyList__dd"><span class="c-color-blue">08月</span>子会社ANSASIA CO.,LTD.　ダナン支社開設 (ベトナム ダナン市)</dd>
                   <dd class="historyList__dd"><span class="c-color-blue">04月</span>日経BP社「飛躍するベンチャー7社に学べ」森部好樹(著)単行本にエイ・エヌ・エスが掲載</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2014</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">12月</span>基幹システムの「システム保守代行」サービスを開始<br>設立25周年</dd>
                   <dd class="historyList__dd"><span class="c-color-blue">08月</span>新ブランドメッセージ、新ブランドロゴ発表</dd>
@@ -102,46 +101,46 @@ include($site_root . 'functions.php');
                   <dd class="historyList__dd"><span class="c-color-blue">03月</span>PICC(一般社団法人公益資本主義推進協議会)に加盟</dd>
                   <dd class="historyList__dd"><span class="c-color-blue">01月</span>食品販売・製造業向けERP「豪商」の旗艦パートナー契約を締結し、サービスリリース</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2011</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">12月</span>勤怠ASPサービス「勤怠グリッパー」を構築し、(株)エスティワークス社と提携してサービス開始</dd>
                   <dd class="historyList__dd"><span class="c-color-blue">11月</span>本社を中央区東日本橋のPMO東日本橋6Fに移転</dd>
                   <dd class="historyList__dd"><span class="c-color-blue">06月</span>大阪オフィス　開設</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2009</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">12月</span>設立20周年</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2008</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">04月</span>ISMS ISO/IEC27001:2005(JISQ27001:2006) 認証取得（適用範囲 : 本社）</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2007</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">08月</span>福島県郡山市内　データセンターにてDR（ディザスタリカバリー）サイト開設し、<br>バックアップ体制の強化</dd>
                   <dd class="historyList__dd"><span class="c-color-blue">04月</span>代表取締役に赤澤博史就任</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2006</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">05月</span>プライバシーマーク取得</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2003</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">07月</span>資本金を1,500万円に増資</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">2001</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">11月</span>(株)フェニックスシステムとグループ化</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">1999</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">04月</span>グループ会社　(株)ナヴィック設立</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">1990</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">12月</span>津田沼センター開設</dd>
                 </div>
-                <div class="historyList__item">
+                <div class="historyList__item js-ani-fade">
                   <dt class="historyList__dt font-mincho">1989</dt>
                   <dd class="historyList__dd"><span class="c-color-blue">12月</span>
                     全日本商事(株)システム開発部門及びアウトソーシングサービス部門が独立し<br>
@@ -152,10 +151,12 @@ include($site_root . 'functions.php');
           </section><!-- ./organization__chart -->
         </div><!-- ./l-column__main -->
       </div><!-- ./l-block -->
-
     </main><!-- ./sub__container -->
 
-    <!-- ▼ inc/gac -->
+    <!-- ▼ inc/companyLink -->
+    <?php include($site_root . "_inc/companyLink.php"); ?>
+
+    <!-- ▼ inc/contact -->
     <?php include($site_root . "_inc/contact.php"); ?>
 
     <!-- ▼ inc/footer -->

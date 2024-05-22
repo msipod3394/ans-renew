@@ -1,6 +1,6 @@
 <?php
 $site_root = '../../';
-$cn = 'company';
+$cn = 'company-philosophy';
 $page_title = "企業理念";
 include($site_root . 'functions.php');
 ?>
@@ -44,42 +44,41 @@ include($site_root . 'functions.php');
         </ul>
       </div><!-- ./sub__breadcrumbs -->
 
-      <section class="sub__heading">
+      <section class="sub__heading js-subHeading-show">
         <h1 class="sub__heading--text">
           <span class="sub__heading--textIn">
-            <span class="font-en line-left">Philosophy</span>
-            <span class="font-mincho">企業理念</span>
+            <span class="font-en line-left text-progress" data-txt="Philosophy">Philosophy</span>
+            <span class="font-mincho text-progress" data-txt="<?= $page_title ?>"><?= $page_title ?></span>
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>
         <div class="sub__headingImg"><img src="<?= $site_root; ?>assets/img/company/philosophy/heading.jpg?<?= time() ?>" alt="代表メッセージ" loading="lazy"></div>
       </section><!-- sub__heading -->
 
-      <div id="philosophy" class="l-block company__sub--contents philosophy">
+      <div id="philosophy" class="l-section l-block company__sub--contents philosophy">
         <div class="philosophy__main">
           <section class="philosophy__message">
             <div class="philosophy__message--left">
-              <h2 class="philosophy__message--heading sub__contents--subtitle">
+              <h2 class="philosophy__message--heading sub__contents--subtitle js-ani-fade">
                 <span class="font-mincho">
                   私たちは、共存共栄の精神で<br>
                   お客様のめざす明日を共に創り続け、<br>
                   100年継栄を実現して社会に貢献します。
                 </span>
               </h2>
-              <p class="philosophy__message--text">
+              <p class="philosophy__message--text js-ani-fade">
                 エイ・エヌ・エスは、お客様と共にあり、共に栄える「共存共栄」の精神を根底に持ちながら、我々が開発するシステムを通してお客様の成長と発展を継続的に支援することで、多くの人に愛される企業として100年継栄（継続して栄える経営）を成し遂げ、広く社会に貢献していくために存在する会社です。
               </p>
             </div>
-            <div class="philosophy__message--right pc"><img src="<?= $site_root; ?>assets/img/company/philosophy/message.jpg?<?= time() ?>" loading="lazy"></div>
+            <div class="philosophy__message--right pc js-ani-fade-ho"><img src="<?= $site_root; ?>assets/img/company/philosophy/message.jpg?<?= time() ?>" loading="lazy"></div>
           </section>
           <!-- ./philosophy__message -->
 
           <section class="philosophy__element">
-            <h1 class="sub__contents--title"><span class="font-mincho">エイ・エヌ・エスブランドを構成する<br class="sp">3つの要素</span></h1>
-
+            <h1 class="sub__contents--title js-ani-fade"><span class="font-mincho">エイ・エヌ・エスブランドを構成する<br class="sp">3つの要素</span></h1>
             <div class="philosophy__element--contents philosophyList">
-              <dl class="philosophyList__dl">
-                <div class="philosophyList__item">
+              <dl class="philosophyList__dl js-ani-fade">
+                <div class="philosophyList__item js-ani-fade">
                   <dt class="philosophyList__dt">
                     <span class="philosophyList__dt--en font-en">Vision</span>
                     <span class="philosophyList__dt--ja">私たちが目指したい未来</span>
@@ -96,7 +95,7 @@ include($site_root . 'functions.php');
                     </span>
                   </dd>
                 </div>
-                <div class="philosophyList__item">
+                <div class="philosophyList__item js-ani-fade">
                   <dt class="philosophyList__dt">
                     <span class="philosophyList__dt--en font-en">Mission</span>
                     <span class="philosophyList__dt--ja">達成のために必要なこと</span>
@@ -115,7 +114,7 @@ include($site_root . 'functions.php');
                     </span>
                   </dd>
                 </div>
-                <div class="philosophyList__item">
+                <div class="philosophyList__item js-ani-fade">
                   <dt class="philosophyList__dt">
                     <span class="philosophyList__dt--en font-en">Value</span>
                     <span class="philosophyList__dt--ja">私たちの提供できる価値</span>
@@ -146,20 +145,20 @@ include($site_root . 'functions.php');
                   </dd>
                 </div>
               </dl>
-              <div class="philosophy__element--img"><img src="<?= $site_root; ?>assets/img/company/philosophy/keyword.jpg?<?= time() ?>" alt="ブランドを構成するキーワード" loading="lazy"></div>
+              <div class="philosophy__element--img js-ani-fade"><img src="<?= $site_root; ?>assets/img/company/philosophy/keyword.jpg?<?= time() ?>" alt="ブランドを構成するキーワード" loading="lazy"></div>
             </div>
-
-
           </section>
           <!-- ./philosophy__element -->
 
-
-
         </div><!-- ./philosophy__main -->
       </div><!-- ./l-block -->
+
     </main><!-- ./sub__container -->
 
-    <!-- ▼ inc/gac -->
+    <!-- ▼ inc/companyLink -->
+    <?php include($site_root . "_inc/companyLink.php"); ?>
+
+    <!-- ▼ inc/contact -->
     <?php include($site_root . "_inc/contact.php"); ?>
 
     <!-- ▼ inc/footer -->

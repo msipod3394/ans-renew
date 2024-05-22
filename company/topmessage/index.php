@@ -1,6 +1,6 @@
 <?php
 $site_root = '../../';
-$cn = 'company';
+$cn = 'company-topmessage';
 $page_title = "代表メッセージ";
 include($site_root . 'functions.php');
 ?>
@@ -44,32 +44,32 @@ include($site_root . 'functions.php');
         </ul>
       </div><!-- ./sub__breadcrumbs -->
 
-      <section class="sub__heading">
+      <section class="sub__heading js-subHeading-show">
         <h1 class="sub__heading--text">
           <span class="sub__heading--textIn">
-            <span class="font-en line-left">Top Message</span>
-            <span class="font-mincho">代表メッセージ</span>
+            <span class="font-en line-left text-progress" data-txt="Top Message">Top Message</span>
+            <span class="font-mincho text-progress" data-txt="<?= $page_title ?>"><?= $page_title ?></span>
           </span>
         </h1>
         <?php include($site_root . "_inc/headingAction.php"); ?>
-        <div class="sub__headingImg"><img src="<?= $site_root; ?>assets/img/company/topmessage/heading.jpg" alt="代表メッセージ"></div>
+        <div class="sub__headingImg"><img src="<?= $site_root; ?>assets/img/company/topmessage/heading.jpg" alt="<?= $page_title ?>"></div>
       </section><!-- sub__heading -->
 
       <div id="topmessage" class="l-block company__sub--contents topmessage">
-        <div class="topmessage__main">
+        <div class="l-column__main topmessage__main">
           <!-- <div class="l-column__main--inner"> -->
 
           <!-- #topmessage-contents -->
-          <section id="topmessage-contents" class="l-section js-target topmessage__contents">
-            <h2 class="sub__contents--title"><span class="font-mincho">代表メッセージ</span></h2>
+          <section id="topmessage-contents" class=" js-target topmessage__contents">
+            <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">代表メッセージ</span></h2>
             <div class="topmessage__contents--wrap">
               <div class="topmessage__contents--left">
-                <h3 class="topmessage__contents--title font-mincho">
+                <h3 class="topmessage__contents--title font-mincho js-ani-fade">
                   「欲しい」を叶え<br>「困った」を解決するプロ集団として <br>また長期的にご信頼頂けるパートナーとして
                 </h3>
-                <div class="topmessage__contents--text">
+                <div class="topmessage__contents--text js-ani-fade">
                   <p>
-                    お取引先様並びに弊社関係者の皆様
+                    お取引先様並びに弊社関係者の皆様<br>
                     日頃より格別のご支援ご愛願を賜り、誠に有難う御座います。<br>
                     <br>
                     お陰様で、株式会社エイ・エヌ・エスは2017年12月をもちまして設立29年目を迎えます。<br>
@@ -87,7 +87,7 @@ include($site_root . 'functions.php');
                   </p>
                 </div>
               </div>
-              <div class="topmessage__contents--right">
+              <div class="topmessage__contents--right js-ani-fade">
                 <div class="topmessage__contents--ceo">
                   <img src="<?= $site_root; ?>assets/img/company/topmessage/topmessage_ceo.jpg" alt="株式会社エイ・エヌ・エス 代表取締役　赤澤博史" loading="lazy">
                 </div>
@@ -96,9 +96,9 @@ include($site_root . 'functions.php');
           </section><!-- ./topmessage__contents -->
 
           <!-- #topmessage-contents -->
-          <section id="topmessage-book" class="l-section js-target topmessage__book">
-            <h2 class="sub__contents--title"><span class="font-mincho">書籍紹介</span></h2>
-            <div class="topmessage__book--wrap">
+          <section id="topmessage-book" class=" js-target topmessage__book">
+            <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">書籍紹介</span></h2>
+            <div class="topmessage__book--wrap js-ani-fade">
               <div class="topmessage__book--left">
                 <img src="<?= $site_root; ?>assets/img/company/topmessage/topmessage_book.jpg" alt="飛躍するベンチャー７社に学べ！ なぜ新事業が起こせるのか？" loading="lazy">
               </div>
@@ -115,16 +115,14 @@ include($site_root . 'functions.php');
               </div>
             </div>
           </section><!-- ./topmessage__contents -->
-
-
         </div><!-- ./l-column__main -->
-
-
       </div><!-- ./l-block -->
-
     </main><!-- ./sub__container -->
 
-    <!-- ▼ inc/gac -->
+    <!-- ▼ inc/companyLink -->
+    <?php include($site_root . "_inc/companyLink.php"); ?>
+
+    <!-- ▼ inc/contact -->
     <?php include($site_root . "_inc/contact.php"); ?>
 
     <!-- ▼ inc/footer -->
