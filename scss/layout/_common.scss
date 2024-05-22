@@ -238,6 +238,76 @@
   }
 }
 
+/* modal */
+.common__modal {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 800px;
+
+  &--link {
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #3a496d, $alpha: 0.7);
+      mix-blend-mode: multiply;
+      z-index: 1;
+      transition: background-color 0.25s ease;
+    }
+
+    > img {
+      width: 100%;
+      transition: transform 0.25s ease;
+      z-index: -1;
+    }
+
+    &:hover {
+      &::before {
+        background-color: rgba($color: #3a496d, $alpha: 0.85);
+      }
+
+      > img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &--text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+
+    > span {
+      display: block;
+      font-size: $size-16;
+      line-height: 1;
+      color: #fff;
+
+      &::before {
+        content: "";
+        display: block;
+        margin: 0 auto $size-16;
+
+        @include mq(md, max) {
+          // sp
+          margin: 0 auto $size-8;
+        }
+      }
+    }
+  }
+}
+
 /* -onbg */
 .-onbg {
   background: url($path + "common/bg/onbg.png") repeat left top/ 150px 150px;
@@ -475,6 +545,16 @@ a.common__borderLink {
     content: "";
     display: block;
     @include icon-mask($path + "common/icon/icon-plus.svg", $color-blue-dark);
+  }
+}
+
+.icon-lupe {
+  &::before {
+    content: "";
+    display: block;
+    width: $size-60;
+    height: $size-64;
+    @include icon-mask($path + "common/icon/icon_lupe.svg", #fff);
   }
 }
 

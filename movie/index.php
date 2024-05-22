@@ -84,120 +84,112 @@ include($site_root . 'functions.php');
                 <ul class="c-columnRow__list">
                   <li class="c-columnRow__card js-ani-fade">
                     <a href="./detail.php" class="c-columnRow__card--link">
-                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--thumb"><img src="http://img.youtube.com/vi/J3pUnESseN8/maxresdefault.jpg" alt=""></div>
                       <p class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</p>
-                      <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                      <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                      <p class="c-columnRow__card--title">【システム開発Q＆A】オフショア開発編～メリットはコスト削減だけではない？～</p>
+                      <p class="c-columnRow__card--desc"><span>オフショア開発について初心者でもわかるように解説します。ぜひ情報収集にお役立てください！</span></p>
                       <div class="c-columnRow__card--tag">
                         <ul class="tag icon-tag">
-                          <li class="tag__item">#IT-Trust</li>
                           <li class="tag__item">#システム開発</li>
-                          <li class="tag__item">#販売管理システム</li>
+                          <li class="tag__item">#オフショア開発</li>
                         </ul>
                       </div>
                     </a>
                   </li><!-- c-columnRow__card -->
                   <li class="c-columnRow__card js-ani-fade">
                     <a href="./detail.php" class="c-columnRow__card--link">
-                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--thumb"><img src="http://img.youtube.com/vi/J3pUnESseN8/maxresdefault.jpg" alt=""></div>
                       <p class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</p>
-                      <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                      <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                      <p class="c-columnRow__card--title">【システム開発Q＆A】オフショア開発編～メリットはコスト削減だけではない？～</p>
+                      <p class="c-columnRow__card--desc"><span>オフショア開発について初心者でもわかるように解説します。ぜひ情報収集にお役立てください！</span></p>
                       <div class="c-columnRow__card--tag">
                         <ul class="tag icon-tag">
-                          <li class="tag__item">#IT-Trust</li>
                           <li class="tag__item">#システム開発</li>
-                          <li class="tag__item">#販売管理システム</li>
+                          <li class="tag__item">#オフショア開発</li>
                         </ul>
                       </div>
                     </a>
                   </li><!-- c-columnRow__card -->
                   <li class="c-columnRow__card js-ani-fade">
                     <a href="./detail.php" class="c-columnRow__card--link">
-                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--thumb"><img src="http://img.youtube.com/vi/J3pUnESseN8/maxresdefault.jpg" alt=""></div>
                       <p class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</p>
-                      <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                      <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                      <p class="c-columnRow__card--title">【システム開発Q＆A】オフショア開発編～メリットはコスト削減だけではない？～</p>
+                      <p class="c-columnRow__card--desc"><span>オフショア開発について初心者でもわかるように解説します。ぜひ情報収集にお役立てください！</span></p>
                       <div class="c-columnRow__card--tag">
                         <ul class="tag icon-tag">
-                          <li class="tag__item">#IT-Trust</li>
                           <li class="tag__item">#システム開発</li>
-                          <li class="tag__item">#販売管理システム</li>
+                          <li class="tag__item">#オフショア開発</li>
                         </ul>
                       </div>
                     </a>
                   </li><!-- c-columnRow__card -->
                   <li class="c-columnRow__card js-ani-fade">
                     <a href="./detail.php" class="c-columnRow__card--link">
-                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--thumb"><img src="http://img.youtube.com/vi/J3pUnESseN8/maxresdefault.jpg" alt=""></div>
                       <p class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</p>
-                      <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                      <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                      <p class="c-columnRow__card--title">【システム開発Q＆A】オフショア開発編～メリットはコスト削減だけではない？～</p>
+                      <p class="c-columnRow__card--desc"><span>オフショア開発について初心者でもわかるように解説します。ぜひ情報収集にお役立てください！</span></p>
                       <div class="c-columnRow__card--tag">
                         <ul class="tag icon-tag">
-                          <li class="tag__item">#IT-Trust</li>
                           <li class="tag__item">#システム開発</li>
-                          <li class="tag__item">#販売管理システム</li>
+                          <li class="tag__item">#オフショア開発</li>
                         </ul>
                       </div>
                     </a>
                   </li><!-- c-columnRow__card -->
                   <li class="c-columnRow__card js-ani-fade">
                     <a href="./detail.php" class="c-columnRow__card--link">
-                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--thumb"><img src="http://img.youtube.com/vi/J3pUnESseN8/maxresdefault.jpg" alt=""></div>
                       <p class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</p>
-                      <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                      <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                      <p class="c-columnRow__card--title">【システム開発Q＆A】オフショア開発編～メリットはコスト削減だけではない？～</p>
+                      <p class="c-columnRow__card--desc"><span>オフショア開発について初心者でもわかるように解説します。ぜひ情報収集にお役立てください！</span></p>
                       <div class="c-columnRow__card--tag">
                         <ul class="tag icon-tag">
-                          <li class="tag__item">#IT-Trust</li>
                           <li class="tag__item">#システム開発</li>
-                          <li class="tag__item">#販売管理システム</li>
+                          <li class="tag__item">#オフショア開発</li>
                         </ul>
                       </div>
                     </a>
                   </li><!-- c-columnRow__card -->
                   <li class="c-columnRow__card js-ani-fade">
                     <a href="./detail.php" class="c-columnRow__card--link">
-                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--thumb"><img src="http://img.youtube.com/vi/J3pUnESseN8/maxresdefault.jpg" alt=""></div>
                       <p class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</p>
-                      <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                      <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                      <p class="c-columnRow__card--title">【システム開発Q＆A】オフショア開発編～メリットはコスト削減だけではない？～</p>
+                      <p class="c-columnRow__card--desc"><span>オフショア開発について初心者でもわかるように解説します。ぜひ情報収集にお役立てください！</span></p>
                       <div class="c-columnRow__card--tag">
                         <ul class="tag icon-tag">
-                          <li class="tag__item">#IT-Trust</li>
                           <li class="tag__item">#システム開発</li>
-                          <li class="tag__item">#販売管理システム</li>
+                          <li class="tag__item">#オフショア開発</li>
                         </ul>
                       </div>
                     </a>
                   </li><!-- c-columnRow__card -->
                   <li class="c-columnRow__card js-ani-fade">
                     <a href="./detail.php" class="c-columnRow__card--link">
-                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--thumb"><img src="http://img.youtube.com/vi/J3pUnESseN8/maxresdefault.jpg" alt=""></div>
                       <p class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</p>
-                      <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                      <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                      <p class="c-columnRow__card--title">【システム開発Q＆A】オフショア開発編～メリットはコスト削減だけではない？～</p>
+                      <p class="c-columnRow__card--desc"><span>オフショア開発について初心者でもわかるように解説します。ぜひ情報収集にお役立てください！</span></p>
                       <div class="c-columnRow__card--tag">
                         <ul class="tag icon-tag">
-                          <li class="tag__item">#IT-Trust</li>
                           <li class="tag__item">#システム開発</li>
-                          <li class="tag__item">#販売管理システム</li>
+                          <li class="tag__item">#オフショア開発</li>
                         </ul>
                       </div>
                     </a>
                   </li><!-- c-columnRow__card -->
                   <li class="c-columnRow__card js-ani-fade">
                     <a href="./detail.php" class="c-columnRow__card--link">
-                      <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
+                      <div class="c-columnRow__card--thumb"><img src="http://img.youtube.com/vi/J3pUnESseN8/maxresdefault.jpg" alt=""></div>
                       <p class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</p>
-                      <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                      <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                      <p class="c-columnRow__card--title">【システム開発Q＆A】オフショア開発編～メリットはコスト削減だけではない？～</p>
+                      <p class="c-columnRow__card--desc"><span>オフショア開発について初心者でもわかるように解説します。ぜひ情報収集にお役立てください！</span></p>
                       <div class="c-columnRow__card--tag">
                         <ul class="tag icon-tag">
-                          <li class="tag__item">#IT-Trust</li>
                           <li class="tag__item">#システム開発</li>
-                          <li class="tag__item">#販売管理システム</li>
+                          <li class="tag__item">#オフショア開発</li>
                         </ul>
                       </div>
                     </a>

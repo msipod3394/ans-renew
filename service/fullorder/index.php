@@ -327,13 +327,18 @@ include($site_root . 'functions.php');
             <section id="develop" class="develop l-section js-target">
               <div class="develop__inner">
                 <div class="develop__heading">
-                  <h2 class="sub__contents--title  js-ani-fade"><span class="font-mincho">開発体制</span></h2>
+                  <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">開発体制</span></h2>
                   <p class="sub__contents--desc js-ani-fade">
                     業績35年以上、約350社のシステム構築の実績。<br>システム導入後も専任の保守担当者がしっかりサポートし、システム保守まで安心してお任せいただける体制をご提供いたします。
                   </p>
                 </div>
+                <div class="develop__modal common__modal js-ani-fade">
+                  <a href="javascript:;" class="js-modalOpen common__modal--link" data-modal="develop" id="test">
+                    <img src="<?= $site_root; ?>assets/img/service/fullorder/develop_modal.jpg" alt="開発体制" loading="lazy">
+                    <p class="common__modal--text"><span class=" icon-lupe">拡大して見る</span></p>
+                  </a>
+                </div>
               </div>
-
             </section>
             <!-- ./develop -->
 
@@ -596,6 +601,23 @@ include($site_root . 'functions.php');
 
   </div>
   <!-- END #fullWrap -->
+
+  <!-- BEGIN .modalBox -->
+  <div class="modalBox js-modalBox">
+    <p class="closeBtn"><a href="javascript:;" class="ah js-modalClose"><span class="hd">close</span></a></p>
+
+    <!-- BEGIN #develop -->
+    <div id="develop" class="oneModal">
+      <div class="oneModalIn js-oneModalIn">
+        <div class="oneModalIn__cont js-oneModalIn__cont">
+          <img src="<?= $site_root; ?>assets/img/service/fullorder/develop_modal.jpg" alt="開発体制" loading="lazy">
+        </div>
+      </div><!-- /.oneModalIn -->
+    </div>
+    <!-- END #develop -->
+
+  </div>
+  <!-- END .modalBox -->
 
 </body>
 

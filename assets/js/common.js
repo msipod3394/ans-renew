@@ -152,3 +152,55 @@ $(function () {
     $("html, body").animate({ scrollTop: 0 }, 1000);
   });
 });
+
+/**
+ * Modal open
+ */
+// Common
+$(".js-modalOpen").on("click", function () {
+  var modalID = $(this).data("modal");
+  $("#" + modalID).fadeIn(500);
+  $(".modalBox").fadeIn(500);
+  $("body").css({ overflow: "hidden" });
+});
+
+// Youtube
+$(".js-youtubePlay").on("click", function () {
+  var ytID = $(this).data("ytid");
+  var ytURL = "https://www.youtube.com/embed/" + ytID + "?autoplay=1&rel=0";
+  setTimeout(function () {
+    $(".js-youtubeIframe").attr("src", ytURL);
+  }, 100);
+});
+
+/**
+ * Modal close
+ * iframeのsrcをcloseの際に消す
+ */
+var $modalIF = $(".js-youtubeIframe");
+
+// Close処理
+function modalClose() {
+  $(".modalBox").fadeOut(500);
+  setTimeout(function () {
+    $modalIF.attr("src", "");
+  }, 500);
+  $("body").css({ overflow: "" });
+}
+
+// Closeボタン
+$(".js-modalClose").on("click", function () {
+  modalClose();
+});
+
+// Close エリア外
+$(".js-oneModalIn").on("click touchend", function (e) {
+  if (!$(e.target).closest(".js-oneModalIn__cont").length) {
+    modalClose();
+  }
+});
+
+// アクセス時自動モーダル
+// if ($("#test")[0]) {
+//   $("#test").click();
+// }

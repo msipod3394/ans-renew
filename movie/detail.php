@@ -88,7 +88,7 @@ include($site_root . 'functions.php');
             <!-- ロゴ・タイトル -->
             <div class="c-contentsDetail__head">
               <h1 class="c-contentsDetail__head--heading sub__contents--title js-ani-fade">
-                <span class="font-mincho">データの一元管理が可能になり、情報の「見える化」が実現</span>
+                <span class="font-mincho">【システム開発Q＆A】オフショア開発編～メリットはコスト削減だけではない？～</span>
               </h1>
               <!-- 関連タグ -->
               <div class="c-contentsDetail__tag c-tags js-ani-fade">
@@ -109,19 +109,19 @@ include($site_root . 'functions.php');
             </div>
 
             <!-- 画像 -->
-            <div class="c-contentsDetail__images js-ani-fade-ho">
-              <img src="<?= $site_root; ?>assets/img/case/sample_img_1.jpg" alt="" srcset="">
+            <div class="c-contentsDetail__images js-ani-fade">
+              <div class="develop__modal common__modal">
+                <a href="javascript:;" class="js-modalOpen js-youtubePlay common__modal--link" data-modal="youtubeModal" data-ytid="J3pUnESseN8">
+                  <img src="http://img.youtube.com/vi/J3pUnESseN8/maxresdefault.jpg" alt="" loading="lazy">
+                  <p class="common__modal--text"><span class="icon-lupe">拡大して見る</span></p>
+                </a>
+              </div>
             </div>
 
             <!-- 課題背景 -->
             <div class="c-contentsDetail__contents js-ani-fade">
-              <h3 class="c-contentsDetail__subtitle">現場担当者が求めるシステムとは？</h3>
               <p>
-                新たにシステム開発を検討する際、企業は何を軸にプロジェクトをすすめるべきなのでしょう。
-                システム開発のプロジェクトは、実際にシステムを使うことになる現場担当者の協力は必要不可欠です。いかにプロジェクトの成功も現場担当者を巻き込めるかどうかが鍵となります。
-                しかし、実際に現場担当者に意見を求めると、現行の業務フローが変化することを避ける傾向が強く、業務はそのままに操作性の向上や応答時間の短縮という要望にとどまることが多いのが実情です。
-                現場担当者は、“現行の業務”については精通していますが、会社全体の効率化や改善という視点でみている立場ではないためと推測できます。また、現場担当者にとって、慣れない業務に変更する改革は受け入れにくいでしょう。
-                反対に、「画面遷移が多く入力に時間がかかるので、入力画面を見やすくまとめてほしい。」「帳票の出力が簡単にできるようにしてほしい。」など、現行の業務を軸にした意見は多く挙がります。もちろん、利便性をシステムに反映させることは必要であっても、業務効率化に繋がらないということになり、根本的な効率化に直結することは難しくなります。
+                【システム開発Q＆A】オフショア開発編～メリットはコスト削減だけではない？～についてわかりやすくお答えします。
               </p>
             </div>
 
@@ -281,6 +281,24 @@ include($site_root . 'functions.php');
 
   </div>
   <!-- END #fullWrap -->
+
+  <!-- BEGIN .modalBox -->
+  <div class="modalBox js-modalBox">
+    <p class="closeBtn"><a href="javascript:;" class="ah js-modalClose"><span class="hd">close</span></a></p>
+
+    <!-- BEGIN #youtubeModal -->
+    <div id="youtubeModal" class="oneModal">
+      <div class="oneModalIn js-oneModalIn">
+        <div class="youtubeIframeWrap js-oneModalIn__cont">
+          <iframe class="youtubeIframe commonIframe js-youtubeIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div><!-- /.oneModalIn -->
+    </div>
+    <!-- END #youtubeModal -->
+
+  </div>
+  <!-- END .modalBox -->
+
 
 </body>
 

@@ -56,10 +56,10 @@
       @include mq(md, max) {
         // sp
         padding: $size-24 0;
-        gap: $size-16;
+        gap: $size-12;
         grid:
-          "thumb date" auto
-          "thumb title" auto
+          "date thumb" auto
+          "title thumb" auto
           "desc desc" auto
           "tag tag" 1fr / 1fr auto;
       }
@@ -105,27 +105,14 @@
     &--thumb {
       grid-area: thumb;
 
-      @include mq(md, min) {
-        // pc
-        width: 16rem;
+      @include mq(md, max) {
+        // sp
+        width: 8rem;
       }
 
       > img {
-        max-width: 100%;
-        aspect-ratio: 4 / 3;
-      }
-    }
-
-    &--contents {
-      width: calc(100% - 16rem - $size-24);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: $size-8;
-
-      @include mq(md, max) {
-        // sp
-        width: calc(100% - 6rem);
+        width: 100%;
+        height: auto;
       }
     }
 
@@ -356,12 +343,11 @@
 
   &__images {
     margin-top: $size-40;
-    overflow: hidden;
     position: relative;
 
     @include mq(md, min) {
       // pc
-      aspect-ratio: 3 / 1;
+      // aspect-ratio: 3 / 1;
     }
 
     > img {
