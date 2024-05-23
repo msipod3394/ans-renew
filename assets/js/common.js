@@ -5,32 +5,73 @@ function isWindowWidthAbove(width) {
 
 // ヘッダーの処理
 $(document).ready(function () {
-  // var lastScrollTop = 0;
-  // var header = $(".header");
-  // if (isWindowWidthAbove(1200)) {
-  //   $(window).scroll(function (event) {
-  //     var st = $(this).scrollTop();
-  //     if (st > lastScrollTop) {
-  //       // 下にスクロールしている場合
-  //       if (header.hasClass("scrolled-top")) {
-  //         header.addClass("_remove");
-  //         header.fadeOut(500, function () {
-  //           header.removeClass("scrolled-top").fadeIn();
-  //           setTimeout(() => {
-  //             header.removeClass("_remove");
-  //           }, 500);
-  //         });
-  //       }
-  //     } else {
-  //       // 上にスクロールしている場合
-  //       header.addClass("scrolled-top");
-  //     }
-  //     // if ($(".mv").isOnScreen()) {
-  //     //   header.removeClass("scrolled-top");
-  //     // }
-  //     lastScrollTop = st;
-  //   });
-  // }
+  if (!isWindowWidthAbove(1080)) {
+    return; // ウィンドウの幅が1080px未満の場合は処理を行わない
+  }
+
+  let position = $(window).scrollTop(); // 現在のスクロール位置を取得
+  let isFixed = false;
+  let isInFirstView = true; // ファーストビュー領域にいるかどうかを示すフラグ
+  let firstViewHeight = $(".sub__heading").height(); // ファーストビューの高さを取得
+
+  // 初期状態でファーストビュー領域にいるかチェック
+  if (position < firstViewHeight) {
+    $(".js-header").addClass("is-top");
+    isInFirstView = true;
+  } else {
+    $(window).trigger("scroll");
+  }
+
+  // スクロールイベントハンドラー
+  function onScroll() {
+    let currentScroll = $(this).scrollTop();
+
+    // ファーストビュー領域にいる場合
+    if (currentScroll < firstViewHeight) {
+      if (!isInFirstView) {
+        $("#fullWrap").removeClass("is-headerFixed");
+        $(".js-header").removeClass("is-fixed").addClass("is-top");
+        isInFirstView = true; // ファーストビュー領域にいることを記録
+      }
+    } else {
+      // ファーストビュー領域を離れた場合
+      if (isInFirstView) {
+        $(".js-header").removeClass("is-top");
+        $("#fullWrap").addClass("is-headerFixed");
+        $(".js-header").hide();
+        isInFirstView = false; // ファーストビュー領域を離れたことを記録
+      }
+
+      if (position < currentScroll) {
+        // 下スクロール
+        if (isFixed) {
+          $(".js-header").fadeOut(100, function () {
+            $(this).removeClass("is-fixed").show(); // クラスを削除して再表示
+          });
+          isFixed = false;
+        }
+      } else {
+        // 上スクロール
+        if (!isFixed) {
+          $(".js-header").addClass("is-fixed");
+          $(".js-header").fadeIn(100); // フェードインを追加して表示
+          isFixed = true;
+        }
+      }
+    }
+
+    position = currentScroll; // 現在のスクロール位置を更新
+    console.log(position); // スクロール位置をコンソールに出力
+  }
+
+  // スクロールイベントをバインド
+  $(window).on("scroll", onScroll);
+
+  // 初期ロード時のスクロール位置に基づく処理
+  if (position === 0) {
+    $(".js-header").addClass("is-fixed");
+    isFixed = true;
+  }
 });
 
 //ハンバーガーメニュー
