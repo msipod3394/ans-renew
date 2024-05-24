@@ -4,7 +4,7 @@
 // 共通幅
 .sub {
   &__breadcrumbs {
-    border-top: 1px solid $color-gray-300;
+    // border-top: 1px solid $color-gray-300;
     border-bottom: 1px solid $color-gray-300;
 
     @include mq(md, min) {
