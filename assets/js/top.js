@@ -39,7 +39,7 @@ window.onload = function () {
   });
 };
 
-// jQueryの拡張機能: 要素がビューポート内にあるかどうかを判定する関数
+//  要素がビューポート内にあるかどうかを判定する関数
 $.fn.isOnScreen = function () {
   var win = $(window);
   var viewport = {
@@ -58,28 +58,6 @@ $.fn.isOnScreen = function () {
     viewport.top > bounds.bottom
   );
 };
-
-$(document).ready(function () {
-  // ページ読み込み時にも実行
-  checkElementVisibility();
-
-  // スクロールイベントを設定
-  $(window).scroll(function () {
-    // スクロール時にも実行
-    checkElementVisibility();
-  });
-});
-
-function checkElementVisibility() {
-  if ($(".mv").isOnScreen()) {
-    // 要素がビューポート内にある場合
-    $(".header").addClass("_notfixed");
-    $(".header").removeClass("scrolled-top");
-  } else {
-    // 要素がビューポート内にない場合
-    $(".header").removeClass("_notfixed");
-  }
-}
 
 // サービス
 $(document).ready(function () {

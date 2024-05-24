@@ -25,10 +25,9 @@ include($site_root . 'functions.php');
   <link rel="stylesheet" href="<?= $site_root; ?>assets/css/style.css?<?= time() ?>">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="<?= $site_root; ?>assets/js/common.js?<?= time() ?>" defer></script>
   <script src="<?= $site_root; ?>assets/js/top.js?<?= time() ?>" defer></script>
+  <script src="<?= $site_root; ?>assets/js/common.js?<?= time() ?>" defer></script>
 </head>
-
 
 <body id="top">
   <div id="fullWrap">
@@ -39,7 +38,7 @@ include($site_root . 'functions.php');
     <main id="contents-top" class="top__container contentsTop">
 
       <!-- mv -->
-      <section id="mv" class="mv">
+      <section id="mv" class="mv js-firstv">
         <div class="mv__wrap">
           <div class="mv__slide swiper">
             <div class="swiper-wrapper">

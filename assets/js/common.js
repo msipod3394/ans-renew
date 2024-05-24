@@ -5,14 +5,18 @@ function isWindowWidthAbove(width) {
 
 // ヘッダーの処理
 $(document).ready(function () {
+  // ウィンドウの幅が1080px未満の場合は処理を行わない
   if (!isWindowWidthAbove(1080)) {
-    return; // ウィンドウの幅が1080px未満の場合は処理を行わない
+    return;
   }
 
-  let position = $(window).scrollTop(); // 現在のスクロール位置を取得
+  // 現在のスクロール位置を取得
+  let position = $(window).scrollTop();
   let isFixed = false;
-  let isInFirstView = true; // ファーストビュー領域にいるかどうかを示すフラグ
-  let firstViewHeight = $(".sub__heading").height(); // ファーストビューの高さを取得
+  // ファーストビュー領域にいるかどうかを示すフラグ
+  let isInFirstView = true;
+  // ファーストビューの高さを取得
+  let firstViewHeight = $(".sub__heading, .js-firstv").height();
 
   // 初期状態でファーストビュー領域にいるかチェック
   if (position < firstViewHeight) {
