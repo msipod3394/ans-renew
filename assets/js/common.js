@@ -73,7 +73,7 @@ $(document).ready(function () {
 
   // 初期ロード時のスクロール位置に基づく処理
   if (position === 0) {
-    $(".js-header").addClass("is-fixed");
+    // $(".js-header").addClass("is-fixed");
     isFixed = true;
   }
 });
