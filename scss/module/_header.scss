@@ -376,7 +376,7 @@
     height: 0;
     visibility: hidden;
     transition: opacity 0.2s ease;
-    // border-top: $border;
+    border-top: $border;
     border-bottom: $border;
     position: absolute;
     z-index: 999;
@@ -406,28 +406,36 @@
     &--nav {
       display: flex;
       flex-direction: column;
+      justify-content: center;
     }
 
     &--heading {
       display: flex;
-      flex-direction: column;
-      margin-bottom: 24px;
+      align-items: center;
+      gap: $size-8;
+      margin-bottom: $size-28;
+
+      &:hover {
+        opacity: 0.8;
+      }
 
       > span {
         color: $color-blue;
       }
+
       &--text {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 16px;
-        font-size: $size-20;
+        gap: $size-16;
+        font-size: $size-18;
         line-height: 1;
         font-weight: 600;
       }
 
       .font-en {
-        font-size: $size-18;
+        font-size: $size-14;
+        line-height: 1;
         font-weight: 500;
         letter-spacing: 0;
       }
@@ -436,12 +444,11 @@
     &--list {
       display: flex;
       flex-wrap: wrap;
-      gap: $size-16;
+      gap: $size-16 $size-24;
     }
 
     &--item {
       position: relative;
-      // @include calc-width-size(240);
 
       @include mq(md, min) {
         // pc
@@ -451,6 +458,7 @@
       > a {
         width: 100%;
         font-size: $size-14;
+        font-weight: 500;
         padding-bottom: 8px;
         border-bottom: $border;
         display: flex;

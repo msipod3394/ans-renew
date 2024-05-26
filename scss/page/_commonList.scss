@@ -104,6 +104,7 @@
 
     &--thumb {
       grid-area: thumb;
+      width: 12rem;
 
       @include mq(md, max) {
         // sp
@@ -345,23 +346,10 @@
     margin-top: $size-40;
     position: relative;
 
-    @include mq(md, min) {
-      // pc
-      // aspect-ratio: 3 / 1;
-    }
-
     > img {
       width: 100%;
       display: block;
       object-fit: cover;
-
-      @include mq(md, min) {
-        // pc
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
     }
   }
 

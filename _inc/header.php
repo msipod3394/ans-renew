@@ -61,7 +61,7 @@ $ac[$cn] = 'is-current';
       <nav class="header__toggle--nav">
         <a href="<?= $site_root; ?>service/" class="header__toggle--heading">
           <span class="font-en">Service</span>
-          <span class="header__toggle--heading--text icon-arrow _after">サービス一覧</span>
+          <span class="header__toggle--heading--text">サービス一覧</span>
         </a>
         <ul class="header__toggle--list">
           <li class="header__toggle--item"><a href="<?= $site_root; ?>service/fullorder/" class="icon-arrow _after">フルオーダーシステム開発</a></li>
@@ -79,7 +79,7 @@ $ac[$cn] = 'is-current';
       <nav class="header__toggle--nav">
         <a href="<?= $site_root; ?>company/" class="header__toggle--heading">
           <span class="font-en">Company</span>
-          <span class="header__toggle--heading--text icon-arrow _after">会社情報</span>
+          <span class="header__toggle--heading--text">会社情報</span>
         </a>
         <ul class="header__toggle--list">
           <li class="header__toggle--item"><a href="<?= $site_root; ?>company/philosophy/" class="icon-arrow _after">企業理念</a></li>
