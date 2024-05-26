@@ -230,15 +230,15 @@
       border-bottom: 1px solid $color-gray-300;
 
       &.-fullorder a::before {
-        background: url($path + "top/service_fullorder_bg.jpg") no-repeat center
-          center / cover;
+        background: url($path + "top/service_fullorder_bg.jpg?0524") no-repeat
+          center center / cover;
       }
       &.-renewal a::before {
-        background: url($path + "top/service_renewal_bg.jpg") no-repeat center
-          center / cover;
+        background: url($path + "top/service_renewal_bg.jpg?052402") no-repeat
+          center center / cover;
       }
       &.-maintenance a::before {
-        background: url($path + "top/service_maintenance_bg.jpg") no-repeat
+        background: url($path + "top/service_maintenance_bg.jpg?0524") no-repeat
           center center / cover;
       }
     }
@@ -246,10 +246,21 @@
       border-top: 1px solid $color-gray-300;
     }
     &--link {
-      display: flex;
-      gap: $size-80;
-      position: relative;
       padding: vw_min(48px) vw_min(88px);
+      position: relative;
+      display: flex;
+
+      @include mq(md, min) {
+        // md
+        flex-direction: column;
+        gap: $size-16;
+      }
+
+      @include mq(lg, min) {
+        // lg
+        gap: $size-80;
+        flex-direction: row;
+      }
 
       @include mq(md, max) {
         // sp
@@ -271,36 +282,18 @@
         transform: translate(-50%, -50%) scale(1.01);
       }
 
-      &::after {
-        width: $size-32;
-        height: $size-16;
-        @include icon-mask(
-          $path + "common/icon/icon-arrow.svg",
-          $color-blue-dark
-        );
-        transition: $transition;
-        position: absolute;
-
-        @include mq(md, min) {
-          // pc
-          right: vw_min(56px);
-          bottom: $size-24;
-        }
-
-        @include mq(md, max) {
-          // sp
-          width: $size-32;
-          height: $size-16;
-          top: vw_max(64px);
-          right: 6%;
-        }
-      }
-
       &:hover {
         .service__main--dt .font-mincho,
         .service__main--dt .font-en,
         .service__main--dd {
           color: #fff;
+        }
+        .service__main--arrow {
+          background-color: $color-blue-dark;
+          transform: translate(0%, -50%) scale(1.15);
+          &::before {
+            background-color: #fff;
+          }
         }
         &::before {
           opacity: 1;
@@ -315,7 +308,7 @@
 
       @include mq(md, min) {
         // pc
-        min-width: 400px;
+        min-width: 320px;
       }
 
       > .font-mincho {
@@ -368,7 +361,6 @@
         }
       }
     }
-
     &--dd {
       position: relative;
       font-weight: 400;
@@ -378,6 +370,11 @@
         padding-top: $size-8;
       }
 
+      @include mq(lg, min) {
+        // lg
+        width: calc(100% - 320px - $size-40 - $size-80);
+      }
+
       @include mq(md, max) {
         // sp
         font-size: vw_min(36px);
@@ -385,6 +382,44 @@
 
       a:hover & {
         color: #fff;
+      }
+    }
+    &--arrow {
+      width: $size-64;
+      height: $size-64;
+      border-radius: 50rem;
+      position: absolute;
+      top: 50%;
+      right: $size-32;
+      transition: $transition;
+      transform: translate(0%, -50%);
+      background-color: transparent;
+
+      @include mq(md, max) {
+        // sp
+        width: $size-40;
+        height: $size-40;
+        top: calc(50% - $size-56);
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: $size-32;
+        height: $size-8;
+        @include icon-mask(
+          $path + "common/icon/icon-arrow.svg",
+          $color-blue-dark
+        );
+        transition: $transition;
+
+        @include mq(md, max) {
+          // sp
+          width: $size-24;
+          height: $size-8;
+        }
       }
     }
   }
@@ -673,6 +708,10 @@
     padding: vw_max(80px) 0 vw_max(20px);
   }
 
+  .common__title--textIn {
+    max-width: calc(100% - vw_min(600px));
+  }
+
   &__in {
     display: flex;
     @include mq(md, min) {
@@ -739,17 +778,14 @@
 
   &__linkButton {
     margin-top: $size-40;
-
-    @include mq(md, max) {
-      // sp
-      margin: vw_max(80px) auto;
-    }
+    margin-left: 0;
   }
 }
 
 /* お客様導入事例 */
 .contentsTop .case {
-  margin-top: vw_min(120px);
+  margin-top: $size-94;
+  padding-bottom: $size-24;
 
   @include mq(md, max) {
     // sp
@@ -761,6 +797,15 @@
     padding-bottom: vw_min(64px);
     background: url($path + "top/case/case_bg.jpg") no-repeat center center /
       cover;
+    background-size: 105%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    // transition-delay: 0.5s;
+
+    &.is-ani {
+      opacity: 1;
+      background-size: 100%;
+    }
 
     @include mq(md, max) {
       // sp
@@ -813,7 +858,7 @@
 
     &--title {
       display: block;
-      font-size: $size-20;
+      font-size: $size-22;
       color: $color-blue-dark;
       text-align: center;
       letter-spacing: 0;
@@ -838,7 +883,7 @@
     }
 
     &--item {
-      width: calc(100% / 5 - vw_min(13px));
+      width: calc(100% / 5 - $size-16);
 
       @include mq(md, max) {
         // sp
@@ -847,7 +892,7 @@
 
       > a {
         display: block;
-        font-size: $size-14;
+        font-size: $size-16;
         color: $color-blue-dark;
         text-align: center;
         font-weight: 500;
@@ -902,6 +947,17 @@
       // sp
       width: 100%;
       border-bottom: 1px solid $color-gray-300;
+    }
+
+    &.is-ani {
+      // ループで各要素に遅延を設定
+      $elements-count: 8;
+
+      @for $i from 1 through $elements-count {
+        &:nth-of-type(#{$i}) {
+          transition-delay: $i * 0.1s;
+        }
+      }
     }
 
     &__link {
@@ -1091,7 +1147,7 @@
 
   &__listWrap {
     margin: 0 auto;
-    padding: 0 vw_min(56px);
+    padding: 0 $size-56 $size-32;
 
     @include mq(md, max) {
       // sp
@@ -1199,6 +1255,25 @@
   }
 }
 
+.develop__item {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+
+  // ループで各要素に遅延を設定
+  $elements-count: 15;
+  @for $i from 1 through $elements-count {
+    .is-ani & {
+      opacity: 1;
+      transform: translateY(0px);
+
+      &:nth-of-type(#{$i}) {
+        transition-delay: $i * 0.05s;
+      }
+    }
+  }
+}
+
 /* システム開発に関する最新情報 */
 .contentsTop .columns {
   padding: $size-80 0 vw_min(160px);
@@ -1299,130 +1374,14 @@
     }
   }
 
-  // &__card {
-  //   display: flex;
-  //   gap: $size-16;
-  //   padding: $size-32 0;
-  //   position: relative;
+  .c-columnRow__card.is-ani {
+    // ループで各要素に遅延を設定
+    $elements-count: 4;
 
-  //   @include mq(md, min){ // pc
-  //   }
-
-  //   @include mq(md, max) {
-  //     // sp
-  //     gap: vw_max(32px);
-  //     padding: vw_max(40px) 0;
-  //   }
-
-  //   &::after {
-  //     position: absolute;
-  //     right: 0;
-  //     bottom: $size-16;
-  //     width: $size-24;
-  //     height: $size-16;
-  //     @include icon-mask(
-  //       $path + "common/icon/icon-arrow.svg",
-  //       $color-blue-dark
-  //     );
-
-  //     @include mq(md, max) {
-  //       // sp
-  //       bottom: $size-14;
-  //     }
-  //   }
-
-  //   &--contents {
-  //     width: 100%;
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: space-between;
-  //     gap: $size-8;
-
-  //     @include mq(md, max) {
-  //       // sp
-  //       gap: vw_max(16px);
-  //     }
-  //   }
-
-  //   &--date {
-  //     color: #6d6b80;
-  //     font-size: vw_min(13px);
-  //     line-height: 1;
-
-  //     @include mq(md, max) {
-  //       // sp
-  //       font-size: vw_max(20px);
-  //     }
-  //   }
-
-  //   &--title {
-  //     font-size: $size-16;
-  //     line-height: 1;
-  //     font-weight: 500;
-
-  //     @include mq(md, max) {
-  //       // sp
-  //       font-size: $size-14;
-  //       line-height: 1.5;
-  //     }
-
-  //     &:hover {
-  //       color: $color-blue;
-  //     }
-  //   }
-
-  //   &--desc {
-  //     margin-top: vw_min(4px);
-  //     font-size: vw_min(14px);
-  //     letter-spacing: 0;
-  //     font-weight: 400;
-  //     line-height: 1.25;
-  //     overflow: hidden;
-
-  //     @include mq(md, max) {
-  //       // sp
-  //       font-size: $size-14;
-  //     }
-
-  //     > span {
-  //       display: -webkit-box;
-  //       -webkit-box-orient: vertical;
-  //       -webkit-line-clamp: 2;
-  //     }
-  //   }
-
-  //   &--tag {
-  //     display: flex;
-  //     flex-wrap: wrap;
-  //     gap: 4px 8px;
-
-  //     @include mq(md, max) {
-  //       // sp
-  //       gap: vw_max(8px);
-  //     }
-
-  //     > span.tag {
-  //       font-size: vw_min(13px);
-  //       color: $color-blue-dark;
-
-  //       @include mq(md, max) {
-  //         // sp
-  //         font-size: vw_max(20px);
-  //         line-height: 1;
-  //       }
-  //     }
-  //   }
-  // }
-  // &__card + &__card {
-  //   border-top: 1px solid $color-gray-200;
-  // }
-
-  .c-columnRow__card--contents {
-    width: calc(100% - 12rem - 1.5rem);
-
-    @include mq(md, max) {
-      // sp
-      width: calc(100% - 6rem - 1.5rem);
+    @for $i from 1 through $elements-count {
+      &:nth-of-type(#{$i}) {
+        transition-delay: $i * 0.1s;
+      }
     }
   }
 

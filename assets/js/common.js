@@ -156,7 +156,7 @@ $(document).ready(function () {
 
 // アニメーション
 const fadeTargets = document.querySelectorAll(
-  ".js-ani-fade, .js-ani-fade-ho, .js-subHeading-show, .js-ani-zoom"
+  ".js-ani, .js-ani-fade, .js-ani-fade-ho, .js-subHeading-show, .js-ani-zoom"
 );
 const fadeOption = {
   root: null,
@@ -249,3 +249,18 @@ $(".js-oneModalIn").on("click touchend", function (e) {
 // if ($("#test")[0]) {
 //   $("#test").click();
 // }
+
+// テキストアニメーション
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".js-title-split");
+
+  elements.forEach((el) => {
+    const str = el.innerHTML.trim().split("");
+
+    el.innerHTML = str.reduce((acc, curr) => {
+      curr = curr.replace(/\s+/, "&nbsp;");
+
+      return `${acc}<span class="char">${curr}</span>`;
+    }, "");
+  });
+});

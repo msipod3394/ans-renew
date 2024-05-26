@@ -70,20 +70,20 @@ include($site_root . 'functions.php');
       </section>
       <!--./mv-->
 
-      <!-- #Service -->
+      <!-- #service -->
       <section id="service" class="service">
         <div class="common__title">
-          <h2 class="common__title--text">
+          <h2 class="common__title--text js-ani">
             <span class="common__title--textIn">
-              <span class="font-en line-left">Service</span>
-              <span class="font-mincho">サービス一覧</span>
+              <span class="font-en line-left js-ani js-title-split ani-title-twist">Service</span>
+              <span class="font-mincho js-ani js-title-split ani-title-twist">サービス一覧</span>
             </span>
           </h2>
-          <p class="common__title--desc service__title--desc">システム開発・保守に関連する課題やお悩みを解決し、事業成長に向けたIT支援を行います。<br>DX化や人材不足、業務効率化等の課題をITで解消するためのサービスを提供しています。</p>
+          <p class="common__title--desc js-ani-fade service__title--desc">システム開発・保守に関連する課題やお悩みを解決し、事業成長に向けたIT支援を行います。<br>DX化や人材不足、業務効率化等の課題をITで解消するためのサービスを提供しています。</p>
         </div><!-- ./common__title -->
         <div class="service__main">
-          <dl class="service__main--dl">
-            <div class="service__main--item -fullorder">
+          <dl class="service__main--dl js-ani-fade">
+            <div class="service__main--item js-ani-fade -fullorder">
               <a href="<?= $site_root; ?>service/fullorder" class="service__main--link">
                 <dt class="service__main--dt">
                   <span class="font-mincho">フルオーダーシステム開発</span>
@@ -92,9 +92,10 @@ include($site_root . 'functions.php');
                 <dd class="service__main--dd">
                   使い心地を追求し、ご要望や現行業務に合わせたオーダーメイドの基幹系・業務システムを開発します。
                 </dd>
+                <span class="service__main--arrow"></span>
               </a>
             </div><!-- ./service__main--item -->
-            <div class="service__main--item -renewal">
+            <div class="service__main--item js-ani-fade -renewal">
               <a href="<?= $site_root; ?>service/renewal" class="service__main--link">
                 <dt class="service__main--dt">
                   <span class="font-mincho">基幹システム再構築</span>
@@ -103,9 +104,10 @@ include($site_root . 'functions.php');
                 <dd class="service__main--dd">
                   システムの老朽化や新事業に伴うリニューアルなど、機能を見直した最適なシステム再構築を行います。
                 </dd>
+                <span class="service__main--arrow"></span>
               </a>
             </div><!-- ./service__main--item -->
-            <div class="service__main--item -maintenance">
+            <div class="service__main--item js-ani-fade -maintenance">
               <a href="<?= $site_root; ?>service/maintenance" class="service__main--link">
                 <dt class="service__main--dt">
                   <span class="font-mincho">システム保守引継ぎ</span>
@@ -114,14 +116,15 @@ include($site_root . 'functions.php');
                 <dd class="service__main--dd">
                   システム開発の実績で蓄積した技術とノウハウをもとに、既存システムの保守引継ぎ・追加開発に対応します。
                 </dd>
+                <span class="service__main--arrow"></span>
               </a>
             </div><!-- ./service__main--item -->
           </dl>
         </div><!-- service__main -->
         <div class="service__other -onbg">
-          <h3 class="service__other--title"><span class="font-mincho">自社サービスのご紹介</span></h3>
+          <h3 class="service__other--title js-ani-fade"><span class="font-mincho">自社サービスのご紹介</span></h3>
           <dl class="service__other--dl">
-            <div class="service__other--item -kintai">
+            <div class="service__other--item -kintai js-ani-fade">
               <img src="<?= $site_root; ?>assets/img/top/service_kintai.jpg" alt="勤怠Trust（勤怠トラスト）">
               <dt class="service__other--dt">
                 <span class="font-mincho">勤怠Trust（勤怠トラスト）</span>
@@ -133,7 +136,7 @@ include($site_root . 'functions.php');
                 <a href="https://www.kintai-trust.com/" target="_blank" class="common__borderLink"><span class="icon-link">勤怠トラスト 公式サイト</span></a>
               </div>
             </div><!-- ./service__other--item -->
-            <div class="service__other--item -kintai">
+            <div class="service__other--item -idl js-ani-fade">
               <img src="<?= $site_root; ?>assets/img/top/service_idl.jpg" alt="イノベーションデザインラボ">
               <dt class="service__other--dt">
                 <span class="font-mincho">イノベーションデザインラボ</span>
@@ -148,7 +151,7 @@ include($site_root . 'functions.php');
           </dl>
         </div><!-- service__other -->
         <div class="service__sub">
-          <div class="service__sub--in">
+          <div class="service__sub--in js-ani-fade">
             <div class="service__sub--card --advice">
               <div class="service__sub--card--img"><img src="<?= $site_root; ?>assets/img/top/service_advice.jpg" alt="IT相談" loading="lazy"></div>
               <div class="service__sub--card--wrap">
@@ -203,24 +206,25 @@ include($site_root . 'functions.php');
 
       <!-- #mission -->
       <section id="mission" class="mission -onbg">
-        <div class="common__title">
-          <h2 class="common__title--text">
+        <div class="common__title js-ani-fade">
+          <h2 class="common__title--text js-ani">
             <span class="common__title--textIn">
-              <span class="font-en line-left">Our Mission</span>
-              <span class="font-mincho">”システム”ではなく、<br>確実な導入効果とメリットを<br class="sp">提供します</span>
+              <span class="font-en line-left js-ani js-title-split ani-title-twist">Our Mission</span>
+              <span class="font-mincho js-ani js-title-split ani-title-twist">”システム”ではなく、</span>
+              <span class="font-mincho js-ani js-title-split ani-title-twist">”確実な導入効果とメリットを提供します</span>
             </span>
           </h2>
         </div><!-- ./common__title -->
         <div class="mission__in">
           <div class="mission__contents">
             <div class="mission__contents--in">
-              <p class="mission__contents--text">
+              <p class="mission__contents--text js-ani-fade">
                 システム開発会社として、首都圏を中心にITシステム関連サービス事業を展開しているエイ・エヌ・エスは、『DXを推進すべく、オーダーメイドの基幹業務システムを構築したい』『既存の業務システムを整理して使いやすく再構築したい』『システム保守が打ち切りになったため、保守を引継いでほしい』といったお悩み・課題を解決するために、システムをとおして、DX推進や業務効率化といった”導入効果とメリット”をご提供します。
               </p>
-              <div class="mission__linkButton common__linkButton"><a href="<?= $site_root; ?>usability/"><span class="font-mincho">私たちの強み</span></a></div>
+              <div class="mission__linkButton common__linkButton js-ani-fade js-ani-fade"><a href="<?= $site_root; ?>usability/"><span class="font-mincho">私たちの強み</span></a></div>
             </div>
           </div><!-- ./common__title -->
-          <div class="mission__image">
+          <div class="mission__image js-ani-zoom">
             <img src="<?= $site_root; ?>assets/img/top/mission_image.png" alt="私たちの強み" />
           </div><!-- ./mission__image -->
         </div><!-- ./mission__in -->
@@ -228,20 +232,20 @@ include($site_root . 'functions.php');
 
       <!-- #develop -->
       <section id="develop" class="develop">
-        <div class="common__title develop__title">
-          <h2 class="common__title--text">
+        <div class="common__title develop__title js-ani-fade">
+          <h2 class="common__title--text js-ani">
             <span class="common__title--textIn">
-              <span class="font-en line-left">Development</span>
-              <span class="font-mincho">対応技術</span>
+              <span class="font-en line-left js-ani js-title-split ani-title-twist">Development</span>
+              <span class="font-mincho js-ani js-title-split ani-title-twist">対応技術</span>
             </span>
           </h2>
-          <p class="common__title--desc develop__title--desc">お客様が抱える問題を整理し、問題に応じて最適な技術を使用した解決案を提案いたします。</p>
+          <p class="common__title--desc js-ani-fade develop__title--desc">お客様が抱える問題を整理し、問題に応じて最適な技術を使用した解決案を提案いたします。</p>
         </div><!-- ./common__title -->
         <div class="common__inner develop__inner">
           <div class="develop__listBox">
-            <h3 class="develop__title"><span class="font-mincho">弊社対応技術 一覧</span></h3>
+            <h3 class="develop__title js-ani-fade"><span class="font-mincho">弊社対応技術 一覧</span></h3>
             <div class="develop__listWrap">
-              <ul class="develop__list dev-lang">
+              <ul class="develop__list dev-lang js-ani-fade">
                 <li class="develop__item">
                   <p class="develop__item--text"><span class="font-robot">VB.NET</span></p>
                 </li>
@@ -288,7 +292,7 @@ include($site_root . 'functions.php');
                   <p class="develop__item--text"><span class="font-robot">COBOL</span></p>
                 </li>
               </ul>
-              <ul class="develop__list dev-db">
+              <ul class="develop__list dev-db js-ani-fade">
                 <li class="develop__item">
                   <p class="develop__item--text"><span class="font-robot">VB.NET</span></p>
                 </li>
@@ -305,7 +309,7 @@ include($site_root . 'functions.php');
                   <p class="develop__item--text"><span class="font-robot">DB2</span></p>
                 </li>
               </ul>
-              <ul class="develop__list dev-framework">
+              <ul class="develop__list dev-framework js-ani-fade">
                 <li class="develop__item">
                   <p class="develop__item--text"><span class="font-robot">jQuery</span></p>
                 </li>
@@ -332,21 +336,21 @@ include($site_root . 'functions.php');
 
       <!-- #case -->
       <section id="case" class="case">
-        <div class="case__titleImg">
+        <div class="case__titleImg js-ani">
           <div class="case__titleImg--in">
             <div class="common__title">
-              <h2 class="common__title--text">
+              <h2 class="common__title--text js-ani">
                 <span class="common__title--textIn">
-                  <span class="font-en line-left">Case</span>
-                  <span class="font-mincho">お客様導入事例</span>
+                  <span class="font-en line-left js-ani js-title-split ani-title-twist">Case</span>
+                  <span class="font-mincho js-ani js-title-split ani-title-twist">お客様導入事例</span>
                 </span>
               </h2>
-              <p class="common__title--desc">実績300社以上の豊富な実績。IT-Trustをご利用いただくお客様よりリアルな声をいただきました。</p>
+              <p class="common__title--desc  js-ani-fade-ho">実績300社以上の豊富な実績。IT-Trustをご利用いただくお客様よりリアルな声をいただきました。</p>
             </div><!-- ./common__title -->
           </div>
         </div><!-- ./case__titleImg -->
         <div class="case__inner common__inner">
-          <div class="case__toggle">
+          <div class="case__toggle js-ani-fade">
             <h3 class="case__toggle--title"><span class="font-mincho">業種別でみる</span></h3>
             <ul class="case__toggle--list">
               <li class="case__toggle--item"><a href="">業種A</a></li>
@@ -361,8 +365,8 @@ include($site_root . 'functions.php');
           </div><!-- ./case__toggle -->
           <div class="case__cardList">
             <ul class="case__cardList--list">
-              <li class="case__cardList--item caseItem">
-                <a href="<?= $site_root; ?>case/detail.php" class="caseItem__link">
+              <li class="case__cardList--item caseItem js-ani-fade">
+                <a href="<?= $site_root; ?>case/detailA.php" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
                     <p class="caseItem__contents--company">株式会社フロンティアコンサルティング</p>
@@ -379,7 +383,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -397,7 +401,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -415,7 +419,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -433,7 +437,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -451,7 +455,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -469,7 +473,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -487,7 +491,7 @@ include($site_root . 'functions.php');
                   </div>
                 </a>
               </li>
-              <li class="case__cardList--item caseItem">
+              <li class="case__cardList--item caseItem js-ani-fade">
                 <a href="<?= $site_root; ?>" class="caseItem__link">
                   <div class="caseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
                   <div class="caseItem__contents">
@@ -508,151 +512,136 @@ include($site_root . 'functions.php');
             </ul>
           </div>
         </div>
-        <div class="column__linkButton common__linkButton"><a href="<?= $site_root; ?>case"><span class="font-mincho">全てのコラムを見る</span></a></div>
+        <div class="column__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>case"><span class="font-mincho">全てのコラムを見る</span></a></div>
       </section><!-- ./case -->
 
       <!-- #columns -->
       <section id="columns" class="columns">
         <div class="common__title">
-          <h2 class="common__title--text">
+          <h2 class="common__title--text js-ani">
             <span class="common__title--textIn">
-              <span class="font-en line-left">Columns</span>
-              <span class="font-mincho">システム開発に関する最新情報</span>
+              <span class="font-en line-left js-ani js-title-split ani-title-twist">Columns</span>
+              <span class="font-mincho js-ani js-title-split ani-title-twist">システム開発に関する最新情報</span>
             </span>
           </h2>
         </div>
         <div class="common__inner columns__inner">
           <div class="columns__box">
-            <h3 class="columns__title"><span class="font-mincho">お悩み解決コラム</span></h3>
+            <h3 class="columns__title js-ani-fade"><span class="font-mincho">お悩み解決コラム</span></h3>
             <ul class="c-columnRow__list">
-              <li class="c-columnRow__card">
-                <a href="<?= $site_root; ?>case/detail.php" class="c-columnRow__card--link">
+              <li class="c-columnRow__card js-ani-fade">
+                <a href="<?= $site_root; ?>case/detailA.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                  <div class="c-columnRow__card--contents">
-                    <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
-                    <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                    <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item">#IT-Trust</li>
-                      <li class="tag__item">#システム開発</li>
-                      <li class="tag__item">#販売管理システム</li>
-                    </ul>
-                  </div>
+                  <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                  <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                  <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                  <ul class="tag icon-tag">
+                    <li class="tag__item">#IT-Trust</li>
+                    <li class="tag__item">#システム開発</li>
+                    <li class="tag__item">#販売管理システム</li>
+                  </ul>
                 </a>
               </li><!-- c-columnRow__card -->
-              <li class="c-columnRow__card">
-                <a href="<?= $site_root; ?>case/detail.php" class="c-columnRow__card--link">
+              <li class="c-columnRow__card js-ani-fade">
+                <a href="<?= $site_root; ?>case/detailA.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                  <div class="c-columnRow__card--contents">
-                    <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
-                    <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                    <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item">#IT-Trust</li>
-                      <li class="tag__item">#システム開発</li>
-                      <li class="tag__item">#販売管理システム</li>
-                    </ul>
-                  </div>
+                  <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                  <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                  <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                  <ul class="tag icon-tag">
+                    <li class="tag__item">#IT-Trust</li>
+                    <li class="tag__item">#システム開発</li>
+                    <li class="tag__item">#販売管理システム</li>
+                  </ul>
                 </a>
               </li><!-- c-columnRow__card -->
-              <li class="c-columnRow__card">
-                <a href="<?= $site_root; ?>case/detail.php" class="c-columnRow__card--link">
+              <li class="c-columnRow__card js-ani-fade">
+                <a href="<?= $site_root; ?>case/detailA.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                  <div class="c-columnRow__card--contents">
-                    <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
-                    <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                    <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item">#IT-Trust</li>
-                      <li class="tag__item">#システム開発</li>
-                      <li class="tag__item">#販売管理システム</li>
-                    </ul>
-                  </div>
+                  <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                  <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                  <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                  <ul class="tag icon-tag">
+                    <li class="tag__item">#IT-Trust</li>
+                    <li class="tag__item">#システム開発</li>
+                    <li class="tag__item">#販売管理システム</li>
+                  </ul>
                 </a>
               </li><!-- c-columnRow__card -->
-              <li class="c-columnRow__card">
-                <a href="<?= $site_root; ?>case/detail.php" class="c-columnRow__card--link">
+              <li class="c-columnRow__card js-ani-fade">
+                <a href="<?= $site_root; ?>case/detailA.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                  <div class="c-columnRow__card--contents">
-                    <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
-                    <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                    <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item">#IT-Trust</li>
-                      <li class="tag__item">#システム開発</li>
-                      <li class="tag__item">#販売管理システム</li>
-                    </ul>
-                  </div>
+                  <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                  <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                  <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                  <ul class="tag icon-tag">
+                    <li class="tag__item">#IT-Trust</li>
+                    <li class="tag__item">#システム開発</li>
+                    <li class="tag__item">#販売管理システム</li>
+                  </ul>
                 </a>
               </li><!-- c-columnRow__card -->
             </ul>
-            <div class="columns__linkButton common__linkButton"><a href="<?= $site_root; ?>movie"><span class="font-mincho">全ての配信動画を見る</span></a></div>
+            <div class="columns__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>movie"><span class="font-mincho">全ての配信動画を見る</span></a></div>
           </div>
           <div class="columns__box">
-            <h3 class="columns__title"><span class="font-mincho">配信動画</span></h3>
+            <h3 class="columns__title js-ani-fade"><span class="font-mincho">配信動画</span></h3>
             <ul class="c-columnRow__list">
-              <li class="c-columnRow__card">
+              <li class="c-columnRow__card js-ani-fade">
                 <a href="<?= $site_root; ?>movie/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                  <div class="c-columnRow__card--contents">
-                    <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
-                    <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                    <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item">#IT-Trust</li>
-                      <li class="tag__item">#システム開発</li>
-                      <li class="tag__item">#販売管理システム</li>
-                    </ul>
-                  </div>
+                  <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                  <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                  <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                  <ul class="tag icon-tag">
+                    <li class="tag__item">#IT-Trust</li>
+                    <li class="tag__item">#システム開発</li>
+                    <li class="tag__item">#販売管理システム</li>
+                  </ul>
                 </a>
               </li><!-- c-columnRow__card -->
-              <li class="c-columnRow__card">
+              <li class="c-columnRow__card js-ani-fade">
                 <a href="<?= $site_root; ?>movie/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                  <div class="c-columnRow__card--contents">
-                    <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
-                    <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                    <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item">#IT-Trust</li>
-                      <li class="tag__item">#システム開発</li>
-                      <li class="tag__item">#販売管理システム</li>
-                    </ul>
-                  </div>
+                  <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                  <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                  <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                  <ul class="tag icon-tag">
+                    <li class="tag__item">#IT-Trust</li>
+                    <li class="tag__item">#システム開発</li>
+                    <li class="tag__item">#販売管理システム</li>
+                  </ul>
                 </a>
               </li><!-- c-columnRow__card -->
-              <li class="c-columnRow__card">
+              <li class="c-columnRow__card js-ani-fade">
                 <a href="<?= $site_root; ?>movie/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                  <div class="c-columnRow__card--contents">
-                    <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
-                    <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                    <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item">#IT-Trust</li>
-                      <li class="tag__item">#システム開発</li>
-                      <li class="tag__item">#販売管理システム</li>
-                    </ul>
-                  </div>
+                  <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                  <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                  <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                  <ul class="tag icon-tag">
+                    <li class="tag__item">#IT-Trust</li>
+                    <li class="tag__item">#システム開発</li>
+                    <li class="tag__item">#販売管理システム</li>
+                  </ul>
                 </a>
               </li><!-- c-columnRow__card -->
-              <li class="c-columnRow__card">
+              <li class="c-columnRow__card js-ani-fade">
                 <a href="<?= $site_root; ?>movie/detail.php" class="c-columnRow__card--link">
                   <div class="c-columnRow__card--thumb"><img src="<?= $site_root; ?>assets/img/top/column_thumbnail.png" alt=""></div>
-                  <div class="c-columnRow__card--contents">
-                    <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
-                    <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
-                    <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
-                    <ul class="tag icon-tag">
-                      <li class="tag__item">#IT-Trust</li>
-                      <li class="tag__item">#システム開発</li>
-                      <li class="tag__item">#販売管理システム</li>
-                    </ul>
-                  </div>
+                  <time class="c-columnRow__card--date" datetime="2024-04-03">2023.12.15</time>
+                  <p class="c-columnRow__card--title">IT需要拡大とIT人材不足の背景</p>
+                  <p class="c-columnRow__card--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
+                  <ul class="tag icon-tag">
+                    <li class="tag__item">#IT-Trust</li>
+                    <li class="tag__item">#システム開発</li>
+                    <li class="tag__item">#販売管理システム</li>
+                  </ul>
                 </a>
               </li><!-- c-columnRow__card -->
             </ul>
-            <div class="columns__linkButton common__linkButton"><a href="<?= $site_root; ?>movie"><span class="font-mincho">全ての配信動画を見る</span></a></div>
+
+            <div class="columns__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>movie"><span class="font-mincho">全ての配信動画を見る</span></a></div>
           </div>
         </div>
       </section><!-- ./columns -->

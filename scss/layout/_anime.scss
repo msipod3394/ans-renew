@@ -29,11 +29,6 @@
   }
 }
 
-.js-ani-zoom-bg {
-  &.is-ani {
-  }
-}
-
 /* フェードイン：横から */
 .js-ani-fade-ho {
   transform: translateX(10px);
@@ -121,5 +116,31 @@
 
   .font-en::after {
     transition-delay: 0.2s;
+  }
+}
+
+/* title-twist */
+.ani-title-twist {
+  display: flex;
+  flex-wrap: wrap;
+
+  span {
+    display: block;
+    opacity: 0;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+  }
+
+  &.is-ani {
+    span {
+      $elements-count: 40;
+      @for $i from 1 through $elements-count {
+        &:nth-of-type(#{$i}) {
+          opacity: 1;
+          transform: translateX(0px);
+          transition-delay: $i * 0.05s;
+        }
+      }
+    }
   }
 }
