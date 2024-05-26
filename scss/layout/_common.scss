@@ -109,6 +109,11 @@
 
         #top & {
           font-size: $size-28;
+
+          @include mq(md, max) {
+            // sp
+            font-size: $size-22;
+          }
         }
 
         @include mq(md, max) {

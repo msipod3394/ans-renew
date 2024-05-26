@@ -97,7 +97,7 @@
 
     @include mq(md, max) {
       // sp
-      padding: 1% 2% 2%;
+      padding: 4% 2%;
 
       img {
         max-width: 80px;
@@ -512,6 +512,12 @@
     z-index: 9999;
     top: 16px;
     right: 8px;
+
+    @include mq(md, max) {
+      // sp
+      top: 20px;
+      right: 16px;
+    }
 
     > span {
       width: 100%;

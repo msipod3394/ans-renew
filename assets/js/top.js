@@ -1,3 +1,54 @@
+// ローディング
+/*-----------------------------------------------
+ * Loading
+-------------------------------------------------*/
+var ww = $(window).innerWidth();
+var wh = $(window).innerHeight();
+var sct = $(window).scrollTop();
+var scl = $(window).scrollLeft();
+
+var hs = location.hash;
+
+//loading,スクロールアニメーションのスキップ
+var skiped = hs === "#skip";
+
+var $header = $(".js-header");
+var headerHeight = $header.innerHeight();
+var $footer = $(".js-footer");
+var footerHeight = $footer.innerHeight();
+
+// hash(#skip)
+if (skiped) {
+  $(".js-fullWrap").css({ opacity: 1 });
+  $(".js-loading").remove();
+
+  setTimeout(() => {
+    $(".js-firstv").addClass("is-show");
+  }, 500);
+
+  // hash none
+} else {
+  $(document).ready(function () {
+    $(".js-loading").addClass("is-ani");
+  });
+
+  $(window).on("load", function () {
+    setTimeout(() => {
+      $(".js-loading img").fadeOut(500);
+      setTimeout(() => {
+        $(".js-fullWrap").css({ opacity: 1 });
+        $(".js-loading").fadeOut(500);
+        setTimeout(() => {
+          $(".js-firstv").addClass("is-show");
+          bookSwpier();
+        }, 600);
+      }, 800);
+    }, 1000);
+  });
+
+  // $(window).on("load resize scroll", function () {});
+}
+
 // プログレスバーの要素を取得
 const bar = document.querySelector(".mv__progressbar--in");
 

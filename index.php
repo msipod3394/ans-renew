@@ -30,7 +30,14 @@ include($site_root . 'functions.php');
 </head>
 
 <body id="top">
-  <div id="fullWrap">
+
+  <div class="loading js-loading">
+    <div class="loading__img">
+      <img src="<?= $site_root; ?>assets/img/common/logo/logo_full.svg" alt="株式会社エイ・エヌ・エス">
+    </div>
+  </div>
+
+  <div id="fullWrap" class="js-fullWrap">
 
     <!-- ▼ inc/header -->
     <?php include($site_root . "_inc/header.php"); ?>
@@ -43,25 +50,25 @@ include($site_root . 'functions.php');
           <div class="mv__slide swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="swiper-img" style="background-image: url('https://source.unsplash.com/Lks7vei-eAg.jpg')"></div>
+                <div class="swiper-img" style="background-image: url('./assets/img/top/mv/bg_3.jpg?1234')"></div>
               </div>
               <div class="swiper-slide">
-                <div class="swiper-img" style="background-image: url('/assets/img/top/mv/bg_1jpg.jpg')"></div>
+                <div class="swiper-img" style="background-image: url('./assets/img/top/mv/bg_2.jpg?1234')"></div>
               </div>
               <div class="swiper-slide">
-                <div class="swiper-img" style="background-image: url('https://source.unsplash.com/hpjSkU2UYSU')"></div>
+                <div class="swiper-img" style="background-image: url('./assets/img/top/mv/bg_1.jpg?5678')"></div>
               </div>
             </div>
           </div>
           <div class="mv__inner">
             <div class="mv__catch">
-              <div class="mv__catch--en"><span class="font-en">CREATE THE FUTURE WITH YOU</span></div>
-              <div class="mv__catch--ja"><span class="font-mincho">めざす明日を、<br />共につくる。</span></div>
+              <div class="mv__catch--en"><span class="font-en line-left js-title-split ani-title-twist">CREATE THE FUTURE WITH YOU</span></div>
+              <div class="mv__catch--ja"><span class="font-mincho line-left js-title-split ani-title-twist">めざす明日を、</span></div>
+              <div class="mv__catch--ja"><span class="font-mincho line-left js-title-split ani-title-twist">共につくる。</span></div>
               <div class="mv__catch--desc">
                 <p>業務にあった最適なオーダーメイドのシステムを導入することで、DX推進を支援します。</p>
               </div>
               <div class="mv__catch--line"></div>
-              <!-- プログレスバー -->
               <div class="mv__progressbar"><span class="mv__progressbar--in"></span></div>
             </div>
           </div>
