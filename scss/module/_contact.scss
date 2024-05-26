@@ -36,7 +36,7 @@
 
     @include mq(md, max) {
       // sp
-      margin-bottom: vw_max(40px);
+      margin-bottom: $size-40;
     }
   }
 
@@ -50,11 +50,19 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     font-size: clamp_vw(32);
+    display: flex;
+    justify-content: center;
 
     @include mq(md, max) {
       // sp
-      font-size: vw_max(40px);
+      font-size: $size-18;
       line-height: 1.5;
+      padding: 0 $size-32;
+      text-align: center;
+    }
+
+    > span {
+      justify-content: center;
     }
   }
 
@@ -77,9 +85,18 @@
       content: "";
       display: block;
       position: absolute;
-      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0%;
       height: 100%;
       background-color: rgba($color: #fff, $alpha: 0.2);
+      // transform: scale(0);
+      transition: width 0.5s ease;
+    }
+
+    &.is-ani::before {
+      width: 100%;
     }
   }
 
@@ -92,12 +109,6 @@
       // pc
       width: vw_min(800px);
       padding: vw_min(64px) 0 0;
-    }
-
-    @include mq(md, max) {
-      // sp
-      // width: $min-width-sp;
-      // padding: vw_max(40px) 0;
     }
   }
 
@@ -120,7 +131,25 @@
     max-width: 850px;
     padding-top: 80px;
     margin: 0 auto;
-    border-top: 1px solid rgba($color: #fff, $alpha: 0.2);
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: rgba($color: #fff, $alpha: 0.2);
+      position: absolute;
+      top: 0;
+      transform: scale(0);
+      transform-origin: center;
+      transition: transform 1s ease;
+      transition-delay: 0.05s;
+    }
+
+    &.is-ani::before {
+      transform: scale(1);
+    }
 
     @include mq(md, max) {
       // sp
@@ -151,16 +180,56 @@
       > a {
         padding: vw_min(64px) 0;
         display: block;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        gap: $size-16;
+        justify-content: center;
+
+        &::before,
+        &::after {
+          content: "";
+          width: 101%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.1);
+          transition: all 0.25s cubic-bezier(0.46, 0.16, 0.24, 0.7);
+          position: absolute;
+        }
+
+        &::before {
+          top: 0;
+          right: 0;
+          clip-path: polygon(0 0, 100% 0, 100% 100%);
+          translate: 100% -100%;
+        }
+        &::after {
+          left: 0;
+          top: 0;
+          bottom: 0;
+          clip-path: polygon(0 0, 100% 100%, 0 100%);
+          translate: -100% 100%;
+        }
 
         &:hover {
-          background-color: rgba($color: #fff, $alpha: 0.2);
+          &::before {
+            translate: 0 0;
+          }
+          &::after {
+            translate: -3px 0;
+          }
+
+          .icon-arrow-in-circle {
+            &::before {
+              transform: translateX(10px);
+            }
+          }
         }
 
         > span {
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: clamp_vw(22);
+          font-size: $size-20;
           text-align: center;
           font-weight: 300;
           color: #fff;
@@ -170,11 +239,51 @@
             font-size: clamp_vw(52, sp);
           }
 
-          &::after {
-            width: $size-28;
-            height: $size-20;
-            margin-left: 16px;
+          // &::after {
+          //   width: $size-28;
+          //   height: $size-20;
+          //   margin-left: 16px;
+          //   @include icon-mask($path + "common/icon/icon-arrow.svg", #fff);
+          // }
+        }
+
+        .icon-arrow-in-circle {
+          width: $size-40;
+          height: $size-40;
+          border-radius: 50rem;
+          opacity: 0;
+          transform: translateX(-10px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+
+          @include mq(md, min) {
+            // pc
+            transition-delay: 0.3s;
+          }
+
+          .is-ani & {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+
+          @include mq(md, max) {
+            // sp
+            width: $size-40;
+            height: $size-40;
+            top: calc(50% - $size-56);
+          }
+
+          &::before {
+            width: $size-20;
+            height: $size-8;
             @include icon-mask($path + "common/icon/icon-arrow.svg", #fff);
+            transition: transform 0.3s ease;
+            // background-color: transparent;
+
+            @include mq(md, max) {
+              // sp
+              width: $size-24;
+              height: $size-8;
+            }
           }
         }
       }

@@ -131,15 +131,25 @@
     transition: all 0.3s ease;
   }
 
+  .is-ani &,
   &.is-ani {
     span {
-      $elements-count: 40;
-      @for $i from 1 through $elements-count {
-        &:nth-of-type(#{$i}) {
-          opacity: 1;
-          transform: translateX(0px);
-          transition-delay: $i * 0.05s;
+      @include mq(md, min) {
+        // pc
+        $elements-count: 40;
+        @for $i from 1 through $elements-count {
+          &:nth-of-type(#{$i}) {
+            opacity: 1;
+            transform: translateX(0px);
+            transition-delay: $i * 0.05s;
+          }
         }
+      }
+
+      @include mq(md, max) {
+        // sp
+        opacity: 1;
+        transform: translateX(0px);
       }
     }
   }

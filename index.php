@@ -122,7 +122,7 @@ include($site_root . 'functions.php');
           </dl>
         </div><!-- service__main -->
         <div class="service__other -onbg">
-          <h3 class="service__other--title js-ani-fade"><span class="font-mincho">自社サービスのご紹介</span></h3>
+          <h3 class="service__other--title js-ani"><span class="font-mincho js-ani js-title-split ani-title-twist">自社サービスのご紹介</span></h3>
           <dl class="service__other--dl">
             <div class="service__other--item -kintai js-ani-fade">
               <img src="<?= $site_root; ?>assets/img/top/service_kintai.jpg" alt="勤怠Trust（勤怠トラスト）">
@@ -151,11 +151,11 @@ include($site_root . 'functions.php');
           </dl>
         </div><!-- service__other -->
         <div class="service__sub">
-          <div class="service__sub--in js-ani-fade">
-            <div class="service__sub--card --advice">
+          <div class="service__sub--in">
+            <div class="service__sub--card --advice js-ani-fade">
               <div class="service__sub--card--img"><img src="<?= $site_root; ?>assets/img/top/service_advice.jpg" alt="IT相談" loading="lazy"></div>
               <div class="service__sub--card--wrap">
-                <h3 class="service__sub--card--title">IT相談<span class="font-mincho">Advice</span></h3>
+                <h3 class="service__sub--card--title">IT相談<span class="font-en">Advice</span></h3>
                 <div class="service__sub--card--content">
                   <p>IT・システムに関するお悩み・ご相談を無料で受付する、IT相談サービスを提供します。</p>
                   <div class="service__sub--card--link">
@@ -164,10 +164,10 @@ include($site_root . 'functions.php');
                 </div>
               </div>
             </div><!-- service__sub--card -->
-            <div class="service__sub--card --insourcing">
+            <div class="service__sub--card --insourcing js-ani-fade">
               <div class="service__sub--card--img"><img src="<?= $site_root; ?>assets/img/top/service_insourcing.jpg" alt="システム開発内製化支援" loading="lazy"></div>
               <div class="service__sub--card--wrap">
-                <h3 class="service__sub--card--title">システム開発<br>内製化支援<span class="font-mincho">Insourcing</span></h3>
+                <h3 class="service__sub--card--title">システム開発<br>内製化支援<span class="font-en">Insourcing</span></h3>
                 <div class="service__sub--card--content">
                   <p>システム開発の内製化を多角的にサポートし、DX推進に向けた課題解決のお手伝いをします。</p>
                   <div class="service__sub--card--link">
@@ -176,10 +176,10 @@ include($site_root . 'functions.php');
                 </div>
               </div>
             </div><!-- service__sub--card -->
-            <div class="service__sub--card --bcp">
+            <div class="service__sub--card --bcp js-ani-fade">
               <div class="service__sub--card--img"><img src="<?= $site_root; ?>assets/img/top/service_bcp.jpg" alt="BCP対策" loading="lazy"></div>
               <div class="service__sub--card--wrap">
-                <h3 class="service__sub--card--title">BCP対策<span class="font-mincho">BCP</span></h3>
+                <h3 class="service__sub--card--title">BCP対策<span class="font-en">BCP</span></h3>
                 <div class="service__sub--card--content">
                   <p>リスクに備えてシステムやデータを守る対策を講じ、インフラ環境の保守・管理をしています。</p>
                   <div class="service__sub--card--link">
@@ -188,10 +188,10 @@ include($site_root . 'functions.php');
                 </div>
               </div>
             </div><!-- service__sub--card -->
-            <div class="service__sub--card --offshore">
+            <div class="service__sub--card --offshore js-ani-fade">
               <div class="service__sub--card--img"><img src="<?= $site_root; ?>assets/img/top/service_offshore.jpg" alt="オフショア開発" loading="lazy"></div>
               <div class="service__sub--card--wrap">
-                <h3 class="service__sub--card--title">オフショア開発<span class="font-mincho">Offshore</span></h3>
+                <h3 class="service__sub--card--title">オフショア開発<span class="font-en">Offshore</span></h3>
                 <div class="service__sub--card--content">
                   <p>高い技術力で開発を担うベトナム子会社ANSAsia。オフショアでのラボ型開発を提供します。</p>
                   <div class="service__sub--card--link">

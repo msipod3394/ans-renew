@@ -84,12 +84,6 @@
   &--textIn {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-
-    @include mq(md, max) {
-      // sp
-      gap: vw_max(8px);
-    }
 
     > span {
       line-height: 1.5;
@@ -340,6 +334,7 @@ a.common__borderLink {
   font-size: $size-15;
   font-weight: 500;
   color: $color-blue-dark;
+  letter-spacing: 0;
 
   @include mq(md, min) {
     // pc
@@ -396,13 +391,21 @@ a.common__borderLink {
   }
 
   &:hover {
+    color: $color-blue;
+
+    &::before {
+      background-color: $color-blue;
+    }
+
     &::after {
       background-color: $color-blue;
       transform-origin: left;
       transform: scale(1, 1);
     }
+
     .icon-arrow {
       color: $color-blue;
+
       &::after {
         background-color: $color-blue;
         transform: translateX(0px);
