@@ -97,7 +97,7 @@
 
     @include mq(md, max) {
       // sp
-      padding: 4% 2%;
+      padding: 2% 0% 3% 2%;
 
       img {
         max-width: 80px;
@@ -515,7 +515,7 @@
 
     @include mq(md, max) {
       // sp
-      top: 20px;
+      top: 16px;
       right: 16px;
     }
 

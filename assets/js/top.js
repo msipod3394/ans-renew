@@ -40,7 +40,7 @@ if (skiped) {
         $(".js-loading").fadeOut(500);
         setTimeout(() => {
           $(".js-firstv").addClass("is-show");
-          bookSwpier();
+          // bookSwpier();
         }, 600);
       }, 800);
     }, 1000);
