@@ -44,13 +44,13 @@
 
     &--link {
       padding: $size-24 $size-24;
-      display: grid;
       gap: $size-16;
+      display: grid;
       grid:
         "thumb date" auto
         "thumb title" auto
         "thumb desc" auto
-        "thumb tag" 1fr / 1fr auto;
+        "thumb tag" 1fr / 200px auto;
       column-gap: $size-24;
 
       @include mq(md, max) {
@@ -104,7 +104,7 @@
 
     &--thumb {
       grid-area: thumb;
-      width: 12rem;
+      // width: 12rem;
 
       @include mq(md, max) {
         // sp
@@ -130,19 +130,18 @@
     }
 
     &--title {
-      font-weight: 500;
       grid-area: title;
+      line-height: 1.5;
+      font-weight: 500;
 
       @include mq(md, min) {
         // pc
         font-size: $size-16;
-        line-height: 1;
       }
 
       @include mq(md, max) {
         // sp
         font-size: $size-14;
-        line-height: 1.5;
       }
 
       &:hover {

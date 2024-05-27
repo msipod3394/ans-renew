@@ -41,7 +41,7 @@ $ac[$cn] = 'is-current';
         </div>
         <div class="header__nav--in _navSub">
           <ul class="header__nav--list">
-            <li class="header__nav--item"><a href="" target="_blank">関連サイト</a></li>
+            <!-- <li class="header__nav--item"><a href="" target="_blank">関連サイト</a></li> -->
             <li class="header__nav--item"><a href="<?= $site_root; ?>recruit" target="_blank">採用情報</a></li>
           </ul>
         </div>
@@ -49,7 +49,7 @@ $ac[$cn] = 'is-current';
       <!--header__inner-->
       <div class="header__inquiry">
         <div class="header__inquiry--btn"><a href="<?= $site_root; ?>download" class="_download">資料請求</a></div>
-        <div class="header__inquiry--btn"><a href="<?= $site_root; ?>inquiry" class="_inquiry">お問合せ</a></div>
+        <div class="header__inquiry--btn"><a href="<?= $site_root; ?>contact/form.php" class="_inquiry">お問合せ</a></div>
       </div>
       <!--./header__inquiry-->
     </div>

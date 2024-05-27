@@ -20,7 +20,7 @@
           </a>
         </li>
         <li class="commonContact__link--item js-ani-fade">
-          <a href="<?= $site_root; ?>inquiry">
+          <a href="<?= $site_root; ?>contact/form.php">
             <span class="font-mincho js-title-split ani-title-twist">お問い合わせ</span>
             <span class="icon-arrow-in-circle"></span>
           </a>

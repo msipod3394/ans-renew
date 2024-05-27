@@ -72,11 +72,11 @@ include($site_root . 'functions.php');
                 <li class="sub__side--item js-nav"><a href="#price" class="js-anchor"><span>料金プラン</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#uiux" class="js-anchor"><span>使い心地を追求したUI/UXデザイン</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#support" class="js-anchor"><span>システム保守・インフラ管理まで安心で長期的なサポート体制をご提供</span></a></li>
-                <li class="sub__side--item js-nav"><a href="#case" class="js-anchor"><span>業務システム開発事例</span></a></li>
-                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>業務システムに関するコラム</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#case" class="js-anchor"><span>開発事例</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>コラム</span></a></li>
               </ul>
               <div class="sub__side--inquiry pc">
-                <a href="<?= $site_root; ?>inquiry"><span class="icon-mail">お問合せ</span></a>
+                <a href="<?= $site_root; ?>contact/form.php"><span class="icon-mail">お問合せ</span></a>
               </div>
             </div>
           </div>
@@ -405,7 +405,7 @@ include($site_root . 'functions.php');
             <!-- #case -->
             <section id="case" class="subCase js-target">
               <div class="subCase__inner l-section">
-                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">業務システム開発事例</span></h2>
+                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">開発事例</span></h2>
                 <div class="subCase__cardList">
                   <ul class="subCase__cardList--list">
                     <li class="subCase__cardList--item subCaseItem js-ani-fade">
@@ -435,8 +435,8 @@ include($site_root . 'functions.php');
                           <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                           <div class="subCaseItem__contents--tagWrap">
                             <div class="subCaseItem__contents--tag">
-                              <ul class="tag">
-                                <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
+                              <ul class="tag icon-tag">
+                                <li class="tag__item"><span class="">IT-Trust</span></li>
                                 <li class="tag__item"><span class="">業種：〇〇</span></li>
                               </ul>
                             </div>
@@ -453,8 +453,8 @@ include($site_root . 'functions.php');
                           <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                           <div class="subCaseItem__contents--tagWrap">
                             <div class="subCaseItem__contents--tag">
-                              <ul class="tag">
-                                <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
+                              <ul class="tag icon-tag">
+                                <li class="tag__item"><span class="">IT-Trust</span></li>
                                 <li class="tag__item"><span class="">業種：〇〇</span></li>
                               </ul>
                             </div>
@@ -471,8 +471,8 @@ include($site_root . 'functions.php');
                           <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                           <div class="subCaseItem__contents--tagWrap">
                             <div class="subCaseItem__contents--tag">
-                              <ul class="tag">
-                                <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
+                              <ul class="tag icon-tag">
+                                <li class="tag__item"><span class="">IT-Trust</span></li>
                                 <li class="tag__item"><span class="">業種：〇〇</span></li>
                               </ul>
                             </div>
@@ -489,8 +489,8 @@ include($site_root . 'functions.php');
                           <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                           <div class="subCaseItem__contents--tagWrap">
                             <div class="subCaseItem__contents--tag">
-                              <ul class="tag">
-                                <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
+                              <ul class="tag icon-tag">
+                                <li class="tag__item"><span class="">IT-Trust</span></li>
                                 <li class="tag__item"><span class="">業種：〇〇</span></li>
                               </ul>
                             </div>
@@ -525,7 +525,7 @@ include($site_root . 'functions.php');
             <!-- #subColumn -->
             <section id="subColumn" class="subColumn js-target">
               <div class="subColumn__inner l-section">
-                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">業務システムに関するコラム</span></h2>
+                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">コラム</span></h2>
                 <ul class="subColumn__list">
                   <li class="subColumn__card js-ani-fade">
                     <a href="<?= $site_root; ?>column" class="subColumn__card--link">

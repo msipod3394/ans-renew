@@ -66,7 +66,12 @@
       transform-origin: left;
 
       #top & {
-        margin-top: $size-20;
+        margin-top: $size-22;
+
+        @include mq(md, max) {
+          // sp
+          margin-top: $size-16;
+        }
       }
 
       @include mq(md, max) {
@@ -95,11 +100,17 @@
 
         #top & {
           font-size: $size-28;
+          font-weight: 500;
+
+          @include mq(md, max) {
+            // sp
+            font-size: $size-20;
+          }
         }
 
         @include mq(md, max) {
           // sp
-          font-size: $size-20;
+          font-size: $size-18;
         }
       }
 
@@ -112,7 +123,7 @@
 
           @include mq(md, max) {
             // sp
-            font-size: $size-22;
+            font-size: $size-20;
           }
         }
 
@@ -142,7 +153,7 @@
 
   @include mq(md, min) {
     // pc
-    width: 20rem;
+    max-width: 24rem;
   }
 
   @include mq(md, max) {
@@ -336,7 +347,7 @@ a.common__borderLink {
   display: inline-block;
   position: relative;
   padding-bottom: $size-12;
-  font-size: $size-15;
+  font-size: $size-16;
   font-weight: 500;
   color: $color-blue-dark;
   letter-spacing: 0;
@@ -382,7 +393,7 @@ a.common__borderLink {
 
   .icon-arrow {
     padding-left: 8px;
-    font-size: $size-14;
+    font-size: $size-15;
 
     @include mq(md, max) {
       // sp
@@ -608,6 +619,11 @@ a.common__borderLink {
   align-items: center;
   gap: $size-8;
 
+  @include mq(md, max) {
+    // sp
+    gap: $size-4;
+  }
+
   &::after {
     position: relative;
     width: $size-16;
@@ -618,7 +634,7 @@ a.common__borderLink {
     @include mq(md, max) {
       // sp
       width: $size-18;
-      height: $size-12;
+      height: $size-16;
     }
   }
 }

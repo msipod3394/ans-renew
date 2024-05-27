@@ -92,7 +92,7 @@ include($site_root . 'functions.php');
 
             <!-- ロゴ・タイトル -->
             <div class="caseDetail__head js-ani-fade">
-              <div class="caseDetail__head--logo"><img loading="lazy" src="../assets/img/case/sample_logo.jpg" alt="ロゴ画像"></div>
+              <div class="caseDetail__head--logo"><img loading="lazy" src="<?= $site_root; ?>assets/img/case/sample_logo.jpg" alt="ロゴ画像"></div>
               <h1 class="caseDetail__head--heading sub__contents--title">
                 <span class="font-mincho">
                   データの一元管理が可能になり、情報の「見える化」が実現
@@ -138,8 +138,8 @@ include($site_root . 'functions.php');
             <!-- 画像 -->
             <div class="caseDetail__images js-ani-fade">
               <ul class="caseDetail__images--list">
-                <li class="caseDetail__images--item"><img src="../assets/img/case/sample_img_1.jpg" alt="" loading="lazy"></li>
-                <li class="caseDetail__images--item"><img src="../assets/img/case/sample_img_2.jpg" alt="" loading="lazy"></li>
+                <li class="caseDetail__images--item"><img src="<?= $site_root; ?>assets/img/case/sample_img_1.jpg" alt="" loading="lazy"></li>
+                <li class="caseDetail__images--item"><img src="<?= $site_root; ?>assets/img/case/sample_img_2.jpg" alt="" loading="lazy"></li>
               </ul>
             </div>
 
@@ -244,7 +244,7 @@ include($site_root . 'functions.php');
 
             <!-- 概要図 -->
             <div class="caseDetail__contents js-ani-fade">
-              <img src="../assets/img/case/sample_img_3.jpg" alt="">
+              <img src="<?= $site_root; ?>assets/img/case/sample_img_3.jpg" alt="">
             </div>
 
             <!-- シェア・下部 -->
@@ -280,9 +280,9 @@ include($site_root . 'functions.php');
                   経験豊富なプロジェクトマネージャーがお客様の業務内容を理解した上で、操作性の良い最適なシステムを構築します。
                 </p>
                 <div class="caseDetail__use--link">
-                  <a href="" class="common__borderLink"><span class="icon-arrow">フルオーダーシステム開発を詳しくみる</span></a>
+                  <a href="<?= $site_root; ?>service/fullorder/" class="common__borderLink"><span class="icon-arrow">フルオーダーシステム開発を詳しくみる</span></a>
                 </div>
-                <div class="caseDetail__use--img"><img src="../assets/img/ittrust/heading.jpg" alt=""></div>
+                <div class="caseDetail__use--img"><img src="<?= $site_root; ?>assets/img/service/fullorder/heading.jpg" alt="フルオーダーシステム開発を詳しくみる"></div>
               </div>
             </div>
 

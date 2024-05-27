@@ -28,6 +28,11 @@
         <li class="footer__nav--item"><a href="<?= $site_root; ?>company/outline/" class="_textThin">会社概要</a></li>
         <li class="footer__nav--item"><a href="<?= $site_root; ?>company/organization/" class="_textThin">当社の体制</a></li>
       </ul>
+      <ul class="footer__nav--list">
+        <li class="footer__nav--item"><span class="_textBold">自社サービス</span></li>
+        <li class="footer__nav--item"><a href="https://www.kintai-trust.com/" target="_blank" class="_textThin"><span class="icon-blank">勤怠トラスト</span></a></li>
+        <li class="footer__nav--item"><a href="https://innovation-design-lab.com/" target="_blank" class="_textThin"><span class="icon-blank">イノベーションデザインラボ</span></a></li>
+      </ul>
     </nav>
   </div>
   <!--./footer__in-->

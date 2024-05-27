@@ -4,7 +4,6 @@
 // 共通幅
 .sub {
   &__breadcrumbs {
-    // border-top: 1px solid $color-gray-300;
     border-bottom: 1px solid $color-gray-300;
 
     @include mq(md, min) {
@@ -14,6 +13,7 @@
 
     @include mq(md, max) {
       // sp
+      border-top: 1px solid $color-gray-300;
       padding: 1% 2%;
       // padding: vw_max(8px) vw_max(24px);
     }
@@ -111,12 +111,12 @@
         width: $size-80;
         height: 1px;
         background-color: $color-blue-dark;
-        margin-top: $size-28;
+        margin-top: $size-18;
 
         @include mq(md, max) {
           // sp
           width: vw_max(40px);
-          margin-top: vw_max(24px);
+          margin-top: $size-12;
         }
       }
 
@@ -137,7 +137,7 @@
 
       @include mq(md, max) {
         // sp
-        gap: $size-8;
+        gap: $size-16;
       }
 
       > span {
@@ -147,7 +147,7 @@
           @include mq(md, max) {
             // sp
             font-size: $size-18;
-            font-weight: 500;
+            font-weight: 400;
           }
         }
 
@@ -622,9 +622,6 @@
   }
 
   &__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   &__title {
@@ -839,9 +836,9 @@
 
 /* 下層事例 */
 .subCase {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
 
   @include mq(md, min) {
     // pc

@@ -60,13 +60,24 @@
     line-height: 1;
     padding: 6px 0;
 
+    @include mq(md, max) {
+      // sp
+      padding: 8px 0;
+    }
+
+    > span,
     > a {
       display: block;
 
       &._textBold {
-        font-size: $size-14;
         font-weight: 600;
         line-height: 1;
+        font-size: $size-14;
+
+        @include mq(md, max) {
+          // sp
+          font-size: $size-16;
+        }
       }
 
       &._textThin {
@@ -75,10 +86,13 @@
 
         @include mq(md, max) {
           // sp
-          font-size: $size-12;
+          font-size: $size-14;
         }
       }
+    }
 
+    > a {
+      transition: color 0.3s ease, text-decoration 0.3s ease;
       &:hover {
         color: $color-blue;
         text-decoration: underline;

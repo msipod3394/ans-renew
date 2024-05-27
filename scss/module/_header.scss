@@ -349,7 +349,12 @@
               margin-right: vw_max(16px);
             }
           }
+
+          &:hover {
+            background-color: lighten($color-blue, 5%);
+          }
         }
+
         &._inquiry {
           background-color: $color-orange;
 
@@ -365,6 +370,10 @@
               height: $size-20;
               margin-right: vw_max(16px);
             }
+          }
+
+          &:hover {
+            background-color: darken($color-orange, 5%);
           }
         }
       }

@@ -47,7 +47,7 @@ include($site_root . 'functions.php');
       <!-- mv -->
       <section id="mv" class="mv js-firstv">
         <div class="mv__wrap">
-          <div class="mv__slide swiper">
+          <div class="mv__slide js-swiper-mv">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="swiper-img" style="background-image: url('./assets/img/top/mv/bg_3.jpg?1234')"></div>
@@ -73,9 +73,33 @@ include($site_root . 'functions.php');
             </div>
           </div>
         </div>
-        <div class="mv__flow"><span class="font-en">CREATE THE FUTURE WITH YOU</span><span class="font-en">CREATE THE FUTURE WITH YOU</span><span class="font-en">CREATE THE FUTURE WITH YOU</span></div>
+        <div class="mv__flow"><span class="font-en">Create The Future With You</span><span class="font-en">Create The Future With You</span><span class="font-en">Create The Future With You</span></div>
       </section>
       <!--./mv-->
+
+
+      <!-- #news -->
+      <section id="news" class="news js-ani-fade">
+        <div class="news__list js-swiper-news">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper">
+            <div class="news__card swiper-slide">
+              <time class="news__card--date" datetime="2024-05-01">2024.05.01</time>
+              <p class="news__card--title">テレワーク対応・書類電子化を推進する取り組みを継続的に実施しております。</p>
+            </div>
+            <div class="news__card swiper-slide">
+              <time class="news__card--date" datetime="2024-05-01">2024.05.01</time>
+              <p class="news__card--title">テレワーク対応・書類電子化を推進する取り組みを継続的に実施しております。</p>
+            </div>
+            <div class="news__card swiper-slide">
+              <time class="news__card--date" datetime="2024-05-01">2024.05.01</time>
+              <p class="news__card--title">テレワーク対応・書類電子化を推進する取り組みを継続的に実施しております。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--./news-->
+
 
       <!-- #service -->
       <section id="service" class="service">
@@ -93,8 +117,8 @@ include($site_root . 'functions.php');
             <div class="service__main--item js-ani-fade -fullorder">
               <a href="<?= $site_root; ?>service/fullorder" class="service__main--link">
                 <dt class="service__main--dt">
-                  <span class="font-mincho">フルオーダーシステム開発</span>
-                  <span class="font-en" data-num="#01">Full Order</span>
+                  <span class="font-mincho" data-num="#01">フルオーダーシステム開発</span>
+                  <span class="font-en">Full Order</span>
                 </dt>
                 <dd class="service__main--dd">
                   使い心地を追求し、ご要望や現行業務に合わせたオーダーメイドの基幹系・業務システムを開発します。
@@ -105,8 +129,8 @@ include($site_root . 'functions.php');
             <div class="service__main--item js-ani-fade -renewal">
               <a href="<?= $site_root; ?>service/renewal" class="service__main--link">
                 <dt class="service__main--dt">
-                  <span class="font-mincho">基幹システム再構築</span>
-                  <span class="font-en" data-num="#02">Renewal</span>
+                  <span class="font-mincho" data-num="#02">基幹システム再構築</span>
+                  <span class="font-en">Renewal</span>
                 </dt>
                 <dd class="service__main--dd">
                   システムの老朽化や新事業に伴うリニューアルなど、機能を見直した最適なシステム再構築を行います。
@@ -117,8 +141,8 @@ include($site_root . 'functions.php');
             <div class="service__main--item js-ani-fade -maintenance">
               <a href="<?= $site_root; ?>service/maintenance" class="service__main--link">
                 <dt class="service__main--dt">
-                  <span class="font-mincho">システム保守引継ぎ</span>
-                  <span class="font-en" data-num="#03">Maintenance</span>
+                  <span class="font-mincho" data-num="#03">システム保守引継ぎ</span>
+                  <span class="font-en">Maintenance</span>
                 </dt>
                 <dd class="service__main--dd">
                   システム開発の実績で蓄積した技術とノウハウをもとに、既存システムの保守引継ぎ・追加開発に対応します。
@@ -228,7 +252,7 @@ include($site_root . 'functions.php');
               <p class="mission__contents--text js-ani-fade">
                 システム開発会社として、首都圏を中心にITシステム関連サービス事業を展開しているエイ・エヌ・エスは、『DXを推進すべく、オーダーメイドの基幹業務システムを構築したい』『既存の業務システムを整理して使いやすく再構築したい』『システム保守が打ち切りになったため、保守を引継いでほしい』といったお悩み・課題を解決するために、システムをとおして、DX推進や業務効率化といった”導入効果とメリット”をご提供します。
               </p>
-              <div class="mission__linkButton common__linkButton js-ani-fade js-ani-fade"><a href="<?= $site_root; ?>usability/"><span class="font-mincho">私たちの強み</span></a></div>
+              <div class="mission__linkButton common__linkButton js-ani-fade js-ani-fade"><a href="<?= $site_root; ?>ittrust/"><span class="font-mincho">私たちの強み</span></a></div>
             </div>
           </div><!-- ./common__title -->
           <div class="mission__image js-ani-zoom">
@@ -360,14 +384,13 @@ include($site_root . 'functions.php');
           <div class="case__toggle js-ani-fade">
             <h3 class="case__toggle--title"><span class="font-mincho">業種別でみる</span></h3>
             <ul class="case__toggle--list">
-              <li class="case__toggle--item"><a href="">業種A</a></li>
-              <li class="case__toggle--item"><a href="">業種A</a></li>
-              <li class="case__toggle--item"><a href="">業種A</a></li>
-              <li class="case__toggle--item"><a href="">業種A</a></li>
-              <li class="case__toggle--item"><a href="">業種A</a></li>
-              <li class="case__toggle--item"><a href="">業種A</a></li>
-              <li class="case__toggle--item"><a href="">業種A</a></li>
-              <li class="case__toggle--item"><a href="">業種A</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case">業種A</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case">業種B</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case">業種C</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case">業種D</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case">業種E</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case">業種F</a></li>
+              <li class="case__toggle--item"><a href="<?= $site_root; ?>case">業種G</a></li>
             </ul>
           </div><!-- ./case__toggle -->
           <div class="case__cardList">

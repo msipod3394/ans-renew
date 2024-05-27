@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: $size-40;
+    gap: $size-24;
 
     @include mq(md, max) {
       // sp
@@ -45,6 +45,7 @@
       flex-direction: column;
       gap: $size-16;
       font-size: $size-15;
+      line-height: 1;
 
       @include mq(md, max) {
         // sp
@@ -280,6 +281,7 @@
 
       > a {
         span.icon-link {
+          font-size: $size-15;
           display: flex;
           align-items: center;
           gap: $size-16;
@@ -483,7 +485,7 @@
   &__titleImg {
     padding-top: vw_min(320px);
     padding-bottom: vw_min(64px);
-    background: url($path + "common/case/title_bg.jpg") no-repeat center center /
+    background: url($path + "top/case/case_bg.jpg") no-repeat center center /
       cover;
 
     @include mq(md, min) {
@@ -520,7 +522,7 @@
     .common__title--desc {
       @include mq(md, min) {
         // pc
-        margin-top: $size-48;
+        margin-top: $size-40;
       }
     }
   }
@@ -594,9 +596,6 @@
   }
 
   &__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   &__cardList {
@@ -759,9 +758,4 @@
 /* コラム */
 .serviceTop .subColumn {
   margin-top: 0;
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }

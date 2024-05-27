@@ -5,7 +5,7 @@
     <div class="c-contentsDetail__inquiry--links js-ani-fade ">
       <ul class="sub__headingAction--list">
         <li class="sub__headingAction--item"><a href="<?= $site_root; ?>download" class="_download">資料請求</a></li>
-        <li class="sub__headingAction--item"><a href="<?= $site_root; ?>inquiry" class="_inquiry">お問合せ</a></li>
+        <li class="sub__headingAction--item"><a href="<?= $site_root; ?>contact/form.php" class="_inquiry">お問合せ</a></li>
       </ul>
     </div>
   </div>
