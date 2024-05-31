@@ -71,7 +71,7 @@ include($site_root . 'functions.php');
                 <li class="sub__side--item js-nav"><a href="#features" class="js-anchor"><span>私たちにできること</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#userneeds" class="js-anchor"><span>ユーザーニーズ遷移をデザインする</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#cases" class="js-anchor"><span>業務システムUI/UX改善事例</span></a></li>
-                <li class="sub__side--item js-nav"><a href="#uiux" class="js-anchor"><span>モックアップアプローチによる効率的なシステム開発</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#mockup" class="js-anchor"><span>モックアップアプローチによる効率的なシステム開発</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>UI/UXデザインに関するコラム</span></a></li>
               </ul>
               <div class="sub__side--inquiry pc">
@@ -244,7 +244,7 @@ include($site_root . 'functions.php');
             </section>
 
             <!-- #uiux -->
-            <section id="uiux" class="uiux js-target">
+            <section id="mockup" class="uiux js-target">
               <div class="l-section">
                 <h2 class="sub__contents--title js-ani-fade"><span class="font-mincho">モックアップアプローチによる効率的なシステム開発</span></h2>
                 <p class="sub__contents--desc js-ani-fade">
