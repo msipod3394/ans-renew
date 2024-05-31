@@ -352,9 +352,9 @@ include($site_root . 'functions.php');
                           インフラ管理代行サービスでは、お客様に代わりサーバの運用支援、トラブル発生時の復旧対応を実施致します。サーバ監視サービスでは、当社よりお客様のサーバ監視を行います。
                         </p>
                         <dl class="support__cards--tagsdl">
-                          <div class="support__cards--tags">
-                            <dt class="support__cards--tagdt">インフラ管理代行サービス</dt>
-                            <dd class="support__cards--tagdd">
+                          <div class="support__cards--tags js-ani-fade">
+                            <dt class="support__cards--tagdt js-ani-fade">インフラ管理代行サービス</dt>
+                            <dd class="support__cards--tagdd js-ani-fade">
                               <ul class="support__cards--tagList">
                                 <li class="support__cards--tagItem"><span>障害情報受付</span></li>
                                 <li class="support__cards--tagItem"><span>ネットワーク情報の管理</span></li>
@@ -365,22 +365,17 @@ include($site_root . 'functions.php');
                               </ul>
                             </dd>
                           </div>
+                          <div class="support__cards--tags js-ani-fade">
+                            <dt class="support__cards--tagdt js-ani-fade">サーバ監視サービス</dt>
+                            <dd class="support__cards--tagdd js-ani-fade">
+                              <ul class="support__cards--tagList">
+                                <li class="support__cards--tagItem"><span>Png監視</span></li>
+                                <li class="support__cards--tagItem"><span>ログ監視</span></li>
+                                <li class="support__cards--tagItem"><span>リソース監視</span></li>
+                              </ul>
+                            </dd>
+                          </div>
                         </dl>
-                      </div>
-                    </li>
-                    <li class="support__cards--item js-ani-fade">
-                      <h3 class="support__cards--title"><span class="title-obi">サービスに合わせた保守体制</span></h3>
-                      <div class="support__cards--itemIn">
-                        <p class="support__cards--desc">
-                          サービスごとに合わせた保守体制をご提案いたします。<br>詳しくは各サービスページをご確認ください。
-                        </p>
-                        <div class="support__cards--links">
-                          <ul class="support__cards--linkList">
-                            <li class="support__cards--link common__cards--link"><a href="<?= $site_root; ?>service/fullorder" class="common__borderLink"><span class="icon-arrow">フルオーダーシステム開発の保守体制</span></a></li>
-                            <li class="support__cards--link common__cards--link"><a href="<?= $site_root; ?>service/renewal" class="common__borderLink"><span class="icon-arrow">システム再構築の保守体制</span></a></li>
-                            <li class="support__cards--link common__cards--link"><a href="<?= $site_root; ?>service/maintenance" class="common__borderLink"><span class="icon-arrow">システム保守引継ぎの保守体制</span></a></li>
-                          </ul>
-                        </div>
                       </div>
                     </li>
                   </ul>
