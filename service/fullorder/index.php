@@ -30,7 +30,7 @@ include($site_root . 'functions.php');
 <!-- ▼ inc/gac -->
 <?php include($site_root . "_inc/gac.php"); ?>
 
-<body id="<?= $cn ?>">
+<body id="<?= $cn; ?>" class="js-sub-loaded-fadebg">
   <div id="fullWrap">
 
     <!-- ▼ inc/header -->
@@ -68,8 +68,8 @@ include($site_root . 'functions.php');
                 <li class="sub__side--item js-nav"><a href="#support" class="js-anchor"><span>サポート体制</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#develop" class="js-anchor"><span>開発体制</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#flow" class="js-anchor"><span>開発フロー</span></a></li>
-                <li class="sub__side--item js-nav"><a href="#case" class="js-anchor"><span>開発事例</span></a></li>
-                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>コラム</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#case" class="js-anchor"><span>フルオーダーシステムの開発事例</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>フルオーダーシステムに関するコラム</span></a></li>
               </ul>
               <div class="sub__side--inquiry pc">
                 <a href="<?= $site_root; ?>contact/form.php"><span class="icon-mail">お問合せ</span></a>
@@ -302,21 +302,6 @@ include($site_root . 'functions.php');
                         </dl>
                       </div>
                     </li>
-                    <li class="support__cards--item js-ani-fade">
-                      <h3 class="support__cards--title"><span class="title-obi">サービスに合わせた保守体制</span></h3>
-                      <div class="support__cards--itemIn">
-                        <p class="support__cards--desc js-ani-fade">
-                          サービスごとに合わせた保守体制をご提案いたします。<br>詳しくは各サービスページをご確認ください。
-                        </p>
-                        <div class="support__cards--links js-ani-fade">
-                          <ul class="support__cards--linkList">
-                            <li class="support__cards--link common__cards--link"><a href="#support" class="js-anchor common__borderLink"><span class="icon-arrow">フルオーダーシステム開発の保守体制</span></a></li>
-                            <li class="support__cards--link common__cards--link"><a href="<?= $site_root; ?>service/renewal#suppurt" class="common__borderLink"><span class="icon-arrow">システム再構築の保守体制</span></a></li>
-                            <li class="support__cards--link common__cards--link"><a href="<?= $site_root; ?>service/maintenance#suppurt" class="common__borderLink"><span class="icon-arrow">システム保守引継ぎの保守体制</span></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -400,9 +385,9 @@ include($site_root . 'functions.php');
             <!-- #case -->
             <section id="case" class="subCase l-section js-target">
               <div class="subCase__inner">
-                <h2 class="serviceTop__mainTitle sub__contents--title  js-ani-fade"><span class="font-mincho">フルオーダーシステムの開発事例</span></h2>
+                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">フルオーダーシステムの開発事例</span></h2>
                 <div class="subCase__cardList js-ani-fade">
-                  <ul class="subCase__cardList--list js-ani-fade">
+                  <ul class="subCase__cardList--list">
                     <li class="subCase__cardList--item subCaseItem">
                       <a href="" class="subCaseItem__link">
                         <div class="subCaseItem__img"><img src="<?= $site_root; ?>assets/img/top/case/case_sample.jpg" alt=""></div>
@@ -412,8 +397,8 @@ include($site_root . 'functions.php');
                           <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                           <div class="subCaseItem__contents--tagWrap">
                             <div class="subCaseItem__contents--tag">
-                              <ul class="tag">
-                                <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
+                              <ul class="tag icon-tag">
+                                <li class="tag__item"><span class="">IT-Trust</span></li>
                                 <li class="tag__item"><span class="">業種：〇〇</span></li>
                               </ul>
                             </div>
@@ -430,8 +415,8 @@ include($site_root . 'functions.php');
                           <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                           <div class="subCaseItem__contents--tagWrap">
                             <div class="subCaseItem__contents--tag">
-                              <ul class="tag">
-                                <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
+                              <ul class="tag icon-tag">
+                                <li class="tag__item"><span class="">IT-Trust</span></li>
                                 <li class="tag__item"><span class="">業種：〇〇</span></li>
                               </ul>
                             </div>
@@ -448,8 +433,8 @@ include($site_root . 'functions.php');
                           <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                           <div class="subCaseItem__contents--tagWrap">
                             <div class="subCaseItem__contents--tag">
-                              <ul class="tag">
-                                <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
+                              <ul class="tag icon-tag">
+                                <li class="tag__item"><span class="">IT-Trust</span></li>
                                 <li class="tag__item"><span class="">業種：〇〇</span></li>
                               </ul>
                             </div>
@@ -466,8 +451,8 @@ include($site_root . 'functions.php');
                           <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                           <div class="subCaseItem__contents--tagWrap">
                             <div class="subCaseItem__contents--tag">
-                              <ul class="tag">
-                                <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
+                              <ul class="tag icon-tag">
+                                <li class="tag__item"><span class="">IT-Trust</span></li>
                                 <li class="tag__item"><span class="">業種：〇〇</span></li>
                               </ul>
                             </div>
@@ -484,8 +469,8 @@ include($site_root . 'functions.php');
                           <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                           <div class="subCaseItem__contents--tagWrap">
                             <div class="subCaseItem__contents--tag">
-                              <ul class="tag">
-                                <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
+                              <ul class="tag icon-tag">
+                                <li class="tag__item"><span class="">IT-Trust</span></li>
                                 <li class="tag__item"><span class="">業種：〇〇</span></li>
                               </ul>
                             </div>
@@ -502,8 +487,8 @@ include($site_root . 'functions.php');
                           <p class="subCaseItem__contents--desc"><span>データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。データの一元管理が可能になり、情報の「見える化」が実現。</span></p>
                           <div class="subCaseItem__contents--tagWrap">
                             <div class="subCaseItem__contents--tag">
-                              <ul class="tag">
-                                <li class="tag__item"><span class="icon-tag">IT-Trust</span></li>
+                              <ul class="tag icon-tag">
+                                <li class="tag__item"><span class="">IT-Trust</span></li>
                                 <li class="tag__item"><span class="">業種：〇〇</span></li>
                               </ul>
                             </div>
@@ -515,7 +500,7 @@ include($site_root . 'functions.php');
                 </div>
               </div>
               <div class="subColumn__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>case"><span class="font-mincho">全ての事例を見る</span></a></div>
-            </section><!-- ./subCase -->
+            </section><!-- ./case -->
 
             <!-- #subColumn -->
             <section id="column" class="subColumn l-section js-target">

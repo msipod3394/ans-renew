@@ -30,7 +30,7 @@ include($site_root . 'functions.php');
 <!-- ▼ inc/gac -->
 <?php include($site_root . "_inc/gac.php"); ?>
 
-<body id="service-bcp">
+<body id="<?= $cn; ?>" class="js-sub-loaded-fadebg">
   <div id="fullWrap">
 
     <!-- ▼ inc/header -->
@@ -66,7 +66,7 @@ include($site_root . 'functions.php');
                 <li class="sub__side--item js-nav"><a href="#secure" class="js-anchor"><span>企業が取り組むべきセキュリティ対策</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#flow" class="js-anchor"><span>BCP策定ステップ</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#plan" class="js-anchor"><span>ITインフラBCP対策</span></a></li>
-                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>コラム</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>ITインフラBPC対策に関するコラム</span></a></li>
               </ul>
               <div class="sub__side--inquiry pc">
                 <a href="<?= $site_root; ?>contact/form.php"><span class="icon-mail">お問合せ</span></a>
@@ -253,7 +253,7 @@ include($site_root . 'functions.php');
 
             <!-- #subColumn -->
             <section id="column" class="subColumn l-section js-target">
-              <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">コラム</span></h2>
+              <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">ITインフラBPC対策に関するコラム</span></h2>
               <div class="subColumn__inner">
                 <ul class="subColumn__list js-ani-fade">
                   <li class="subColumn__card">

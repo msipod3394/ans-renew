@@ -30,7 +30,7 @@ include($site_root . 'functions.php');
 <!-- ▼ inc/gac -->
 <?php include($site_root . "_inc/gac.php"); ?>
 
-<body id="<?= $cn ?>">
+<body id="<?= $cn; ?>" class="js-sub-loaded-fadebg">
   <div id="fullWrap">
 
     <!-- ▼ inc/header -->
@@ -69,8 +69,8 @@ include($site_root . 'functions.php');
                 <li class="sub__side--item js-nav"><a href="#support" class="js-anchor"><span>サービス紹介</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#price" class="js-anchor"><span>料金プラン</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#flow" class="js-anchor"><span>開発フロー</span></a></li>
-                <li class="sub__side--item js-nav"><a href="#case" class="js-anchor"><span>事例</span></a></li>
-                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>コラム</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#case" class="js-anchor"><span>システム保守引継ぎの事例</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>システム保守引継ぎに関するコラム</span></a></li>
               </ul>
               <div class="sub__side--inquiry pc">
                 <a href="<?= $site_root; ?>contact/form.php"><span class="icon-mail">お問合せ</span></a>
@@ -282,15 +282,12 @@ include($site_root . 'functions.php');
                             </dd>
                           </div>
                           <div class="support__cards--tags js-ani-fade">
-                            <dt class="support__cards--tagdt">インフラ管理代行サービス</dt>
-                            <dd class="support__cards--tagdd">
-                              <ul class="support__cards--tagList js-ani-fade">
-                                <li class="support__cards--tagItem"><span>障害情報受付</span></li>
-                                <li class="support__cards--tagItem"><span>ネットワーク情報の管理</span></li>
-                                <li class="support__cards--tagItem"><span>ハードウェア情報の管理</span></li>
-                                <li class="support__cards--tagItem"><span>ADドメイン</span></li>
-                                <li class="support__cards--tagItem"><span>サーバによる管理</span></li>
-                                <li class="support__cards--tagItem"><span>ソフトウェア情報の管理</span></li>
+                            <dt class="support__cards--tagdt js-ani-fade">サーバ監視サービス</dt>
+                            <dd class="support__cards--tagdd js-ani-fade">
+                              <ul class="support__cards--tagList">
+                                <li class="support__cards--tagItem"><span>Png監視</span></li>
+                                <li class="support__cards--tagItem"><span>ログ監視</span></li>
+                                <li class="support__cards--tagItem"><span>リソース監視</span></li>
                               </ul>
                             </dd>
                           </div>
@@ -442,7 +439,7 @@ include($site_root . 'functions.php');
             <!-- #case -->
             <section id="case" class="subCase l-section js-target">
               <div class="subCase__inner">
-                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">開発事例</span></h2>
+                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">システム保守引継ぎの開発事例</span></h2>
                 <div class="subCase__cardList js-ani-fade">
                   <ul class="subCase__cardList--list">
                     <li class="subCase__cardList--item subCaseItem">
@@ -557,11 +554,11 @@ include($site_root . 'functions.php');
                 </div>
               </div>
               <div class="subColumn__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>case"><span class="font-mincho">全ての事例を見る</span></a></div>
-            </section><!-- ./subCase -->
+            </section><!-- ./case -->
 
             <!-- #subColumn -->
             <section id="column" class="subColumn l-section js-target">
-              <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">コラム</span></h2>
+              <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">システム保守引継ぎに関するコラム</span></h2>
               <div class="subColumn__inner">
                 <ul class="subColumn__list js-ani-fade">
                   <li class="subColumn__card">

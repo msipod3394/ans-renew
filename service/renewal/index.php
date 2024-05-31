@@ -30,7 +30,7 @@ include($site_root . 'functions.php');
 <!-- ▼ inc/gac -->
 <?php include($site_root . "_inc/gac.php"); ?>
 
-<body id="<?= $cn ?>">
+<body id="<?= $cn; ?>" class="js-sub-loaded-fadebg">
   <div id="fullWrap">
 
     <!-- ▼ inc/header -->
@@ -68,8 +68,8 @@ include($site_root . 'functions.php');
                 <li class="sub__side--item js-nav"><a href="#features" class="js-anchor"><span>特徴</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#support" class="js-anchor"><span>サポート体制</span></a></li>
                 <li class="sub__side--item js-nav"><a href="#flow" class="js-anchor"><span>開発フロー</span></a></li>
-                <li class="sub__side--item js-nav"><a href="#case" class="js-anchor"><span>開発事例</span></a></li>
-                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>コラム</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#case" class="js-anchor"><span>基幹システム再構築の開発事例</span></a></li>
+                <li class="sub__side--item js-nav"><a href="#column" class="js-anchor"><span>基幹システム再構築に関するコラム</span></a></li>
               </ul>
               <div class="sub__side--inquiry pc">
                 <a href="<?= $site_root; ?>contact/form.php"><span class="icon-mail">お問合せ</span></a>
@@ -271,34 +271,16 @@ include($site_root . 'functions.php');
                             </dd>
                           </div>
                           <div class="support__cards--tags js-ani-fade">
-                            <dt class="support__cards--tagdt">インフラ管理代行サービス</dt>
+                            <dt class="support__cards--tagdt js-ani-fade">サーバ監視サービス</dt>
                             <dd class="support__cards--tagdd js-ani-fade">
                               <ul class="support__cards--tagList">
-                                <li class="support__cards--tagItem"><span>障害情報受付</span></li>
-                                <li class="support__cards--tagItem"><span>ネットワーク情報の管理</span></li>
-                                <li class="support__cards--tagItem"><span>ハードウェア情報の管理</span></li>
-                                <li class="support__cards--tagItem"><span>ADドメイン</span></li>
-                                <li class="support__cards--tagItem"><span>サーバによる管理</span></li>
-                                <li class="support__cards--tagItem"><span>ソフトウェア情報の管理</span></li>
+                                <li class="support__cards--tagItem"><span>Png監視</span></li>
+                                <li class="support__cards--tagItem"><span>ログ監視</span></li>
+                                <li class="support__cards--tagItem"><span>リソース監視</span></li>
                               </ul>
                             </dd>
                           </div>
                         </dl>
-                      </div>
-                    </li>
-                    <li class="support__cards--item js-ani-fade">
-                      <h3 class="support__cards--title"><span class="title-obi">サービスに合わせた保守体制</span></h3>
-                      <div class="support__cards--itemIn">
-                        <p class="support__cards--desc js-ani-fade">
-                          サービスごとに合わせた保守体制をご提案いたします。<br>詳しくは各サービスページをご確認ください。
-                        </p>
-                        <div class="support__cards--links js-ani-fade">
-                          <ul class="support__cards--linkList">
-                            <li class="support__cards--link common__cards--link"><a href="" class="common__borderLink"><span class="icon-arrow">フルオーダーシステム開発の保守体制</span></a></li>
-                            <li class="support__cards--link common__cards--link"><a href="" class="common__borderLink"><span class="icon-arrow">システム再構築の保守体制</span></a></li>
-                            <li class="support__cards--link common__cards--link"><a href="" class="common__borderLink"><span class="icon-arrow">システム保守引継ぎの保守体制</span></a></li>
-                          </ul>
-                        </div>
                       </div>
                     </li>
                   </ul>
@@ -371,14 +353,6 @@ include($site_root . 'functions.php');
                     <dt class="flow__item--dt"><span class="icon-flow" data-num="07"></span>保守・運用</dt>
                     <dd class="flow__item--dd">システムの安定運用のため、監視、管理、サポートの支援等の作業を実施。システム運用後も、より良いシステムとするための状況分析や提案を致します。</dd>
                   </div>
-                  <div class="flow__item js-ani-fade">
-                    <dt class="flow__item--dt"><span class="icon-flow" data-num="08"></span>導入</dt>
-                    <dd class="flow__item--dd">システム全体の動作確認や導入時の初期設定、 移行作業などを実施します。</dd>
-                  </div>
-                  <div class="flow__item js-ani-fade">
-                    <dt class="flow__item--dt"><span class="icon-flow" data-num="09"></span>保守・運用</dt>
-                    <dt class="flow__item--dd">システムの安定運用のため、監視、管理、サポートの支援等の作業を実施。システム運用後も、より良いシステムとするための状況分析や提案を致します。</dt>
-                  </div>
                 </dl>
               </div>
             </section>
@@ -387,7 +361,7 @@ include($site_root . 'functions.php');
             <!-- #case -->
             <section id="case" class="subCase l-section js-target">
               <div class="subCase__inner">
-                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">フルオーダーシステムの開発事例</span></h2>
+                <h2 class="serviceTop__mainTitle sub__contents--title js-ani-fade"><span class="font-mincho">基幹システム再構築の開発事例</span></h2>
                 <div class="subCase__cardList js-ani-fade">
                   <ul class="subCase__cardList--list">
                     <li class="subCase__cardList--item subCaseItem">
@@ -502,7 +476,7 @@ include($site_root . 'functions.php');
                 </div>
               </div>
               <div class="subColumn__linkButton common__linkButton js-ani-fade"><a href="<?= $site_root; ?>case"><span class="font-mincho">全ての事例を見る</span></a></div>
-            </section><!-- ./subCase -->
+            </section><!-- ./case -->
 
             <!-- #subColumn -->
             <section id="column" class="subColumn l-section js-target">

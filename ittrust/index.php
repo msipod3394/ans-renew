@@ -31,7 +31,7 @@ include($site_root . 'functions.php');
 <!-- ▼ inc/gac -->
 <?php include($site_root . "_inc/gac.php"); ?>
 
-<body id="<?= $cn ?>">
+<body id="<?= $cn; ?>" class="js-sub-loaded-fadebg">
   <div id="fullWrap">
 
     <!-- ▼ inc/header -->
@@ -97,7 +97,7 @@ include($site_root . 'functions.php');
                 システム開発会社として、首都圏を中心にITシステム関連サービス事業を展開しているエイ・エヌ・エスは、<br>
                 『DXを推進すべく、オーダーメイドの基幹業務システムを構築したい』<br>
                 『既存の業務システムを整理して使いやすく再構築したい』『システム保守が打ち切りになったため、<br>
-                保守を引継いでほしい』といったお悩み・課題を解決するためにシステムをと通して、<br>
+                保守を引継いでほしい』といったお悩み・課題を解決するためにシステムを通して、<br>
                 DX推進や業務効率化といった”導入効果とメリット”をご提供します。
               </p>
             </section>
@@ -149,7 +149,7 @@ include($site_root . 'functions.php');
                       <li class="approach__cards--tagItem"><span>受発注管理システム</span>卸売業、小売業、食品業、イベント業</li>
                       <li class="approach__cards--tagItem"><span>勤怠管理システム</span>保険業、運送業、保育事業</li>
                       <li class="approach__cards--tagItem"><span>人事関連システム</span>社会保険労務士事務所、運送業、医療サービス業</li>
-                      <li class="approach__cards--tagItem"><span>情報検索システム</span>官公庁(外務省)、建設業</li>
+                      <li class="approach__cards--tagItem"><span>情報検索システム</span>官公庁、建設業</li>
                       <li class="approach__cards--tagItem"><span>レンタル・販売管理システム</span>福祉・介護業</li>
                       <li class="approach__cards--tagItem"><span>原価管理・輸出管理システム</span>医療機器業、運輸業</li>
                       <li class="approach__cards--tagItem"><span>航空・海上輸出入システム</span>国際輸送業</li>
@@ -199,7 +199,7 @@ include($site_root . 'functions.php');
                     <dt class="common__cards--dt _hasIcon" data-num="#04">システムやインフラの管理に不安がある</dt>
                     <dd class="plan__cards--result common__cards--dd">
                       <p class="plan__cards--result--title">システム保守、インフラ管理も一貫して対応します。</p>
-                      <p class="plan__cards--result--text">システムの利用に必須となるメンテナンスやデータのバックアップといった保守対応や、サーバー等のインフラ管理も一括して対応します。 長期的に安心してシステムをご利用できる環境を整え、本業に専念ています。</p>
+                      <p class="plan__cards--result--text">システムの利用に必須となるメンテナンスやデータのバックアップといった保守対応や、サーバー等のインフラ管理も一括して対応します。 長期的に安心してシステムをご利用できる環境を整え、本業に専念しています。</p>
                     </dd>
                   </div><!-- ./common__cards--item -->
                 </dl>
@@ -352,19 +352,6 @@ include($site_root . 'functions.php');
                           インフラ管理代行サービスでは、お客様に代わりサーバの運用支援、トラブル発生時の復旧対応を実施致します。サーバ監視サービスでは、当社よりお客様のサーバ監視を行います。
                         </p>
                         <dl class="support__cards--tagsdl">
-                          <div class="support__cards--tags">
-                            <dt class="support__cards--tagdt">インフラ管理代行サービス</dt>
-                            <dd class="support__cards--tagdd">
-                              <ul class="support__cards--tagList">
-                                <li class="support__cards--tagItem"><span>障害情報受付</span></li>
-                                <li class="support__cards--tagItem"><span>ネットワーク情報の管理</span></li>
-                                <li class="support__cards--tagItem"><span>ハードウェア情報の管理</span></li>
-                                <li class="support__cards--tagItem"><span>ADドメイン</span></li>
-                                <li class="support__cards--tagItem"><span>サーバによる管理</span></li>
-                                <li class="support__cards--tagItem"><span>ソフトウェア情報の管理</span></li>
-                              </ul>
-                            </dd>
-                          </div>
                           <div class="support__cards--tags">
                             <dt class="support__cards--tagdt">インフラ管理代行サービス</dt>
                             <dd class="support__cards--tagdd">

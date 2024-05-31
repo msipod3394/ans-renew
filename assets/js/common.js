@@ -81,6 +81,7 @@ $(document).ready(function () {
 //ハンバーガーメニュー
 const ham = $("#js-hamburger");
 const nav = $("#header");
+
 ham.on("click", function () {
   ham.toggleClass("_active"); // ハンバーガーメニューにactiveクラスを付け外し
   nav.toggleClass("_active"); // ナビゲーションメニューにactiveクラスを付け外し
@@ -264,3 +265,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }, "");
   });
 });
+
+// 下層ページ ロード終了後にふわっと表示
+window.onload = function () {
+  const $body = $("body");
+
+  if ($body.hasClass("js-sub-loaded-fadebg")) {
+    $body.addClass("-completeLoaded");
+    setTimeout(function () {
+      $body.removeClass("js-sub-loaded-fadebg -completeLoaded");
+    }, 1000);
+  }
+};

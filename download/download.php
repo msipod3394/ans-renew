@@ -30,14 +30,14 @@ include($site_root . 'functions.php');
 <!-- ▼ inc/gac -->
 <?php include($site_root . "_inc/gac.php"); ?>
 
-<body id="<?= $cn; ?>">
+<body id="<?= $cn; ?>" class="js-sub-loaded-fadebg">
 
   <div id="fullWrap">
 
     <!-- ▼ inc/header -->
     <?php include($site_root . "_inc/header.php"); ?>
 
-    <main id="whitepaper" class="sub__container whitepaper">
+    <main id="download" class="sub__container downloadDetail">
       <div class="sub__breadcrumbs">
         <ul class="sub__breadcrumbs--list">
           <li class="sub__breadcrumbs--item"><a href="<?= $site_root; ?>"><span>トップ</span></a></li>
@@ -45,7 +45,16 @@ include($site_root . 'functions.php');
         </ul>
       </div><!-- ./sub__breadcrumbs -->
 
-      <div id="" class="l-block -full downloadDetail">
+      <section class="sub__heading js-subHeading-show">
+        <h1 class="sub__heading--text">
+          <span class="sub__heading--textIn">
+            <span class="font-en line-left text-progress" data-txt="Download">Download</span>
+            <span class="font-mincho text-progress" data-txt="<?= $page_title ?>"><?= $page_title ?></span>
+          </span>
+        </h1>
+      </section><!-- sub__heading -->
+
+      <div id="" class="l-block -full">
         <div class="l-column__main--inner">
           <section class="c-contentsDetail">
 

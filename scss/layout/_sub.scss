@@ -1137,3 +1137,26 @@
     }
   }
 }
+
+// js-page-sub
+.js-sub-loaded-fadebg {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    transition: opacity 0.8s ease, visibility 1s ease;
+  }
+
+  &.-completeLoaded::before {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
